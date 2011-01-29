@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	xmlns:dtvmedia="http://participatoryculture.org/RSSModules/dtv/1.0"
+	xmlns:media="http://search.yahoo.com/mrss/"
+>
+
+<channel>
+	<title>Thomas Dolby's Blog</title>
+	<atom:link href="http://blog.thomasdolby.com/?feed=rss2" rel="self" type="application/rss+xml" />
+	<link>http://blog.thomasdolby.com</link>
+	<description>Thomas Dolby's official personal blog. Music, Geekery, Technology.</description>
+	<pubDate>Wed, 11 Jun 2008 19:37:45 +0000</pubDate>
+	<generator>http://wordpress.org/?v=2.5.1</generator>
+	<language>en</language>
+		<!-- podcast_generator="podPress/8.7" -->
+		<copyright>&#xA9; </copyright>
+		<managingEditor>lunesse@thomasdolby.com ()</managingEditor>
+		<webMaster>lunesse@thomasdolby.com</webMaster>
+		<category></category>
+		<ttl>1440</ttl>
+		<itunes:keywords></itunes:keywords>
+		<itunes:subtitle></itunes:subtitle>
+		<itunes:summary>Thomas Dolby's official personal blog. Music, Geekery, Technology.</itunes:summary>
+		<itunes:author></itunes:author>
+		<itunes:category text="Society &amp; Culture"/>
+		<itunes:owner>
+			<itunes:name></itunes:name>
+			<itunes:email>lunesse@thomasdolby.com</itunes:email>
+		</itunes:owner>
+		<itunes:block>No</itunes:block>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:image href="http://www.thomasdolby.com/images/ThomasDolby_c_usm.gif" />
+		<image>
+			<url>http://www.thomasdolby.com/images/ThomasDolby_c_usm.gif</url>
+			<title>Thomas Dolby's Blog</title>
+			<link>http://blog.thomasdolby.com</link>
+			<width>144</width>
+			<height>144</height>
+		</image>
+		<item>
+		<title>Long Beach</title>
+		<link>http://blog.thomasdolby.com/?p=544</link>
+		<comments>http://blog.thomasdolby.com/?p=544#comments</comments>
+		<pubDate>Wed, 11 Jun 2008 19:36:54 +0000</pubDate>
+		<dc:creator>TMDR</dc:creator>
+		
+		<category><![CDATA[Misc]]></category>
+
+		<guid isPermaLink="false">http://blog.thomasdolby.com/?p=544</guid>
+		<description><![CDATA[
+I&#8217;m in Long Beach, CA for meetings about next year&#8217;s TED Conference, which is moving to its new home here from Monterey next February. From my hotel window I can see the Queen Mary (memo to Steve Jobs: MacBook webcams don&#8217;t snap very good long distance shots!) Oh, and now I notice it&#8217;s reversed, isn&#8217;t [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://blog.thomasdolby.com/wp-content/uploads/2008/06/lb.jpg"><img class="alignnone size-medium wp-image-541" title="lb" src="http://blog.thomasdolby.com/wp-content/uploads/2008/06/lb.jpg" alt="" width="307" height="206" /></a></p>
+<p>I&#8217;m in Long Beach, CA for meetings about next year&#8217;s TED Conference, which is moving to its new home here from Monterey next February. From my hotel window I can see the Queen Mary (memo to Steve Jobs: MacBook webcams don&#8217;t snap very good long distance shots!) Oh, and now I notice it&#8217;s reversed, isn&#8217;t it? Kathleen and I once stayed the night on board the QM, after playing a Lost Toy People gig at the Spruce Goose flying boat (its former domed hanger is pictured behind the QM). Tonight I&#8217;m going to meet up with  my former video crew Johnny Dekam and Bree Edwards, just back after a year-long Dream Theater tour, and we&#8217;re going to sample the Observation Room bar on board the old steamer.</p>
+<p>Behind that is the bay where I used to windsurf when I lived in LA. Given where I sail now on the North Sea it seems a bit cruddy that I used to sail here. But actually the water beyond the breakwater was relatively clean. I never caught anything, but I did once nearly hit a suitcase!</p>
+<p>Tomorrow, I&#8217;m off to Toronto where there&#8217;s an event called NxNE going on, and they want me to do a days&#8217; worth of interviews because The Sole Inhabitant is being released to retail in North America on Invisible Hands Music. I know it seems odd that this is coming out now when it&#8217;s been available on the Net for two years. But it was never in retail stores here, and now it seems a couple of chains want to pick it up, in a version called &#8216;Deluxe&#8217;&#8212;which means the CD and DVD are both in the same package.</p>
+<p>Oh and more news: I recently agreed terms with EMI to re-release my first two albums! Looks like they will be in some sort of &#8216;enhanced&#8217; format, possibly including alternative mixes and B-sides. This should happen early in 2009. But it&#8217;s not to take away from Job #1 which is my next album. I&#8217;m working away at that and have some nice new songs on the boil. It&#8217;ll get easier when I finish my lifeboat studio, which is going to be great but is coming along slowly&#8212;no big surprise for an old wooden boat.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thomasdolby.com/?feed=rss2&amp;p=544</wfw:commentRss>
+		</item>
+		<item>
+		<title>Poem</title>
+		<link>http://blog.thomasdolby.com/?p=538</link>
+		<comments>http://blog.thomasdolby.com/?p=538#comments</comments>
+		<pubDate>Tue, 27 May 2008 11:20:44 +0000</pubDate>
+		<dc:creator>TMDR</dc:creator>
+		
+		<category><![CDATA[Misc]]></category>
+
+		<category><![CDATA[Tech Geek]]></category>
+
+		<guid isPermaLink="false">http://blog.thomasdolby.com/?p=538</guid>
+		<description><![CDATA[Slaughden Village is gone now, and the only building remaining is the yacht club, which was rebuilt on stilts. Further up the coast is a place called Dunwich, which was once a busy market town with 17 churches. Now all that's left are three sheds, one of which is a museum documenting Dunwich's gradual disappearance.]]></description>
+			<content:encoded><![CDATA[<p>I dreamed that we were castaways<br />
+Two turtles on a log<br />
+We were drifting off the coast of France<br />
+And listing sideways.<br />
+At times like these<br />
+You turn in on yourself.</p>
+<p>The superstitious sailors of old<br />
+Refused to learn to swim<br />
+But there&#8217;s no need to drown today<br />
+Cause we&#8217;ve got lifeboats.<br />
+Where are the lifeboats?<br />
+There are no lifeboats.<br />
+There are no fucking lifeboats&#8230;.</p>
+<p>There&#8217;s a freak storm blowing in, in from the Arctic<br />
+There&#8217;s a freak storm blowing in, in from the Poles<br />
+I&#8217;ll be the last to leave the bridge<br />
+The last rat off your ship, England!</p>
+<p>In dreams the skies are azure blue<br />
+The sea a mirror pond<br />
+Then you wake to howling wind and rain<br />
+Upon your roof tiles<br />
+It won&#8217;t be long<br />
+It won&#8217;t be very long<br />
+It won&#8217;t be very long now.</p>
+<p><em>© T.Dolby (May 27th 2008)</em></p>
+<p><a href="http://blog.thomasdolby.com/wp-content/uploads/2008/05/25-slaughden-three-mariners.jpg"><img class="alignnone size-medium wp-image-539" title="25-slaughden-three-mariners" src="http://blog.thomasdolby.com/wp-content/uploads/2008/05/25-slaughden-three-mariners.jpg" alt="" width="337" height="233" /></a></p>
+<p>There&#8217;s a woman in my village whose father ran the Three Mariners Inn, Slaughden, pictured here. As the North Sea gradually encroached and reclaimed the village, the pub was the last building left standing. At the end, she told me, she remembers the locals would sit with their tankards on high bar stools, watching as the occasional wave broke in through the front door and wash out the back.</p>
+<p>Slaughden Village is gone now, and the only building remaining is the yacht club, which was rebuilt on stilts. Further up the coast is a place called Dunwich, which was once a busy market town with 17 churches. Now all that&#8217;s left are three sheds, one of which is a museum documenting Dunwich&#8217;s gradual disappearance.</p>
+<p>A couple of millenia ago you could walk all the way from East Anglia to Holland, on mainland Europe. But that was at the tail end of the Ice Age, when much of the Northern Hemisphere&#8217;s water was still sucked up in glaciers.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thomasdolby.com/?feed=rss2&amp;p=538</wfw:commentRss>
+		</item>
+		<item>
+		<title>Michel and &#8216;Isobel&#8217;</title>
+		<link>http://blog.thomasdolby.com/?p=537</link>
+		<comments>http://blog.thomasdolby.com/?p=537#comments</comments>
+		<pubDate>Mon, 26 May 2008 15:37:21 +0000</pubDate>
+		<dc:creator>TMDR</dc:creator>
+		
+		<category><![CDATA[Misc]]></category>
+
+		<category><![CDATA[Music]]></category>
+
+		<category><![CDATA[Thoughts]]></category>
+
+		<guid isPermaLink="false">http://blog.thomasdolby.com/?p=537</guid>
+		<description><![CDATA[It&#8217;s blowing a Force 8 gale outside, horizontal rain and bleak dark clouds whizzing by. Huge waves crashing on the beach. This is England in the Spring.
+I was flattered to read that eccentric French film director Michel Gondry is making a compilation DVD of his work and wants to include my video for &#8216;Close But [...]]]></description>
+			<content:encoded><![CDATA[<p>It&#8217;s blowing a Force 8 gale outside, horizontal rain and bleak dark clouds whizzing by. Huge waves crashing on the beach. This is England in the Spring.</p>
+<p>I was flattered to read that eccentric French film director <a href="http://en.wikipedia.org/wiki/Michel_Gondry">Michel Gondry</a> is making a compilation DVD of his work and wants to include my video for &#8216;<a href="http://www.youtube.com/watch?v=wYOGgETYG0M" target="_blank">Close But No Cigar</a>.&#8217; I&#8217;ve liked  a couple of his movies but most of all I adore some of his work with my heroine, Bjork. The finest of the seven clips he did with her has to be &#8216;Isobel&#8217;, below. It&#8217;s a kick to read the comments about it on YouTube. People just don&#8217;t get her, do they? That&#8217;s because she&#8217;s from a different species altogether.</p>
+<p>That Phoenix space probe that&#8217;s digging today under the surface of Mars with a robot arm drill, it might just send us back pictures of Bjork&#8217;s frozen face beneath the ice, lying there in her swan dress.<br />
+<code><br />
+<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/AGjGh74n_9U&#038;hl=en"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/AGjGh74n_9U&#038;hl=en" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object></code></p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thomasdolby.com/?feed=rss2&amp;p=537</wfw:commentRss>
+		</item>
+		<item>
+		<title>Diggerland is hiring!</title>
+		<link>http://blog.thomasdolby.com/?p=535</link>
+		<comments>http://blog.thomasdolby.com/?p=535#comments</comments>
+		<pubDate>Thu, 08 May 2008 11:29:41 +0000</pubDate>
+		<dc:creator>TMDR</dc:creator>
+		
+		<category><![CDATA[Misc]]></category>
+
+		<guid isPermaLink="false">http://blog.thomasdolby.com/?p=535</guid>
+		<description><![CDATA[
+My favourite theme park on the planet is Diggerland in Devon, UK. You can see their real-time webcam here although if it&#8217;s night time in England all you&#8217;ll see is car headlights going past on the main road.
+Anyone that knows me knows I have a fetish for bulldozers. Don&#8217;t ask me what it is about [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://blog.thomasdolby.com/wp-content/uploads/2008/05/diggerland_clare_oliver_470.jpg"><img class="alignnone size-medium wp-image-536" title="diggerland_clare_oliver_470" src="http://blog.thomasdolby.com/wp-content/uploads/2008/05/diggerland_clare_oliver_470.jpg" alt="" width="321" height="243" /></a></p>
+<p>My favourite theme park on the planet is Diggerland in Devon, UK. You can see their real-time webcam <a href="http://www.diggerland.com/visiting/webcam.htm" target="_blank">here</a> although if it&#8217;s night time in England all you&#8217;ll see is car headlights going past on the main road.</p>
+<p>Anyone that knows me knows I have a fetish for bulldozers. Don&#8217;t ask me what it is about them, I just see a bulldozer and I come over all funny. Big yellow ones are quite sexy, but it&#8217;s the smallish black and white ones with metal grilles over the driver that really get me going. Imagine my delight when I came across a theme park where you get to drive them yourself! At Diggerland you can race the small ones round a track, dig holes and fill them in again in a medium-sized one, or even go for a whirry ride in the spade part of a giant one. Ooh, I was in heaven!</p>
+<p>And now it appears that <a href="http://www.diggerland.com/explore/JobsV2.htm" target="_blank">Diggerland is hiring</a>! I am awfully tempted to sell everything and head down to Cullompton for a spell. I quote: &#8220;You will need to like working with the general public, be energetic, have an outgoing personality and enjoy the thrill of showing others how to use the diggers and other activities in Diggerland.&#8221; Isn&#8217;t that me down to a tee?</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thomasdolby.com/?feed=rss2&amp;p=535</wfw:commentRss>
+		</item>
+		<item>
+		<title>The cha-cha-charts</title>
+		<link>http://blog.thomasdolby.com/?p=534</link>
+		<comments>http://blog.thomasdolby.com/?p=534#comments</comments>
+		<pubDate>Fri, 25 Apr 2008 10:14:51 +0000</pubDate>
+		<dc:creator>TMDR</dc:creator>
+		
+		<category><![CDATA[Misc]]></category>
+
+		<category><![CDATA[Music]]></category>
+
+		<category><![CDATA[Thoughts]]></category>
+
+		<guid isPermaLink="false">http://blog.thomasdolby.com/?p=534</guid>
+		<description><![CDATA[I have to confess there&#8217;s still a certain thrill when I watch something I&#8217;ve done climbing a chart. It&#8217;s not an experience I&#8217;ve had for some time. The very first time it ever happened to me I was ecstatic. I was 21. It was Lene Lovich&#8217;s &#8216;New Toy&#8217; which I&#8217;d written and co-arranged, and played [...]]]></description>
+			<content:encoded><![CDATA[<p>I have to confess there&#8217;s still a certain thrill when I watch something I&#8217;ve done climbing a chart. It&#8217;s not an experience I&#8217;ve had for some time. The very first time it ever happened to me I was ecstatic. I was 21. It was Lene Lovich&#8217;s &#8216;New Toy&#8217; which I&#8217;d written and co-arranged, and played synths on. It got added to the BBC Radio 1 Playlist, which is an essential start, as in the 70&#8217;s and 80&#8217;s without it you couldn&#8217;t compete (unless you were the Sex Pistols or Frankie Goes To Hollywood, but that&#8217;s another story.) After a couple of weeks it had risen high enough for us to get invited on Top Of The Pops, Britain&#8217;s one primetime music TV show, which again was essential if you wanted a hit. Without TOTP you had almost zero chance of reaching the Top 10; with it, you were likely to get there, even if your record was rubbish.</p>
+<p>Even though the charts were only published weekly, when a song was going up them you could feel it. The phone was always ringing. A friend left you a message to say they heard it in their car. Your manager or someone from your record label called with a request for you to do an interview with Radio Aberystwyth. There would be a tiny mention on the Daily Mirror&#8217;s pop page. In the streets, you&#8217;d hear a titter from a group of kids as you walked by. Based on the accumulation of that buzz, as the day approached for the new chart to be announced, you would find yourself visualising and hoping for a certain number&#8212;#19, from last week&#8217;s #26? Then your manager would call and wake you early in the morning with the actual number, which would be a rush, or a shock.</p>
+<p>When the record was struggling, you could feel that too. The phone would be eerily quiet. You feared the worst. And then when the chart position came in, and your record had stayed at #26, or worse, dropped to #29, you felt sad and deflated. You usually only get one shot at it. It&#8217;s almost impossible to turn a record around once it starts to fall. And this had a huge affect on your lifestyle. If the success continued, the offers would keep pouring in, each more exotic than the last: fly to Paris for a TV show, meet the NME&#8217;s top journalist who&#8217;s writing a feature, go to New York to play guest keyboards on some megaband&#8217;s new album. Your agent is desperate for you to tour in the Summer, playing bigger venues than ever before. But if the record went into freefall, within a week, people could be asking you when you&#8217;d start thinking about new material, a new album?</p>
+<p>Thinking back, it was a crazy way to live. You couldn&#8217;t help it affecting your sense of self-worth, and the gratification you felt about your music, which was measured in radio playlists, chart positions, royalty statements. There was no way to truly get face to face with your audience. Signing autographs at the stage door certainly didn&#8217;t do it.</p>
+<p>And the irony was, those charts were so manipulated. When you saw behind the scenes, the seamy underbelly of the pop business, you&#8217;d wish you hadn&#8217;t. Parties were thrown, peoples&#8217; speedboats were berthed, their kids&#8217; college funds received anonymous donations. You turned a blind eye to it, because you knew that in order to get heard by the public, and then to compete on a level with the other records that were out, you needed the dark machinery of the Music Business to be working in your favour, not against you.</p>
+<p>I can&#8217;t tell you how happy I am that it&#8217;s all over! Those days are gone. Even if the mainstream music business is still ultimately more powerful than the MySpace world, it has changed beyond the point of no return. And I&#8217;m on the cusp. I have a reputation and core sales base that date back to my time on the charts; yet unlike some of my contemporaries, I have a good sense of how to take advantage of the new scheme of things. I feel lucky to have benefitted from the Music Biz when I did, even though there were other times when it did me no favours at all, and great songs got lost without trace just because the oily cogs never clicked into gear.</p>
+<p>The main thing is, nowadays there&#8217;s not that disconnect between my sense of artistic self-worth, and the commercial realities of the charts and retail sales. Of course I do care whether people are taking notice, whether they&#8217;re listening to and buying my stuff, but it&#8217;s not a numbers racket any more. And I certainly don&#8217;t have to make any compromises just to make some A+R or marketing guy happy. I can live happily as a &#8216;cult&#8217; artist, making great music and not caring too much about the charts&#8212;in fact, emulating my teenage musical heroes, few of whom ever got anywhere near Top Of The Pops.</p>
+<p>Best of all, via the Internet, I get to read what real people truly think about my music. When it has affected someone in a profound way, I know I hit the mark. Each chord change or line of lyrics that I struggled with, deliberated over, and eventually settled on because it hit me in the gut&#8212;I hear back from somebody who felt it the same way I intended it. I communicated, I touched someone&#8217;s soul.</p>
+<p>Regina Spector said it best:</p>
+<p>&#8220;this is how it works<br />
+you peer inside yourself<br />
+you take the things you like<br />
+and try to love the things you took<br />
+and then you take that love you made<br />
+and stick it into some&#8211;<br />
+someone else&#8217;s heart<br />
+pumping someone else&#8217;s blood.&#8221;</p>
+<p>(From &#8216;On The Radio.&#8217;)</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thomasdolby.com/?feed=rss2&amp;p=534</wfw:commentRss>
+		</item>
+		<item>
+		<title>More Radiohead&#8230; and Shane MacGowan</title>
+		<link>http://blog.thomasdolby.com/?p=532</link>
+		<comments>http://blog.thomasdolby.com/?p=532#comments</comments>
+		<pubDate>Mon, 21 Apr 2008 22:30:22 +0000</pubDate>
+		<dc:creator>TMDR</dc:creator>
+		
+		<category><![CDATA[Misc]]></category>
+
+		<category><![CDATA[Music]]></category>
+
+		<category><![CDATA[Thoughts]]></category>
+
+		<guid isPermaLink="false">http://blog.thomasdolby.com/?p=532</guid>
+		<description><![CDATA[Oh and another curious thing, while I'm on the subject of famous shoolboys. At my previous school in London I was good friends with Shane MacGowan, of The Pogues. He and I used to sit together in the back row of English Lit. He was extremely smart. On one occasion during a boring reading of some classic novel or other, the teacher spotted me and Shane nattering. He singled me out saying something like 'what figure of speech is "indubitably".... Robertson?' Shane whispered under his breath: 'It's an onanism.' Ha. 'IT'S AN ONANISM, SIR!' I blurted out. Deadly pause. 'Robertson, please come up to the front of the class, take down the Oxford English Dictionary and read out to the class the definition of the word onanism.' Which I did. Much to the delight of Shane and the rest of the class.]]></description>
+			<content:encoded><![CDATA[<p>I just found out an amusing fact about Radiohead. They met while attending Abindgon School in Oxfordshire. I was there too! I took my A-levels there (ok since you asked, I got a B in French, a C in English, and I went to the pub during the History exam). My family at that point lived about 3 miles outside Abindgon, as my father was an Oxford professor, but after being at boarding school in London for 3 years I was a real REBEL and demanded that I move to a local school where I could be a day boy. So I was at Abingdon from 1975 to 76, approximately, and left not long before my 17th birthday to go and get a job in a fruit and vegetable shop. Of course, I was Tom Robertson back in those days. Someone needs to list me as a famous alumnus in the <a href="http://en.wikipedia.org/wiki/Abingdon_School" target="_blank">Wikipedia entry</a> about the school! Screw Radiohead being the only famous people to have gone there, along with Zippo the Clown and a rowing cox called Nicholas Bradie.</p>
+<p><a href="http://blog.thomasdolby.com/wp-content/uploads/2008/04/shane_mag.jpg" title="Shane MacGowan"><img src="http://blog.thomasdolby.com/wp-content/uploads/2008/04/shane_mag.jpg" alt="Shane MacGowan" /></a></p>
+<p>Oh and another curious thing, while I&#8217;m on the subject of famous shoolboys. At my previous school in London I was good friends with Shane MacGowan, of The Pogues. He and I used to sit together in the back row of English Lit. He was extremely smart. On one occasion during a boring reading of some classic novel or other, the teacher spotted me and Shane nattering. He singled me out saying something like &#8216;what figure of speech is &#8220;indubitably&#8221;&#8230;. Robertson?&#8217; Shane whispered under his breath: &#8216;<em>It&#8217;s an onanism</em>.&#8217; Ha. &#8216;IT&#8217;S AN ONANISM, SIR!&#8217; I blurted out. Deadly pause. &#8216;Robertson, please come up to the front of the class, take down the Oxford English Dictionary and read out to the class the definition of the word <a href="http://dictionary.reference.com/browse/onanism">onanism</a>.&#8217; Which I did. Much to the delight of Shane and the rest of the class.</p>
+<p>Shane was the most knowledegable kid in school about rock music. A gang of us used to sit all afternoon in a cafe a few streets away from the school, drinking tea and smoking Woodbines, talking about progressive music like Yes, Genesis and Soft Machine. We also loved the Allman Bros who we considered raunchy and Steely Dan who were jazzy, experimental and rebellious. One day&#8212;this would have been around early 1975&#8212;Shane walks in to out cafe with a scowl on his face. &#8216;That&#8217;s all CRAP!&#8217; he spits out from between his already rotten teeth. &#8216;The Beatles&#8212;bloody Pink Floyd&#8212;they&#8217;re just a bunch of old FUCKS!&#8217;</p>
+<p>You could almost hear the collective gasp. How could our music guru possibly utter such sacrilege! We were shocked and upset. Well, who should we be listening to now then, we asked? Shane listed a bunch of bands we&#8217;d never heard of, though we&#8217;d sure enough rush off to Oxford St later to find them at the Virgin Records shop, where you could sit in an aircraft seat and listen to any album on headphones. &#8216;The New York Dolls. The MC5. Johnny Thunders. Wayne County. That&#8217;s the new stuff! Fuck the old fart bands!&#8217;</p>
+<p>Of course, Shane&#8217;s proclamation was a barometer of the era we were about to live through. Rock music had indeed become staid and self-important. In the mid-1970&#8217;s merchant bankers were getting monthly subscriptions to Rolling Stone magazine. It was high time some new kid with a different hairdo, a new cut to his jeans, and a menacing snarl to his lip, came along and shook us all up. And that kid was Johnny Rotten, who appeared on the scene about a year later. The collective intake of breath could now be heard all over the nation. I can remember the review of a Marquee gig by the Sex Pistols in NME: &#8216;Who do they think they are? They played too loud and too fast while this Rotten bloke spat and sweared at the audience, kicked the monitor, and walked offstage half way through the set. Have young people today no respect for rock music?&#8217;</p>
+<p>I only saw Shane once after we left school. I bumped into him on King&#8217;s Rd in about 1979. He was by then a famous figure in the London punk scene, and he was getting his photo taken standing next to some tourists. He was in bondage trousers and safety pins (I don&#8217;t remember what I wearing but in those pre-New Romantic days before the start of the 80&#8217;s it was probably a Demob WW2 suit and a fluffy shirt.) It was clear Shane and I had grown apart. He told me he was forming a band of his own. I was not surprised, though I had never suspected he had any singing talent. What kind of music was his band going to play, I asked? &#8216;Sorta punk folk,&#8217; he said. I suppressed a giggle. That&#8217;ll never work, I thought! Wrong again.</p>
+<p>Never underestimate Shane MacGowan. I should have learned my lesson with the Onanism thing.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thomasdolby.com/?feed=rss2&amp;p=532</wfw:commentRss>
+		</item>
+		<item>
+		<title>Thomas Dolby remixes Radiohead!</title>
+		<link>http://blog.thomasdolby.com/?p=530</link>
+		<comments>http://blog.thomasdolby.com/?p=530#comments</comments>
+		<pubDate>Fri, 18 Apr 2008 23:33:10 +0000</pubDate>
+		<dc:creator>TMDR</dc:creator>
+		
+		<category><![CDATA[Misc]]></category>
+
+		<category><![CDATA[Music]]></category>
+
+		<category><![CDATA[Tech Geek]]></category>
+
+		<guid isPermaLink="false">http://blog.thomasdolby.com/?p=530</guid>
+		<description><![CDATA[
+I&#8217;ve done a remix of Radiohead&#8217;s gorgeous &#8216;Nude&#8217; from the Rainbows album. This was not solicited by the band. They are running a remix contest for their single, and I just went to iTunes and bought the &#8217;stems&#8217; to the song for $5 just like everybody else. Here&#8217;s how it came about&#8230;
+A few days ago [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://blog.thomasdolby.com/wp-content/uploads/2008/04/icefloe2.jpg" title="icefloe2.jpg"><img src="http://blog.thomasdolby.com/wp-content/uploads/2008/04/icefloe2.jpg" alt="icefloe2.jpg" height="159" width="268" /></a></p>
+<p>I&#8217;ve done a remix of Radiohead&#8217;s gorgeous &#8216;Nude&#8217; from the Rainbows album. This was not solicited by the band. They are running a remix contest for their single, and I just went to iTunes and bought the &#8217;stems&#8217; to the song for $5 just like everybody else. Here&#8217;s how it came about&#8230;</p>
+<p>A few days ago I received my new super-groovy Apple Airport Extreme wireless router. It has a much wider range than my previous Linksys. I was keen to see if it would reach the beach, which is about 150 ft from my house. The weather was fine if a little nippy so I took my MacBook Pro and a warm blanket down to the water&#8217;s edge and was delighted to find I could get Internet reception. I happened to check iTunes store where I saw a banner advertising the Radiohead remix contest. I love their album and especially &#8216;Nude&#8217; so I was intrigued, and I downloaded the guitar stem and opened it in Logic 8. Now, each of the stems starts from 00:00 so it took a while before the guitar started to play. While waiting for it I just listened to the lapping of the waves on the shore, and the cry of some seagulls fighting over a crab shell. By the time the beautiful plaintive guitar part came in I was completely mesmerised. It left such a vivid impression on me that this became the basis for a remix, and I recorded a sample of the waves and seagulls and included it in the track. I downloaded the rest of the stems, and after two straight nights with no sleep, the mix is finally finished, and I&#8217;ve just posted it on <a href="http://www.radioheadremix.com/remix/?id=1825" target="_blank">www.radioheadremix.com</a>. Check it out, it&#8217;s called &#8216;Bathing In The Icefloe&#8217; and to hear it you can click on the widget at the bottom of this page.</p>
+<p>You don&#8217;t have to vote for my mix! I&#8217;m not trying to win anything. There are some pretty interesting remixes up there, very unexpected and original. There&#8217;s also some complete dross which I&#8217;m sure will make Thom Yorke&#8217;s stomach turn. There are ravey Ibiza floor fillers which disregard the original 6/8 time signature and put the vocal over a 4/4 beat. Some of them swap the upbeat and downbeat so Thom is singing &#8216;back to front.&#8217; Mine is not a radical remix, mainly I&#8217;ve learned their parts and played them myself with a few new sounds that double what&#8217;s already there. What I tried to do is dig deeper into the song itself without disrespecting the band&#8217;s own lovely arrangement.</p>
+<p>The lyrics, which are hard to make out, are quite amusing&#8212;a tale of a man tempted by the sins of the flesh. &#8216;Don&#8217;t get any big ideas&#8217;, he tells himself, &#8216;they&#8217;re not gonna happen.&#8217; Then later: &#8216;You&#8217;ll go to hell for what your dirty mind is thinking!&#8217; When I saw them play this live I thought he sang some additional lyrics about her beckoning him to the bed. I kinda like that he&#8217;s stripped it back and left it minimal. And I love how the seagulls in my Icefloe mix seem to be laughing at him.</p>
+
+<object	type="application/x-shockwave-flash"
+			data="http://radioheadremix.com/widget/remix_widget.swf?remix_id=1825"
+			width="425"
+			height="305">
+	<param name="movie" value="http://radioheadremix.com/widget/remix_widget.swf?remix_id=1825" />
+</object>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thomasdolby.com/?feed=rss2&amp;p=530</wfw:commentRss>
+		</item>
+		<item>
+		<title>Found Missing Sub!</title>
+		<link>http://blog.thomasdolby.com/?p=529</link>
+		<comments>http://blog.thomasdolby.com/?p=529#comments</comments>
+		<pubDate>Thu, 03 Apr 2008 17:11:52 +0000</pubDate>
+		<dc:creator>Lunesse</dc:creator>
+		
+		<category><![CDATA[Misc]]></category>
+
+		<guid isPermaLink="false">http://blog.thomasdolby.com/?p=529</guid>
+		<description><![CDATA[
+Click to enlarge. =)
+This wooden sub is outside the Maritime Museum in Barcelona, Spain&#8211;a visit that I totally recommend if you&#8217;re ever in town. It was designed in the 1860s and held six people. A later design by the same inventor held 30 people, had lateral stabilisers, gauze filters to freshen the interior breathing air, [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://blog.thomasdolby.com/wp-content/uploads/2008/04/img00031.JPG" title="img00031.JPG"><img src="http://blog.thomasdolby.com/wp-content/uploads/2008/04/img00031.JPG" alt="img00031.JPG" height="191" width="239" /></a></p>
+<p>Click to enlarge. =)</p>
+<p>This wooden sub is outside the <a href="http://" title="http://www.museumaritimbarcelona.com/default.asp?idApartado=102" target="_blank">Maritime Museum</a> in Barcelona, Spain&#8211;a visit that I totally recommend if you&#8217;re ever in town. It was designed in the 1860s and held six people. A later design by the same inventor held 30 people, had lateral stabilisers, gauze filters to freshen the interior breathing air, and even a net and &#8216;poker&#8217; on the bow for scraping coral samples off underwater reefs! I&#8217;m quite sure this helped inspire <a href="http://" title="http://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_under_the_Sea" target="_blank">Jules Verne,</a> not to mention <a href="http://" title="ttp://en.wikipedia.org/wiki/Yellow_Submarine_%28film%29" target="_blank">George Dunning</a> who animated the Beatles&#8217; famous movie. The windows are rather minimal, in fact you&#8217;d get a better view from a deep sea diving suit. And of course, this was all before my namesake Morgan Robertson invented the periscope. But the rudder and propellor are excellent. All it lacked was a couple of hydrogen balloons to make it a dual purpose, go-anywhere radical steampunk ride!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thomasdolby.com/?feed=rss2&amp;p=529</wfw:commentRss>
+		</item>
+		<item>
+		<title>Travel Tip</title>
+		<link>http://blog.thomasdolby.com/?p=526</link>
+		<comments>http://blog.thomasdolby.com/?p=526#comments</comments>
+		<pubDate>Sat, 15 Mar 2008 19:54:49 +0000</pubDate>
+		<dc:creator>TMDR</dc:creator>
+		
+		<category><![CDATA[Misc]]></category>
+
+		<category><![CDATA[Thoughts]]></category>
+
+		<guid isPermaLink="false">http://blog.thomasdolby.com/?p=526</guid>
+		<description><![CDATA[If a $150/night hotel near Central Park in New York City sounds too good to be true&#8230;.. it probably is!
+I&#8217;m here for the &#8216;Sputnik Mania&#8217; premiere at the IFC tonight. I jetted in for only two nights. Looked for a hotel on Expedia. Most hotels in the SoHo area start around $295/night. Last time I [...]]]></description>
+			<content:encoded><![CDATA[<p>If a $150/night hotel near Central Park in New York City sounds too good to be true&#8230;.. it probably is!</p>
+<p>I&#8217;m here for the &#8216;Sputnik Mania&#8217; premiere at the IFC tonight. I jetted in for only two nights. Looked for a hotel on Expedia. Most hotels in the SoHo area start around $295/night. Last time I was here I found one on Expedia for about $160, close to Central Park, and it was a real score. That one (Park 76) had increased to $280 this time. So I picked another close by, the Belnord on 87th St, which is only $150 per night with free Internet. How for wrong could I go?</p>
+<p>I was a little concerned when I walked into the lobby and it looked more like a taxi office. The clerk gave me the key to my room, on the 5th floor. He said he had to warn me there&#8217;s no elevator. Boy, I&#8217;m feeling glad all I have with me is a small rollaboard, unlike last time I came through NY on my way to TED with a keyboard flightcase packed full of equipment. And my torn calf ligament is close to completely healed. Still, I&#8217;ve carrying my laptop and a chunky hard drive as I&#8217;m hoping to get a couple more TED tunes mixed over the weekend. So I start climbing the 10 flights of stairs. The place looks like a building site&#8212;door framed half finished, dust everywhere, plastic sheeting. I get to the 5th floor, naively hoping that this one will be habitable; but it&#8217;s no different from the other floors. Now I realise to my horror that the clerk had pointed me down a different corridor, presumably with its own staircase! Standing there dreading the double trek back down, around and up again, I am approached by a Hispanic workman in overalls. I tell him my room number and he confirms my worst fears. But, &#8216;come!&#8217; he says, and even picks up my case. I follow him through the rubble to a fire exit, and it opens onto a corridor on what presumably is the correct side of the building.</p>
+<p>I find my room, and it&#8217;s a bare shell with a bed and a lamp.  It&#8217;s hot in there, but the window doesn&#8217;t want to open, and I can tell that if I was to force it, the mini air conditioner would plummet 80 feet to its peril into the alleyway below.  So I turn on the a/c but it&#8217;s one of those units that has a terrible, irregular rattle. And there&#8217;s no desk&#8212;so much for mixing this weekend! Nor, for that matter, is there a bathroom. Ugh. I call down to reception. It appears none of the available $150 rooms have bathrooms, you have to share one with everybody else on your floor. Oh well, at least my room is right opposite it.</p>
+<p>But wait, it gets worse: the one shared bathroom has a problem with its lock. You have to slam the door repeatedly to get it closed enough so that you can lock it. So this means that every time anyone goes to the bathroom all night, I hear three minutes of repeated door slamming! This, combined with mild jetlag, assures me a rotten night.</p>
+<p>But I&#8217;m up again at 6 and I head to a Starbucks around the corner (I know, I know) with my computer. I get some breakfast in me, and now things are looking up. I plug in my MacBook and my brand new MBox ProTools Micro. This is basically a little USB dongle that lets you use ProTools without being connected to any of their hefty hardware.</p>
+<p>With occasional refills of capuccino I spent a very happy morning mixing a song of Rachelle Garniez&#8217; called &#8216;Hello Cruel World&#8217; on headphones. This needs to get done for potential inclusion on a BluRay disk of the TED Conference. It&#8217;s amazing what a good mix can do. I saw a QuickTime clip of us playing it at TED with the audio mix that was recorded live to camera. It was a long way from anything Rachelle would have been proud of. And I&#8217;m ashamed to say I seriously buggered up the second verse. I was playing a kind of saloon bar honky-tonk piano, and as I&#8217;m anything but fluent in that style I had a brain fart in the middle and played utterly the wrong notes. Ah, but that&#8217;s the beauty of multitrack recording: I simply cut and pasted 3 beats&#8217; worth of my piano from the first verse into the second, and wa la. I checked it in sync with the QuickTime and it still works fine. Rachelle, incidentally, looks absolutely stunning. She&#8217;s one of those naturally videogenic people. And out of her mouth comes a growl like Tom Waits, it&#8217;s fantastic.</p>
+<p>Now back at the hotel, all is all quiet and there&#8217;s just time for a nap before I head down to the Village for David&#8217;s premiere. He got a nice <a href="http://movies.nytimes.com/2008/03/14/movies/14sputnik.html?em&amp;ex=1205726400&amp;en=f9df1dff95725dcb&amp;ei=5087%0A&amp;ref=movies">review</a> in the New York Times today and he should be well pleased. He asked me to invite some of the &#8216;influential people&#8217; that I know. I managed to knock off emails to David Byrne, Moby, and Ryuichi Sakamoto, but it remains to see if any of them will show up.</p>
+<p>&#8216;Sputnik Mania&#8217;  screens for the next 2 weeks at the IFC Center, 323 Avenue of the Americas, at Third Street, Greenwich Village.</p>
+<p><a href="http://blog.thomasdolby.com/wp-content/uploads/2008/03/sputnik-party.JPG" title="sputnik-party.JPG"><img src="http://blog.thomasdolby.com/wp-content/uploads/2008/03/sputnik-party.JPG" alt="sputnik-party.JPG" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thomasdolby.com/?feed=rss2&amp;p=526</wfw:commentRss>
+		</item>
+		<item>
+		<title>&#8216;Sputnik Mania&#8217; opens in NY this weekend</title>
+		<link>http://blog.thomasdolby.com/?p=525</link>
+		<comments>http://blog.thomasdolby.com/?p=525#comments</comments>
+		<pubDate>Wed, 12 Mar 2008 00:25:10 +0000</pubDate>
+		<dc:creator>TMDR</dc:creator>
+		
+		<category><![CDATA[Misc]]></category>
+
+		<category><![CDATA[Thoughts]]></category>
+
+		<category><![CDATA[Tour]]></category>
+
+		<guid isPermaLink="false">http://blog.thomasdolby.com/?p=525</guid>
+		<description><![CDATA[I&#8217;ll be flying to New York this weekend to join David Hoffman at the premiere of his feature-length documentary about the launch from the USSR 50 years of  the first man-made satellite in space. If you&#8217;re around please come! It&#8217;s a terrific movie, and terribly relevant to today.
+
+
+]]></description>
+			<content:encoded><![CDATA[<p>I&#8217;ll be flying to New York this weekend to join David Hoffman at the premiere of his feature-length documentary about the launch from the USSR 50 years of  the first man-made satellite in space. If you&#8217;re around please come! It&#8217;s a terrific movie, and terribly relevant to today.</p>
+<p><a href="http://blog.thomasdolby.com/wp-content/uploads/2008/03/sputnik-party.JPG" title="sputnik-party.JPG"><br />
+</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thomasdolby.com/?feed=rss2&amp;p=525</wfw:commentRss>
+		</item>
+	</channel>
+</rss>

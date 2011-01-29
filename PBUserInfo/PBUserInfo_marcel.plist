@@ -1,0 +1,21 @@
+{
+    NSMACHOperatingSystem = {
+        Archs = "18 "; 
+        LauncherSelectedExec = (/usr/local/bin/testlogger); 
+        NonProjectExecutables = (
+            {
+                cla_array = ((/Local/Users/marcel/programming/Projects/htmlscan/NSStandardSubmenus.xml)); 
+                cla_array_index = 0; 
+                exec_class = PBLibExecutable; 
+                exec_path = /Users/marcel/programming/Projects/htmlscan/htmlscan; 
+            }, 
+            {
+                cla_array = ((MPWFoundation, MPWXmlKit, MPWTemplateKit)); 
+                cla_array_index = 0; 
+                exec_class = PBLibExecutable; 
+                exec_path = /usr/local/bin/testlogger; 
+            }
+        ); 
+        Target = framework; 
+    }; 
+}

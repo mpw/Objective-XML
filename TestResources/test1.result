@@ -1,0 +1,12 @@
+(
+    "<?XML version=\"1.0\"?>", 
+    "\n", 
+    "<!DOCTYPE greeting SYSTEM \"hello.dtd\">", 
+    "\n", 
+    "<greeting>", 
+    "Hello, ", 
+    "&cruel;", 
+    " world!", 
+    "</greeting>", 
+    "\n"
+)

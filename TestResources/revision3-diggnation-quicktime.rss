@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:cnettv="http://cnettv.com/mrss/"
+	xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule"
+	xmlns:media="http://search.yahoo.com/mrss/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:amp="http://www.adobe.com/amp/1.0">
+  <channel>
+    <title>Diggnation (Small Quicktime)</title>
+    <link>http://revision3.com/diggnation</link>
+    <description>Diggnation is a weekly tech/web culture show based on the top digg.com social bookmarking news stories.</description>
+    <language>en-us</language>
+    <cnettv:partnerId>27842</cnettv:partnerId>
+    <itunes:explicit>yes</itunes:explicit>
+    <itunes:summary>Diggnation is a weekly tech/web culture show based on the top digg.com social bookmarking news stories.</itunes:summary>
+    <itunes:subtitle>Diggnation is a weekly tech/web culture show based on the top digg.com social bookmarking news stories.</itunes:subtitle>
+    <itunes:author>Revision3</itunes:author>
+    <itunes:owner>
+      <itunes:email>feedback@revision3.com</itunes:email>
+      <itunes:name>Revision3</itunes:name>
+    </itunes:owner>
+    <itunes:image href="http://revision3.com/static/images/shows/diggnation/diggnation.jpg" />
+    <itunes:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</itunes:keywords>
+    <image>
+      <title>Diggnation (Small Quicktime)</title>
+      <width>100</width>
+      <height>100</height>
+      <link>http://revision3.com/diggnation</link>
+      <url>http://revision3.com/static/images/shows/diggnation/diggnation.jpg</url>
+    </image>
+    <!-- Adobe Media Player Network Assets -->
+    <amp:networkLogo>http://revision3.com/static/images/revision3_networklogo.png</amp:networkLogo>
+    <amp:networkHalfBanner>http://revision3.com/static/images/revision3_halfbanner.jpg</amp:networkHalfBanner>
+    <amp:networkBackground>http://revision3.com/static/images/revision3_background.jpg</amp:networkBackground>
+    <!-- Adobe Media Player Show Assets -->
+    <amp:background>http://revision3.com/static/images/shows/diggnation/diggnation_background.jpg</amp:background>
+    <amp:banner>http://revision3.com/static/images/shows/diggnation/diggnation_fullbanner.jpg</amp:banner>
+    <amp:halfBanner>http://revision3.com/static/images/shows/diggnation/diggnation_halfbanner.jpg</amp:halfBanner>
+    <atom:link rel="self" href="http://revision3.com/diggnation/feed/quicktime-small" />
+    <item>
+      <title>Diggnation - The Crazy Episode Taped Live in New York City</title>
+      <link>http://revision3.com/diggnation/2008-06-12studbeez</link>
+      <description>
+&lt;p&gt;The first Diggnation ever east of the Mississippi.  Don't miss it! Featuring: Wife Castrated DVD Collection, Best Firefox Add On Ever, Girlfriend Using Wii Fit, Woman Living in Man's Closet, 6 Most Innovative Brothels, Stupid Secretary&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;The first Diggnation ever east of the Mississippi.  Don't miss it! Featuring: Wife Castrated DVD Collection, Best Firefox Add On Ever, Girlfriend Using Wii Fit, Woman Living in Man's Closet, 6 Most Innovative Brothels, Stupid Secretary&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 13 Jun 2008 23:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 13 Jun 2008 23:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+The first Diggnation ever east of the Mississippi.  Don't miss it! Featuring: Wife Castrated DVD Collection, Best Firefox Add On Ever, Girlfriend Using Wii Fit, Woman Living in Man's Closet, 6 Most Innovative Brothels, Stupid Secretary
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0154/diggnation--0154--2008-06-12studbeez--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0154/diggnation--0154--2008-06-12studbeez--small.m4v" length="162316138" type="video/x-m4v" />
+      <media:content duration="3093" medium="video" fileSize="162316138" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0154/diggnation--0154--2008-06-12studbeez--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - The Crazy Episode Taped Live in New York City</media:title>
+        <media:description>
+The first Diggnation ever east of the Mississippi.  Don't miss it! Featuring: Wife Castrated DVD Collection, Best Firefox Add On Ever, Girlfriend Using Wii Fit, Woman Living in Man's Closet, 6 Most Innovative Brothels, Stupid Secretary
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-06-12studbeez/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-06-12studbeez" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Jay Adelson's House Party</title>
+      <link>http://revision3.com/diggnation/2008-06-05epic</link>
+      <description>
+&lt;p&gt;Inside the Attack that Crippled Revision3, Radiohead to Prince, Canadian Border to check iPods, Gun T-Shirt a Security Risk, Metal Gear Solid 4, Can you see a Spider?, The Internet Will End in 2012.&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Inside the Attack that Crippled Revision3, Radiohead to Prince, Canadian Border to check iPods, Gun T-Shirt a Security Risk, Metal Gear Solid 4, Can you see a Spider?, The Internet Will End in 2012.&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Sat, 07 Jun 2008 00:30:00 GMT</pubDate>
+      <cnettv:lastModDate>Sat, 07 Jun 2008 00:30:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Inside the Attack that Crippled Revision3, Radiohead to Prince, Canadian Border to check iPods, Gun T-Shirt a Security Risk, Metal Gear Solid 4, Can you see a Spider?, The Internet Will End in 2012.
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0153/diggnation--0153--2008-06-05epic--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0153/diggnation--0153--2008-06-05epic--small.m4v" length="185865732" type="video/x-m4v" />
+      <media:content duration="3555" medium="video" fileSize="185865732" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0153/diggnation--0153--2008-06-05epic--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Jay Adelson's House Party</media:title>
+        <media:description>
+Inside the Attack that Crippled Revision3, Radiohead to Prince, Canadian Border to check iPods, Gun T-Shirt a Security Risk, Metal Gear Solid 4, Can you see a Spider?, The Internet Will End in 2012.
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-06-05epic/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-06-05epic" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Relationship Advice</title>
+      <link>http://revision3.com/diggnation/2008-05-29dos</link>
+      <description>
+&lt;p&gt;Top 10 Firefox Features, Best Parking Apology Note, Heat Sensitive Wallpaper, Xbox Server, Hackers Can Blow You Up, Weezers New Music Video, New MP3 Changes How You Listen to Music.&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Top 10 Firefox Features, Best Parking Apology Note, Heat Sensitive Wallpaper, Xbox Server, Hackers Can Blow You Up, Weezers New Music Video, New MP3 Changes How You Listen to Music.&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 30 May 2008 23:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 30 May 2008 23:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Top 10 Firefox Features, Best Parking Apology Note, Heat Sensitive Wallpaper, Xbox Server, Hackers Can Blow You Up, Weezers New Music Video, New MP3 Changes How You Listen to Music.
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0152/diggnation--0152--2008-05-29dos--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0152/diggnation--0152--2008-05-29dos--small.m4v" length="153065748" type="video/x-m4v" />
+      <media:content duration="2921" medium="video" fileSize="153065748" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0152/diggnation--0152--2008-05-29dos--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Relationship Advice</media:title>
+        <media:description>
+Top 10 Firefox Features, Best Parking Apology Note, Heat Sensitive Wallpaper, Xbox Server, Hackers Can Blow You Up, Weezers New Music Video, New MP3 Changes How You Listen to Music.
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-05-29dos/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-05-29dos" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Kevin and Alex Discuss Their Future &amp; Water Bullets</title>
+      <link>http://revision3.com/diggnation/2008-05-23flummoxed</link>
+      <description>
+&lt;p&gt;Geeks on Roller Coasters, Don't Throw Paper Clips at Your Co-Worker, iSight Busts Thieves, Stressful Life of Japanese Reporter, Little Kid Vs. Tuba Player, MUTO: Wall Painted Animation, Pac-Man Explained&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Geeks on Roller Coasters, Don't Throw Paper Clips at Your Co-Worker, iSight Busts Thieves, Stressful Life of Japanese Reporter, Little Kid Vs. Tuba Player, MUTO: Wall Painted Animation, Pac-Man Explained&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 23 May 2008 23:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 23 May 2008 23:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Geeks on Roller Coasters, Don't Throw Paper Clips at Your Co-Worker, iSight Busts Thieves, Stressful Life of Japanese Reporter, Little Kid Vs. Tuba Player, MUTO: Wall Painted Animation, Pac-Man Explained
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0151/diggnation--0151--2008-05-23flummoxed--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0151/diggnation--0151--2008-05-23flummoxed--small.m4v" length="135054970" type="video/x-m4v" />
+      <media:content duration="2575" medium="video" fileSize="135054970" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0151/diggnation--0151--2008-05-23flummoxed--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Kevin and Alex Discuss Their Future &amp; Water Bullets</media:title>
+        <media:description>
+Geeks on Roller Coasters, Don't Throw Paper Clips at Your Co-Worker, iSight Busts Thieves, Stressful Life of Japanese Reporter, Little Kid Vs. Tuba Player, MUTO: Wall Painted Animation, Pac-Man Explained
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-05-23flummoxed/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-05-23flummoxed" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - The New Albrecht Residence</title>
+      <link>http://revision3.com/diggnation/2008-05-15heatwave</link>
+      <description>
+&lt;p&gt;Angry Television Reporters, Mario Kart for Adults, Staring into Jessica Alba's eyes, Food Portion Size, McLovin's Anti-Piracy PSA, Farmer missing sheep find giant snake, NIN gives away new album&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Angry Television Reporters, Mario Kart for Adults, Staring into Jessica Alba's eyes, Food Portion Size, McLovin's Anti-Piracy PSA, Farmer missing sheep find giant snake, NIN gives away new album&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 16 May 2008 23:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 16 May 2008 23:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Angry Television Reporters, Mario Kart for Adults, Staring into Jessica Alba's eyes, Food Portion Size, McLovin's Anti-Piracy PSA, Farmer missing sheep find giant snake, NIN gives away new album
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0150/diggnation--0150--2008-05-15heatwave--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0150/diggnation--0150--2008-05-15heatwave--small.m4v" length="135937019" type="video/x-m4v" />
+      <media:content duration="2597" medium="video" fileSize="135937019" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0150/diggnation--0150--2008-05-15heatwave--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - The New Albrecht Residence</media:title>
+        <media:description>
+Angry Television Reporters, Mario Kart for Adults, Staring into Jessica Alba's eyes, Food Portion Size, McLovin's Anti-Piracy PSA, Farmer missing sheep find giant snake, NIN gives away new album
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-05-15heatwave/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-05-15heatwave" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Win Alex's Xbox with Twitter</title>
+      <link>http://revision3.com/diggnation/2008-05-08sigh</link>
+      <description>
+&lt;p&gt;Twitter Virtualization, Britain's Got Talent, 50 Ways to Use Bacon, Realistic Bowser, Awesome Baseball Save, Mutant Black Squirrels, Crazy Artist Dangles&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Twitter Virtualization, Britain's Got Talent, 50 Ways to Use Bacon, Realistic Bowser, Awesome Baseball Save, Mutant Black Squirrels, Crazy Artist Dangles&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 09 May 2008 23:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 09 May 2008 23:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Twitter Virtualization, Britain's Got Talent, 50 Ways to Use Bacon, Realistic Bowser, Awesome Baseball Save, Mutant Black Squirrels, Crazy Artist Dangles
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0149/diggnation--0149--2008-05-08sigh--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0149/diggnation--0149--2008-05-08sigh--small.m4v" length="115817283" type="video/x-m4v" />
+      <media:content duration="2209" medium="video" fileSize="115817283" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0149/diggnation--0149--2008-05-08sigh--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Win Alex's Xbox with Twitter</media:title>
+        <media:description>
+Twitter Virtualization, Britain's Got Talent, 50 Ways to Use Bacon, Realistic Bowser, Awesome Baseball Save, Mutant Black Squirrels, Crazy Artist Dangles
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-05-08sigh/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-05-08sigh" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Live in San Francisco</title>
+      <link>http://revision3.com/diggnation/2008-05-01mightier</link>
+      <description>
+&lt;p&gt;Build a Spy GPS Tracking System, Man Stabbed while buying GTAIV, Metallica Now Embraces File Sharing, Radiohead turns down US trip, 3G iPhone on June 9th, Pirate Bay has 12 million users, Penis Theft on the Rise.&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Build a Spy GPS Tracking System, Man Stabbed while buying GTAIV, Metallica Now Embraces File Sharing, Radiohead turns down US trip, 3G iPhone on June 9th, Pirate Bay has 12 million users, Penis Theft on the Rise.&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 02 May 2008 23:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 02 May 2008 23:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Build a Spy GPS Tracking System, Man Stabbed while buying GTAIV, Metallica Now Embraces File Sharing, Radiohead turns down US trip, 3G iPhone on June 9th, Pirate Bay has 12 million users, Penis Theft on the Rise.
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0148/diggnation--0148--2008-05-01mightier--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0148/diggnation--0148--2008-05-01mightier--small.m4v" length="138893870" type="video/x-m4v" />
+      <media:content duration="2606" medium="video" fileSize="138893870" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0148/diggnation--0148--2008-05-01mightier--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Live in San Francisco</media:title>
+        <media:description>
+Build a Spy GPS Tracking System, Man Stabbed while buying GTAIV, Metallica Now Embraces File Sharing, Radiohead turns down US trip, 3G iPhone on June 9th, Pirate Bay has 12 million users, Penis Theft on the Rise.
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-05-01mightier/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-05-01mightier" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Urban Star Wars starring Cats</title>
+      <link>http://revision3.com/diggnation/2008-04-22earth</link>
+      <description>
+&lt;p&gt;Best Mugshot Ever, Cat Plays Thermin, Diggnation iPods, Star Wars Street Photos, Longest Slam Dunk, Engineer's Guide To Cats,  Robot Displays Facial Expressions.&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Best Mugshot Ever, Cat Plays Thermin, Diggnation iPods, Star Wars Street Photos, Longest Slam Dunk, Engineer's Guide To Cats,  Robot Displays Facial Expressions.&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 25 Apr 2008 23:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 25 Apr 2008 23:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Best Mugshot Ever, Cat Plays Thermin, Diggnation iPods, Star Wars Street Photos, Longest Slam Dunk, Engineer's Guide To Cats,  Robot Displays Facial Expressions.
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0147/diggnation--0147--2008-04-22earth--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0147/diggnation--0147--2008-04-22earth--small.m4v" length="89894675" type="video/x-m4v" />
+      <media:content duration="1726" medium="video" fileSize="89894675" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0147/diggnation--0147--2008-04-22earth--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Urban Star Wars starring Cats</media:title>
+        <media:description>
+Best Mugshot Ever, Cat Plays Thermin, Diggnation iPods, Star Wars Street Photos, Longest Slam Dunk, Engineer's Guide To Cats,  Robot Displays Facial Expressions.
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-04-22earth/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-04-22earth" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Our Lip Dub is Better Than Yours</title>
+      <link>http://revision3.com/diggnation/2008-04-17xsanned</link>
+      <description>
+&lt;p&gt;Twitter Saves Berkeley Student in Jail, Breakthrough at Stonehenge, Revision3 Lip Dub, Drug Could Cure Alzheimer's, Facebook Addict, &quot;V&quot; Remake Aiming For Theaters, Amazing Oh S#$t Moments.&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Twitter Saves Berkeley Student in Jail, Breakthrough at Stonehenge, Revision3 Lip Dub, Drug Could Cure Alzheimer's, Facebook Addict, &quot;V&quot; Remake Aiming For Theaters, Amazing Oh S#$t Moments.&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 18 Apr 2008 23:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 18 Apr 2008 23:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Twitter Saves Berkeley Student in Jail, Breakthrough at Stonehenge, Revision3 Lip Dub, Drug Could Cure Alzheimer's, Facebook Addict, &quot;V&quot; Remake Aiming For Theaters, Amazing Oh S#$t Moments.
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0146/diggnation--0146--2008-04-17xsanned--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0146/diggnation--0146--2008-04-17xsanned--small.m4v" length="131056573" type="video/x-m4v" />
+      <media:content duration="2502" medium="video" fileSize="131056573" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0146/diggnation--0146--2008-04-17xsanned--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Our Lip Dub is Better Than Yours</media:title>
+        <media:description>
+Twitter Saves Berkeley Student in Jail, Breakthrough at Stonehenge, Revision3 Lip Dub, Drug Could Cure Alzheimer's, Facebook Addict, &quot;V&quot; Remake Aiming For Theaters, Amazing Oh S#$t Moments.
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-04-17xsanned/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-04-17xsanned" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - A Hotel Room in Amsterdam</title>
+      <link>http://revision3.com/diggnation/2008-04-08tullamore</link>
+      <description>
+&lt;p&gt;Xbox 360 Moron, Nerd Holds A Woman, Firefox 3 In June, Lala from Tiki Bar TV gets clean, Neighbors Stealing Your WiFi, SEO Design Rap, Circuit City Does $12000 Of Damage to New Car.&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Xbox 360 Moron, Nerd Holds A Woman, Firefox 3 In June, Lala from Tiki Bar TV gets clean, Neighbors Stealing Your WiFi, SEO Design Rap, Circuit City Does $12000 Of Damage to New Car.&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 11 Apr 2008 23:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 11 Apr 2008 23:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Xbox 360 Moron, Nerd Holds A Woman, Firefox 3 In June, Lala from Tiki Bar TV gets clean, Neighbors Stealing Your WiFi, SEO Design Rap, Circuit City Does $12000 Of Damage to New Car.
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0145/diggnation--0145--2008-04-08tullamore--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0145/diggnation--0145--2008-04-08tullamore--small.m4v" length="129262906" type="video/x-m4v" />
+      <media:content duration="2470" medium="video" fileSize="129262906" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0145/diggnation--0145--2008-04-08tullamore--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - A Hotel Room in Amsterdam</media:title>
+        <media:description>
+Xbox 360 Moron, Nerd Holds A Woman, Firefox 3 In June, Lala from Tiki Bar TV gets clean, Neighbors Stealing Your WiFi, SEO Design Rap, Circuit City Does $12000 Of Damage to New Car.
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-04-08tullamore/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-04-08tullamore" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Diggnation Live in Amsterdam</title>
+      <link>http://revision3.com/diggnation/amsterdamnation2</link>
+      <description>
+&lt;p&gt;Photoshop Users are Pirates, Having Sex With A Patio Table,  Mr. T Saves Boy,  Victory for the Topless Front,  3G iPhone Coming in Months,  Redheads Have More Sex,  Rats Use Miniature Rakes.&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Photoshop Users are Pirates, Having Sex With A Patio Table,  Mr. T Saves Boy,  Victory for the Topless Front,  3G iPhone Coming in Months,  Redheads Have More Sex,  Rats Use Miniature Rakes.&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 04 Apr 2008 23:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 04 Apr 2008 23:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Photoshop Users are Pirates, Having Sex With A Patio Table,  Mr. T Saves Boy,  Victory for the Topless Front,  3G iPhone Coming in Months,  Redheads Have More Sex,  Rats Use Miniature Rakes.
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0144/diggnation--0144--amsterdamnation2--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0144/diggnation--0144--amsterdamnation2--small.m4v" length="137922489" type="video/x-m4v" />
+      <media:content duration="2644" medium="video" fileSize="137922489" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0144/diggnation--0144--amsterdamnation2--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Diggnation Live in Amsterdam</media:title>
+        <media:description>
+Photoshop Users are Pirates, Having Sex With A Patio Table,  Mr. T Saves Boy,  Victory for the Topless Front,  3G iPhone Coming in Months,  Redheads Have More Sex,  Rats Use Miniature Rakes.
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/amsterdamnation2/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/amsterdamnation2" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Huge Diggnation Announcement </title>
+      <link>http://revision3.com/diggnation/2008-03-27foxnews</link>
+      <description>
+&lt;p&gt;World of Warcraft Virgin, Command and Conquer Red Alert 3 Screenshots, If Mario Was Real, Who Owns the Organic Companies, Solar Powered Building, Laptop Skins, Star Wars Sweded&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;World of Warcraft Virgin, Command and Conquer Red Alert 3 Screenshots, If Mario Was Real, Who Owns the Organic Companies, Solar Powered Building, Laptop Skins, Star Wars Sweded&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Sat, 29 Mar 2008 00:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Sat, 29 Mar 2008 00:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+World of Warcraft Virgin, Command and Conquer Red Alert 3 Screenshots, If Mario Was Real, Who Owns the Organic Companies, Solar Powered Building, Laptop Skins, Star Wars Sweded
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0143/diggnation--0143--2008-03-27foxnews--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0143/diggnation--0143--2008-03-27foxnews--small.m4v" length="105349209" type="video/x-m4v" />
+      <media:content duration="2014" medium="video" fileSize="105349209" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0143/diggnation--0143--2008-03-27foxnews--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Huge Diggnation Announcement </media:title>
+        <media:description>
+World of Warcraft Virgin, Command and Conquer Red Alert 3 Screenshots, If Mario Was Real, Who Owns the Organic Companies, Solar Powered Building, Laptop Skins, Star Wars Sweded
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-03-27foxnews/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-03-27foxnews" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - iPhone Rumor Du Jour</title>
+      <link>http://revision3.com/diggnation/2008-03-20hamsters</link>
+      <description>
+&lt;p&gt;No Blu-Ray for XBox 360, Reznor makes 1.6 million, Firefox 3 Eats Less Memory, Google Sky, RIAA Sets 750 Per Song, Intel Releasing 6 Cores, Reporter Gets Owned and Kevin's latest iPhone Rumor
+&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;No Blu-Ray for XBox 360, Reznor makes 1.6 million, Firefox 3 Eats Less Memory, Google Sky, RIAA Sets 750 Per Song, Intel Releasing 6 Cores, Reporter Gets Owned and Kevin's latest iPhone Rumor
+&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Sat, 22 Mar 2008 00:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Sat, 22 Mar 2008 00:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+No Blu-Ray for XBox 360, Reznor makes 1.6 million, Firefox 3 Eats Less Memory, Google Sky, RIAA Sets 750 Per Song, Intel Releasing 6 Cores, Reporter Gets Owned and Kevin's latest iPhone Rumor
+
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0142/diggnation--0142--2008-03-20hamsters--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0142/diggnation--0142--2008-03-20hamsters--small.m4v" length="156887494" type="video/x-m4v" />
+      <media:content duration="2992" medium="video" fileSize="156887494" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0142/diggnation--0142--2008-03-20hamsters--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - iPhone Rumor Du Jour</media:title>
+        <media:description>
+No Blu-Ray for XBox 360, Reznor makes 1.6 million, Firefox 3 Eats Less Memory, Google Sky, RIAA Sets 750 Per Song, Intel Releasing 6 Cores, Reporter Gets Owned and Kevin's latest iPhone Rumor
+
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-03-20hamsters/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-03-20hamsters" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Furniture: Transform!</title>
+      <link>http://revision3.com/diggnation/2008-03-13latenight</link>
+      <description>
+&lt;p&gt;Garfield Minus Garfield, Plants Twitter, Add Room to Your Apartment, Fail Dogs, Transforming Furniture, 9 Signs to Not Hire a Web Designer, 12 Year Old Magneto&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Garfield Minus Garfield, Plants Twitter, Add Room to Your Apartment, Fail Dogs, Transforming Furniture, 9 Signs to Not Hire a Web Designer, 12 Year Old Magneto&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Sat, 15 Mar 2008 00:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Sat, 15 Mar 2008 00:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Garfield Minus Garfield, Plants Twitter, Add Room to Your Apartment, Fail Dogs, Transforming Furniture, 9 Signs to Not Hire a Web Designer, 12 Year Old Magneto
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0141/diggnation--0141--2008-03-13latenight--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0141/diggnation--0141--2008-03-13latenight--small.m4v" length="125728445" type="video/x-m4v" />
+      <media:content duration="2408" medium="video" fileSize="125728445" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0141/diggnation--0141--2008-03-13latenight--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Furniture: Transform!</media:title>
+        <media:description>
+Garfield Minus Garfield, Plants Twitter, Add Room to Your Apartment, Fail Dogs, Transforming Furniture, 9 Signs to Not Hire a Web Designer, 12 Year Old Magneto
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-03-13latenight/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-03-13latenight" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Say It Ain't So, Favre</title>
+      <link>http://revision3.com/diggnation/2008-03-06burner</link>
+      <description>
+&lt;p&gt;How Not to Firebomb a Night Club, New Nine Inch Nails Record, Google Gives Voicemail to the Homeless, Top 10 Barely Legal Gadgets, US Soldier Throws Puppy, iPhone Stopwatch hits 1,000, Brett Favre Retires&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;How Not to Firebomb a Night Club, New Nine Inch Nails Record, Google Gives Voicemail to the Homeless, Top 10 Barely Legal Gadgets, US Soldier Throws Puppy, iPhone Stopwatch hits 1,000, Brett Favre Retires&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Sat, 08 Mar 2008 00:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Sat, 08 Mar 2008 00:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+How Not to Firebomb a Night Club, New Nine Inch Nails Record, Google Gives Voicemail to the Homeless, Top 10 Barely Legal Gadgets, US Soldier Throws Puppy, iPhone Stopwatch hits 1,000, Brett Favre Retires
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0140/diggnation--0140--2008-03-06burner--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0140/diggnation--0140--2008-03-06burner--small.m4v" length="136154649" type="video/x-m4v" />
+      <media:content duration="2590" medium="video" fileSize="136154649" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0140/diggnation--0140--2008-03-06burner--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Say It Ain't So, Favre</media:title>
+        <media:description>
+How Not to Firebomb a Night Club, New Nine Inch Nails Record, Google Gives Voicemail to the Homeless, Top 10 Barely Legal Gadgets, US Soldier Throws Puppy, iPhone Stopwatch hits 1,000, Brett Favre Retires
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-03-06burner/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-03-06burner" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - A Couch In St. Louis</title>
+      <link>http://revision3.com/diggnation/2008-02-28skyz</link>
+      <description>
+&lt;p&gt;Dubai Architecture, Rejected Star Wars Promotional Crap, Dell Salesman Goes 
+Insane, Do You Dress Like a Douchebag?, Recharge Your iPod with your Shirt, 
+Elmo Live, 50% of all BitTorrent is TV shows.&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Dubai Architecture, Rejected Star Wars Promotional Crap, Dell Salesman Goes 
+Insane, Do You Dress Like a Douchebag?, Recharge Your iPod with your Shirt, 
+Elmo Live, 50% of all BitTorrent is TV shows.&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Sat, 01 Mar 2008 00:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Sat, 01 Mar 2008 00:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Dubai Architecture, Rejected Star Wars Promotional Crap, Dell Salesman Goes 
+Insane, Do You Dress Like a Douchebag?, Recharge Your iPod with your Shirt, 
+Elmo Live, 50% of all BitTorrent is TV shows.
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0139/diggnation--0139--2008-02-28skyz--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0139/diggnation--0139--2008-02-28skyz--small.m4v" length="150908282" type="video/x-m4v" />
+      <media:content duration="2890" medium="video" fileSize="150908282" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0139/diggnation--0139--2008-02-28skyz--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - A Couch In St. Louis</media:title>
+        <media:description>
+Dubai Architecture, Rejected Star Wars Promotional Crap, Dell Salesman Goes 
+Insane, Do You Dress Like a Douchebag?, Recharge Your iPod with your Shirt, 
+Elmo Live, 50% of all BitTorrent is TV shows.
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-02-28skyz/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-02-28skyz" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Live from St. Louis</title>
+      <link>http://revision3.com/diggnation/2008-02-22snow</link>
+      <description>
+&lt;p&gt;Divorce over WoW, Indy trailer, HD DVD is Dead, Pirate Bay Captain Speaks out, Fidel Castro Retires, Yahoo design team fired, GeForce 8 cards gain PhysX
+
+&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Divorce over WoW, Indy trailer, HD DVD is Dead, Pirate Bay Captain Speaks out, Fidel Castro Retires, Yahoo design team fired, GeForce 8 cards gain PhysX
+
+&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Sat, 23 Feb 2008 07:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Sat, 23 Feb 2008 07:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Divorce over WoW, Indy trailer, HD DVD is Dead, Pirate Bay Captain Speaks out, Fidel Castro Retires, Yahoo design team fired, GeForce 8 cards gain PhysX
+
+
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0138/diggnation--0138--2008-02-22snow--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0138/diggnation--0138--2008-02-22snow--small.m4v" length="124954595" type="video/x-m4v" />
+      <media:content duration="2375" medium="video" fileSize="124954595" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0138/diggnation--0138--2008-02-22snow--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Live from St. Louis</media:title>
+        <media:description>
+Divorce over WoW, Indy trailer, HD DVD is Dead, Pirate Bay Captain Speaks out, Fidel Castro Retires, Yahoo design team fired, GeForce 8 cards gain PhysX
+
+
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-02-22snow/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-02-22snow" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Delay</title>
+      <link>http://revision3.com/diggnation/late</link>
+      <description>
+&lt;p&gt;Diggnation episode 138 will be released with a short delay due to ice and traffic
+weather difficulties.  Thank you for your patience and understanding.
+
+&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Diggnation episode 138 will be released with a short delay due to ice and traffic
+weather difficulties.  Thank you for your patience and understanding.
+
+&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Sat, 23 Feb 2008 00:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Sat, 23 Feb 2008 00:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Diggnation episode 138 will be released with a short delay due to ice and traffic
+weather difficulties.  Thank you for your patience and understanding.
+
+
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/-004/diggnation---004--late--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/-004/diggnation---004--late--small.m4v" length="3748594" type="video/x-m4v" />
+      <media:content duration="69" medium="video" fileSize="3748594" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/-004/diggnation---004--late--small.m4v" cnettv:aspectRatio="16x9" type="video/x-m4v">
+        <media:title>Diggnation - Delay</media:title>
+        <media:description>
+Diggnation episode 138 will be released with a short delay due to ice and traffic
+weather difficulties.  Thank you for your patience and understanding.
+
+
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/late/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/late" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Edward Cold Hands</title>
+      <link>http://revision3.com/diggnation/2008-02-15comhcinc</link>
+      <description>
+&lt;p&gt;iPhone Clone, Netflix Picks Blu-Ray, Collapsible Bike, Spore Release Date, Yahoo Rejects Microsoft, Writer's Strike is Over, Cop Vs. Skateboarder&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;iPhone Clone, Netflix Picks Blu-Ray, Collapsible Bike, Spore Release Date, Yahoo Rejects Microsoft, Writer's Strike is Over, Cop Vs. Skateboarder&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 15 Feb 2008 23:51:50 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 15 Feb 2008 23:51:50 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+iPhone Clone, Netflix Picks Blu-Ray, Collapsible Bike, Spore Release Date, Yahoo Rejects Microsoft, Writer's Strike is Over, Cop Vs. Skateboarder
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0137/diggnation--0137--2008-02-15comhcinc--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0137/diggnation--0137--2008-02-15comhcinc--small.m4v" length="157442526" type="video/quicktime" />
+      <media:content duration="2984" medium="video" fileSize="157442526" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0137/diggnation--0137--2008-02-15comhcinc--small.m4v" cnettv:aspectRatio="16x9" type="video/quicktime">
+        <media:title>Diggnation - Edward Cold Hands</media:title>
+        <media:description>
+iPhone Clone, Netflix Picks Blu-Ray, Collapsible Bike, Spore Release Date, Yahoo Rejects Microsoft, Writer's Strike is Over, Cop Vs. Skateboarder
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-02-15comhcinc/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-02-15comhcinc" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Sometimes Alex Gets Bored</title>
+      <link>http://revision3.com/diggnation/2008-02-07samureye</link>
+      <description>
+&lt;p&gt;Geeky Home Theaters, F Planet Earth, Man Hides Castle, Rambo, Crazy Airport, Explosive Skateboarding, Clean Your Computer Screen&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Geeky Home Theaters, F Planet Earth, Man Hides Castle, Rambo, Crazy Airport, Explosive Skateboarding, Clean Your Computer Screen&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 08 Feb 2008 23:46:41 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 08 Feb 2008 23:46:41 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Geeky Home Theaters, F Planet Earth, Man Hides Castle, Rambo, Crazy Airport, Explosive Skateboarding, Clean Your Computer Screen
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0136/diggnation--0136--2008-02-07samureye--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0136/diggnation--0136--2008-02-07samureye--small.m4v" length="254171189" type="video/quicktime" />
+      <media:content duration="2497" medium="video" fileSize="254171189" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0136/diggnation--0136--2008-02-07samureye--small.m4v" cnettv:aspectRatio="16x9" type="video/quicktime">
+        <media:title>Diggnation - Sometimes Alex Gets Bored</media:title>
+        <media:description>
+Geeky Home Theaters, F Planet Earth, Man Hides Castle, Rambo, Crazy Airport, Explosive Skateboarding, Clean Your Computer Screen
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-02-07samureye/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-02-07samureye" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - World of Diggnation</title>
+      <link>http://revision3.com/diggnation/2008-01-31tokenuser</link>
+      <description>
+&lt;p&gt;Pownce Launches, Johnny Johnny is a Hero, Revision3 on Virgin America, EA hates Fox News, Cheeseburger in a Can, World of Warcraft hits 10 million, Facebook Apps on any Website&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Pownce Launches, Johnny Johnny is a Hero, Revision3 on Virgin America, EA hates Fox News, Cheeseburger in a Can, World of Warcraft hits 10 million, Facebook Apps on any Website&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 01 Feb 2008 23:48:59 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 01 Feb 2008 23:48:59 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Pownce Launches, Johnny Johnny is a Hero, Revision3 on Virgin America, EA hates Fox News, Cheeseburger in a Can, World of Warcraft hits 10 million, Facebook Apps on any Website
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0135/diggnation--0135--2008-01-31tokenuser--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0135/diggnation--0135--2008-01-31tokenuser--small.m4v" length="136512532" type="video/quicktime" />
+      <media:content duration="2589" medium="video" fileSize="136512532" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0135/diggnation--0135--2008-01-31tokenuser--small.m4v" cnettv:aspectRatio="16x9" type="video/quicktime">
+        <media:title>Diggnation - World of Diggnation</media:title>
+        <media:description>
+Pownce Launches, Johnny Johnny is a Hero, Revision3 on Virgin America, EA hates Fox News, Cheeseburger in a Can, World of Warcraft hits 10 million, Facebook Apps on any Website
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-01-31tokenuser/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-01-31tokenuser" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Dreaming of the Super Bowl</title>
+      <link>http://revision3.com/diggnation/2008-01-24omaha</link>
+      <description>
+&lt;p&gt;Super Bowl Fantasies, Open Letter to Sci-Fi, Kickflip a Surfboard, Creepy Ads, Cat Suit of Armor, WTF Kids Ride, Survive a 500 foot fall, Counterfeit $100 Bills&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Super Bowl Fantasies, Open Letter to Sci-Fi, Kickflip a Surfboard, Creepy Ads, Cat Suit of Armor, WTF Kids Ride, Survive a 500 foot fall, Counterfeit $100 Bills&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 25 Jan 2008 23:43:27 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 25 Jan 2008 23:43:27 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Super Bowl Fantasies, Open Letter to Sci-Fi, Kickflip a Surfboard, Creepy Ads, Cat Suit of Armor, WTF Kids Ride, Survive a 500 foot fall, Counterfeit $100 Bills
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0134/diggnation--0134--2008-01-24omaha--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0134/diggnation--0134--2008-01-24omaha--small.m4v" length="133491935" type="video/quicktime" />
+      <media:content duration="2538" medium="video" fileSize="133491935" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0134/diggnation--0134--2008-01-24omaha--small.m4v" cnettv:aspectRatio="16x9" type="video/quicktime">
+        <media:title>Diggnation - Dreaming of the Super Bowl</media:title>
+        <media:description>
+Super Bowl Fantasies, Open Letter to Sci-Fi, Kickflip a Surfboard, Creepy Ads, Cat Suit of Armor, WTF Kids Ride, Survive a 500 foot fall, Counterfeit $100 Bills
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-01-24omaha/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-01-24omaha" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Still Flying Sober</title>
+      <link>http://revision3.com/diggnation/2008-01-17acidburn</link>
+      <description>
+&lt;p&gt;MacBook Air, Blu-Ray Victory, Carmen Electra Without Make-Up, Pioneer Kuro, Radiohead Top Selling CD, Amazing Tennis Serve, Gizmodo Banned from CES&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;MacBook Air, Blu-Ray Victory, Carmen Electra Without Make-Up, Pioneer Kuro, Radiohead Top Selling CD, Amazing Tennis Serve, Gizmodo Banned from CES&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Sat, 19 Jan 2008 00:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Sat, 19 Jan 2008 00:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+MacBook Air, Blu-Ray Victory, Carmen Electra Without Make-Up, Pioneer Kuro, Radiohead Top Selling CD, Amazing Tennis Serve, Gizmodo Banned from CES
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0133/diggnation--0133--2008-01-17acidburn--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0133/diggnation--0133--2008-01-17acidburn--small.m4v" length="147151311" type="video/quicktime" />
+      <media:content duration="2795" medium="video" fileSize="147151311" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0133/diggnation--0133--2008-01-17acidburn--small.m4v" cnettv:aspectRatio="16x9" type="video/quicktime">
+        <media:title>Diggnation - Still Flying Sober</media:title>
+        <media:description>
+MacBook Air, Blu-Ray Victory, Carmen Electra Without Make-Up, Pioneer Kuro, Radiohead Top Selling CD, Amazing Tennis Serve, Gizmodo Banned from CES
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-01-17acidburn/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-01-17acidburn" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Digg that Souljah weather girl</title>
+      <link>http://revision3.com/diggnation/2008-01-10spinney</link>
+      <description>
+&lt;p&gt;Things Men Wish Women Knew, Dancing Weather Girl, Laughably Misleading Ads, 9 Year Old Beats Guitar Hero on EXPERT, Blue Angels, Hello Kitty Contact Lenses, Trippiest Simpsons Art Ever&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;Things Men Wish Women Knew, Dancing Weather Girl, Laughably Misleading Ads, 9 Year Old Beats Guitar Hero on EXPERT, Blue Angels, Hello Kitty Contact Lenses, Trippiest Simpsons Art Ever&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Fri, 11 Jan 2008 00:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Fri, 11 Jan 2008 00:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+Things Men Wish Women Knew, Dancing Weather Girl, Laughably Misleading Ads, 9 Year Old Beats Guitar Hero on EXPERT, Blue Angels, Hello Kitty Contact Lenses, Trippiest Simpsons Art Ever
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0132/diggnation--0132--2008-01-10spinney--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0132/diggnation--0132--2008-01-10spinney--small.m4v" length="105743766" type="video/quicktime" />
+      <media:content duration="2004" medium="video" fileSize="105743766" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0132/diggnation--0132--2008-01-10spinney--small.m4v" cnettv:aspectRatio="16x9" type="video/quicktime">
+        <media:title>Diggnation - Digg that Souljah weather girl</media:title>
+        <media:description>
+Things Men Wish Women Knew, Dancing Weather Girl, Laughably Misleading Ads, 9 Year Old Beats Guitar Hero on EXPERT, Blue Angels, Hello Kitty Contact Lenses, Trippiest Simpsons Art Ever
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-01-10spinney/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-01-10spinney" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+    <item>
+      <title>Diggnation - Alcohol Free in the New Year</title>
+      <link>http://revision3.com/diggnation/2008-01-03diggdogg</link>
+      <description>
+&lt;p&gt;The Digg Song!, 100 Things We Didn't Know, World Record Motorcycle Jump, Hardest Video Game Ever, Cop Tasers Himself, Solar Energy Has Arrived, Your Best Defense Against Crossbow Attacks&lt;/p&gt;
+      </description>
+      <content:encoded>
+&lt;p&gt;The Digg Song!, 100 Things We Didn't Know, World Record Motorcycle Jump, Hardest Video Game Ever, Cop Tasers Himself, Solar Energy Has Arrived, Your Best Defense Against Crossbow Attacks&lt;/p&gt;
+      </content:encoded>
+      <author>webmaster@revision3.com (Revision3)</author>
+      <pubDate>Sat, 05 Jan 2008 00:00:00 GMT</pubDate>
+      <cnettv:lastModDate>Sat, 05 Jan 2008 00:00:00 GMT</cnettv:lastModDate>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:keywords>diggnation</itunes:keywords>
+      <itunes:author>Revision3</itunes:author>
+      <itunes:subtitle>
+The Digg Song!, 100 Things We Didn't Know, World Record Motorcycle Jump, Hardest Video Game Ever, Cop Tasers Himself, Solar Energy Has Arrived, Your Best Defense Against Crossbow Attacks
+      </itunes:subtitle>
+      <guid isPermaLink="false">/diggnation/0131/diggnation--0131--2008-01-03diggdogg--small.m4v</guid>
+      <enclosure url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0131/diggnation--0131--2008-01-03diggdogg--small.m4v" length="181612848" type="video/quicktime" />
+      <media:content duration="3414" medium="video" fileSize="181612848" url="http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0131/diggnation--0131--2008-01-03diggdogg--small.m4v" cnettv:aspectRatio="16x9" type="video/quicktime">
+        <media:title>Diggnation - Alcohol Free in the New Year</media:title>
+        <media:description>
+The Digg Song!, 100 Things We Didn't Know, World Record Motorcycle Jump, Hardest Video Game Ever, Cop Tasers Himself, Solar Energy Has Arrived, Your Best Defense Against Crossbow Attacks
+        </media:description>
+        <media:thumbnail url="http://revision3.com/static/images/shows/diggnation/2008-01-03diggdogg/screenshot.jpg" width="100" height="100" />
+        <media:player url="http://revision3.com/diggnation/2008-01-03diggdogg" />
+        <media:rating>adult</media:rating>
+        <media:keywords>diggnation, kevin rose, alex albrecht, digg.com, digg, revision3</media:keywords>
+      </media:content>
+      <cnettv:franchiseID>46</cnettv:franchiseID>
+    </item>
+  </channel>
+</rss>

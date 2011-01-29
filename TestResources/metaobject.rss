@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8'?><rss xmlns:atom='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' version='2.0'><channel><atom:id>tag:blogger.com,1999:blog-8397311766319215218</atom:id><lastBuildDate>Sun, 20 Apr 2008 21:13:50 +0000</lastBuildDate><title>metablog</title><description/><link>http://www.metaobject.com/blog/</link><managingEditor>Marcel Weiher</managingEditor><generator>Blogger</generator><openSearch:totalResults>10</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><openSearch:itemsPerPage>25</openSearch:itemsPerPage><item><guid isPermaLink='false'>tag:blogger.com,1999:blog-8397311766319215218.post-5786690447800980125</guid><pubDate>Sun, 20 Apr 2008 20:57:00 +0000</pubDate><atom:updated>2008-04-20T13:57:03.222-07:00</atom:updated><title>Higher Order Messaging backgrounded</title><description>
+&lt;a href="http://www.bofh.org.uk/articles/2007/05/19/domain-agnostic-languages"&gt;Piers Cawley&lt;/a&gt; talks 
+about &lt;a href="http://rspec.info/"&gt;RSpec&lt;/a&gt;'s use of &lt;a href="http://www.metaobject.com/Research/"&gt;HOM&lt;/a&gt;:
+
+&lt;blockquote&gt;It is, however, encouraging to see initiatives like Rspec which, through judicious use of higher order messages enables a much more fluent environment for writing tests: &lt;/blockquote&gt;
+
+I think that's the first time I've seen HOM used to explain something else, rather than being the
+&lt;a href="http://nat.truemesh.com/archives/000535.html"&gt;object&lt;/a&gt; of &lt;a href="http://www.devchix.com/2007/05/25/ruby-dry-up-your-enumerations/"&gt;attention&lt;/a&gt; itself.  So HOM is starting to be seen as simply a part of the computing landscape, at least by some.  Cool.
+
+HOM was never conceived of as an interesting thing by itself but rather as a (meta-)building block for
+building more expressive computational forms.  RSpec looks exactly like one of those cool things HOM 
+enables that I would never have come up with myself.  I look forward to seeing more.
+</description><link>http://www.metaobject.com/blog/2008/04/higher-order-messaging-backgrounded.html</link><author>Marcel Weiher</author></item><item><guid isPermaLink='false'>tag:blogger.com,1999:blog-8397311766319215218.post-1602973155561144165</guid><pubDate>Sun, 20 Apr 2008 04:42:00 +0000</pubDate><atom:updated>2008-04-20T14:13:51.025-07:00</atom:updated><title>Not just high performance Objective-C</title><description>Addendum to my &lt;a href="http://www.metaobject.com/blog/2007/08/high-performance-objective-c-i.html"&gt;article&lt;/a&gt; on implementing a high performance Postscript interpreter in Objective-C:  not just is performance better, so is accuracy.
+
+Despite the fact that we are optimizing the heck out of the Objective-C objects we are using, they still
+give us encapsulation and polymorphism, allowing us to choose arbitrary representations.  For example,
+most Postscript interpreters use a fixed-size value object (polymorphic in a C-union type of way) 
+that constraints floating point precision to 32 bits.  With Objective-C, we have no such constraints,
+so EGOS floats are actually 64 bit doubles, so running the modified benchmark below in PostView doesn't just yield the result 75% faster than Preview, it also produces it with 7 orders of magnitude less error.  Not that that is necessarily important in Postscript, but it is a pleasant side effect and shows the power of combining performance with abstraction.
+
+
+&lt;pre&gt;
+%!
+  usertime
+  1000 0 1 10000000 { pop 0.0001 sub  } bind for
+  exch usertime exch sub dup ==
+  20 20 moveto /Times-Roman 24 selectfont
+  100 string cvs show ( ms) show ( error:  ) show 
+  1000.0 div 100.0 mul abs  100 string cvs show ( %) show
+  showpage
+&lt;/pre&gt;</description><link>http://www.metaobject.com/blog/2008/04/not-just-high-performance-objective-c.html</link><author>Marcel Weiher</author></item><item><guid isPermaLink='false'>tag:blogger.com,1999:blog-8397311766319215218.post-4715721926048787685</guid><pubDate>Thu, 29 Nov 2007 02:27:00 +0000</pubDate><atom:updated>2007-11-28T18:27:25.863-08:00</atom:updated><title>Better HOM selects</title><description>Wincent Colaiuta &lt;a href="http://wincent.com/a/about/wincent/weblog/archives/2006/11/hom_improvement.php"&gt;discusses&lt;/a&gt; a variant of the select HOM that takes an arbitrary number of
+argument messages.  I like it!&lt;p&gt;
+
+My initial implementation actually had arbitrary nesting, but as he discusses with collect, that
+requires a trigger message to start, as there is no way of knowing at runtime when the expression terminates.  It never occurred to me that this limitation did not apply to select, which can
+look at the return type of the messages sent and stop when it reaches a BOOL (char).&lt;p&gt;
+
+Nice.&lt;p&gt;
+
+p.s.:  the arbitrary nesting is still in the implementation, with each of the collection processing
+HOMs actually running an enumerator and those enumerators stackable, and this is two of the reasons
+the implementation is so gnarly:  (1) there is extra generality that is not needed and (2) making
+that more general mechanism run fast was really, really tricky.&lt;p&gt;
+p.p.s:  He actually discussed it almost a year ago, but I just saw it now.&lt;p&gt;</description><link>http://www.metaobject.com/blog/2007/11/better-hom-selects.html</link><author>Marcel Weiher</author></item><item><guid isPermaLink='false'>tag:blogger.com,1999:blog-8397311766319215218.post-4907891978879381450</guid><pubDate>Wed, 03 Oct 2007 18:41:00 +0000</pubDate><atom:updated>2007-10-03T11:41:56.434-07:00</atom:updated><title>Reading Helps</title><description>&lt;a href="http://www.cincomsmalltalk.com/blog/blogView"&gt;James Robertson&lt;/a&gt; &lt;a href="http://www.cincomsmalltalk.com/blog/blogView?showComments=true&amp;printTitle=Stupidity_as_an_Ideology&amp;entry=3368786071"&gt;slams&lt;/a&gt; the proposal by the &lt;a href="http://www.globalisation.eu/blog/technology/microsoft-responds-to-our-unbundling-proposal-200709251246/"&gt;EU free market institute&lt;/a&gt; to unbundle the OS from PCs sold in the EU.
+&lt;blockquote&gt;
+
+I've seen a lot of stupid ideas float past, but &lt;a href="http://tech.blorge.com/Structure:%20/2007/09/24/globalization-institute-wants-eu-to-unbundle-windows-with-pcs/"&gt;this&lt;/a&gt; one from the EU's Globalization Institute makes it into the top 5 - only the existence of the RIAA and the MPAA prevent a complete victory for these morons:
+&lt;blockquote&gt;
+[..]
+The think tank recommended to the EU that all computers be sold without an operating system and sees no reason "why computer operating systems could not follow the same model as computer hard drives and processors."
+&lt;/blockquote&gt;
+Yes, installing an OS from scratch is exactly what most buyers long to do - it's such a productive use of their time.
+
+&lt;/blockquote&gt;
+
+Hmmm, what could they mean with the "same model as computer hard drives and processors"?&lt;p&gt;
+
+Well, of course!  We all buy processors and hard drives separately, mount the CPU on our separately purchased motherboard, hook up hard-drive and power-supply and stick it all in a chassis.  That *must* be what they meant with that phrase.&lt;p&gt;
+
+Or maybe, they meant that you can configure your computer with different CPUs and hard drives, and have the vendor ship you a machine configured to your specifications, whereas you cannot actually get
+a computer and not pay the Microsoft tax?   Nah, that's just *crazy*:
+
+&lt;blockquote&gt;
+IT professionals are being forced to adopt Microsoft's operating systems — even if they tell their PC supplier they want a system free of Microsoft software, ZDNet UK's research has revealed.
+&lt;/blockquote&gt;
+
+&lt;a href="http://news.zdnet.co.uk/hardware/0,1000000091,39286228,00.htm"&gt;Oh&lt;/a&gt;.&lt;p&gt;  
+</description><link>http://www.metaobject.com/blog/2007/10/reading-helps.html</link><author>Marcel Weiher</author></item><item><guid isPermaLink='false'>tag:blogger.com,1999:blog-8397311766319215218.post-4162159017653404038</guid><pubDate>Mon, 01 Oct 2007 00:28:00 +0000</pubDate><atom:updated>2007-09-30T23:17:50.029-07:00</atom:updated><title>'Thousands' or transistor²</title><description>The Alan Kay quote in my previous &lt;a href="http://www.metaobject.com/blog/2007/09/objective-c-futures.html"&gt;post&lt;/a&gt; made me think of &lt;a href="http://www.eetimes.com/news/latest/showArticle.jhtml?articleID=172301051"&gt;Montecito&lt;/a&gt;, the new Itanic version with 1.72 billion transistors.  Compare that to the ARM6, which had a measly 35K transistors, including its 4K cache.&lt;p&gt; Dividing the two numbers gets you almost 50K.  That's how many ARM6 CPUs you could get on the same chip with the same transistor budget as the Montecito.  A processor for every object.  Or viewed another way, more ARM6-equivalents than the ARM6 has transistors.  Which begs the question:  is the  Montecito proportionally as much an improvement in computational capacity as an ARM6 is over a  single transistor?&lt;p&gt;  </description><link>http://www.metaobject.com/blog/2007/09/or-transistor.html</link><author>Marcel Weiher</author></item><item><guid isPermaLink='false'>tag:blogger.com,1999:blog-8397311766319215218.post-5228696922178297357</guid><pubDate>Wed, 26 Sep 2007 00:57:00 +0000</pubDate><atom:updated>2007-09-25T17:59:22.763-07:00</atom:updated><category domain='http://www.blogger.com/atom/ns#'>Threading</category><category domain='http://www.blogger.com/atom/ns#'>Objective-C</category><title>Objective-C future(s)</title><description>Via &lt;a href="http://lambda-the-ultimate.org/node/2469"&gt;LtU&lt;/a&gt;, I got alerted to the fact that the&lt;a href="http://www.etoile-project.org/"&gt;Etoile&lt;/a&gt; project now has an &lt;a href="http://www.etoile-project.org/etoile/blog/2007/09/futures-in-objective-c.html"&gt;implementation&lt;/a&gt; of &lt;a href="http://en.wikipedia.org/wiki/Future_%28programming%29"&gt;futures&lt;/a&gt;.  Cool.&lt;p&gt;However, their implementation has specific objects reacting asynchronously to messages, making it more similar to the &lt;a href="http://dspace.mit.edu/handle/1721.1/6272"&gt;actor&lt;/a&gt; &lt;a href="http://www.lcs.mit.edu/publications/specpub.php?id=762"&gt;model&lt;/a&gt;,which as they mention is also very much Alan Kay's &lt;a href="http://gagne.homedns.org/~tgagne/contrib/EarlyHistoryST.html"&gt;original conceptual model&lt;/a&gt; for Smalltalk:&lt;p&gt;	&lt;blockquote&gt;Bob Barton, the main designer of the B5000 and a professor at Utah had said in one of his talks a few days earlier: "The basic principle of recursive design is to make the parts have the same power as the whole." For the first time I thought of the whole as the entire computer and wondered why anyone would want to divide it up into weaker things called data structures and procedures. &lt;em&gt;Why not divide it up into little computers&lt;/em&gt;, as time sharing was starting to? But not in dozens. Why not thousands of them, each simulating a useful structure? [Emphasis mine]&lt;/blockquote&gt;Actors are inherently asynchronous, each actor runs in a separate process/thread and messages arealso asynchronous, with the sender not waiting for the message to be delivered or ever gettinga return value.  Of course the actor model also makes all objects active, so the Etoile model, whichonly makes objects of specific classes active, is somewhere inbetween.&lt;p&gt;Futures, on the other hand, as introduced in &lt;a href="http://portal.acm.org/citation.cfm?doid=4472.4478"&gt;MULTLSIP&lt;/a&gt; &lt;a href="http://pages.cs.wisc.edu/~fischer/cs538.s07/multilisp.pdf"&gt;(pdf)&lt;/a&gt;, tryto integrate asynchronous execution into a traditional call/return control- and data-flow.  So messages(or functions in MULTILSIP) appear to have normal synchronous semantics and immediately yielda return value, but when annotated with the &lt;em&gt;future&lt;/em&gt; keyword execution of that return valueis done in a background thread and the immediate return value is just a proxy for the value that is still being computed.&lt;p&gt;In the &lt;a href="http://portal.acm.org/citation.cfm?doid=1146841.1146844"&gt;HOM paper&lt;/a&gt; (&lt;a href="http://www.metaobject.com/papers/Higher_Order_Messaging_OOPSLA_2005.pdf"&gt;pdf&lt;/a&gt;) presented at &lt;a href="http://www.oopsla.org/2005/ShowPage.do?id=Home"&gt;OOPSLA 2005&lt;/a&gt;, I also describe a Future implementationbased on Higher Order Messaging that comes very close to the way it was done in MULTILSIP.  A -futureHOM is all that is needed to indicate that you would like a result computed in a background thread:&lt;pre&gt;  result = [anObject lengthyOperation:parameter];           //  synchronous
+  result = [[anObject future] lengthyOperation:parameter];  //  asynchronous with future&lt;/pre&gt;I am probably biased, but this seems about as easy-to-use as possible,with all the nasty machinery (worker-queues, lockless FIFOs, etc.)hidden behind a single -future message.</description><link>http://www.metaobject.com/blog/2007/09/objective-c-futures.html</link><author>Marcel Weiher</author></item><item><guid isPermaLink='false'>tag:blogger.com,1999:blog-8397311766319215218.post-7695276182360787519</guid><pubDate>Sat, 22 Sep 2007 22:33:00 +0000</pubDate><atom:updated>2007-09-22T15:37:21.473-07:00</atom:updated><title>Message-oriented persistence</title><description>The good folks at Omni posted an interesting discussion of their &lt;a href="http://blog.omnigroup.com/2007/09/17/omnifocus-what-weve-learned-so-far-engineering/trackback/"&gt;persistence strategy&lt;/a&gt; for OmniFocus.   In short they found that using a database, specifically a CoreData data store, was not exactly ideal for their primary public data format.&lt;p&gt;  Instead, they appear to be using a pattern that Martin Fowler calls &lt;a href="http://martinfowler.com/bliki/EventPoster.html"&gt;EventPoster&lt;/a&gt;.  After reading &lt;a href="http://en.wikipedia.org/wiki/David_P._Reed"&gt;David Reed&lt;/a&gt;'s &lt;a href="http://www.lcs.mit.edu/publications/specpub.php?id=773"&gt;thesis&lt;/a&gt;, I think I prefer to call it message-oriented persistence.&lt;p&gt;  I first stumbled on this pattern when designing a replacement for a feed processor at the &lt;a href="http://news.bbc.co.uk/sport"&gt;BBC&lt;/a&gt;.  The basic task was to process a feed of information snippets encoded as XML and generate/update web and interactive TV (Ceefax) pages.&lt;p&gt;  Like a good little enterprise architect, and similar to the existing system, I had originally planned to use a central SQL database for storage, though designing a data model for that was proving difficult due to the highly irregular nature of the feed data.  As an auditing/logging measure, I also wanted to keep a copy of the incoming feed data, so when the time came to do the first implementation spikes,  I decided we would implemented the display, update and XML feed processing logic, but not the datastore.  Instead, we would just re-play the feed data from the log we had kept.&lt;p&gt;  This worked so well that we never got around to implementing the central database.&lt;p&gt;  Leaving out the database vastly simplified both our code-base and the deployed system, which I could run in its entirety on my 12" AlBook whereas the system we were replacing ran around a dozen networked machines.  Apart from making us popular with our sysadmin team both in terms of reliability and deployment/maintenance complexity (essentially a jar and a working directory was all it needed), a fringe benefit was being able to work on the system on said AlBook while disconnected from the network, working from home or from a sunny patch of grass outside the office.&lt;p&gt;  In addition to personal happiness, systen performance was also positively affected:  since we kept our working state completely in memory, the AlBook mentioned outperformed the original cluster by 2-3 orders of magnitude, producing hundreds of pages per second versus taking from several seconds to several minutes to produce a single page.&lt;p&gt;  Performance and simplicity are exactly the benefits claimed for &lt;a href="http://www.prevayler.org/"&gt;prevlayer&lt;/a&gt;, a persistence layer for Java based on the same principles.&lt;p&gt;  &lt;a href="http://portal.acm.org/citation.cfm?doid=1094855.1094861"&gt;TeaTime&lt;/a&gt;, the theoretical foundation and actual engine working underneath &lt;a href="http://www.croquetproject.org"&gt;Croquet&lt;/a&gt;, takes this idea to a whole different level:  objects do not have state, but are simply names for message histories.  This is truly "objects [and messages] all the way down".  Turtles need not apply.&lt;p&gt;  </description><link>http://www.metaobject.com/blog/2007/09/message-oriented-persistence.html</link><author>Marcel Weiher</author></item><item><guid isPermaLink='false'>tag:blogger.com,1999:blog-8397311766319215218.post-2658466420241734000</guid><pubDate>Sat, 01 Sep 2007 18:53:00 +0000</pubDate><atom:updated>2007-09-01T11:57:30.566-07:00</atom:updated><category domain='http://www.blogger.com/atom/ns#'>performance</category><category domain='http://www.blogger.com/atom/ns#'>Objective-C</category><title>More on MPWObjectCache</title><description>&lt;p&gt;Now that I've motivated why an MPWObjectCache might be &lt;a href="http://www.metaobject.com/blog/2007/08/high-performance-objective-c-i.html"&gt;useful&lt;/a&gt;, let's go into some more detail as to how it actually works.  To follow along, or if you'd rather just read the source code than my ramblings, MPWObjectCache is part of MPWFoundation, which can be downloaded here: &lt;a hre="http://www.metaobject.com/downloads/Objective-C/"&gt;http://www.metaobject.com/downloads/Objective-C/&lt;/a&gt;.&lt;/p&gt;
+
+As I mentioned before, the algorithm for MPWObjectCache is quite simple:  there is a circular buffer of object slots.  We try to get pre-allocated 
+objects from this circular buffer if possible.  If we find an object
+in the cache and it is available for reuse, we just return it and 
+have just saved the cost of allocation.
+
+Two things can prevent this happy state of affairs: (1) we don't have
+an object yet or (2) we cannot reuse the object because it is still in use.
+In both cases we will need to allocate a new object, but in the second
+case we also remove the old object from the cache position.
+
+&lt;pre&gt;
+#if  SLOW_SAMPLE_IMPLEMENTATION_WANTED
+-getObject
+{
+    id obj;
+    objIndex++;
+    if ( objIndex &amp;gt;= cacheSize ) {
+        objIndex=0;
+    }
+    obj=objs[objIndex];
+    if ( obj==nil ||  [obj retainCount] &amp;gt; 1 ) {
+        if ( obj!=nil ) {
+            [obj release];
+        }
+        obj = [[objClass alloc] init];
+        objs[objIndex]=obj;
+    }
+    return [[obj retain] autorelease];
+}
+#else
+
+&lt;/pre&gt;
+
+&lt;p&gt;This is what a naive implementation looks like.  A couple of notes on the code:
+&lt;ul&gt;
+&lt;li&gt;objects must be reinitialized by the client (and reinitializable in the first place)
+&lt;li&gt;only one attempt is made to find an object&lt;/li&gt;
+&lt;li&gt;the retain/autorelease will prevent the cache from working unless a fairly tight autorelease pool regime is maintained&lt;/li&gt;
+&lt;li&gt;there are quite a few message sends&lt;/li&gt;
+&lt;li&gt;it's not what is used in production&lt;/li&gt;
+&lt;/ul&gt;
+
+The effectiveness of the cache obviously depends on your allocation
+patterns and the size of the object-cache.  Larger caches take
+longer to be filled up before they start wrapping around with
+the potential for reuse,
+but smaller sizes can mean that the object will still be in use
+when we do wrap around.
+
+The actual implementation is very similar to the one presented
+above, except that it does a little more probing and uses
+IMP-caching for all the messages sent on the critical path.
+These optimizations ensure that object-caches are no slower
+than normal allocations even in worst-case situations such
+as every allocated object being retained.  In addition the
+cache can also be set to not do the retain/autorelease, which is
+safe when you are pushing objects and have control over
+the cache:
+
+&lt;pre&gt;
+-doSomething:target
+{
+ // cache is an ivar
+ id obj=GETOBJECT(cache);
+ // target does not have access to cache
+ [target doSomethingWithObject:obj];
+ // obj now either has an extra retain or can be reused
+}
+&lt;/pre&gt;
+
+This pleasant property is a side effect of the decision to turn
+the object-cache into an object that can be instantiated and
+placed in an instance variable, rather than the typical 
+object pools that are implemented as class
+methods.  The class method that maintains such a pool 
+usually has no information about the lifetime
+of objects, so to be safe such an implementation always
+has to protect the objects it returns, negating much of
+the advantage of caching.  Similar caveats apply to 
+multi-threading and locking.
+
+Those caveats notwithstanding, MPWObjectCache also provides the
+CACHING_ALLOC macro for creating class-side allocation methods
+backed by an object cache, which is used in the HOM implementation
+to reduce the cost of allocating trampolines:
+&lt;pre&gt;
+ CACHING_ALLOC( quickTrampoline, 5, YES )
+&lt;/pre&gt;
+
+This creates a +quickTramplone method backed by an object cache
+with 5 entries.  The YES flag allows objects to be returned from
+the cache without the retain/autorelease despite the fact
+that it isn't one of the safe "push" patterns described above.
+However, this use is also safe because the trampoline is used
+only temporarily to catch and forward the message, all of 
+which is code controlled by the implementation.  It is no
+longer needed once any client code implementing the actual
+HOM is run.
+
+So, this is how and why object-caches can make your (temporary)
+object allocations much, much faster.</description><link>http://www.metaobject.com/blog/2007/09/more-on-mpwobjectcache.html</link><author>Marcel Weiher</author></item><item><guid isPermaLink='false'>tag:blogger.com,1999:blog-8397311766319215218.post-1302058502082968477</guid><pubDate>Mon, 27 Aug 2007 20:17:00 +0000</pubDate><atom:updated>2007-08-27T17:54:58.379-07:00</atom:updated><category domain='http://www.blogger.com/atom/ns#'>performance</category><category domain='http://www.blogger.com/atom/ns#'>Objective-C</category><category domain='http://www.blogger.com/atom/ns#'>Postscript</category><title>High performance Objective-C I: a Postscript interpreter</title><description>A key component of the metaobject product suite is EGOS, which includes as a central ingredient a custom Postscript Level 3 compatible interpreter.  The project was started in part as a hedge against the chance of Apple dropping DisplayPostscript, in part because our Postscript virtualization technique was hitting limits, and in part because it would make getting Objective-C objects out of the interpreter much easier.&lt;p&gt;At its core, Postscript is a stack-oriented, dynamically typed and highly polymorphic interpreted programming language.  So implementing Postscript with Objective-C objects is actually not just convenient when you want to get Objective-C objects out, it is also a good match for the semantics of the language.&lt;/p&gt;&lt;p&gt;So all is good, right?  Well, we also need to make sure that performance is competitive, otherwise there really isn't much of a point.  How do we find out if performance is competitive?  Fortunately, we have the gold standard handily available:  Adobe's interpreter was not just used in NeXT's DisplayPostscript, but is also available as the PS Normalizer on Mac OS X .  So let's test performance with a little Postscript program:&lt;/p&gt;&lt;pre&gt;  %!
+  usertime
+  0 1 1000000 { 4 mul pop } bind for
+  usertime exch sub dup ==
+  20 20 moveto /Times-Roman 24 selectfont
+  100 string cvs show ( ms) show
+  showpage
+&lt;/pre&gt;
+The program times a loop that multiplies some numbers one million times.   It exercises a good deal of the basic execution machinery in the Postscript language:  stack manipulation, procedure invocation, array access (a procedure is just an array with the executable bit set), looping and arithmetic.  The loop is timed with the usertime command, which returns CPU time used in milliseconds.&lt;p&gt;This test clocks in at  513 ms (513 ns per iteration) in Preview, which isn't too shabby.&lt;/p&gt;&lt;h3&gt;1.  The problem&lt;/h3&gt;
+As proof of concept, let's code up some Objective-C equivalent of what the Postscript interpreter has to do in this loop.  That should give us a good lower bound for the time taken (lower bound because there will be additional interpretation overhead, and Postscript semantics are slightly more complicated).   We need a stack, some number objects and a bit of arithmetic.  Easy:&lt;pre&gt;
+ id startcounter=[NSNumber numberWithInt:0];
+ id endcounter=[NSNumber numberWithInt:1000000];
+ id counter=startcounter;
+ id four=[NSNumber numberWithInt:4];
+ while ( [counter intValue] &amp;lt; [endcounter intValue] ) {
+  int intResult;
+  id result;
+  [stack addObject:counter];
+  [stack addObject:four];
+  intResult = [[stack lastObject] intValue] * [[stack objectAtIndex:[stack count]-2] intValue];
+  result=[NSNumber numberWithInt:intResult];
+  [stack removeLastObject];
+  [stack removeLastObject];
+  [stack addObject:result];
+  [stack removeLastObject];
+  counter=[NSNumber numberWithInt:[counter intValue]+1];
+ }
+ &lt;/pre&gt;
+Sadly, this takes 4.8 µs per iteration, so our 'lower' bound is almost 10 times slower than our target, and that's without accounting for interpretation.  Clearly not good enough.  What if we get rid of all that silly stack manipulation code and use a plain C loop?&lt;pre&gt;
+  id b=[NSNumber numberWithInt:4];
+  for (i=0;i &amp;lt; 10000000;i++) {
+  id a=[NSNumber numberWithInt:i];
+  id c=[NSNumber numberWithInt:[a intValue] * [b intValue]];
+ }
+
+&lt;/pre&gt;
+&lt;h3&gt;2. Mutable State&lt;/h3&gt;Objective-C is an imperative object oriented language, meaning objects can change state.  However, we have treated numbers as immutable value objects, requiring them to be recreated from scratch.  Allocating objects tends to be around 25x more costly than an Objective-C message send, so what if we don't allocate new integer objects, but instead reuse an existing one and just change its value?  It turns out we can't use NSNumber for this as it doesn't allow its value to be set, so we need a (trivial) wrapper class for a single integer.&lt;pre&gt; 
+   id b=[MPWInteger numberWithInt:4];
+   id a=[MPWInteger numberWithInt:0];
+   id c=[MPWInteger numberWithInt:0];
+   for (i=0;i &amp;lt;10000000;i++) {
+  [a setIntValue:i];
+  [c setIntValue:[a intValue] * [b intValue]];
+  }
+
+&lt;/pre&gt;
+That's more like it:  50ns per iteration is 100x better than our first attempt and also 10x better than the target we're aiming for.  So taking advantage of mutable state makes our basic plan possible, at least in principle.  Of course, we now have to reintroduce the stack and add interpretation.
+&lt;h3&gt;3.   Save the planet&lt;/h3&gt;
+Alas, it turns out that the interpreter really does need fresh instances.  While it will discard them quickly in most cases, it sometimes stores them away meaning we can't statically reuse objects the way we did above.&lt;p&gt;Instead, we need to figure out a way to recycle temporary objects so we can reuse them without spending a lot of time.  The common way to do this is to keep a pool of objects from which requests for new MPWInteger instances are satisfied.  However, due to the unpredictable nature of the interpreted code, we cannot use the explicit checkin/checkout policy such pools usually require.&lt;/p&gt;&lt;p&gt;Instead we make the pool a circular buffer and use the retain count to verify that an object can be reused.  When we get to a position in the pool that has an object, we can reuse that object if the retain count is one, meaning that only the pool has a valid reference.  If the retain count of the object is greater than one, someone other than the pool is holding on to the object and it cannot be reused (yet), so we need to get another instance.&lt;/p&gt;&lt;p&gt;This logic is encapsulated in the class MPWObjectCache, which can be used very similarly to a class (factory object) in creating new instances.
+&lt;/p&gt;&lt;pre&gt;
+ MPWObjectCache* intCache=[[MPWObjectCache alloc] initWithCapacity:20 
+        class:[MPWInteger class]];
+ id b=[MPWInteger integer:5];
+ for (i=0;i &amp;lt; 1000000;i++) {
+  id a=GETOBJECT(intCache);
+  id d=GETOBJECT(intCache);
+  [a setIntValue:i];
+  [d setIntValue:[a intValue] * [b intValue]];
+
+&lt;/pre&gt;
+
+
+This code runs in 100ns per iteration,  so we now have a solution that gives us new or safely recycled objects quickly enough to build on with the confidence the end result will perform acceptably.&lt;h3&gt;4.  Results&lt;/h3&gt;Running the Postscript test program from the start of this post in &lt;a href="http://www.metaobject.com/Products/"&gt;PostView&lt;/a&gt; yields a result of 260ns per iteration, meaning that our Objective-C Postscript interpreter is almost twice as fast as Adobe's, at least on this particular workload.  While I wouldn't generalize this isolated result to say that EGOS is a faster interpreter, it clearly shows that it is at least competitive, which was the goal of the exercise.&lt;div&gt;
+&lt;/div&gt;&lt;div&gt;The fact that it took a measly 20 KLOC illustrates the leverage Objective-C provides:  Ghostscript weighs in at around 250+ KLOC (without drivers).&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;div&gt;&lt;span class="Apple-style-span" style="font-weight: bold;"&gt;&lt;span class="Apple-style-span"  style="font-size:large;"&gt;5.  Conclusion&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;div&gt;One of the things I've always liked about Objective-C is that it lets you have your cake and eat it, too:  great expressiveness to solve your problem effectively is always coupled with the ability to get down and dirty and get really great performance, without losing the structure of the original solution.&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;div&gt;The most important factor to watch out for in terms of performance tends to be object allocation.  Controlling this factor with a transparent object-cache allowed us to get an overall performance improvement of around 10-20x in the case of a Postscript interpreter, taking performance from unacceptably slow up to and beyond the industry standard.&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;div&gt;Of course, this isn't the only factor and Postscript interpretation not the only application.  Stay tuned!&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;</description><link>http://www.metaobject.com/blog/2007/08/high-performance-objective-c-i.html</link><author>Marcel Weiher</author></item><item><guid isPermaLink='false'>tag:blogger.com,1999:blog-8397311766319215218.post-6601746517682976273</guid><pubDate>Sat, 12 May 2007 21:12:00 +0000</pubDate><atom:updated>2007-05-19T18:47:34.854-07:00</atom:updated><title>Onward the Blogosphere</title><description>Somewhat late to the party, metaobject now has a blog.  Expect to see more details about our products, as well as more general ramblings about programming in general, dynamic languages, Objective-C, Cocoa and (Higher Order) Messaging in particular, and anything else that strikes my fancy.</description><link>http://www.metaobject.com/blog/2007/05/onwards-blogosphere.html</link><author>Marcel Weiher</author></item></channel></rss>

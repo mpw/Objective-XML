@@ -1,0 +1,6 @@
+{
+    RootNode = /Users/marcel/programming/Kits/MPWXmlKit/images; 
+    Toolbar = No; 
+    ViewName = Browser; 
+    WindowFrame = "{{139, 228}, {450, 441}}"; 
+}

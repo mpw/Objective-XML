@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<methodCall><methodName>ld.submitAction</methodName><params><param><value>login</value></param><param><value><struct><member><name>desktopUser</name><value>userBla</value></member><member><name>password</name><value>passwordBla</value></member></struct></value></param></params></methodCall>

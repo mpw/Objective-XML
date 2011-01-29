@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Categories</title>
+  <id>tag:livescribe.com,2010-12-14:/services/community/pencast/categories</id>
+  <updated>2010-12-15T01:38:56Z</updated>
+  <entry>
+    <title>Random</title>
+    <link rel="self" type="application/atom+xml" href="http://www.livescribe.com/services/community/pencast/category/Random.atom" />
+  </entry>
+  <entry>
+    <title>Creative</title>
+    <link rel="self" type="application/atom+xml" href="http://www.livescribe.com/services/community/pencast/category/Creative.atom" />
+  </entry>
+  <entry>
+    <title>How-Tos</title>
+    <link rel="self" type="application/atom+xml" href="http://www.livescribe.com/services/community/pencast/category/How-Tos.atom" />
+  </entry>
+  <entry>
+    <title>Business</title>
+    <link rel="self" type="application/atom+xml" href="http://www.livescribe.com/services/community/pencast/category/Business.atom" />
+  </entry>
+  <entry>
+    <title>Fun Stuff</title>
+    <link rel="self" type="application/atom+xml" href="http://www.livescribe.com/services/community/pencast/category/Fun Stuff.atom" />
+  </entry>
+  <entry>
+    <title>Cartoons</title>
+    <link rel="self" type="application/atom+xml" href="http://www.livescribe.com/services/community/pencast/category/Cartoons.atom" />
+  </entry>
+  <entry>
+    <title>Blogs</title>
+    <link rel="self" type="application/atom+xml" href="http://www.livescribe.com/services/community/pencast/category/Blogs.atom" />
+  </entry>
+  <entry>
+    <title>Academic</title>
+    <link rel="self" type="application/atom+xml" href="http://www.livescribe.com/services/community/pencast/category/Academic.atom" />
+  </entry>
+  <entry>
+    <title>Unspecified</title>
+    <link rel="self" type="application/atom+xml" href="http://www.livescribe.com/services/community/pencast/category/Unspecified.atom" />
+  </entry>
+  <entry>
+    <title>Moments</title>
+    <link rel="self" type="application/atom+xml" href="http://www.livescribe.com/services/community/pencast/category/Moments.atom" />
+  </entry>
+</feed>
+

@@ -1,0 +1,20 @@
+#!/bin/sh
+operator=$1
+MPWFOUNDATION=$2
+
+$operator AccessorMacros.h $MPWFOUNDATION/AccessorMacros.h
+$operator CodingAdditions.h $MPWFOUNDATION/CodingAdditions.h
+$operator DebugMacros.h $MPWFOUNDATION/DebugMacros.h
+$operator MPWCaseInsensitiveSmallStringTable.h $MPWFOUNDATION/Collections.subproj/MPWCaseInsensitiveSmallStringTable.h
+$operator MPWCaseInsensitiveSmallStringTable.m $MPWFOUNDATION/Collections.subproj/MPWCaseInsensitiveSmallStringTable.m
+$operator MPWFastInvocation.h $MPWFOUNDATION/MPWFastInvocation.h
+$operator MPWFastInvocation.m $MPWFOUNDATION/MPWFastInvocation.m
+$operator MPWObject.h $MPWFOUNDATION/MPWObject.h
+$operator MPWObject.m $MPWFOUNDATION/MPWObject.m
+$operator MPWObjectCache.h $MPWFOUNDATION/MPWObjectCache.h
+$operator MPWObjectCache.m $MPWFOUNDATION/MPWObjectCache.m
+$operator MPWSmallStringTable.h $MPWFOUNDATION/Collections.subproj/MPWSmallStringTable.h
+$operator MPWSmallStringTable.m $MPWFOUNDATION/Collections.subproj/MPWSmallStringTable.m
+$operator MPWSubData.h $MPWFOUNDATION/Collections.subproj/MPWSubData.h
+$operator MPWSubData.m $MPWFOUNDATION/Collections.subproj/MPWSubData.m
+$operator NSInvocationAdditions_lookup.h $MPWFOUNDATION/NSInvocationAdditions_lookup.h

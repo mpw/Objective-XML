@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<methodCall><methodName>login</methodName><params><param><value>userName</value></param><param><value><struct><member><name>password</name><value>passwordBla</value></member></struct></value></param></params></methodCall>

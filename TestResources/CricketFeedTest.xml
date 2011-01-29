@@ -1,0 +1,160 @@
+<?xml version="1.0" standalone="no"?>
+<CricketMatch revision="558" id="3684" date="20000910" scheduledStart="1230+0100" ballsPerOver="6" numberOvers="45" numberInnings="1" numberDays="1" dayNumber="1" status="Close">
+<Team id="11" name="Hampshire" homeOrAway="Home" >
+<Players>
+<Player id="155" captain="Yes">
+<Name firstName="Robin" initials="R A" lastName="Smith">R A Smith</Name>
+</Player>
+<Player id="762">
+<Name firstName="Derek" initials="D A" lastName="Kenway">D A Kenway</Name>
+</Player>
+<Player id="790">
+<Name firstName="Shane" initials="S K" lastName="Warne">S K Warne</Name>
+</Player>
+<Player id="150">
+<Name firstName="Jason" initials="J S" lastName="Laney">J S Laney</Name>
+</Player>
+<Player id="149">
+<Name firstName="William" initials="W S" lastName="Kendall">W S Kendall</Name>
+</Player>
+<Player id="1058">
+<Name firstName="Lawrence" initials="L R" lastName="Prittipaul">L R Prittipaul</Name>
+</Player>
+<Player id="652">
+<Name firstName="Dimitri" initials="A D" lastName="Mascarenhas">A D Mascarenhas</Name>
+</Player>
+<Player id="158">
+<Name firstName="Shaun" initials="S D" lastName="Udal">S D Udal</Name>
+</Player>
+<Player id="136" wicketKeeper="Yes">
+<Name firstName="Adrian" initials="A N" lastName="Aymes">A N Aymes</Name>
+</Player>
+<Player id="432">
+<Name firstName="Peter" initials="P J" lastName="Hartley">P J Hartley</Name>
+</Player>
+<Player id="3726">
+<Name firstName="C" initials="C T" lastName="Tremlett">C T Tremlett</Name>
+</Player>
+</Players>
+</Team>
+<Team id="35" name="Derbyshire" homeOrAway="Away" >
+<Players>
+<Player id="680">
+<Name firstName="Matthew" initials="M E" lastName="Cassar">M E Cassar</Name>
+</Player>
+<Player id="796">
+<Name firstName="Michael" initials="M J" lastName="Di Venuto">M J Di Venuto</Name>
+</Player>
+<Player id="257">
+<Name firstName="Rob" initials="R J" lastName="Bailey">R J Bailey</Name>
+</Player>
+<Player id="289">
+<Name firstName="Matthew" initials="M P" lastName="Dowman">M P Dowman</Name>
+</Player>
+<Player id="732">
+<Name firstName="Steve" initials="S D" lastName="Stubbings">S D Stubbings</Name>
+</Player>
+<Player id="1042" wicketKeeper="Yes">
+<Name firstName="Luke" initials="L D" lastName="Sutton">L D Sutton</Name>
+</Player>
+<Player id="682">
+<Name firstName="James" initials="J P" lastName="Pyemont">J P Pyemont</Name>
+</Player>
+<Player id="697">
+<Name firstName="Simon" initials="S J" lastName="Lacey">S J Lacey</Name>
+</Player>
+<Player id="506">
+<Name firstName="Paul" initials="P" lastName="Aldred">P Aldred</Name>
+</Player>
+<Player id="385" captain="Yes">
+<Name firstName="Tim" initials="T A" lastName="Munton">T A Munton</Name>
+</Player>
+<Player id="10">
+<Name firstName="Kevin" initials="K J" lastName="Dean">K J Dean</Name>
+</Player>
+</Players>
+</Team>
+<Umpires>
+<Umpire type="On-field">
+<Name>V A Holder</Name>
+</Umpire>
+<Umpire type="On-field">
+<Name>A A Jones</Name>
+</Umpire>
+</Umpires>
+<Toss teamId="35" decision="Bat"/>
+<Innings number="1" status="Close" battingId="35" wickets="9" overs="45.0" runs="195">
+<Batsmen>
+<Batsman number="1" playerId="680" status="Out" howOut="Caught" bowlerId="652" fielderId="136" runs="13" balls="33" fours="2" sixes="0" />
+<Batsman number="2" playerId="796" status="Out" howOut="Leg before wicket" bowlerId="432" runs="10" balls="11" fours="2" sixes="0" />
+<Batsman number="3" playerId="257" status="Out" howOut="Caught" bowlerId="652" fielderId="3726" runs="0" balls="10" fours="0" sixes="0" />
+<Batsman number="4" playerId="289" status="Out" howOut="Bowled" bowlerId="652" runs="4" balls="7" fours="1" sixes="0" />
+<Batsman number="5" playerId="732" status="Out" howOut="Caught" bowlerId="790" fielderId="136" runs="33" balls="46" fours="5" sixes="0" />
+<Batsman number="6" playerId="1042" status="Not out" runs="53" balls="79" fours="3" sixes="0" />
+<Batsman number="7" playerId="682" status="Out" howOut="Bowled" bowlerId="790" runs="50" balls="73" fours="6" sixes="0" />
+<Batsman number="8" playerId="697" status="Out" howOut="Leg before wicket" bowlerId="790" runs="0" balls="1" fours="0" sixes="0" />
+<Batsman number="9" playerId="506" status="Out" howOut="Bowled" bowlerId="790" runs="0" balls="2" fours="0" sixes="0" />
+<Batsman number="10" playerId="385" status="Out" howOut="Stumped" bowlerId="432" fielderId="136" runs="0" balls="2" fours="0" sixes="0" />
+<Batsman number="11" playerId="10" status="Not out" runs="6" balls="6" fours="0" sixes="0" />
+</Batsmen>
+<Bowlers>
+<Bowler playerId="432" overs="9.0" maidens="1" runs="36" wickets="2" wides="1" />
+<Bowler playerId="652" overs="9.0" maidens="2" runs="40" wickets="3" wides="1" />
+<Bowler playerId="3726" overs="9.0" maidens="0" runs="45" wickets="0" wides="4" />
+<Bowler playerId="790" overs="9.0" maidens="2" runs="23" wickets="4" wides="2" />
+<Bowler playerId="158" overs="9.0" maidens="0" runs="38" wickets="0" wides="1" />
+</Bowlers>
+<Extras byes="1" legByes="12" wides="13" noBalls="0" total="26" />
+<FallOfWickets>
+<FallOfWicket number="1" batsmanId="796" minutes="10" runs="17" />
+<FallOfWicket number="2" batsmanId="257" minutes="9" runs="1" />
+<FallOfWicket number="3" batsmanId="289" minutes="6" runs="6" />
+<FallOfWicket number="4" batsmanId="680" minutes="20" runs="13" />
+<FallOfWicket number="5" batsmanId="732" minutes="35" runs="48" />
+<FallOfWicket number="6" batsmanId="682" minutes="62" runs="99" />
+<FallOfWicket number="7" batsmanId="697" runs="0" />
+<FallOfWicket number="8" batsmanId="506" runs="0" />
+<FallOfWicket number="9" batsmanId="385" minutes="1" runs="1" />
+</FallOfWickets>
+</Innings>
+<Innings number="1" status="Close" battingId="11" wickets="9" overs="45.0" runs="191">
+<Batsmen>
+<Batsman number="1" playerId="790" status="Out" howOut="Leg before wicket" bowlerId="385" runs="0" balls="5" fours="0" sixes="0" />
+<Batsman number="2" playerId="155" status="Out" howOut="Caught" bowlerId="10" fielderId="1042" runs="14" balls="20" fours="1" sixes="0" />
+<Batsman number="3" playerId="762" status="Out" howOut="Bowled" bowlerId="680" runs="90" balls="135" fours="8" sixes="0" />
+<Batsman number="4" playerId="150" status="Out" howOut="Caught" bowlerId="680" fielderId="682" runs="22" balls="29" fours="2" sixes="1" />
+<Batsman number="5" playerId="149" status="Out" howOut="Run out" bowlerId="680" fielderId="796" runs="1" balls="6" fours="0" sixes="0" />
+<Batsman number="6" playerId="1058" status="Out" howOut="Bowled" bowlerId="289" runs="19" balls="29" fours="1" sixes="0" />
+<Batsman number="7" playerId="652" status="Out" howOut="Caught" bowlerId="506" fielderId="796" runs="26" balls="36" fours="1" sixes="1" />
+<Batsman number="8" playerId="136" status="Out" howOut="Bowled" bowlerId="680" runs="7" balls="8" fours="1" sixes="0" />
+<Batsman number="9" playerId="158" status="Not out" runs="1" balls="1" fours="0" sixes="0" />
+<Batsman number="10" playerId="3726" status="Out" howOut="Bowled" bowlerId="680" runs="0" balls="1" fours="0" sixes="0" />
+<Batsman number="11" playerId="762" status="Not out" runs="0" balls="0" fours="0" sixes="0" />
+</Batsmen>
+<Bowlers>
+<Bowler playerId="385" overs="9.0" maidens="0" runs="27" wickets="1" wides="0" />
+<Bowler playerId="10" overs="8.0" maidens="0" runs="45" wickets="1" wides="1" />
+<Bowler playerId="680" overs="8.0" maidens="0" runs="29" wickets="4" wides="1" />
+<Bowler playerId="506" overs="9.0" maidens="1" runs="32" wickets="1" wides="2" />
+<Bowler playerId="697" overs="6.0" maidens="0" runs="24" wickets="0" wides="0" />
+<Bowler playerId="289" overs="5.0" maidens="0" runs="27" wickets="1" wides="0" />
+</Bowlers>
+<Extras byes="0" legByes="7" wides="4" noBalls="0" total="11" />
+<FallOfWickets>
+<FallOfWicket number="1" batsmanId="790" minutes="3" runs="0" />
+<FallOfWicket number="2" batsmanId="155" minutes="24" runs="30" />
+<FallOfWicket number="3" batsmanId="150" minutes="42" runs="49" />
+<FallOfWicket number="4" batsmanId="149" minutes="7" runs="8" />
+<FallOfWicket number="5" batsmanId="1058" minutes="35" runs="42" />
+<FallOfWicket number="6" batsmanId="652" minutes="35" runs="49" />
+<FallOfWicket number="7" batsmanId="136" minutes="8" runs="12" />
+<FallOfWicket number="8" batsmanId="762" minutes="10" runs="1" />
+<FallOfWicket number="9" batsmanId="3726" runs="0" />
+</FallOfWickets>
+</Innings>
+<Result type="Win" resultDate="20000910+0100">
+<Win teamId="35" runs="4"/>
+<Points teamId="35" total="4"/>
+<Points teamId="11" total="0"/>
+</Result>
+</CricketMatch>

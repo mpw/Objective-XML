@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="yes"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:docset="http://developer.apple.com/rss/docset_extensions" xml:lang="en">
+    <id>http://developer.apple.com/rss/com.apple.adc.documentation.AppleSnowLeopard.atom/20080609120049</id>
+    <title type="text">Apple Snow Leopard</title>
+    <author>
+        <name>Apple Developer Connection</name>
+        <uri>http://developer.apple.com/</uri>
+    </author>
+    <rights>Copyright 2010 Apple Inc.</rights>
+    <link rel="self" href="http://developer.apple.com/rss/com.apple.adc.documentation.AppleSnowLeopard.atom"></link>
+    <updated>2010-11-19T14:49:03-08:00</updated>
+    <docset:publisherName>Apple</docset:publisherName>
+    <docset:publisherID>com.apple.adc.documentation</docset:publisherID>
+    <entry>
+        <id>tag:developer.apple.com,2010-11-18:com.apple.adc.documentation.AppleSnowLeopard.CoreReference/409.4.0</id>
+        <title type="text">Mac OS X 10.6 Core Library</title>
+        <updated>2010-11-18T18:48:07-08:00</updated>
+        <content type="text">Mac OS X 10.6 Core Library (v409.4.0)</content>
+        <link rel="enclosure" type="application/octet-stream" href="http://devimages.apple.com/docsets/20101122/com.apple.adc.documentation.AppleSnowLeopard.CoreReference.xar" length="590631564"></link>
+        <docset:identifier>com.apple.adc.documentation.AppleSnowLeopard.CoreReference</docset:identifier>
+        <docset:version>409.4.0</docset:version>
+        <docset:signer>CN=ADC DocSet Update,O=Apple Inc.,OU=Apple Developer Connection,C=US</docset:signer>
+        <docset:issuer>CN=ADC DocSet Update,O=Apple Inc.,OU=Apple Developer Connection,C=US</docset:issuer>
+        <docset:minimumXcodeVersion>3.2.0</docset:minimumXcodeVersion>
+        <docset:maximumXcodeVersion>3.9.999</docset:maximumXcodeVersion>
+    </entry>
+    <entry>
+        <id>tag:developer.apple.com,2010-11-18:com.apple.adc.documentation.AppleSnowLeopard.JavaReference/409.2.0</id>
+        <title type="text">Mac OS X Java Library</title>
+        <updated>2010-11-18T18:51:57-08:00</updated>
+        <content type="text">Mac OS X Java Library (v409.2.0)</content>
+        <link rel="enclosure" type="application/octet-stream" href="http://devimages.apple.com/docsets/20101122/com.apple.adc.documentation.AppleSnowLeopard.JavaReference.xar" length="112083014"></link>
+        <docset:identifier>com.apple.adc.documentation.AppleSnowLeopard.JavaReference</docset:identifier>
+        <docset:version>409.2.0</docset:version>
+        <docset:signer>CN=ADC DocSet Update,O=Apple Inc.,OU=Apple Developer Connection,C=US</docset:signer>
+        <docset:issuer>CN=ADC DocSet Update,O=Apple Inc.,OU=Apple Developer Connection,C=US</docset:issuer>
+        <docset:minimumXcodeVersion>3.2.0</docset:minimumXcodeVersion>
+        <docset:maximumXcodeVersion>3.9.999</docset:maximumXcodeVersion>
+    </entry>
+    <entry>
+        <id>tag:developer.apple.com,2010-11-18:com.apple.adc.documentation.AppleLegacy.CoreReference/9.2.0</id>
+        <title type="text">Mac OS X Legacy Library</title>
+        <updated>2010-11-18T19:07:17-08:00</updated>
+        <content type="text">Mac OS X Legacy Library (v9.2.0)</content>
+        <link rel="enclosure" type="application/octet-stream" href="http://devimages.apple.com/docsets/20101122/com.apple.adc.documentation.AppleLegacy.CoreReference.xar" length="890211607"></link>
+        <docset:identifier>com.apple.adc.documentation.AppleLegacy.CoreReference</docset:identifier>
+        <docset:version>9.2.0</docset:version>
+        <docset:signer>CN=ADC DocSet Update,O=Apple Inc.,OU=Apple Developer Connection,C=US</docset:signer>
+        <docset:issuer>CN=ADC DocSet Update,O=Apple Inc.,OU=Apple Developer Connection,C=US</docset:issuer>
+        <docset:minimumXcodeVersion>3.2.0</docset:minimumXcodeVersion>
+        <docset:maximumXcodeVersion>3.9.999</docset:maximumXcodeVersion>
+    </entry>
+    <entry>
+        <id>tag:developer.apple.com,2010-11-19:com.apple.adc.documentation.AppleSnowLeopard.CoreReference/409.53.0</id>
+        <title type="text">Mac OS X 10.6 Core Library</title>
+        <updated>2010-11-19T14:49:03-08:00</updated>
+        <content type="text">Mac OS X 10.6 Core Library (v409.53.0)</content>
+        <link rel="enclosure" type="application/octet-stream" href="http://devimages.apple.com/docsets/20101122/com.apple.adc.documentation.AppleSnowLeopard.CoreReference.Xcode4.xar" length="599355246"></link>
+        <docset:identifier>com.apple.adc.documentation.AppleSnowLeopard.CoreReference</docset:identifier>
+        <docset:version>409.53.0</docset:version>
+        <docset:signer>CN=ADC DocSet Update,O=Apple Inc.,OU=Apple Developer Connection,C=US</docset:signer>
+        <docset:issuer>CN=ADC DocSet Update,O=Apple Inc.,OU=Apple Developer Connection,C=US</docset:issuer>
+        <docset:minimumXcodeVersion>4.0.0</docset:minimumXcodeVersion>
+    </entry>
+</feed>

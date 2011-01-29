@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Pencasts</title>
+  <link rel="first" href="http://www.livescribe.com/services/community/pencast/category/Unspecified.atom?start= 0&amp;fetchSize=20" title="First" />
+  <link rel="next" href="http://www.livescribe.com/services/community/pencast/category/Unspecified.atom?start=20&amp;fetchSize=20" title="Next" />
+  <id>tag:livescribe.com,2010-12-14:/services/community/pencast</id>
+  <updated>2010-12-15T01:39:09Z</updated>
+  <entry>
+    <title>LouiseImpression</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C53E000000011916006FB8FA49BA03" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=hwFmp4HQkgh4" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=hwFmp4HQkgh4" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C53E000000011916006FB8FA49BA03&amp;audio=PRS-a315fae2&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C53E000000011916006FB8FA49BA03&amp;page=0" />
+    <author>
+      <name>Frank Jensen</name>
+      <email>fjensen@binarylabs.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-04:/services/community/pencast/hwFmp4HQkgh4</id>
+    <published>2008-04-04T23:09:53Z</published>
+    <summary type="html" />
+    <duration xmlns="">47421</duration>
+  </entry>
+  <entry>
+    <title>test 4</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C5A700000001191C016CF9AFD1AE34" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=4TzjrHDNMGrQ" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=4TzjrHDNMGrQ" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C5A700000001191C016CF9AFD1AE34&amp;audio=PRS-d949e35d&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C5A700000001191C016CF9AFD1AE34&amp;page=0" />
+    <author>
+      <name>Bob Land</name>
+      <email>rland@audio-tutor.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-16:/services/community/pencast/4TzjrHDNMGrQ</id>
+    <published>2008-04-17T05:53:37Z</published>
+    <summary type="html" />
+    <duration xmlns="">864278</duration>
+  </entry>
+  <entry>
+    <title>George Washington</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5E400000001191F367CB318CD8310" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=xmTBzNZzWBd1" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=xmTBzNZzWBd1" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5E400000001191F367CB318CD8310&amp;audio=PRS-fad530f7&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5E400000001191F367CB318CD8310&amp;page=0" />
+    <author>
+      <name>Colin Mahan</name>
+      <email>cmahan@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-21:/services/community/pencast/xmTBzNZzWBd1</id>
+    <published>2008-04-21T08:41:29Z</published>
+    <summary type="html">Paper Replay Presidents: George Washington.</summary>
+    <duration xmlns="">28385</duration>
+  </entry>
+  <entry>
+    <title>James Madison</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5E600000001191F367CB318CD8310" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=f2b5gPNZhBrf" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=f2b5gPNZhBrf" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5E600000001191F367CB318CD8310&amp;audio=PRS-fba3dc98&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5E600000001191F367CB318CD8310&amp;page=0" />
+    <author>
+      <name>Colin Mahan</name>
+      <email>cmahan@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-21:/services/community/pencast/f2b5gPNZhBrf</id>
+    <published>2008-04-21T08:42:32Z</published>
+    <summary type="html">Paper Replay Presidents: James Madison.</summary>
+    <duration xmlns="">25487</duration>
+  </entry>
+  <entry>
+    <title>James Monroe</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C5D900000001191C016CF9AFD1AE34" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=84tkRzwvdC6z" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=84tkRzwvdC6z" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C5D900000001191C016CF9AFD1AE34&amp;audio=PRS-fbb99367&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C5D900000001191C016CF9AFD1AE34&amp;page=0" />
+    <author>
+      <name>Colin Mahan</name>
+      <email>cmahan@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-21:/services/community/pencast/84tkRzwvdC6z</id>
+    <published>2008-04-21T08:42:58Z</published>
+    <summary type="html">Paper Replay Presidents: James Monroe.</summary>
+    <duration xmlns="">27197</duration>
+  </entry>
+  <entry>
+    <title>William Harrison</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C5DB00000001191C016CF9AFD1AE34" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=HGTd69WVbzlt" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=HGTd69WVbzlt" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C5DB00000001191C016CF9AFD1AE34&amp;audio=PRS-fbd98f51&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C5DB00000001191C016CF9AFD1AE34&amp;page=0" />
+    <author>
+      <name>Colin Mahan</name>
+      <email>cmahan@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-21:/services/community/pencast/HGTd69WVbzlt</id>
+    <published>2008-04-21T08:45:01Z</published>
+    <summary type="html">Paper Replay Presidents: William Harrison.</summary>
+    <duration xmlns="">27542</duration>
+  </entry>
+  <entry>
+    <title>Penguins</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C52B000000011977E10553174C4D4A" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=Zsjjj9ZjBHVv" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=Zsjjj9ZjBHVv" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C52B000000011977E10553174C4D4A&amp;audio=PRS-83ed4513&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C52B000000011977E10553174C4D4A&amp;page=0" />
+    <author>
+      <name>Byron Connell</name>
+      <email>bconnell@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-23:/services/community/pencast/Zsjjj9ZjBHVv</id>
+    <published>2008-04-23T19:47:08Z</published>
+    <summary type="html" />
+    <duration xmlns="">62365</duration>
+  </entry>
+  <entry>
+    <title>James K. Polk</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C626000000011977DAD20899C4EEDC" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=tngH715St95v" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=tngH715St95v" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C626000000011977DAD20899C4EEDC&amp;audio=PRS-10fba9c7e&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C626000000011977DAD20899C4EEDC&amp;page=0" />
+    <author>
+      <name>Colin Mahan</name>
+      <email>cmahan@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-23:/services/community/pencast/tngH715St95v</id>
+    <published>2008-04-23T23:24:00Z</published>
+    <summary type="html" />
+    <duration xmlns="">22228</duration>
+  </entry>
+  <entry>
+    <title>Ulysses S. Grant</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C52B000000011977DBCE2C99D68BA2" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=wZc0lpt21VC7" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=wZc0lpt21VC7" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C52B000000011977DBCE2C99D68BA2&amp;audio=PRS-10fe5c98f&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C52B000000011977DBCE2C99D68BA2&amp;page=0" />
+    <author>
+      <name>Colin Mahan</name>
+      <email>cmahan@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-23:/services/community/pencast/wZc0lpt21VC7</id>
+    <published>2008-04-23T23:26:28Z</published>
+    <summary type="html">Paper Replay President Ulysses S. Grant.</summary>
+    <duration xmlns="">25002</duration>
+  </entry>
+  <entry>
+    <title>Welcome to the Livescribe Community</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C544000000011977DBCE2C99D68BA2" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=7b5XN6ptlcTc" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=7b5XN6ptlcTc" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C544000000011977DBCE2C99D68BA2&amp;audio=PRS-11a34f0c3&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C544000000011977DBCE2C99D68BA2&amp;page=0" />
+    <author>
+      <name>harry blinders</name>
+      <email>lazerfoxx@yahoo.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-24:/services/community/pencast/7b5XN6ptlcTc</id>
+    <published>2008-04-24T22:45:26Z</published>
+    <summary type="html">Welcome to the Livescribe Community.</summary>
+    <duration xmlns="">19868</duration>
+  </entry>
+  <entry>
+    <title>04.24.2008 5:23p</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C592000000011977DBCE2C99D68BA2" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=NXCCkVXDFpbW" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=NXCCkVXDFpbW" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C592000000011977DBCE2C99D68BA2&amp;audio=PRS-117d55bf9&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C592000000011977DBCE2C99D68BA2&amp;page=0" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C592000000011977DBCE2C99D68BA2&amp;page=1" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C592000000011977DBCE2C99D68BA2&amp;page=2" />
+    <author>
+      <name>Martin Stein</name>
+      <email>martin.stein@juno.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-01:/services/community/pencast/NXCCkVXDFpbW</id>
+    <published>2008-05-01T15:07:43Z</published>
+    <summary type="html" />
+    <duration xmlns="">6456737</duration>
+  </entry>
+  <entry>
+    <title>Girls in Tech FEMME Power</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5D5000000011977DBCE2C99D68BA2" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=fpMjHXw81LgD" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=fpMjHXw81LgD" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5D5000000011977DBCE2C99D68BA2&amp;audio=PRS-120499293&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5D5000000011977DBCE2C99D68BA2&amp;page=0" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5D5000000011977DBCE2C99D68BA2&amp;page=1" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5D5000000011977DBCE2C99D68BA2&amp;page=2" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5D5000000011977DBCE2C99D68BA2&amp;page=3" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5D5000000011977DBCE2C99D68BA2&amp;page=4" />
+    <author>
+      <name>karen lee</name>
+      <email>klee@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-02:/services/community/pencast/fpMjHXw81LgD</id>
+    <published>2008-05-03T00:39:41Z</published>
+    <summary type="html" />
+    <duration xmlns="">5482349</duration>
+  </entry>
+  <entry>
+    <title>Upload by E013967</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6C9000000011977DAD20899C4EEDC" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=C5S11hblGhQV" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=C5S11hblGhQV" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6C9000000011977DAD20899C4EEDC&amp;page=0" />
+    <author>
+      <name>Jody Farrar</name>
+      <email>jfarrar@ar-edelman.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-03:/services/community/pencast/C5S11hblGhQV</id>
+    <published>2008-05-04T01:44:01Z</published>
+    <summary type="html" />
+    <duration xmlns="">0</duration>
+  </entry>
+  <entry>
+    <title>Tic-Tac-Toe Game with David</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C524010000011977E10553174C4D4A" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=467mrGzsjWsL" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=467mrGzsjWsL" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C524010000011977E10553174C4D4A&amp;audio=PRS-13e632b82&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C524010000011977E10553174C4D4A&amp;page=0" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C524010000011977E10553174C4D4A&amp;page=1" />
+    <author>
+      <name>Helen Thomas</name>
+      <email>hthomas@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-05:/services/community/pencast/467mrGzsjWsL</id>
+    <published>2008-05-05T18:10:40Z</published>
+    <summary type="html">Blow up to full screen and see a fun family game with a 6-year-old. Great for sharing with family and friends.</summary>
+    <duration xmlns="">582195</duration>
+  </entry>
+  <entry>
+    <title>Condor Notes</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6FA000000011977FE32EB174C4D4A" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=qDXmQqz0pM1p" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=qDXmQqz0pM1p" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6FA000000011977FE32EB174C4D4A&amp;audio=PRS-1146b8713&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6FA000000011977FE32EB174C4D4A&amp;page=0" />
+    <author>
+      <name>Brian Friedlander</name>
+      <email>brian@assistivetek.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-05:/services/community/pencast/qDXmQqz0pM1p</id>
+    <published>2008-05-06T00:54:38Z</published>
+    <summary type="html">Student taking notes</summary>
+    <duration xmlns="">166184</duration>
+  </entry>
+  <entry>
+    <title>face the lions sermon</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C61A010000011977FE32EB174C4D4A" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=2DKQLT8dbJH0" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=2DKQLT8dbJH0" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C61A010000011977FE32EB174C4D4A&amp;audio=PRS-f320f14e&amp;fileName=audio-0_fix.aac" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C61A010000011977FE32EB174C4D4A&amp;audio=PRS-f320f14e&amp;fileName=audio-1_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C61A010000011977FE32EB174C4D4A&amp;page=0" />
+    <author>
+      <name>Emily Eskelson</name>
+      <email>emyeske@comcast.net</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-06:/services/community/pencast/2DKQLT8dbJH0</id>
+    <published>2008-05-06T21:56:32Z</published>
+    <summary type="html" />
+    <duration xmlns="">37969</duration>
+  </entry>
+  <entry>
+    <title>05.06.2008 8:55p</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C57C010000011977DBCE2C99D68BA2" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=N5Rt0GSsh9hD" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=N5Rt0GSsh9hD" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C57C010000011977DBCE2C99D68BA2&amp;audio=PRS-84cd72a2&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C57C010000011977DBCE2C99D68BA2&amp;page=0" />
+    <author>
+      <name>Vivek Swarnakar</name>
+      <email>vswarnakar@hotmail.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-07:/services/community/pencast/N5Rt0GSsh9hD</id>
+    <published>2008-05-08T01:57:40Z</published>
+    <summary type="html" />
+    <duration xmlns="">31390</duration>
+  </entry>
+  <entry>
+    <title>05.02.2008 4:13p</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5A0010000011977DBCE2C99D68BA2" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=W9FRWFkpLDgg" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=W9FRWFkpLDgg" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5A0010000011977DBCE2C99D68BA2&amp;audio=PRS-140c8a6d0&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5A0010000011977DBCE2C99D68BA2&amp;page=0" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5A0010000011977DBCE2C99D68BA2&amp;page=1" />
+    <author>
+      <name>Martin Stein</name>
+      <email>martin.stein@juno.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-08:/services/community/pencast/W9FRWFkpLDgg</id>
+    <published>2008-05-08T15:55:10Z</published>
+    <summary type="html" />
+    <duration xmlns="">4501045</duration>
+  </entry>
+  <entry>
+    <title>Bus 170 - 0506 - Lecture Notes</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6D5010000011977FE32EB174C4D4A" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=BZckF4zkwbk8" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=BZckF4zkwbk8" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6D5010000011977FE32EB174C4D4A&amp;page=0" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6D5010000011977FE32EB174C4D4A&amp;page=1" />
+    <author>
+      <name>Andrew Eller</name>
+      <email>microbreak@gmail.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-08:/services/community/pencast/BZckF4zkwbk8</id>
+    <published>2008-05-09T05:45:00Z</published>
+    <summary type="html" />
+    <duration xmlns="">0</duration>
+  </entry>
+  <entry>
+    <title>Old Man</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5EF010000011977DBCE2C99D68BA2" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=JDzM95lFTxQG" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=JDzM95lFTxQG" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5EF010000011977DBCE2C99D68BA2&amp;page=0" />
+    <author>
+      <name>Lance Ulanoff</name>
+      <email>lance.ulanoff@gmail.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-09:/services/community/pencast/JDzM95lFTxQG</id>
+    <published>2008-05-09T13:48:41Z</published>
+    <summary type="html" />
+    <duration xmlns="">0</duration>
+  </entry>
+</feed>
+

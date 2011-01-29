@@ -1,0 +1,11 @@
+#!/usr/local/bin/stsh
+filename :=args objectAtIndex:0.
+attributes := NSMutableDictionary dictionary.
+options := NSMutableDictionary dictionary.
+options setObject:100000000 forKey:'NSIndexing'.
+data := NSData dataWithContentsOfMappedFile:filename.
+richText:=NSAttributedString alloc initWithData:data options:options documentAttributes:attributes error:nil.
+#stdout println:'attributes:'.
+#stdout println:attributes.
+#utf16data := richText string dataUsingEncoding:4.
+stdout println:richText string.

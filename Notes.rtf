@@ -1,0 +1,210 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf430
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red46\green13\blue110;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs24 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\fs36 \cf0 To Do
+\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\b0 \cf0 \
+- Update generation with ideas from WAX and Seaside, SAX compatibility\
+- more MAX default methods:  my (lazy) DOM ,Apple DOM\
+- expand lazy DOM\
+- re-activate archiving? / work on mapping\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\b\fs36 \cf0 Issues/Notes
+\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\b0 \cf0 \
+\
+1	Mapper so we can map directly between existing XML grammars and existing object models\
+3.	Archiving backwards/forwards compatibility\
+		- skip over attributes in archive that aren't asked for\
+		- provide defaults for attributes requested but not in archive \
+	option to complain/fail on either of those conditions as well\
+7.	Special XML search engine, sgrep, ...\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\b \cf0 Log
+\b0 \
+2008.12.18\
+ - don't treat aborts as errors\
+2008.9.3\
+- parsers recognize encodings specified in <?xml> element via 
+\f1\fs20 \cf2 \CocoaLigature0 CFStringConvertIANACharSetNameToEncoding()
+\f0\fs24 \cf0 \CocoaLigature1 \
+2008.8.30\
+- SAX parser is NSXMLParser compatible\
+- MAX parser implemented\
+9912.01\
+- released 0.1 version\
+9912.07\
+- modified SaxProtocol to reflect current, more OO protocol, + exported the header\
+- creating examples showed some problems:\
+	- the scan: method is not necessarily obvious, need parse:\
+	- DOM parser needs convenience method that immediately returns the result\
+		- a renaming of the stream convenience methods should suffice\
+	- stream logic and SAX-client not integrated\
+	- whitespace handling\
+		- ignorable whitespace not possible without parsing the DTD, need DTD parser?\
+		- plain whitespace possible\
+	- attribute with only key not read (is this valid XML?)\
+2000.07.30\
+- fixed various problems with (un-)archiving XML\
+- added special message for encode/decoding to/from XML-archive\
+	- NSFont was being problematic, now I can encode NSFont specially (this is done in MPWTemplateAppKit)\
+2000.08.13\
+- bug:  can't unarchive NSNumber\
+	- NSNumber/NSValue store their type as a c-string, and c-string coding isn't supported yet\
+	- fix:  support c-string coding ( Objective-C type-encoding: '*' )\
+- bug:  cannot archive selectors ( SEL )\
+	- fix:  added archiving for SEL type ( Objective-C type-encoding: ':' )\
+- bug: after decoding NSCustomImageRep, app crashes in freed-handler\
+	- idref - references did not add a retain to their argument\
+	- fix:  idref-decoding now adds a retain\
+2000.09.02\
+- bug:  various xadtemplates broken ( Xml archives)\
+	- cause:  NSData-archiving didn't properly re-constitute data that contained the cdata eod sequence ( ]]> )\
+		as plain data and thus had to be split up when writing as cdata-sections\
+	- fix:  modify both -characters:  and -cdata: to properly reconstitute such combined binary data from individual\
+		cdata sections\
+2000.09.11\
+- bug: xadtemplates still breaking sometimes\
+	- cause:  CDATA-writing also buggy, skips over some of the data to be encoded\
+	- fix:  the ]]> search has now been adjusted so there is no skip\
+2000.09.17\
+- added parsing of processing instructions\
+- class versions now stored in XML-archives (via processing-instructions)\
+- versions of superclass now also stored\
+2000.10.17\
+- added XML default versions for NSImageRep and NSEPSImageRep (both are 17)\
+	- old xadtemplates now load again...\
+2000.10.18\
+- modified archiver so it uses ordinal object numbers as id/idref identifiers in the XML instead of memory addresses\
+	- slight refactoring of encodeObject: + encodeReference: methods\
+- missing-test-bug:   don't have isolated tests for archiver!\
+	- fix:  very simple tests for both archiver and unarchiver added\
+- bug:  xadtemplates stopped loading after re-saving several times\
+	- cause: for objects that substitute another object for encoding, was writing the original class name instead\
+		of the substituted class-name\
+	- fix:  -encodeObject: now writes the substituted class name\
+	- added test for this condition, undid the fix to make sure it raises, redid the fix -> OK\
+- bug(?): certain data sections seem to grow by 1 byte on each save/load cycle\
+	- not-a-bug:  %%BeginBinary sections were adding a \\n before just to be safe\
+		- in MPWPSSupport\
+2000.12.10\
+- added -keyEnumerator to MPWXmlAttributes\
+2001.8.29\
+- bug: rects not decoded/encoded\
+	- cause: type-encoding changed\
+    	- workaround:  updated exact string that is matched\
+        	(fix would be to truly parse the type-strings)\
+2001.10.25\
+- updated MPWXmlParser and MPWXmlAttributes to be a bit more compatible\
+	with Helge's SAX \
+2003.12.?\
+- better GNUstep (mingw) compatibility\
+2004.1.5\
+- attributes are now scanned in MPWXmlScanner, so '>' in attributes should work\
+- bug:  NSString -initWithCoder:  doesn't work with XML unarchiver any longer\
+	- cause:  Apple seems to have changed that method to use NSDeserializer??\
+	- fix/workaround:  added a category that reads the old format\
+2006.8.4\
+- started converting MPWXmlParser to use mostly NSXMLParser-compatible client API\
+- bug:  run-on bug broken again\
+	- cause: spaces between name and value in XML attributes causing scanner to prematurely end tag processing		(and consider the character-sequence not a tag)\
+	- fix:  account for spaces both before and after the '='\
+- bug: XML declarations mess up the character scanner\
+	- fix:  scan over the declaration\
+- bug:  ENDELEMENT() macros cause crashes (sometimes or always), at least with the message catcher\
+	- cause is unclear at present\
+	- workaround:  use a normal message send instead\
+- started implementing namespace processing\
+	- namespace attributes ( xmlns and xmlns:___ ) are recognized, handed off, and NOT included in the other tag attributes\
+	- a startMapping message is sent\
+- issue: attributes are cleared/reused so they don't necessarily remain valid\
+	- workaround: \
+- bug/issue:  it seems that hasSuffix didn't work in a select HOM on MPWSubDatas\
+	- workaround:  calling stringValue to convert to real NSStrings did the trick\
+2006.8.11\
+- bug?:  Spotlight HTML importer throws out some tags as character data\
+	- cause:  attribute values that aren't delimited by quotes\
+	- fix:  allow attribute values not delimited by quotes\
+	- issue:  is this valid XML?\
+- bug: entity references are not being reported\
+	- fix:  are now reported\
+	+ XML predefined entities are automatically converted to characters\
+	+ it seems that NSXMLParser is buggy in this respect, it doesn't seem to report &gt; and/or &lt;  at all\
+- bug?: Spotlight HTML importer ignores some character content\
+	- cause:  character content following input tag with an attribute that has no value \
+	- fix:  character scanner now deals with situation of having no attribute value following the attribute name\
+\
+2006.9.7\
+- HTML importer 'fixes'\
+	- primarily fall into two categories:  spacing related and working around buggy HTML\
+		- spacing:  parser either puts a whitespace where it shouldn't or omits one where there should be one\
+			- tags that need a space:  th, h?, p, li, br   \
+		- HTML bugs: 	\
+			- broken close tag:  "</code  more text..."\
+			- entity run-on:   "&amp  more text "\
+			- multiple BODY tags in body:  probably should have been escaped\
+				- fix:  do not honor body close tags at all!\
+			- html fragments:  don't have any enclosing tag structure, start with plain text\
+				- had to mangle the XML parser to completely delegate the decision of wether to start reporting chacters\
+				- (it previously never reported characters before encountering the outermost XML element)\
+	- also getting + using the encoding from HTML meta tags ( lower + upper case, but not mixed)\
+2006.9.25\
+- bugfix:  comment processing didn't work at all\
+	- scanState not switched to 'inComment' at start of comment processing\
+	- fix:  add line that switches the scanState at the start of comment handling\
+- more bogus HTML handling:\
+	- two quotes close an attribute (instead of just 1)\
+	- no space between an attribute value and the following attribute name\
+2006.9.26\
+- meta-data ( meta name= content = ) now extracted to dict\
+	- keys are the lower-case versions of the HTML meta attribute name\
+	- matches any case of the attribute name\
+2006.9.27\
+- meta-data attributes now correctly handle encodings\
+2007.3.20\
+- bug:  unit tests crash (signal 11) in  MPWXmlParserTesting:testBasicSaxParse	- seems to work fine when MPWXmlKit is compiled without optimization:  -O0\
+	- is related to issue with NSNumber / 'q' (64 bit) encoding -> when I leave that test out or disable 'q' it works\
+	- NSNumber is requesting 'q' / 64 bit when running in testlogger\
+		- also in stsh, but not in test-program(s), statically linking or dynamically loading MPWXmlKit\
+	- crasher:  the "defaultedVoidMethodForSelector" function can return something I don't understand \
+		-> workaround in MPWFoundation:  always return objc_msgSend()\
+	- 'q':  CoreFoundation is caching numbers from -1 to 12, with whatever 'type' comes in first, if that is 'q', then all\
+		subsequent requests for that number will get that 64 bit value, not matter what they requested\
+2007.3.27\
+- issue:  high memory use in testcoredataxml / readRows\
+	- attributes not getting freed?\
+	- \
+- issue:  need to decouple the DOM-like parsers from the low-level XML parser so they can be fed separately (for binary)\
+	- alternative: add binary parsing to the SAX scanner \
+		- issue with that:  all the low-level methods/overrides that expect c-strings\
+		-> should encapsulate those away so clients have the benefits without being exposed\
+2007.8.1\
+- proplist reader now uses small-string-table:  now 50% faster than CF proplist reader (have to check memory consumption)\
+2007.8.8\
+- MAX:  Message oriented API for XML parser\
+2007.8.9\
+- DOM parser is now a subclass of the MAX parser\
+	- unfortunately, that broke the (un)-archiver, but that's OK, needed to be rewritten anyway..\
+2007.8.13\
+- MAX/plist parser doesn't like NoteBook plists, -[NSNumber length]  (unrecognized selector)\
+	- I had this before, it was fixed, and I don't seem to have notes.\
+		- actually I do have notes and I remember, was a corruption issue due to overfowing the allowed bits\
+2009.2.7\
+- compile errors with certain targets fixed\
+- }

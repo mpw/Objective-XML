@@ -1,0 +1,659 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja-JP">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=shift_jis">
+<meta http-equiv="content-language" content="ja">
+<meta http-equiv="content-script-type" content="text/javascript">
+<meta http-equiv="content-style-type" content="text/css">
+<title>特許庁ホームページ</title>
+<script type="text/JavaScript">
+<!--
+	function check(){
+		srcform = document.inputform;
+		///
+		if( srcform.query.value == '' ){
+			alert( "キーワードを入力してください。" );
+				return false;
+		}
+		srcform.submit();
+	}
+-->
+</script>
+<script type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a && i < a.length && (x=a[i]) && x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+a:active {
+  color:#ff4444;
+}
+td {
+  line-height:105%;
+}
+-->
+</style>
+
+</head>
+<body text="#000000" bgcolor="#d1E2F6" link="#2346AB" vlink="#ff44ff" alink="#ff4444" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"onLoad="MM_preloadImages('images/t_menu01_on.gif','images/t_menu02_on.gif','images/t_menu03_on.gif','images/t_menu04_on.gif','images/t_menu05_on.gif','images/t_menu01_txt.jpg','images/t_menu02_txt.jpg','images/t_menu03_txt.jpg','images/t_menu04_txt.jpg','images/t_menu05_txt.jpg')">
+<form method="get" action="http://www.deux.jpo.go.jp/cgi/search.cgi" name="inputform" target="_top">
+<center>
+<table width="720" cellpadding="0" cellspacing="0" border="0">
+	<tr align="left" valign="top">
+		<td width="720">
+			<table width="720" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td bgcolor="#FFFFFF" width="374"><a href="indexj.htm" target="_top"><img src="images/head01.gif" width="374" height="66" border="0" alt="特許庁 Japan Patent Office"></a></td>
+					<td bgcolor="#FFFFFF" align="right" width="100%">
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr align="left">
+								<td colspan="2"><img src="images/search.gif" width="135" height="20" border="0" alt="ホームページ内検索"></td>
+							</tr>
+							<tr valign="top">
+								<td align="left"><input type="text" name="query" maxlength="100" size="15" value=""></td>
+								<td align="center"><input type="button" value="検索" onclick="check();"><input type="hidden" name="lang" value="jp">
+									<input type="hidden" name="root" value="short">
+								<input type="reset" value="取消"><br><font size="2"><a href="http://www.deux.jpo.go.jp/cgi/search.cgi?lang=jp">詳細設定</a></font></td>
+							</tr>
+						</table>
+					</td>
+					<td bgcolor="#FFFFFF" width="10"><img src="images/spacer.gif" width="10" height="66"></td>
+					<td width="17"><img src="images/head02.gif" width="17" height="66"></td>
+					<td align="right" valign="middle" width="87">
+						
+						<table cellpadding="0" cellspacing="0" border="0" height="56" width="87">
+							<tr align="left" valign="top">
+								<td><a href="rireki/index.htm" target="_top"><img src="images/head03.gif" width="87" height="14" border="0" alt="更新履歴"></a></td>
+							</tr>
+							<tr align="left" valign="top">
+								<td><a href="sitemap/index.htm" target="_top"><img src="images/head04.gif" width="87" height="14" border="0" alt="サイトマップ"></a></td>
+							</tr>
+							<tr align="left" valign="top">
+								<td><a href="quick/index.htm" target="_top"><img src="images/head05.gif" width="87" height="14" border="0" alt="クイックガイド"></a></td>
+							</tr>
+							<tr align="left" valign="top">
+								<td><a href="toiawase/index.htm" target="_top"><img src="images/head06.gif" width="87" height="14" border="0" alt="お問い合わせ"></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#2346AB" width="100%"><img src="images/spacer.gif" width="720" height="3"></td>
+	</tr>
+</table>
+
+<table width="720" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td>
+			
+			<table width="192" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td><a href="seido/index.htm" target="_top" onmouseover="MM_swapImage('txt','','images/t_menu01_txt.jpg',1);MM_swapImage('seido','','images/t_menu01_on.gif',1)" onMouseOut="MM_swapImage('txt','','images/top.jpg',1);MM_swapImage('seido','','images/t_menu01.gif',1)"><img src="images/t_menu01.gif" width="192" height="29" border="0" alt="制度の紹介" name="seido"></a></td>
+				</tr>
+				<tr>
+					<td><a href="tetuzuki/index.htm" target="_top" onmouseover="MM_swapImage('txt','','images/t_menu02_txt.jpg',1);MM_swapImage('tetuzuki','','images/t_menu02_on.gif',1)" onMouseOut="MM_swapImage('txt','','images/top.jpg',1);MM_swapImage('tetuzuki','','images/t_menu02.gif',1)"><img src="images/t_menu02.gif" width="192" height="29" border="0" alt="出願から審査、審判、登録まで" name="tetuzuki"></a></td>
+				</tr>
+				<tr>
+					<td><a href="shoukai/index.htm" target="_top" onmouseover="MM_swapImage('txt','','images/t_menu03_txt.jpg',1);MM_swapImage('shoukai','','images/t_menu03_on.gif',1)" onMouseOut="MM_swapImage('txt','','images/top.jpg',1);MM_swapImage('shoukai','','images/t_menu03.gif',1)"><img src="images/t_menu03.gif" width="192" height="29" border="0" alt="特許庁の紹介" name="shoukai"></a></td>
+				</tr>
+				<tr>
+					<td><a href="torikumi/index.htm" target="_top" onmouseover="MM_swapImage('txt','','images/t_menu04_txt.jpg',1);MM_swapImage('torikumi','','images/t_menu04_on.gif',1)" onMouseOut="MM_swapImage('txt','','images/top.jpg',1);MM_swapImage('torikumi','','images/t_menu04.gif',1)"><img src="images/t_menu04.gif" width="192" height="29" border="0" alt="特許庁の取り組み" name="torikumi"></a></td>
+				</tr>
+				<tr>
+					<td><a href="shiryou/index.htm" target="_top" onmouseover="MM_swapImage('txt','','images/t_menu05_txt.jpg',1);MM_swapImage('shiryou','','images/t_menu05_on.gif',1)" onMouseOut="MM_swapImage('txt','','images/top.jpg',1);MM_swapImage('shiryou','','images/t_menu05.gif',1)"><img src="images/t_menu05.gif" width="192" height="29" border="0" alt="資料室" name="shiryou"></a></td>
+				</tr>
+				<tr>
+					<td><img src="images/t_menusp.gif" width="192" height="4" border="0" alt=""></td>
+				</tr>
+				<tr>
+					<td><a href="torikumi/index_p.htm" target="_top"><img src="images/t_menu06.gif" width="192" height="16" border="0" alt="プレス発表"></a></td>
+				</tr>
+				<tr>
+					<td><a href="koubo/index.htm" target="_top"><img src="images/t_menu07.gif" width="192" height="16" border="0" alt="調達情報・公募情報"></a></td>
+				</tr>
+				<tr>
+					<td><a href="iken/index.htm" target="_top"><img src="images/t_menu08.gif" width="192" height="17" border="0" alt="意見募集（パブリックコメント）"></a></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src="images/top.jpg" width="371" height="198" border="0" name="txt"></td>
+		<td><img src="images/spacer.gif" width="10" height="1"></td>
+		<td>
+			<table width="147" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td colspan="3"><a href="quick/index.htm" target="_top"><img src="images/quick.gif" width="147" height="52" border="0" alt="クイックガイド"></a></td>
+				</tr>
+				<tr>
+					<td bgcolor="#2346ab" width="1"><img src="images/spacer.gif" width="1" height="1"></td>
+					<td bgcolor="#FFFFFF" width="145" height="100%">
+						<table width="145" cellpadding="5" cellspacing="0" border="0">
+							<tr>
+								<td valign="middle">
+									
+									<table cellpadding="0" cellspacing="0" border="0">
+										<tr align="left" valign="top">
+											<td><img src="images/qguide01.gif" width="135" height="18" border="0" alt="どのような情報をお探しですか" vspace="3"></td>
+										</tr>
+										<tr align="left" valign="top">
+											<td><a href="quick/index_tokkyo.htm" target="_top"><img src="images/qguide02.gif" width="135" height="18" border="0" alt="特許・実用新案に関しては"></a></td>
+										</tr>
+										<tr align="left" valign="top">
+											<td><a href="quick/index_isho.htm" target="_top"><img src="images/qguide03.gif" width="135" height="18" border="0" alt="意匠に関しては"></a></td>
+										</tr>
+										<tr align="left" valign="top">
+											<td><a href="quick/index_sh.htm" target="_top"><img src="images/qguide04.gif" width="135" height="18" border="0" alt="商標に関しては"></a></td>
+										</tr>
+										<tr align="left" valign="top">
+											<td><img src="images/quickline.gif" width="135" height="12" border="0" alt=""></td>
+										</tr>
+										<tr align="left" valign="top">
+											<td><a href="http://www.publication.jpo.go.jp/" target="_top"><img src="images/inet_kouhou.gif" width="135" height="18" border="0" alt="インターネット公報"></a></td>
+										</tr>
+										<tr align="left" valign="top">
+											<td><a href="http://www.jpaa.or.jp/" target="_top"><img src="images/qguide06.gif" width="135" height="18" border="0" alt="弁理士をお探しの方は"></a></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td bgcolor="#2346ab" width="1"><img src="images/spacer.gif" width="1" height="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#2346ab" colspan="3"><img src="images/spacer.gif" width="1" height="1"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="720" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td bgcolor="#2346AB" width="100%"><img src="images/spacer.gif" width="720" height="1"></td>
+	</tr>
+	<tr>
+		<td><img src="images/spacer.gif" width="1" height="10"></td>
+	</tr>
+</table>
+
+<!--レイアウト調整用テーブル-->
+<table width="720" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+		<td bgcolor="#FFFFFF" width="359">
+			
+			<!--************************************左側のコラムのテーブル************************************************-->
+			<table width="359" cellpadding="0" cellspacing="0" border="0">
+				
+				<!--行政↓-->
+				<tr valign="middle">
+					<td rowspan="2"><img src="images/spacer.gif" width="10" height="1"></td>
+					<td align="left"><a href="sesaku/pdf/menu/gyousei_service.pdf" target="_blank"><img src="images/tokkyo_s_menu.gif" width="300" height="15" alt="特許行政サービスメニュー-知ってうまく活用！" vspace="5" border="0"></a></td>
+					<td rowspan="2"><img src="images/spacer.gif" width="10" height="1"></td>
+				</tr>
+				
+				<tr>
+					<td>
+						<font size="2">
+						&nbsp;・<a href="sesaku/pdf/menu/shinsa_seikyu00.pdf" target="_blank">料金が安くなる？</a><br>
+						&nbsp;・<a href="/cgi/link.cgi?url=/tetuzuki/ryoukin/henkan.htm">審査請求料の全額返還</a><br>
+						&nbsp;・<a href="sesaku/pdf/menu/18-shinsa0.pdf" target="_blank">審査を早くするには？</a><br>
+						&nbsp;・<a href="sesaku/pdf/menu/37-soudan0.pdf" target="_blank">手続きがわからない時は？</a>
+						</font><br>
+						<a href="/cgi/link.cgi?url=/sesaku/sesaku_menu.htm"><img src="images/button5.gif" border="0" alt="中小企業、個人の方々が活用できる情報を満載"></a><br>
+					</td>
+				</tr>
+				<!--行政↑-->
+				<tr>
+					<td><img src="images/spacer.gif" width="10" height="1"></td>
+					<td><img src="images/pix_br.gif" width="340" height="1"></td>
+					<td><img src="images/spacer.gif" width="10" height="1"></td>
+				</tr>
+				
+				<tr valign="middle" height="30">
+					<td rowspan="3"><img src="images/spacer.gif" width="10" height="1"></td>
+					<td align="left">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td colspan="2" align="left">
+								<a href="https://www.jpo.go.jp/jponews/"><img src="images/shin_haishin.gif" width="220" height="15" border="0"alt="新着配信サービス"></a></td>
+							</tr>
+						</table>
+					</td>
+					<td rowspan="3"><img src="images/spacer.gif" width="10" height="0"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="images/pix_br.gif" width="339" height="1"></td>
+				</tr>
+				<tr>
+					<td><img src="images/spacer.gif" width="1" height="5"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="images/spacer.gif" width="10" height="1"></td>
+					<td>
+						
+						<!-- $$$MIND.start.news$$$ -->
+						
+						<!--**********************************新着情報のテーブル********************************************-->
+						
+						<table width="339" cellpadding="0" cellspacing="2" border="0">
+							
+							<tr align="left" valign="top">
+								<td colspan="2" align="left"><img src="images/shinchaku.gif" width="56" height="15" alt="新着情報" vspace="5"></td>
+							</tr>
+							
+							<tr align="left" valign="top">
+								<td colspan="2" align="left"><font size="2">2006/9/5更新</font></td>
+							</tr>
+							
+							<tr>
+								<td valign="top" align="right"><img src="images/sankaku.gif" width="8" height="10"></td>
+								<td><font size="2">特許庁の紹介</font><br>
+								<font size="2"><a href="/cgi/link.cgi?url=/shoukai/kengaku/kengaku.htm">特許庁の見学について</a>を更新しました。
+								</font>
+								</td>
+							</tr>
+							
+							<tr>
+								<td valign="top" align="right"><img src="images/sankaku.gif" width="8" height="10"></td>
+								<td><font size="2">調達情報・公募情報</font><br>
+								<font size="2"><a href="/cgi/link.cgi?url=/koubo/koubo/ishouchosa_chosa.htm">意匠（デザイン）調査サービス等の実態に関する調査研究について</a>を掲載しました。
+								</font>
+								</td>
+							</tr>
+							
+							<!--tr>
+							<td valign="top" align="right"><img src="images/sankaku.gif" width="8" height="10"></td>
+							<td><font size="2">調達情報・公募情報</font><br>
+							<font size="2">
+							<a href="/cgi/link.cgi?url=/koubo/choutatu/choutatu2/futou_sin.htm">封筒（規格外　特許（登録）証発送用封筒）」作成のための一般競争入札について</a>を掲載しました。<br>
+							</font>
+							
+							
+							<font size="2">
+							<a href="/cgi/link.cgi?url=/koubo/choutatu/choutatu2/seizoubussan-huto-nyusatukoukoku.htm">「封筒（規格外　発送用窓あき封筒）」作成のための一般競争入札について</a>を掲載しました。
+							</font>
+							</td>
+							</tr-->
+							
+							<tr>
+								<td colspan="2" align="right"><br>
+									<font size="2"><a href="rireki/index.htm" target="_top">更新履歴へ</a>&gt;&gt;&gt;</font>
+								</td>
+							</tr>
+							
+							<!-- cool biz -->
+							<tr>
+								<td align="center" colspan="2"><br>
+									<table width="245" bordercolor="#000000" border="1" cellpadding="0" cellspacing="0">
+										<tr>
+											<td colspan="2" align="center"><img src="images/title.gif" width="245" height="50" alt="『執務における夏季の軽装』を励行中です。"></td>
+										</tr>
+										<tr>
+											<td>
+												<table width="100%" bgcolor="#CCFFFF">
+													<tr>
+														<td colspan="2" align="center"><font size="-1"><b><u>6月1日（木）～9月29日（金）</u></b></font></td>
+													</tr>
+													<tr valign="top">
+														<td><font size="-1">○</font></td>
+														<td><font size="-1">地球温暖化対策及びオフィスの省エネ・節電の観点から、冷房の適温化の徹底とあわせて、軽装を励行しております。<br>（※室温が２８度を目安に冷房を設定しております。皆様の御理解をお願いします。）</font></td>
+													</tr>
+													<tr valign="top">
+														<td><font size="-1">○</font></td>
+														<td><font size="-1">当庁に御来訪される際には、是非、軽装に御協力下さるようお願い致します。</font></td>
+													</tr>
+													<tr>
+														<td colspan="2" align="right"><font size="-1">特許庁</font></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<!-- cool biz -->
+							<tr>
+								<td colspan="2" style="height:10px;"></td>
+							</tr>
+							
+							<!--左側コラム間隔調整用セル-->
+							<tr>
+								<td colspan="2" style="height:0px;"></td>
+							</tr>
+							
+						</table>
+						
+						<!-- $$$MIND.end.news$$$ -->
+						
+					</td>
+					<td><img src="images/spacer.gif" width="10" height="1"></td>
+				</tr>
+				
+			</table>
+		</td>
+		
+		<td bgcolor="#2346AB" width="1"><img src="images/spacer.gif" width="1" height="1"></td>
+		
+		<!--*************************ここから下、右側のコラム*************************************-->
+		
+		<td bgcolor="#ffffff" width="360">
+			<table width="360" cellpadding="0" cellspacing="0" border="0">
+				
+				<tr valign="middle" height="45">
+					<td rowspan="3"><img src="images/spacer.gif" width="10" height="1"></td>
+					<td align="left"><a href="/cgi/link.cgi?url=/torikumi/ibento/ibento3/ip_event_cal.htm"><img src="images/event_cal.gif" alt="イベントカレンダー" vspace="5" border="0" hspace="1"></a>&nbsp;&nbsp;<a href="/cgi/link.cgi?url=/e_shutugan/e_shutugan_list.htm"><img src="images/e_shutugan.gif" alt="パソコン電子出願" vspace="5" border="0"></a></td>
+					<td rowspan="3"><img src="images/spacer.gif" width="10" height="1"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="images/pix_br.gif" width="340" height="1"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="images/spacer.gif" width="1" height="5"></td>
+				</tr>
+				
+				<tr align="left" valign="top">
+					<td><img src="images/spacer.gif" width="10" height="1"></td>
+					<td>
+						
+						<!--*************************************トピックス**************************************-->
+						
+						<table width="340" cellpadding="0" cellspacing="2" border="0">
+						<!--<img src="images/new.gif" width="29" height="13" alt="NEW!" border="0">-->
+							
+							<tr align="left" valign="top">
+								<td colspan="3"><img src="images/topics.gif" width="63" height="15" alt="トピックス" vspace="5"></td>
+							</tr>
+							
+							<tr align="left" valign="top">
+								<td><img src="images/sankaku.gif" width="8" height="10"></td>
+								<td colspan="2"><font size="2" color="#008888">パソコン電子出願に関するお知らせ</font><br>
+									<font size="2">
+									・<a href="/cgi/link.cgi?url=/e_shutugan/announce/teiden_onlinestop_h180917.htm"><font color="red">【重要】インターネット出願ソフト・パソコン出願ソフトご利用の皆様へ　オンライン業務一時停止のお知らせ</font></a><br>
+									</font>
+								</td>
+							</tr>
+							
+							<tr align="left" valign="top">
+								<td><img src="images/sankaku.gif" width="8" height="10"></td>
+								<td colspan="2"><font size="2" color="#008888">公報に関して</font><br>
+									<font size="2">
+									・<a href="/cgi/link.cgi?url=/torikumi/kouhou/kouhou2/site_itijityuusi.htm"><font color="red">インターネット利用による公報発行サイトの一時停止について</font></a><br>
+									</font>
+								</td>
+							</tr>
+							
+							<tr align="left" valign="top">
+								<td><img src="images/sankaku.gif" width="8" height="10"></td>
+								<td colspan="2"><font size="2" color="#008888">公募情報</font><br>
+								<font size="2">
+								・<font size="2"><a href="/cgi/link.cgi?url=/koubo/koubo/ishouchosa_chosa.htm">意匠（デザイン）調査サービス等の実態に関する調査研究について</a><img src="images/new.gif" width="29" height="13" alt="NEW!" border="0"><br>
+								・<a href="/cgi/link.cgi?url=/koubo/koubo/koubo_mohouhin_campaign.htm">「模倣品・海賊版撲滅キャンペーン」の企画提案募集について</a><br>
+								・<a href="/cgi/link.cgi?url=/koubo/koubo/kansa_koubo.htm">「特許庁における情報セキュリティ監査支援」に係る企画提案の募集について</a><br>
+								</font>
+								</td>
+							</tr>
+							
+							<tr align="left" valign="top">
+								<td><img src="images/sankaku.gif" width="8" height="10"></td>
+								<td colspan="2"><font size="2" color="#008888">審査・審判の取り組み</font><br>
+									<font size="2">
+									・<a href="/cgi/link.cgi?url=/torikumi/t_torikumi/junkai.htm">巡回審査（出張面接審査）について</a><br>
+									・<a href="/cgi/link.cgi?url=/torikumi/t_torikumi/torisage_houki.htm">取下げ・放棄予定案件のすれ違い審査着手防止について</a><br>
+									・<a href="/cgi/link.cgi?url=/torikumi/t_torikumi/h19_renkeishinsa.htm">平成１９年度関連出願連携審査の説明会の開催について</a><br>
+									</font>
+								</td>
+							</tr>
+							
+							<tr align="left" valign="top">
+								<td><img src="images/sankaku.gif" width="8" height="10"></td>
+								<td colspan="2"><font size="2" color="#008888">国際活動と協力</font><br>
+								<font size="2">
+								・<a href="/cgi/link.cgi?url=/torikumi/kokusai/kokusai2/chugokusenrihou_kyougi_sympo.htm">中国専利法改正調査団の訪日に伴う協議・シンポジウムの開催について</a><br>
+								</font>
+								</td>
+							</tr>
+							
+							<tr align="left" valign="top">
+								<td><img src="images/sankaku.gif" width="8" height="10"></td>
+								<td colspan="2"><font size="2" color="#008888">説明会・セミナー・シンポジウム・フェア</font><br>
+									<font size="2">
+									・<a href="/cgi/link.cgi?url=/torikumi/ibento/ibento2/h18_pct_ro_internet.htm">ＰＣＴ－ＲＯインターネット出願説明会開催について</a><br>
+									・<a href="/cgi/link.cgi?url=/torikumi/ibento/ibento2/h18_jitumusya.htm">平成１８年度知的財産権制度説明会（実務者向け）開催について</a><br>
+									・<a href="/cgi/link.cgi?url=/torikumi/ibento/ibento2/sinsyokumu_soudankai.htm">新職務発明制度相談会の開催について</a><br>
+									・<a href="/cgi/link.cgi?url=/torikumi/ibento/ibento2/h18_beginner.htm">平成１８年度知的財産権制度説明会（初心者向け）開催について</a><br>
+									</font>
+								</td>
+							</tr>
+							
+							<tr>
+								<td style="height:2px;"></td>
+							</tr>
+							<tr align="left" valign="top">
+								<td><img src="images/sankaku.gif" width="8" height="10"></td>
+								<td colspan="2"><font size="2" color="#008888">特許庁職員等の採用・募集</font><br>
+									<font size="2">
+									・<a href="/cgi/link.cgi?url=/shoukai/saiyou/kasumigaseki_tanbou.htm">国家公務員採用&nbsp;I&nbsp;種試験志望者対象「霞が関ＯＰＥＮゼミ（秋）」</a><br>
+									・<a href="/cgi/link.cgi?url=/shoukai/saiyou/ninki_setumei2.htm">特許庁任期付職員（特許審査官補）の業務説明会について</a><br>
+									・<a href="/cgi/link.cgi?url=/shoukai/saiyou/ninki_shokuin_recruit.htm">特許庁任期付職員（特許審査官補）の募集について(募集要綱)</a><br>
+									・<a href="/cgi/link.cgi?url=/shoukai/saiyou/saiyo3.htm">採用情報（II種）</a><br>
+									・<a href="/cgi/link.cgi?url=/shoukai/saiyou/isyou_sinsakan.htm">意匠審査官の採用について</a><br>
+									・<a href="/cgi/link.cgi?url=/shoukai/saiyou/tokkyo_sinsakan.htm">特許審査官の採用について</a><br>
+									・<a href="/cgi/link.cgi?url=/shoukai/saiyou/hisyo_bunru.htm">秘書職員（非常勤職員）の募集について</a><br>
+									・<a href="/cgi/link.cgi?url=/shoukai/saiyou/20041130_recruit02.htm">臨時事務補助員（アルバイト）募集</a>
+									</font>
+								</td>
+							</tr>
+							
+							<!--font size="2">
+							・<a href="/cgi/link.cgi?url=/torikumi/puresu/18_tizai_kourou.htm">平成１８年度「知財功労賞」の表彰について</a>
+							<img src="images/new.gif" width="29" height="13" alt="NEW!" border="0"><br-->
+							
+							
+							<!--tr>
+							<td style="height:2px;"></td>
+							</tr>
+							
+							<tr align="left" valign="top">
+							<td><img src="images/sankaku.gif" width="8" height="10"></td>
+							<td colspan="2"><font size="2" color="#008888">ＰＣＴ制度の運用とその改正</font><br>
+							<font size="2">
+							・<a href="/cgi/link.cgi?url=/tetuzuki/t_tokkyo/kokusai/pct417_siteikoku.htm">ＰＣＴ４．１７規則に規定する申立てへの指定国の記載について</a>
+							<img src="images/new.gif" width="29" height="13" alt="NEW!" border="0">
+							</font>
+							</td>
+							</tr>
+							
+							<tr>
+							<td style="height:2px;"></td>
+							</tr>
+							
+							<tr align="left" valign="top">
+							<td><img src="images/sankaku.gif" width="8" height="10"></td>
+							<td colspan="2"><font size="2" color="#008888">国際活動と協力</font><br>
+							<font size="2">
+							・<a href="/cgi/link.cgi?url=/torikumi/kokusai/kokusai2/splt_meeting_h1803.htm">ＳＰＬＴファーストパッケージに関する先進国サブグループ会合（第３回）の結果概要</a>
+							<!--img src="images/new.gif" width="29" height="13" alt="NEW!" border="0">
+							</font>
+							</td>
+							</tr-->
+							
+							<!--tr>
+							<td style="height:2px;"></td>
+							</tr>
+							
+							<tr align="left" valign="top">
+							<td><img src="images/sankaku.gif" width="8" height="10"></td>
+							<td colspan="2"><font size="2" color="#008888">ＰＣＴ制度の運用とその改正</font><br>
+							<font size="2">
+							・<a href="/cgi/link.cgi?url=/tetuzuki/t_tokkyo/kokusai/pct_shutugan_number.htm">日本に国内移行したＰＣＴ国際出願の国内出願番号通知の発送について</a>
+							<img src="images/new.gif" width="29" height="13" alt="NEW!" border="0">
+							</font>
+							</td>
+							</tr-->
+							
+							<!--tr>
+							<td style="height:2px;"></td>
+							</tr>
+							
+							<tr align="left" valign="top">
+							<td><img src="images/sankaku.gif" width="8" height="10"></td>
+							<td colspan="2"><font size="2" color="#008888">審判請求・異議申し立て</font><br>
+							<font size="2">
+							・<a href="/cgi/link.cgi?url=/tetuzuki/sinpan/sinpan2/sample_bill_sinpan.htm">審判請求書の様式作成見本・書き方集</a>
+							</font>
+							</td>
+							</tr-->
+							
+							<!--tr>
+							<td style="height:2px;"></td>
+							</tr>
+							
+							<tr align="left" valign="top">
+							<td><img src="images/sankaku.gif" width="8" height="10"></td>
+							<td colspan="2"><font size="2" color="#008888">特許・実用新案の出願と審査に関して</font><br>
+							<font size="2">
+							・<a href="/cgi/link.cgi?url=/tetuzuki/t_tokkyo/kokusai/kaisei_pct4_9.htm">国際出願における日本国の指定の除外について－ＰＣＴ規則４．９（ｂ）の改正－</a>
+							<上のトピックスは、2006年4月末まで掲載して、その後削除してください。>
+							</font>
+							</td>
+							</tr-->
+							
+							<!--
+							<tr align="left" valign="top">
+							<td><img src="images/sankaku.gif" width="8" height="10"></td>
+							<td colspan="2"><font size="2" color="#008888">　　　</font><br>
+							<font size="2">
+							・<a href="/cgi/link.cgi?url=/">　　　</a>
+							</font>
+							</td>
+							</tr>
+							-->
+						</table>
+					</td>
+					<td><img src="images/spacer.gif" width="10" height="1"></td>
+				</tr>
+				
+				<!--右側コラム間隔調整用セル-->
+				<tr>
+					<td colspan="3" style="height:5px;"></td>
+				</tr>
+				
+				<!--区切りのライン-->
+				<tr>
+					<td><img src="images/spacer.gif" width="10" height="1"></td>
+					<td><img src="images/pix_br.gif" width="340" height="1"></td>
+					<td><img src="images/spacer.gif" width="10" height="1"></td>
+				</tr>
+				
+				
+				<tr valign="bottom">
+					<td><img src="images/spacer.gif" width="10" height="0"></td>
+					<td valign="bottom">
+						
+						<!--このサイトについて、投書箱、プライバシーポリシー、住所など-->
+						<table width="100%" border="0" cellpadding="0" valign="bottom">
+							<tr>
+								<td>
+									<a href="about/index.htm">
+									<img src="images/t_foot03.gif" height="9" width="218" hspace="2" border="0" alt="このサイトについて-著作権・リンク・免責事項">
+									</a>
+								</td>
+								
+								<td align="right" rowspan="2" valign="bottom">
+									<a href="/cgi/link.cgi?url=/sesaku/tousho.htm">
+									<img src="images/tousho.gif" width="53" height="39" alt="投書箱" vspace="2" border="0" hspace="1">
+									</a>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<a href="/cgi/link.cgi?url=/privacy/privacy_list.htm">
+									<img src="images/privacy.gif" width="107" height="10" hspace="2" border="0" alt="プライバシーポリシー">
+									</a>
+								</td>
+							</tr>
+							
+							<tr>
+								<td colspan="2" style="height:40px;text-align:left;font-size:12px;line-height:1.4em;">
+									〒100-8915&nbsp;東京都千代田区霞が関三丁目４番３号<br>
+									電話番号&nbsp;03-3581-1101（代表）&nbsp;&nbsp;&nbsp;&nbsp;<a href="/cgi/link.cgi?url=/shoukai/soshiki/tizu.htm">地図・交通案内</a>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td><img src="images/spacer.gif" width="10" height="1"></td>
+				</tr>
+				
+			</table>
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="3"><img src="images/spacer.gif" width="1" height="5"><br></td>
+	</tr>
+	
+</table>
+
+<table width="720" cellpadding="0" cellspacing="0" border="0" bgcolor="#2346AB">
+	<tr>
+		<td><img src="images/spacer.gif" width="10"></td>
+		<td>
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><a href="http://www.ncipi.go.jp/" target="_top"><img src="images/foot_ncipi.gif" width="230" height="19" border="0" alt="独立行政法人　工業所有権情報・研修館"></a></td>
+					<td><a href="http://www.ipdl.ncipi.go.jp/homepg.ipdl" target="_top"><img src="images/foot_ipdl.gif" width="151" height="19" border="0" alt="特許電子図書館（IPDL）"></a></td>
+					<td><img src="images/spacer.gif" width="50" height="19"></td>
+					<td><a href="kanren/index.htm"><img src="images/t_foot06.gif" width="158" height="19" border="0" alt="関連ホームページリンク"></a></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src="images/spacer.gif" width="10"></td>
+	</tr>
+</table>
+
+<table width="720" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="middle">
+		<td width="454">
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td><a href="index.htm"><img src="images/t_foot01.gif" width="58" height="15" hspace="3" border="0" alt="English"></a></td>
+					<td><img src="images/spacer.gif" width="5" height="1"></td>
+					<td><a href="http://www.e-gov.go.jp/"><img src="images/t_foot02.gif" width="198" height="15" hspace="3" border="0" alt="電子政府の総合窓口（総務省行政管理局）"></a></td>
+					<td><img src="images/spacer.gif" width="5" height="1"></td>
+					<td><img src="images/spacer.gif" width="5" height="1"></td>
+				</tr>
+			</table>
+		</td>
+		<td align="right" width="266"><font color="#2346AB" size="2">(C)Copyright:2006　特許庁</font></td>
+	</tr>
+</table>
+</center>
+</form>
+</body>
+</html>

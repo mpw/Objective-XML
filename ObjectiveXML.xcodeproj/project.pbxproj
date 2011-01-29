@@ -1,0 +1,2299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1F4B0F610DBEB75A00639DC0 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1F4B0F6E0DBEB78C00639DC0 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				1F4B0F6C0DBEB76900639DC0 /* PBXTargetDependency */,
+				1FC4D3160DFA034400AC1A66 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+		1F5A6CAA1170104300E4A959 /* iXmlKit (Phone + Simulator fat) */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1F5A6CC11170105400E4A959 /* Build configuration list for PBXAggregateTarget "iXmlKit (Phone + Simulator fat)" */;
+			buildPhases = (
+				1F5A6CA91170104300E4A959 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "iXmlKit (Phone + Simulator fat)";
+			productName = "iXmlKit (Phone + Simulator fat)";
+		};
+		1FD564AB0E2ECB2D00607D4E /* B&I ObjectiveXML */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1FD564B50E2ECB5F00607D4E /* Build configuration list for PBXAggregateTarget "B&I ObjectiveXML" */;
+			buildPhases = (
+			);
+			dependencies = (
+				1FD564B30E2ECB3400607D4E /* PBXTargetDependency */,
+			);
+			name = "B&I ObjectiveXML";
+			productName = "B&I ObjectiveXML";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1F04895112D148560069E1D4 /* dictAfterNumber.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F04895012D148560069E1D4 /* dictAfterNumber.json */; };
+		1F04895212D148560069E1D4 /* dictAfterNumber.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F04895012D148560069E1D4 /* dictAfterNumber.json */; };
+		1F05F7030A8339A900C8C652 /* MPWHrefScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F05F7010A8339A900C8C652 /* MPWHrefScanner.h */; };
+		1F05F7040A8339A900C8C652 /* MPWHrefScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05F7020A8339A900C8C652 /* MPWHrefScanner.m */; };
+		1F0E2D10109AC9850093F50E /* responseWithAmpersands.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1F0E2D0F109AC9850093F50E /* responseWithAmpersands.xmlrpc */; };
+		1F18E7A20D510A3E00839569 /* MPWFastKeyedArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F18E7A00D510A3E00839569 /* MPWFastKeyedArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F18E7A30D510A3E00839569 /* MPWFastKeyedArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18E7A10D510A3E00839569 /* MPWFastKeyedArchiver.m */; };
+		1F18E7AE0D51341D00839569 /* MPWFastKeyedUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F18E7AC0D51341D00839569 /* MPWFastKeyedUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F18E7AF0D51341D00839569 /* MPWFastKeyedUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18E7AD0D51341D00839569 /* MPWFastKeyedUnarchiver.m */; };
+		1F22FA3D12D13E8D0032C890 /* MPWMASONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2742A212CC6DA0001498F9 /* MPWMASONParser.m */; };
+		1F22FA3E12D13E940032C890 /* MPWXmlAppleProplistReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2400668979C35ADD82 /* MPWXmlAppleProplistReader.m */; };
+		1F2553F00D627384007D8DAF /* MPWMAXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F449D6F0C6592AB00EC276C /* MPWMAXParser.m */; };
+		1F2553F20D6273A8007D8DAF /* MPWXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2700668979C35ADD82 /* MPWXmlParser.m */; };
+		1F2553F30D6273BA007D8DAF /* MPWXmlScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1D00668979C35ADD82 /* MPWXmlScanner.m */; };
+		1F2554030D6274FB007D8DAF /* MPWXmlAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1F00668979C35ADD82 /* MPWXmlAttributes.m */; };
+		1F27429F12CC6D7B001498F9 /* glossary.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27429E12CC6D7B001498F9 /* glossary.json */; };
+		1F2742A012CC6D7B001498F9 /* glossary.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27429E12CC6D7B001498F9 /* glossary.json */; };
+		1F2742A312CC6DA0001498F9 /* MPWMASONParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2742A112CC6DA0001498F9 /* MPWMASONParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F2742A412CC6DA0001498F9 /* MPWMASONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2742A212CC6DA0001498F9 /* MPWMASONParser.m */; };
+		1F2742A512CC6DA0001498F9 /* MPWMASONParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2742A112CC6DA0001498F9 /* MPWMASONParser.h */; };
+		1F2742A612CC6DA0001498F9 /* MPWMASONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2742A212CC6DA0001498F9 /* MPWMASONParser.m */; };
+		1F27431112CC7BF4001498F9 /* string.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27431012CC7BF4001498F9 /* string.json */; };
+		1F27431212CC7BF4001498F9 /* string.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27431012CC7BF4001498F9 /* string.json */; };
+		1F27432412CC7D16001498F9 /* dict.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27432312CC7D16001498F9 /* dict.json */; };
+		1F27432512CC7D16001498F9 /* dict.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27432312CC7D16001498F9 /* dict.json */; };
+		1F27433D12CC8074001498F9 /* array.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27433C12CC8074001498F9 /* array.json */; };
+		1F27433E12CC8074001498F9 /* array.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27433C12CC8074001498F9 /* array.json */; };
+		1F27436A12CC8741001498F9 /* MPWJSONWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F27436812CC8741001498F9 /* MPWJSONWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F27436B12CC8741001498F9 /* MPWJSONWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27436912CC8741001498F9 /* MPWJSONWriter.m */; };
+		1F27436C12CC8741001498F9 /* MPWJSONWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F27436812CC8741001498F9 /* MPWJSONWriter.h */; };
+		1F27436D12CC8741001498F9 /* MPWJSONWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27436912CC8741001498F9 /* MPWJSONWriter.m */; };
+		1F2B4A7B0D6B893B00189FEB /* MPWOpenDocumentParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2B4A790D6B893B00189FEB /* MPWOpenDocumentParser.h */; };
+		1F2B4ADD0D6B95EF00189FEB /* MPWTagHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2B4ADB0D6B95EF00189FEB /* MPWTagHandler.h */; };
+		1F2B4ADE0D6B95EF00189FEB /* MPWTagHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B4ADC0D6B95EF00189FEB /* MPWTagHandler.m */; };
+		1F2B4B3F0D6BCEDD00189FEB /* MPWTagHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B4ADC0D6B95EF00189FEB /* MPWTagHandler.m */; };
+		1F2C48210E563D7E0055F0A6 /* Faehre.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C48200E563D7E0055F0A6 /* Faehre.xml */; };
+		1F2C49320E563EA90055F0A6 /* Faehre-iso.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C49310E563EA90055F0A6 /* Faehre-iso.xml */; };
+		1F2DB5D50AB08E8400DA2427 /* empty_html.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5CF0AB08E8400DA2427 /* empty_html.html */; };
+		1F2DB5D60AB08E8400DA2427 /* empty_html.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5D00AB08E8400DA2427 /* empty_html.txt */; };
+		1F2DB5D70AB08E8400DA2427 /* textwith_br.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5D10AB08E8400DA2427 /* textwith_br.html */; };
+		1F2DB5D80AB08E8400DA2427 /* textwith_br.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5D20AB08E8400DA2427 /* textwith_br.txt */; };
+		1F2DB5D90AB08E8400DA2427 /* textwith_td.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5D30AB08E8400DA2427 /* textwith_td.html */; };
+		1F2DB5DA0AB08E8400DA2427 /* textwith_td.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5D40AB08E8400DA2427 /* textwith_td.txt */; };
+		1F2DB61E0AB0983F00DA2427 /* html_with_javascript.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB61C0AB0983F00DA2427 /* html_with_javascript.html */; };
+		1F2DB61F0AB0983F00DA2427 /* html_with_javascript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB61D0AB0983F00DA2427 /* html_with_javascript.txt */; };
+		1F2DB6250AB09E0E00DA2427 /* naked_html_fragment.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6230AB09E0E00DA2427 /* naked_html_fragment.html */; };
+		1F2DB6260AB09E0E00DA2427 /* naked_html_fragment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6240AB09E0E00DA2427 /* naked_html_fragment.txt */; };
+		1F2DB6570AB0B29700DA2427 /* html_text_through_tag.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6550AB0B29700DA2427 /* html_text_through_tag.html */; };
+		1F2DB6580AB0B29700DA2427 /* html_text_through_tag.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6560AB0B29700DA2427 /* html_text_through_tag.txt */; };
+		1F2DB6660AB0B65800DA2427 /* jap-pto.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6640AB0B65800DA2427 /* jap-pto.html */; };
+		1F2DB6670AB0B65800DA2427 /* jap-pto.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6650AB0B65800DA2427 /* jap-pto.txt */; };
+		1F2DB69E0AB0C2D400DA2427 /* jap-pto_upcase_meta.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB69C0AB0C2D400DA2427 /* jap-pto_upcase_meta.html */; };
+		1F2DB69F0AB0C2D400DA2427 /* jap-pto_upcase_meta.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB69D0AB0C2D400DA2427 /* jap-pto_upcase_meta.txt */; };
+		1F2DB6AE0AB0C41200DA2427 /* jap-pto_all_upcase_meta.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6AC0AB0C41200DA2427 /* jap-pto_all_upcase_meta.html */; };
+		1F2DB6AF0AB0C41200DA2427 /* jap-pto_all_upcase_meta.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6AD0AB0C41200DA2427 /* jap-pto_all_upcase_meta.txt */; };
+		1F2DB6B50AB0C52C00DA2427 /* entity_runon.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6B30AB0C52C00DA2427 /* entity_runon.html */; };
+		1F2DB6B60AB0C52C00DA2427 /* entity_runon.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6B40AB0C52C00DA2427 /* entity_runon.txt */; };
+		1F2DB6C90AB0C65700DA2427 /* close_tag_not_closed.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6C70AB0C65700DA2427 /* close_tag_not_closed.html */; };
+		1F2DB6CA0AB0C65700DA2427 /* close_tag_not_closed.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6C80AB0C65700DA2427 /* close_tag_not_closed.txt */; };
+		1F345E630D662E8800CA4F40 /* MPWHTMLFileTextExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F443B4B0AAF3443006A2739 /* MPWHTMLFileTextExtractor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F3466680E09BB04001FBB20 /* nested.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F3466670E09BB04001FBB20 /* nested.xml */; };
+		1F3519AA0E05766900A730BF /* revision3-diggnation-quicktime.rss in Resources */ = {isa = PBXBuildFile; fileRef = 1F3519A90E05766900A730BF /* revision3-diggnation-quicktime.rss */; };
+		1F36076E0AC9CD51007B4CA2 /* meta_attributes.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F36076D0AC9CD51007B4CA2 /* meta_attributes.html */; };
+		1F3653EF0AC01F20008792DA /* attributes_with_double_closing_quotes.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653EE0AC01F20008792DA /* attributes_with_double_closing_quotes.html */; };
+		1F3653F90AC0200F008792DA /* xml_comment_with_dash.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653F80AC0200F008792DA /* xml_comment_with_dash.xml */; };
+		1F3653FF0AC02085008792DA /* no_space_between_attributes.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653FE0AC02085008792DA /* no_space_between_attributes.html */; };
+		1F3C9A820BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3C9A800BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.h */; };
+		1F3C9A830BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C9A810BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.m */; };
+		1F3C9A880BCC0C2C00732CD5 /* MPWXmlParserTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3C9A860BCC0C2C00732CD5 /* MPWXmlParserTesting.h */; };
+		1F3C9A890BCC0C2C00732CD5 /* MPWXmlParserTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C9A870BCC0C2C00732CD5 /* MPWXmlParserTesting.m */; };
+		1F3C9AAE0BCC112600732CD5 /* test1.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C9AAD0BCC112600732CD5 /* test1.fi */; };
+		1F3C9AB40BCC137100732CD5 /* emptyelement.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C9AB30BCC137100732CD5 /* emptyelement.fi */; };
+		1F3C9AB90BCC139E00732CD5 /* emptyElementWithAttribute.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C9AB80BCC139E00732CD5 /* emptyElementWithAttribute.fi */; };
+		1F41ADB809FE3E3A00466C82 /* attrparserunonbug.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F41ADB709FE3E3A00466C82 /* attrparserunonbug.html */; };
+		1F421EFD10C2554D00C403D5 /* MPWXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F421EFC10C2554D00C403D5 /* MPWXmlParser.h */; };
+		1F421EFE10C2554D00C403D5 /* MPWXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F421EFC10C2554D00C403D5 /* MPWXmlParser.h */; };
+		1F421EFF10C2554D00C403D5 /* MPWXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F421EFC10C2554D00C403D5 /* MPWXmlParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F421F0010C2554D00C403D5 /* MPWXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F421EFC10C2554D00C403D5 /* MPWXmlParser.h */; };
+		1F421F0210C2555700C403D5 /* MPWMAXParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F421F0110C2555700C403D5 /* MPWMAXParser.h */; };
+		1F421F0310C2555700C403D5 /* MPWMAXParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F421F0110C2555700C403D5 /* MPWMAXParser.h */; };
+		1F421F0410C2555700C403D5 /* MPWMAXParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F421F0110C2555700C403D5 /* MPWMAXParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F421F0510C2555700C403D5 /* MPWMAXParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F421F0110C2555700C403D5 /* MPWMAXParser.h */; };
+		1F42261C10C3A14800C403D5 /* checkForPenApps_with_ISO8859_claiming_UTF8.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1F42261B10C3A14800C403D5 /* checkForPenApps_with_ISO8859_claiming_UTF8.xmlrpc */; };
+		1F42261D10C3A14800C403D5 /* checkForPenApps_with_ISO8859_claiming_UTF8.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1F42261B10C3A14800C403D5 /* checkForPenApps_with_ISO8859_claiming_UTF8.xmlrpc */; };
+		1F443B4D0AAF3443006A2739 /* MPWHTMLFileTextExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F443B4B0AAF3443006A2739 /* MPWHTMLFileTextExtractor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F443B4E0AAF3444006A2739 /* MPWHTMLFileTextExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F443B4C0AAF3443006A2739 /* MPWHTMLFileTextExtractor.m */; };
+		1F449D240C6549CB00EC276C /* Itunes_info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F449D230C6549CB00EC276C /* Itunes_info.plist */; };
+		1F449D730C6592AB00EC276C /* MPWMAXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F449D6F0C6592AB00EC276C /* MPWMAXParser.m */; };
+		1F478F050F479FEB004D1CCE /* Dg-duplex.htm in Resources */ = {isa = PBXBuildFile; fileRef = 1F478F040F479FEB004D1CCE /* Dg-duplex.htm */; };
+		1F4A855C0ACB45F40059E997 /* decor.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A855B0ACB45F40059E997 /* decor.html */; };
+		1F4A855E0ACB46190059E997 /* decor.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A855D0ACB46190059E997 /* decor.txt */; };
+		1F4B0F9B0DBEBA7500639DC0 /* MPWMAXParser_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4B0F7D0DBEB9E700639DC0 /* MPWMAXParser_private.h */; };
+		1F4B0F9C0DBEBA8700639DC0 /* MPWMAXParser_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4B0F7D0DBEB9E700639DC0 /* MPWMAXParser_private.h */; };
+		1F4FCE9E110454A700376799 /* MPWXmlGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2000668979C35ADD82 /* MPWXmlGeneratorStream.m */; };
+		1F4FCE9F110454A700376799 /* MPWXmlRpc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3D38F0F95706A00E991F2 /* MPWXmlRpc.m */; };
+		1F4FCEA0110454A700376799 /* MPWXmlRpcGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF98690F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m */; };
+		1F4FCED41105101B00376799 /* MPWByteStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4FCED11105101B00376799 /* MPWByteStream.h */; };
+		1F4FCED51105101B00376799 /* MPWFlattenStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4FCED21105101B00376799 /* MPWFlattenStream.h */; };
+		1F4FCED61105101B00376799 /* MPWStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4FCED31105101B00376799 /* MPWStream.h */; };
+		1F5A6C53116EE4B800E4A959 /* MPWXmlElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1E00668979C35ADD82 /* MPWXmlElement.m */; };
+		1F5A6D3411702BBB00E4A959 /* MPWXmlElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1E00668979C35ADD82 /* MPWXmlElement.m */; };
+		1F661E190F13EF8300C6F713 /* cdatatest1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F661E180F13EF8300C6F713 /* cdatatest1.xml */; };
+		1F6ED8A00D1FB04C00290F6B /* MPWNSXMLDocumentParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F6ED89C0D1FB04C00290F6B /* MPWNSXMLDocumentParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F6ED8A10D1FB04C00290F6B /* MPWNSXMLDocumentParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6ED89D0D1FB04C00290F6B /* MPWNSXMLDocumentParser.m */; };
+		1F6F086A0F3EB9F300FA4183 /* mojibake_utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F6F08690F3EB9F300FA4183 /* mojibake_utf16.txt */; };
+		1F6F08700F3EBB5900FA4183 /* mojibake_utf8.xhtml in Resources */ = {isa = PBXBuildFile; fileRef = 1F6F086F0F3EBB5900FA4183 /* mojibake_utf8.xhtml */; };
+		1F6F08890F3EBFD000FA4183 /* utf8xhtml_test.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F6F08880F3EBFD000FA4183 /* utf8xhtml_test.html */; };
+		1F6F088D0F3EC08500FA4183 /* utf8xhtml_test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F6F088C0F3EC08500FA4183 /* utf8xhtml_test.txt */; };
+		1F734A5D0AC6D89C004C624F /* attributes_with_double_closing_quotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F734A5C0AC6D89C004C624F /* attributes_with_double_closing_quotes.txt */; };
+		1F734A620AC7D871004C624F /* no_space_between_attributes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F734A610AC7D871004C624F /* no_space_between_attributes.txt */; };
+		1F734A6E0AC7DAEF004C624F /* space_before_tag_close.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F734A6D0AC7DAEF004C624F /* space_before_tag_close.html */; };
+		1F734A700AC7DB04004C624F /* space_before_tag_close.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F734A6F0AC7DB04004C624F /* space_before_tag_close.txt */; };
+		1F734AD80AC8136B004C624F /* html_comment_with_dash.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F734AD60AC8136B004C624F /* html_comment_with_dash.html */; };
+		1F734AD90AC8136B004C624F /* html_comment_with_dash.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F734AD70AC8136B004C624F /* html_comment_with_dash.txt */; };
+		1F7915940BD5F60000BF5CB2 /* test3.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F7915920BD5F60000BF5CB2 /* test3.xml */; };
+		1F7915950BD5F60000BF5CB2 /* test3.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F7915930BD5F60000BF5CB2 /* test3.fi */; };
+		1F7FB2D10E00D58700A40B28 /* MPWFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F7FB2D20E00D58700A40B28 /* MPWFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FB2D00E00D58700A40B28 /* MPWFeed.m */; };
+		1F7FB2D60E00D5B900A40B28 /* NSString+extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2D40E00D5B900A40B28 /* NSString+extras.h */; };
+		1F7FB2D70E00D5B900A40B28 /* NSString+extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FB2D50E00D5B900A40B28 /* NSString+extras.m */; };
+		1F7FB3060E00F27E00A40B28 /* metaobject.rss in Resources */ = {isa = PBXBuildFile; fileRef = 1F7FB3050E00F27E00A40B28 /* metaobject.rss */; };
+		1F8D47A00D8B1877000879BA /* MPWXmlAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A2F00668979C35ADD82 /* MPWXmlAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F8E0E390A8CE6F900F224C2 /* htmlfragment_attribute_no_value.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E0E380A8CE6F900F224C2 /* htmlfragment_attribute_no_value.html */; };
+		1F8E23E30AB0E8FE0073A0F7 /* jap-pto-other-meta.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E23E10AB0E8FE0073A0F7 /* jap-pto-other-meta.html */; };
+		1F8E23E40AB0E8FE0073A0F7 /* jap-pto-other-meta.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E23E20AB0E8FE0073A0F7 /* jap-pto-other-meta.txt */; };
+		1F8E23FD0AB0FD4A0073A0F7 /* textwith_th.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E23FB0AB0FD4A0073A0F7 /* textwith_th.html */; };
+		1F8E23FE0AB0FD4A0073A0F7 /* textwith_th.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E23FC0AB0FD4A0073A0F7 /* textwith_th.txt */; };
+		1F8E24080AB0FE980073A0F7 /* textwith_p.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E24060AB0FE980073A0F7 /* textwith_p.html */; };
+		1F8E24090AB0FE980073A0F7 /* textwith_p.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E24070AB0FE980073A0F7 /* textwith_p.txt */; };
+		1F8E24360AB105810073A0F7 /* textwith_multiple_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E24340AB105810073A0F7 /* textwith_multiple_body.html */; };
+		1F8E24370AB105810073A0F7 /* textwith_multiple_body.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E24350AB105810073A0F7 /* textwith_multiple_body.txt */; };
+		1F8E24900AB209560073A0F7 /* textwith_headings.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E248E0AB209560073A0F7 /* textwith_headings.html */; };
+		1F8E24910AB209560073A0F7 /* textwith_headings.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E248F0AB209560073A0F7 /* textwith_headings.txt */; };
+		1F90D6A80B9BC47D00BD2D9C /* MPWTemplateApply.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F90D6A60B9BC47D00BD2D9C /* MPWTemplateApply.h */; };
+		1F90D6A90B9BC47D00BD2D9C /* MPWTemplateApply.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F90D6A70B9BC47D00BD2D9C /* MPWTemplateApply.m */; };
+		1F90E7ED0BD587BB0074D009 /* test2.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F90E7EC0BD587BB0074D009 /* test2.fi */; };
+		1F90E7F20BD589D60074D009 /* test2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F90E7F10BD589D60074D009 /* test2.xml */; };
+		1F9403860C68159F00E189FC /* hreftest.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F9403850C68159F00E189FC /* hreftest.html */; };
+		1F96E5C709B62F5C0063D669 /* MPWXmlScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A2C00668979C35ADD82 /* MPWXmlScanner.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1F96E5C809B62F5C0063D669 /* MPWXmlElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A2D00668979C35ADD82 /* MPWXmlElement.h */; };
+		1F96E5C909B62F5C0063D669 /* MPWXmlDOM.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A2E00668979C35ADD82 /* MPWXmlDOM.h */; };
+		1F96E5CA09B62F5C0063D669 /* MPWXmlAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A2F00668979C35ADD82 /* MPWXmlAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F96E5CB09B62F5C0063D669 /* MPWXmlGeneratorStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3000668979C35ADD82 /* MPWXmlGeneratorStream.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1F96E5CC09B62F5C0063D669 /* MPWSaxProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3100668979C35ADD82 /* MPWSaxProtocol.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1F96E5CF09B62F5C0063D669 /* MPWXmlProplistGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3400668979C35ADD82 /* MPWXmlProplistGenerator.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1F96E5D009B62F5C0063D669 /* MPWXmlAppleProplistGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3500668979C35ADD82 /* MPWXmlAppleProplistGenerator.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1F96E5D109B62F5C0063D669 /* MPWXmlAppleProplistReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3600668979C35ADD82 /* MPWXmlAppleProplistReader.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1F96E5D209B62F5C0063D669 /* MPWXmlArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3700668979C35ADD82 /* MPWXmlArchiver.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1F96E5D309B62F5C0063D669 /* MPWXmlUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3800668979C35ADD82 /* MPWXmlUnarchiver.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1F96E5D409B62F5C0063D669 /* XmlScannerScanCDataPseudoMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3900668979C35ADD82 /* XmlScannerScanCDataPseudoMacro.h */; };
+		1F96E5D609B62F5C0063D669 /* MPWXmlScanner16BitBE.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3B00668979C35ADD82 /* MPWXmlScanner16BitBE.h */; };
+		1F96E5D709B62F5C0063D669 /* SaxDocumentHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3C00668979C35ADD82 /* SaxDocumentHandler.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1F96E5D909B62F5C0063D669 /* XmlDelimitAttrValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3E00668979C35ADD82 /* XmlDelimitAttrValues.h */; };
+		1F96E5DA09B62F5C0063D669 /* XmlCommonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3F00668979C35ADD82 /* XmlCommonMacros.h */; };
+		1F96E5DB09B62F5C0063D669 /* MPWXmlWrapperArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FB6C17012ABAD5005ADD88 /* MPWXmlWrapperArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F96E5DC09B62F5C0063D669 /* MPWXmlWrapperUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FB6C24012ACB88005ADD88 /* MPWXmlWrapperUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F96E5DF09B62F5C0063D669 /* test1.xml.MPWXmlScanner-result in Resources */ = {isa = PBXBuildFile; fileRef = 07DF1A4100668979C35ADD82 /* test1.xml.MPWXmlScanner-result */; };
+		1F96E5E009B62F5C0063D669 /* test1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 07DF1A4200668979C35ADD82 /* test1.xml */; };
+		1F96E5E109B62F5C0063D669 /* emptyelement.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E2261072C6B2A007DCDB1 /* emptyelement.xml */; };
+		1F96E5E209B62F5C0063D669 /* archiversample.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E2291072C71A7007DCDB1 /* archiversample.xml */; };
+		1F96E5E309B62F5C0063D669 /* emptyElementWithAttribute.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E22BE072C794E007DCDB1 /* emptyElementWithAttribute.xml */; };
+		1F96E5E609B62F5C0063D669 /* MPWXmlScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1D00668979C35ADD82 /* MPWXmlScanner.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5E709B62F5C0063D669 /* MPWXmlElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1E00668979C35ADD82 /* MPWXmlElement.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5E809B62F5C0063D669 /* MPWXmlAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1F00668979C35ADD82 /* MPWXmlAttributes.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5E909B62F5C0063D669 /* MPWXmlGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2000668979C35ADD82 /* MPWXmlGeneratorStream.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5EB09B62F5C0063D669 /* MPWXmlProplistGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2200668979C35ADD82 /* MPWXmlProplistGenerator.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5EC09B62F5C0063D669 /* MPWXmlAppleProplistGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2300668979C35ADD82 /* MPWXmlAppleProplistGenerator.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5ED09B62F5C0063D669 /* MPWXmlAppleProplistReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2400668979C35ADD82 /* MPWXmlAppleProplistReader.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5EE09B62F5C0063D669 /* MPWXmlArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2500668979C35ADD82 /* MPWXmlArchiver.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5EF09B62F5C0063D669 /* MPWXmlUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2600668979C35ADD82 /* MPWXmlUnarchiver.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5F009B62F5C0063D669 /* MPWXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2700668979C35ADD82 /* MPWXmlParser.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5F109B62F5C0063D669 /* MPWXmlScanner16BitBE.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2800668979C35ADD82 /* MPWXmlScanner16BitBE.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5F309B62F5C0063D669 /* MPWXmlWrapperArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB6C16012ABAD5005ADD88 /* MPWXmlWrapperArchiver.m */; };
+		1F96E5F409B62F5C0063D669 /* MPWXmlWrapperUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB6C23012ACB88005ADD88 /* MPWXmlWrapperUnarchiver.m */; };
+		1F96E5F709B62F5C0063D669 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF1A4B00668979C35ADD82 /* Foundation.framework */; };
+		1F96E5F809B62F5C0063D669 /* MPWFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9BAE6905762A2E009DD1EC /* MPWFoundation.framework */; };
+		1F9BC69A0D7BEF4700B04FE8 /* MPWOpenDocumentParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2B4A790D6B893B00189FEB /* MPWOpenDocumentParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F9F23EB0F818DF500D8A750 /* MPWHTMLFileTextExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F443B4C0AAF3443006A2739 /* MPWHTMLFileTextExtractor.m */; };
+		1F9F24090F81B25200D8A750 /* c1qt12.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F9F24080F81B25200D8A750 /* c1qt12.html */; };
+		1F9F240D0F81B2B900D8A750 /* c1qt12.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F9F240C0F81B2B900D8A750 /* c1qt12.txt */; };
+		1F9F242D0F81B9C100D8A750 /* accent_grave.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F9F242C0F81B9C100D8A750 /* accent_grave.html */; };
+		1F9F242F0F81B9CE00D8A750 /* accent_grave.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F9F242E0F81B9CD00D8A750 /* accent_grave.txt */; };
+		1FA3D32C0F93E09600E991F2 /* stringLengthRequest.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D32A0F93E09600E991F2 /* stringLengthRequest.xmlrpc */; };
+		1FA3D32D0F93E09600E991F2 /* stringLengthResponse.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D32B0F93E09600E991F2 /* stringLengthResponse.xmlrpc */; };
+		1FA3D3900F95706A00E991F2 /* MPWXmlRpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FA3D38E0F95706A00E991F2 /* MPWXmlRpc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FA3D3910F95706A00E991F2 /* MPWXmlRpc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3D38F0F95706A00E991F2 /* MPWXmlRpc.m */; };
+		1FA3D3AB0F9572BC00E991F2 /* stringLengthResponse1.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D3AA0F9572BC00E991F2 /* stringLengthResponse1.xmlrpc */; };
+		1FA3D3BE0F95764F00E991F2 /* getListResponse.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D3BD0F95764F00E991F2 /* getListResponse.xmlrpc */; };
+		1FA3D3CB0F957A6000E991F2 /* getDictResponse.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D3CA0F957A6000E991F2 /* getDictResponse.xmlrpc */; };
+		1FA3D4950F97EC9500E991F2 /* getDictRequest.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D4940F97EC9500E991F2 /* getDictRequest.xmlrpc */; };
+		1FAAD2E30DF61EC200592B29 /* mpwfoundation_imports.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FAAD2E20DF61EC200592B29 /* mpwfoundation_imports.h */; };
+		1FAAD2E40DF61F0C00592B29 /* mpwfoundation_imports.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FAAD2E20DF61EC200592B29 /* mpwfoundation_imports.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB006DB0BC7580F0074E056 /* MPWBridgeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB006D90BC7580F0074E056 /* MPWBridgeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB006DC0BC7580F0074E056 /* MPWBridgeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB006DA0BC7580F0074E056 /* MPWBridgeReader.m */; };
+		1FB148E612C82036000AA99F /* MPWFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FB2D00E00D58700A40B28 /* MPWFeed.m */; };
+		1FB43B5710BFB6EF00490AA6 /* mpwfoundation_imports.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FAAD2E20DF61EC200592B29 /* mpwfoundation_imports.h */; };
+		1FB43B5810BFB6EF00490AA6 /* MPWMAXParser_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4B0F7D0DBEB9E700639DC0 /* MPWMAXParser_private.h */; };
+		1FB43B5910BFB6EF00490AA6 /* MPWXmlScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A2C00668979C35ADD82 /* MPWXmlScanner.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1FB43B5A10BFB6EF00490AA6 /* MPWXmlElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A2D00668979C35ADD82 /* MPWXmlElement.h */; };
+		1FB43B5B10BFB6EF00490AA6 /* MPWXmlDOM.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A2E00668979C35ADD82 /* MPWXmlDOM.h */; };
+		1FB43B5C10BFB6EF00490AA6 /* MPWXmlAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A2F00668979C35ADD82 /* MPWXmlAttributes.h */; };
+		1FB43B5D10BFB6EF00490AA6 /* MPWXmlGeneratorStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3000668979C35ADD82 /* MPWXmlGeneratorStream.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1FB43B5E10BFB6EF00490AA6 /* MPWSaxProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3100668979C35ADD82 /* MPWSaxProtocol.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1FB43B6010BFB6EF00490AA6 /* MPWXmlProplistGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3400668979C35ADD82 /* MPWXmlProplistGenerator.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1FB43B6110BFB6EF00490AA6 /* MPWXmlAppleProplistGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3500668979C35ADD82 /* MPWXmlAppleProplistGenerator.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1FB43B6210BFB6EF00490AA6 /* MPWXmlAppleProplistReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3600668979C35ADD82 /* MPWXmlAppleProplistReader.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1FB43B6310BFB6EF00490AA6 /* MPWXmlArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3700668979C35ADD82 /* MPWXmlArchiver.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1FB43B6410BFB6EF00490AA6 /* MPWXmlUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3800668979C35ADD82 /* MPWXmlUnarchiver.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1FB43B6510BFB6EF00490AA6 /* XmlScannerScanCDataPseudoMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3900668979C35ADD82 /* XmlScannerScanCDataPseudoMacro.h */; };
+		1FB43B6710BFB6EF00490AA6 /* MPWXmlScanner16BitBE.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3B00668979C35ADD82 /* MPWXmlScanner16BitBE.h */; };
+		1FB43B6810BFB6EF00490AA6 /* SaxDocumentHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3C00668979C35ADD82 /* SaxDocumentHandler.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		1FB43B6A10BFB6EF00490AA6 /* XmlDelimitAttrValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3E00668979C35ADD82 /* XmlDelimitAttrValues.h */; };
+		1FB43B6B10BFB6EF00490AA6 /* XmlCommonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A3F00668979C35ADD82 /* XmlCommonMacros.h */; };
+		1FB43B6C10BFB6EF00490AA6 /* MPWXmlWrapperArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FB6C17012ABAD5005ADD88 /* MPWXmlWrapperArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB43B6D10BFB6EF00490AA6 /* MPWXmlWrapperUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FB6C24012ACB88005ADD88 /* MPWXmlWrapperUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB43B6E10BFB6EF00490AA6 /* MPWHrefScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F05F7010A8339A900C8C652 /* MPWHrefScanner.h */; };
+		1FB43B6F10BFB6EF00490AA6 /* MPWHTMLFileTextExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F443B4B0AAF3443006A2739 /* MPWHTMLFileTextExtractor.h */; };
+		1FB43B7010BFB6EF00490AA6 /* MPWTemplateApply.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F90D6A60B9BC47D00BD2D9C /* MPWTemplateApply.h */; };
+		1FB43B7110BFB6EF00490AA6 /* MPWBridgeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB006D90BC7580F0074E056 /* MPWBridgeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB43B7210BFB6EF00490AA6 /* MPWXmlFastInfosetParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3C9A800BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.h */; };
+		1FB43B7310BFB6EF00490AA6 /* MPWXmlParserTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3C9A860BCC0C2C00732CD5 /* MPWXmlParserTesting.h */; };
+		1FB43B7510BFB6EF00490AA6 /* MPWNSXMLDocumentParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F6ED89C0D1FB04C00290F6B /* MPWNSXMLDocumentParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB43B7610BFB6EF00490AA6 /* MPWFastKeyedArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F18E7A00D510A3E00839569 /* MPWFastKeyedArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB43B7710BFB6EF00490AA6 /* MPWFastKeyedUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F18E7AC0D51341D00839569 /* MPWFastKeyedUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB43B7810BFB6EF00490AA6 /* MPWTagHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2B4ADB0D6B95EF00189FEB /* MPWTagHandler.h */; };
+		1FB43B7910BFB6EF00490AA6 /* MPWOpenDocumentParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2B4A790D6B893B00189FEB /* MPWOpenDocumentParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB43B7A10BFB6EF00490AA6 /* MPWFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB43B7B10BFB6EF00490AA6 /* NSString+extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2D40E00D5B900A40B28 /* NSString+extras.h */; };
+		1FB43B7C10BFB6EF00490AA6 /* MPWXmlRpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FA3D38E0F95706A00E991F2 /* MPWXmlRpc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FB43B7D10BFB6EF00490AA6 /* MPWXmlRpcGeneratorStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBF98680F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.h */; };
+		1FB43B7F10BFB6EF00490AA6 /* test1.xml.MPWXmlScanner-result in Resources */ = {isa = PBXBuildFile; fileRef = 07DF1A4100668979C35ADD82 /* test1.xml.MPWXmlScanner-result */; };
+		1FB43B8010BFB6EF00490AA6 /* test1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 07DF1A4200668979C35ADD82 /* test1.xml */; };
+		1FB43B8110BFB6EF00490AA6 /* emptyelement.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E2261072C6B2A007DCDB1 /* emptyelement.xml */; };
+		1FB43B8210BFB6EF00490AA6 /* archiversample.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E2291072C71A7007DCDB1 /* archiversample.xml */; };
+		1FB43B8310BFB6EF00490AA6 /* emptyElementWithAttribute.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E22BE072C794E007DCDB1 /* emptyElementWithAttribute.xml */; };
+		1FB43B8410BFB6EF00490AA6 /* attrparserunonbug.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F41ADB709FE3E3A00466C82 /* attrparserunonbug.html */; };
+		1FB43B8510BFB6EF00490AA6 /* simple-xml-with-namespaces.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FC694460A83DDED0079AA90 /* simple-xml-with-namespaces.xml */; };
+		1FB43B8610BFB6EF00490AA6 /* htmlfragment_unquoted_attr_values.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FEBF4690A8C807500F56D44 /* htmlfragment_unquoted_attr_values.html */; };
+		1FB43B8710BFB6EF00490AA6 /* htmlfragment_entities.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FEBF4C20A8C872300F56D44 /* htmlfragment_entities.html */; };
+		1FB43B8810BFB6EF00490AA6 /* htmlfragment_attribute_no_value.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E0E380A8CE6F900F224C2 /* htmlfragment_attribute_no_value.html */; };
+		1FB43B8910BFB6EF00490AA6 /* empty_html.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5CF0AB08E8400DA2427 /* empty_html.html */; };
+		1FB43B8A10BFB6EF00490AA6 /* empty_html.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5D00AB08E8400DA2427 /* empty_html.txt */; };
+		1FB43B8B10BFB6EF00490AA6 /* textwith_br.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5D10AB08E8400DA2427 /* textwith_br.html */; };
+		1FB43B8C10BFB6EF00490AA6 /* textwith_br.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5D20AB08E8400DA2427 /* textwith_br.txt */; };
+		1FB43B8D10BFB6EF00490AA6 /* textwith_td.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5D30AB08E8400DA2427 /* textwith_td.html */; };
+		1FB43B8E10BFB6EF00490AA6 /* textwith_td.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB5D40AB08E8400DA2427 /* textwith_td.txt */; };
+		1FB43B8F10BFB6EF00490AA6 /* html_with_javascript.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB61C0AB0983F00DA2427 /* html_with_javascript.html */; };
+		1FB43B9010BFB6EF00490AA6 /* html_with_javascript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB61D0AB0983F00DA2427 /* html_with_javascript.txt */; };
+		1FB43B9110BFB6EF00490AA6 /* naked_html_fragment.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6230AB09E0E00DA2427 /* naked_html_fragment.html */; };
+		1FB43B9210BFB6EF00490AA6 /* naked_html_fragment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6240AB09E0E00DA2427 /* naked_html_fragment.txt */; };
+		1FB43B9310BFB6EF00490AA6 /* html_text_through_tag.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6550AB0B29700DA2427 /* html_text_through_tag.html */; };
+		1FB43B9410BFB6EF00490AA6 /* html_text_through_tag.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6560AB0B29700DA2427 /* html_text_through_tag.txt */; };
+		1FB43B9510BFB6EF00490AA6 /* jap-pto.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6640AB0B65800DA2427 /* jap-pto.html */; };
+		1FB43B9610BFB6EF00490AA6 /* jap-pto.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6650AB0B65800DA2427 /* jap-pto.txt */; };
+		1FB43B9710BFB6EF00490AA6 /* jap-pto_upcase_meta.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB69C0AB0C2D400DA2427 /* jap-pto_upcase_meta.html */; };
+		1FB43B9810BFB6EF00490AA6 /* jap-pto_upcase_meta.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB69D0AB0C2D400DA2427 /* jap-pto_upcase_meta.txt */; };
+		1FB43B9910BFB6EF00490AA6 /* jap-pto_all_upcase_meta.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6AC0AB0C41200DA2427 /* jap-pto_all_upcase_meta.html */; };
+		1FB43B9A10BFB6EF00490AA6 /* jap-pto_all_upcase_meta.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6AD0AB0C41200DA2427 /* jap-pto_all_upcase_meta.txt */; };
+		1FB43B9B10BFB6EF00490AA6 /* entity_runon.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6B30AB0C52C00DA2427 /* entity_runon.html */; };
+		1FB43B9C10BFB6EF00490AA6 /* entity_runon.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6B40AB0C52C00DA2427 /* entity_runon.txt */; };
+		1FB43B9D10BFB6EF00490AA6 /* close_tag_not_closed.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6C70AB0C65700DA2427 /* close_tag_not_closed.html */; };
+		1FB43B9E10BFB6EF00490AA6 /* close_tag_not_closed.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DB6C80AB0C65700DA2427 /* close_tag_not_closed.txt */; };
+		1FB43B9F10BFB6EF00490AA6 /* jap-pto-other-meta.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E23E10AB0E8FE0073A0F7 /* jap-pto-other-meta.html */; };
+		1FB43BA010BFB6EF00490AA6 /* jap-pto-other-meta.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E23E20AB0E8FE0073A0F7 /* jap-pto-other-meta.txt */; };
+		1FB43BA110BFB6EF00490AA6 /* textwith_th.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E23FB0AB0FD4A0073A0F7 /* textwith_th.html */; };
+		1FB43BA210BFB6EF00490AA6 /* textwith_th.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E23FC0AB0FD4A0073A0F7 /* textwith_th.txt */; };
+		1FB43BA310BFB6EF00490AA6 /* textwith_p.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E24060AB0FE980073A0F7 /* textwith_p.html */; };
+		1FB43BA410BFB6EF00490AA6 /* textwith_p.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E24070AB0FE980073A0F7 /* textwith_p.txt */; };
+		1FB43BA510BFB6EF00490AA6 /* textwith_multiple_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E24340AB105810073A0F7 /* textwith_multiple_body.html */; };
+		1FB43BA610BFB6EF00490AA6 /* textwith_multiple_body.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E24350AB105810073A0F7 /* textwith_multiple_body.txt */; };
+		1FB43BA710BFB6EF00490AA6 /* textwith_headings.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E248E0AB209560073A0F7 /* textwith_headings.html */; };
+		1FB43BA810BFB6EF00490AA6 /* textwith_headings.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E248F0AB209560073A0F7 /* textwith_headings.txt */; };
+		1FB43BA910BFB6EF00490AA6 /* attributes_with_double_closing_quotes.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653EE0AC01F20008792DA /* attributes_with_double_closing_quotes.html */; };
+		1FB43BAA10BFB6EF00490AA6 /* xml_comment_with_dash.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653F80AC0200F008792DA /* xml_comment_with_dash.xml */; };
+		1FB43BAB10BFB6EF00490AA6 /* no_space_between_attributes.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653FE0AC02085008792DA /* no_space_between_attributes.html */; };
+		1FB43BAC10BFB6EF00490AA6 /* attributes_with_double_closing_quotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F734A5C0AC6D89C004C624F /* attributes_with_double_closing_quotes.txt */; };
+		1FB43BAD10BFB6EF00490AA6 /* no_space_between_attributes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F734A610AC7D871004C624F /* no_space_between_attributes.txt */; };
+		1FB43BAE10BFB6EF00490AA6 /* space_before_tag_close.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F734A6D0AC7DAEF004C624F /* space_before_tag_close.html */; };
+		1FB43BAF10BFB6EF00490AA6 /* space_before_tag_close.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F734A6F0AC7DB04004C624F /* space_before_tag_close.txt */; };
+		1FB43BB010BFB6EF00490AA6 /* html_comment_with_dash.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F734AD60AC8136B004C624F /* html_comment_with_dash.html */; };
+		1FB43BB110BFB6EF00490AA6 /* html_comment_with_dash.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F734AD70AC8136B004C624F /* html_comment_with_dash.txt */; };
+		1FB43BB210BFB6EF00490AA6 /* meta_attributes.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F36076D0AC9CD51007B4CA2 /* meta_attributes.html */; };
+		1FB43BB310BFB6EF00490AA6 /* metadata_unicode.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FC164B90ACAFD5D007F72C8 /* metadata_unicode.html */; };
+		1FB43BB410BFB6EF00490AA6 /* decor.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A855B0ACB45F40059E997 /* decor.html */; };
+		1FB43BB510BFB6EF00490AA6 /* decor.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A855D0ACB46190059E997 /* decor.txt */; };
+		1FB43BB610BFB6EF00490AA6 /* test1.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C9AAD0BCC112600732CD5 /* test1.fi */; };
+		1FB43BB710BFB6EF00490AA6 /* emptyelement.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C9AB30BCC137100732CD5 /* emptyelement.fi */; };
+		1FB43BB810BFB6EF00490AA6 /* emptyElementWithAttribute.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C9AB80BCC139E00732CD5 /* emptyElementWithAttribute.fi */; };
+		1FB43BB910BFB6EF00490AA6 /* test2.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F90E7EC0BD587BB0074D009 /* test2.fi */; };
+		1FB43BBA10BFB6EF00490AA6 /* test2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F90E7F10BD589D60074D009 /* test2.xml */; };
+		1FB43BBB10BFB6EF00490AA6 /* test3.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F7915920BD5F60000BF5CB2 /* test3.xml */; };
+		1FB43BBC10BFB6EF00490AA6 /* test3.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F7915930BD5F60000BF5CB2 /* test3.fi */; };
+		1FB43BBD10BFB6EF00490AA6 /* Itunes_info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F449D230C6549CB00EC276C /* Itunes_info.plist */; };
+		1FB43BBE10BFB6EF00490AA6 /* hreftest.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F9403850C68159F00E189FC /* hreftest.html */; };
+		1FB43BBF10BFB6EF00490AA6 /* empty_elements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FCD3B1A0C6964A50049EB86 /* empty_elements.plist */; };
+		1FB43BC010BFB6EF00490AA6 /* test4.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1E4400D67AD420057258D /* test4.xml */; };
+		1FB43BC110BFB6EF00490AA6 /* metaobject.rss in Resources */ = {isa = PBXBuildFile; fileRef = 1F7FB3050E00F27E00A40B28 /* metaobject.rss */; };
+		1FB43BC210BFB6EF00490AA6 /* revision3-diggnation-quicktime.rss in Resources */ = {isa = PBXBuildFile; fileRef = 1F3519A90E05766900A730BF /* revision3-diggnation-quicktime.rss */; };
+		1FB43BC310BFB6EF00490AA6 /* nested.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F3466670E09BB04001FBB20 /* nested.xml */; };
+		1FB43BC410BFB6EF00490AA6 /* test3_16bit.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD58790E0DACD9000AE272 /* test3_16bit.xml */; };
+		1FB43BC510BFB6EF00490AA6 /* iso-encoded.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FE5F70F0E538DDF008F629B /* iso-encoded.xml */; };
+		1FB43BC610BFB6EF00490AA6 /* windows-encoded.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FE5F72A0E53964C008F629B /* windows-encoded.xml */; };
+		1FB43BC710BFB6EF00490AA6 /* Faehre.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C48200E563D7E0055F0A6 /* Faehre.xml */; };
+		1FB43BC810BFB6EF00490AA6 /* Faehre-iso.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C49310E563EA90055F0A6 /* Faehre-iso.xml */; };
+		1FB43BC910BFB6EF00490AA6 /* cdatatest1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F661E180F13EF8300C6F713 /* cdatatest1.xml */; };
+		1FB43BCA10BFB6EF00490AA6 /* tagconflict_disambiguated_by_namespace.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FD5DC2E0F2D02A400F8F769 /* tagconflict_disambiguated_by_namespace.xml */; };
+		1FB43BCB10BFB6EF00490AA6 /* mojibake_utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F6F08690F3EB9F300FA4183 /* mojibake_utf16.txt */; };
+		1FB43BCC10BFB6EF00490AA6 /* mojibake_utf8.xhtml in Resources */ = {isa = PBXBuildFile; fileRef = 1F6F086F0F3EBB5900FA4183 /* mojibake_utf8.xhtml */; };
+		1FB43BCD10BFB6EF00490AA6 /* utf8xhtml_test.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F6F08880F3EBFD000FA4183 /* utf8xhtml_test.html */; };
+		1FB43BCE10BFB6EF00490AA6 /* utf8xhtml_test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F6F088C0F3EC08500FA4183 /* utf8xhtml_test.txt */; };
+		1FB43BCF10BFB6EF00490AA6 /* Dg-duplex.htm in Resources */ = {isa = PBXBuildFile; fileRef = 1F478F040F479FEB004D1CCE /* Dg-duplex.htm */; };
+		1FB43BD010BFB6EF00490AA6 /* c1qt12.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F9F24080F81B25200D8A750 /* c1qt12.html */; };
+		1FB43BD110BFB6EF00490AA6 /* c1qt12.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F9F240C0F81B2B900D8A750 /* c1qt12.txt */; };
+		1FB43BD210BFB6EF00490AA6 /* accent_grave.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F9F242C0F81B9C100D8A750 /* accent_grave.html */; };
+		1FB43BD310BFB6EF00490AA6 /* accent_grave.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F9F242E0F81B9CD00D8A750 /* accent_grave.txt */; };
+		1FB43BD410BFB6EF00490AA6 /* stringLengthRequest.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D32A0F93E09600E991F2 /* stringLengthRequest.xmlrpc */; };
+		1FB43BD510BFB6EF00490AA6 /* stringLengthResponse.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D32B0F93E09600E991F2 /* stringLengthResponse.xmlrpc */; };
+		1FB43BD610BFB6EF00490AA6 /* stringLengthResponse1.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D3AA0F9572BC00E991F2 /* stringLengthResponse1.xmlrpc */; };
+		1FB43BD710BFB6EF00490AA6 /* getListResponse.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D3BD0F95764F00E991F2 /* getListResponse.xmlrpc */; };
+		1FB43BD810BFB6EF00490AA6 /* getDictResponse.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D3CA0F957A6000E991F2 /* getDictResponse.xmlrpc */; };
+		1FB43BD910BFB6EF00490AA6 /* getDictRequest.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3D4940F97EC9500E991F2 /* getDictRequest.xmlrpc */; };
+		1FB43BDA10BFB6EF00490AA6 /* getSimpleDictResponse.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF988E0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc */; };
+		1FB43BDB10BFB6EF00490AA6 /* loginRequest.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF98A10F9E7F340030ED80 /* loginRequest.xmlrpc */; };
+		1FB43BDC10BFB6EF00490AA6 /* responseWithAmpersands.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1F0E2D0F109AC9850093F50E /* responseWithAmpersands.xmlrpc */; };
+		1FB43BDE10BFB6EF00490AA6 /* MPWXmlScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1D00668979C35ADD82 /* MPWXmlScanner.m */; settings = {ATTRIBUTES = (); }; };
+		1FB43BDF10BFB6EF00490AA6 /* MPWXmlElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1E00668979C35ADD82 /* MPWXmlElement.m */; settings = {ATTRIBUTES = (); }; };
+		1FB43BE010BFB6EF00490AA6 /* MPWXmlAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1F00668979C35ADD82 /* MPWXmlAttributes.m */; settings = {ATTRIBUTES = (); }; };
+		1FB43BE110BFB6EF00490AA6 /* MPWXmlGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2000668979C35ADD82 /* MPWXmlGeneratorStream.m */; settings = {ATTRIBUTES = (); }; };
+		1FB43BE210BFB6EF00490AA6 /* MPWXmlProplistGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2200668979C35ADD82 /* MPWXmlProplistGenerator.m */; settings = {ATTRIBUTES = (); }; };
+		1FB43BE310BFB6EF00490AA6 /* MPWXmlAppleProplistGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2300668979C35ADD82 /* MPWXmlAppleProplistGenerator.m */; settings = {ATTRIBUTES = (); }; };
+		1FB43BE510BFB6EF00490AA6 /* MPWXmlArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2500668979C35ADD82 /* MPWXmlArchiver.m */; settings = {ATTRIBUTES = (); }; };
+		1FB43BE610BFB6EF00490AA6 /* MPWXmlUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2600668979C35ADD82 /* MPWXmlUnarchiver.m */; settings = {ATTRIBUTES = (); }; };
+		1FB43BE710BFB6EF00490AA6 /* MPWXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2700668979C35ADD82 /* MPWXmlParser.m */; settings = {ATTRIBUTES = (); }; };
+		1FB43BE810BFB6EF00490AA6 /* MPWXmlScanner16BitBE.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2800668979C35ADD82 /* MPWXmlScanner16BitBE.m */; settings = {ATTRIBUTES = (); }; };
+		1FB43BEA10BFB6EF00490AA6 /* MPWXmlWrapperArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB6C16012ABAD5005ADD88 /* MPWXmlWrapperArchiver.m */; };
+		1FB43BEB10BFB6EF00490AA6 /* MPWXmlWrapperUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB6C23012ACB88005ADD88 /* MPWXmlWrapperUnarchiver.m */; };
+		1FB43BEC10BFB6EF00490AA6 /* MPWHrefScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05F7020A8339A900C8C652 /* MPWHrefScanner.m */; };
+		1FB43BED10BFB6EF00490AA6 /* MPWHTMLFileTextExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F443B4C0AAF3443006A2739 /* MPWHTMLFileTextExtractor.m */; };
+		1FB43BEE10BFB6EF00490AA6 /* MPWTemplateApply.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F90D6A70B9BC47D00BD2D9C /* MPWTemplateApply.m */; };
+		1FB43BEF10BFB6EF00490AA6 /* MPWBridgeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB006DA0BC7580F0074E056 /* MPWBridgeReader.m */; };
+		1FB43BF010BFB6EF00490AA6 /* MPWXmlFastInfosetParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C9A810BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.m */; };
+		1FB43BF110BFB6EF00490AA6 /* MPWXmlParserTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C9A870BCC0C2C00732CD5 /* MPWXmlParserTesting.m */; };
+		1FB43BF210BFB6EF00490AA6 /* MPWMAXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F449D6F0C6592AB00EC276C /* MPWMAXParser.m */; };
+		1FB43BF310BFB6EF00490AA6 /* MPWNSXMLDocumentParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6ED89D0D1FB04C00290F6B /* MPWNSXMLDocumentParser.m */; };
+		1FB43BF410BFB6EF00490AA6 /* MPWFastKeyedArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18E7A10D510A3E00839569 /* MPWFastKeyedArchiver.m */; };
+		1FB43BF510BFB6EF00490AA6 /* MPWFastKeyedUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18E7AD0D51341D00839569 /* MPWFastKeyedUnarchiver.m */; };
+		1FB43BF610BFB6EF00490AA6 /* MPWTagHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B4ADC0D6B95EF00189FEB /* MPWTagHandler.m */; };
+		1FB43BF710BFB6EF00490AA6 /* MPWFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FB2D00E00D58700A40B28 /* MPWFeed.m */; };
+		1FB43BF810BFB6EF00490AA6 /* NSString+extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FB2D50E00D5B900A40B28 /* NSString+extras.m */; };
+		1FB43BF910BFB6EF00490AA6 /* MPWXmlRpc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3D38F0F95706A00E991F2 /* MPWXmlRpc.m */; };
+		1FB43BFA10BFB6EF00490AA6 /* MPWXmlRpcGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF98690F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m */; };
+		1FB43BFC10BFB6EF00490AA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF1A4B00668979C35ADD82 /* Foundation.framework */; };
+		1FB43BFD10BFB6EF00490AA6 /* MPWFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9BAE6905762A2E009DD1EC /* MPWFoundation.framework */; };
+		1FB43C5C10BFBCA700490AA6 /* dllmain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB43C5B10BFBCA700490AA6 /* dllmain.m */; };
+		1FBF986A0F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBF98680F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.h */; };
+		1FBF986B0F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF98690F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m */; };
+		1FBF988F0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF988E0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc */; };
+		1FBF98A20F9E7F340030ED80 /* loginRequest.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF98A10F9E7F340030ED80 /* loginRequest.xmlrpc */; };
+		1FC164BA0ACAFD5D007F72C8 /* metadata_unicode.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FC164B90ACAFD5D007F72C8 /* metadata_unicode.html */; };
+		1FC4D34E0DFA05FC00AC1A66 /* MPWCaseInsensitiveSmallStringTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4D3480DFA05FC00AC1A66 /* MPWCaseInsensitiveSmallStringTable.m */; };
+		1FC4D34F0DFA05FD00AC1A66 /* MPWFastInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4D3490DFA05FC00AC1A66 /* MPWFastInvocation.m */; };
+		1FC4D3500DFA05FD00AC1A66 /* MPWObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4D34A0DFA05FC00AC1A66 /* MPWObject.m */; };
+		1FC4D3510DFA05FD00AC1A66 /* MPWObjectCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4D34B0DFA05FC00AC1A66 /* MPWObjectCache.m */; };
+		1FC4D3520DFA05FE00AC1A66 /* MPWSmallStringTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4D34C0DFA05FC00AC1A66 /* MPWSmallStringTable.m */; };
+		1FC4D3530DFA05FE00AC1A66 /* MPWSubData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4D34D0DFA05FC00AC1A66 /* MPWSubData.m */; };
+		1FC4D35F0DFA0EC600AC1A66 /* MPWFastInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D35A0DFA0EC600AC1A66 /* MPWFastInvocation.h */; };
+		1FC4D3600DFA0EC600AC1A66 /* MPWObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D35B0DFA0EC600AC1A66 /* MPWObject.h */; };
+		1FC4D3610DFA0EC600AC1A66 /* MPWObjectCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D35C0DFA0EC600AC1A66 /* MPWObjectCache.h */; };
+		1FC4D3620DFA0EC600AC1A66 /* MPWSmallStringTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D35D0DFA0EC600AC1A66 /* MPWSmallStringTable.h */; };
+		1FC4D3630DFA0EC600AC1A66 /* MPWSubData.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D35E0DFA0EC600AC1A66 /* MPWSubData.h */; };
+		1FC4D3660DFA0F2B00AC1A66 /* DebugMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D3650DFA0F2B00AC1A66 /* DebugMacros.h */; };
+		1FC4D3810DFA0FD000AC1A66 /* AccessorMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D3800DFA0FD000AC1A66 /* AccessorMacros.h */; };
+		1FC4D3840DFA0FE700AC1A66 /* MPWCaseInsensitiveSmallStringTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D3830DFA0FE700AC1A66 /* MPWCaseInsensitiveSmallStringTable.h */; };
+		1FC4D3880DFA102600AC1A66 /* NSInvocationAdditions_lookup.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D3870DFA102600AC1A66 /* NSInvocationAdditions_lookup.h */; };
+		1FC4D38F0DFA10A500AC1A66 /* CodingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D38E0DFA10A500AC1A66 /* CodingAdditions.h */; };
+		1FC694470A83DDED0079AA90 /* simple-xml-with-namespaces.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FC694460A83DDED0079AA90 /* simple-xml-with-namespaces.xml */; };
+		1FCD3B1B0C6964A50049EB86 /* empty_elements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FCD3B1A0C6964A50049EB86 /* empty_elements.plist */; };
+		1FCD3D3812B854FB00FF08E9 /* MPWAtomParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FCD3D3612B854FB00FF08E9 /* MPWAtomParser.h */; };
+		1FCD3D3912B854FB00FF08E9 /* MPWAtomParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD3D3712B854FB00FF08E9 /* MPWAtomParser.m */; };
+		1FCD3D3A12B854FB00FF08E9 /* MPWAtomParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FCD3D3612B854FB00FF08E9 /* MPWAtomParser.h */; };
+		1FCD3D3B12B854FB00FF08E9 /* MPWAtomParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD3D3712B854FB00FF08E9 /* MPWAtomParser.m */; };
+		1FCD3D3C12B854FB00FF08E9 /* MPWAtomParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FCD3D3612B854FB00FF08E9 /* MPWAtomParser.h */; };
+		1FCD3D3D12B854FB00FF08E9 /* MPWAtomParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD3D3712B854FB00FF08E9 /* MPWAtomParser.m */; };
+		1FCDAF8A12CD9ED3008162C7 /* literals.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCDAF8912CD9ED3008162C7 /* literals.json */; };
+		1FCDAF8B12CD9ED3008162C7 /* literals.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCDAF8912CD9ED3008162C7 /* literals.json */; };
+		1FCDB00312CDB6F8008162C7 /* numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCDB00212CDB6F8008162C7 /* numbers.json */; };
+		1FCDB00412CDB6F8008162C7 /* numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FCDB00212CDB6F8008162C7 /* numbers.json */; };
+		1FCDB27712CEA771008162C7 /* states.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FCDB27612CEA771008162C7 /* states.xml */; };
+		1FCDB27812CEA771008162C7 /* states.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FCDB27612CEA771008162C7 /* states.xml */; };
+		1FD564D30E2ED28900607D4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF1A4B00668979C35ADD82 /* Foundation.framework */; };
+		1FD5DB050F2CEDD500F8F769 /* MPWMAXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F449D6F0C6592AB00EC276C /* MPWMAXParser.m */; };
+		1FD5DB060F2CEDD500F8F769 /* MPWXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2700668979C35ADD82 /* MPWXmlParser.m */; };
+		1FD5DB070F2CEDD500F8F769 /* MPWXmlScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1D00668979C35ADD82 /* MPWXmlScanner.m */; };
+		1FD5DB080F2CEDD500F8F769 /* MPWXmlAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1F00668979C35ADD82 /* MPWXmlAttributes.m */; };
+		1FD5DB090F2CEDD500F8F769 /* MPWTagHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B4ADC0D6B95EF00189FEB /* MPWTagHandler.m */; };
+		1FD5DB100F2CEDED00F8F769 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF1A4B00668979C35ADD82 /* Foundation.framework */; };
+		1FD5DB970F2CEEDC00F8F769 /* MPWMAXParser_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4B0F7D0DBEB9E700639DC0 /* MPWMAXParser_private.h */; };
+		1FD5DB990F2CEEDC00F8F769 /* MPWXmlAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF1A2F00668979C35ADD82 /* MPWXmlAttributes.h */; };
+		1FD5DB9B0F2CEEDC00F8F769 /* MPWHTMLFileTextExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F443B4B0AAF3443006A2739 /* MPWHTMLFileTextExtractor.h */; };
+		1FD5DB9C0F2CEEDC00F8F769 /* MPWOpenDocumentParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2B4A790D6B893B00189FEB /* MPWOpenDocumentParser.h */; };
+		1FD5DB9D0F2CEEDC00F8F769 /* mpwfoundation_imports.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FAAD2E20DF61EC200592B29 /* mpwfoundation_imports.h */; };
+		1FD5DB9E0F2CEEDC00F8F769 /* MPWFastInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D35A0DFA0EC600AC1A66 /* MPWFastInvocation.h */; };
+		1FD5DB9F0F2CEEDC00F8F769 /* MPWObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D35B0DFA0EC600AC1A66 /* MPWObject.h */; };
+		1FD5DBA00F2CEEDC00F8F769 /* MPWObjectCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D35C0DFA0EC600AC1A66 /* MPWObjectCache.h */; };
+		1FD5DBA10F2CEEDC00F8F769 /* MPWSmallStringTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D35D0DFA0EC600AC1A66 /* MPWSmallStringTable.h */; };
+		1FD5DBA20F2CEEDC00F8F769 /* MPWSubData.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D35E0DFA0EC600AC1A66 /* MPWSubData.h */; };
+		1FD5DBA30F2CEEDC00F8F769 /* DebugMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D3650DFA0F2B00AC1A66 /* DebugMacros.h */; };
+		1FD5DBA40F2CEEDC00F8F769 /* AccessorMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D3800DFA0FD000AC1A66 /* AccessorMacros.h */; };
+		1FD5DBA50F2CEEDC00F8F769 /* MPWCaseInsensitiveSmallStringTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D3830DFA0FE700AC1A66 /* MPWCaseInsensitiveSmallStringTable.h */; };
+		1FD5DBA60F2CEEDC00F8F769 /* NSInvocationAdditions_lookup.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D3870DFA102600AC1A66 /* NSInvocationAdditions_lookup.h */; };
+		1FD5DBA70F2CEEDC00F8F769 /* CodingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC4D38E0DFA10A500AC1A66 /* CodingAdditions.h */; };
+		1FD5DC2F0F2D02A400F8F769 /* tagconflict_disambiguated_by_namespace.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FD5DC2E0F2D02A400F8F769 /* tagconflict_disambiguated_by_namespace.xml */; };
+		1FD5DC300F2D02A400F8F769 /* tagconflict_disambiguated_by_namespace.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FD5DC2E0F2D02A400F8F769 /* tagconflict_disambiguated_by_namespace.xml */; };
+		1FDD4788110D018B00A380E0 /* numericEntities.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FDD4787110D018B00A380E0 /* numericEntities.xml */; };
+		1FDD4789110D018B00A380E0 /* numericEntities.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FDD4787110D018B00A380E0 /* numericEntities.xml */; };
+		1FE39B0612D249F6005019C3 /* session.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FE39B0512D249F6005019C3 /* session.xml */; };
+		1FE39B0712D249F6005019C3 /* session.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FE39B0512D249F6005019C3 /* session.xml */; };
+		1FE39B9F12D26779005019C3 /* MPWRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */; };
+		1FE39BB212D26804005019C3 /* MPWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832D312D1BAAE00DF5E66 /* MPWFeedItem.m */; };
+		1FE5F7100E538DDF008F629B /* iso-encoded.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FE5F70F0E538DDF008F629B /* iso-encoded.xml */; };
+		1FE5F72B0E53964C008F629B /* windows-encoded.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FE5F72A0E53964C008F629B /* windows-encoded.xml */; };
+		1FEBF46A0A8C807500F56D44 /* htmlfragment_unquoted_attr_values.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FEBF4690A8C807500F56D44 /* htmlfragment_unquoted_attr_values.html */; };
+		1FEBF4C30A8C872300F56D44 /* htmlfragment_entities.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FEBF4C20A8C872300F56D44 /* htmlfragment_entities.html */; };
+		1FF1E4450D67ADD00057258D /* test4.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1E4400D67AD420057258D /* test4.xml */; };
+		1FF8314D12D1673F00DF5E66 /* emptyelements.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8314C12D1673F00DF5E66 /* emptyelements.json */; };
+		1FF8314E12D1673F00DF5E66 /* emptyelements.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8314C12D1673F00DF5E66 /* emptyelements.json */; };
+		1FF831F412D1767500DF5E66 /* stringescapes.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FF831F312D1767500DF5E66 /* stringescapes.json */; };
+		1FF831F512D1767500DF5E66 /* stringescapes.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FF831F312D1767500DF5E66 /* stringescapes.json */; };
+		1FF8325612D186EC00DF5E66 /* unicodeescapes.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8325512D186EC00DF5E66 /* unicodeescapes.json */; };
+		1FF8325712D186EC00DF5E66 /* unicodeescapes.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8325512D186EC00DF5E66 /* unicodeescapes.json */; };
+		1FF832D412D1BAAE00DF5E66 /* MPWFeedItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832D212D1BAAE00DF5E66 /* MPWFeedItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FF832D512D1BAAE00DF5E66 /* MPWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832D312D1BAAE00DF5E66 /* MPWFeedItem.m */; };
+		1FF832D612D1BAAE00DF5E66 /* MPWFeedItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832D212D1BAAE00DF5E66 /* MPWFeedItem.h */; };
+		1FF832D712D1BAAE00DF5E66 /* MPWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832D312D1BAAE00DF5E66 /* MPWFeedItem.m */; };
+		1FF832E212D1BB9400DF5E66 /* MPWAtomLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832E012D1BB9400DF5E66 /* MPWAtomLink.h */; };
+		1FF832E312D1BB9400DF5E66 /* MPWAtomLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E112D1BB9400DF5E66 /* MPWAtomLink.m */; };
+		1FF832E412D1BB9400DF5E66 /* MPWAtomLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832E012D1BB9400DF5E66 /* MPWAtomLink.h */; };
+		1FF832E512D1BB9400DF5E66 /* MPWAtomLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E112D1BB9400DF5E66 /* MPWAtomLink.m */; };
+		1FF832E812D1BBDF00DF5E66 /* MPWRSSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832E612D1BBDF00DF5E66 /* MPWRSSParser.h */; };
+		1FF832E912D1BBDF00DF5E66 /* MPWRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */; };
+		1FF832EA12D1BBDF00DF5E66 /* MPWRSSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832E612D1BBDF00DF5E66 /* MPWRSSParser.h */; };
+		1FF832EB12D1BBDF00DF5E66 /* MPWRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */; };
+		1FFD587A0E0DACD9000AE272 /* test3_16bit.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD58790E0DACD9000AE272 /* test3_16bit.xml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		1FB43C0710BFB75600490AA6 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = org.cocotron.1.0.windows.i386.gcc.default;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		1F4B0F6B0DBEB76900639DC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DF1A1900668979C35ADD82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F96E5C409B62F5C0063D669;
+			remoteInfo = "MPWXmlKit (Framework) (Upgraded)";
+		};
+		1FC4D3150DFA034400AC1A66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DF1A1900668979C35ADD82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F2553E80D627362007D8DAF;
+			remoteInfo = MPWXmlCore;
+		};
+		1FD564B20E2ECB3400607D4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DF1A1900668979C35ADD82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F2553E80D627362007D8DAF;
+			remoteInfo = MPWXmlCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07DF1A1D00668979C35ADD82 /* MPWXmlScanner.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlScanner.m; sourceTree = "<group>"; };
+		07DF1A1E00668979C35ADD82 /* MPWXmlElement.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlElement.m; sourceTree = "<group>"; };
+		07DF1A1F00668979C35ADD82 /* MPWXmlAttributes.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlAttributes.m; sourceTree = "<group>"; };
+		07DF1A2000668979C35ADD82 /* MPWXmlGeneratorStream.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlGeneratorStream.m; sourceTree = "<group>"; };
+		07DF1A2200668979C35ADD82 /* MPWXmlProplistGenerator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlProplistGenerator.m; sourceTree = "<group>"; };
+		07DF1A2300668979C35ADD82 /* MPWXmlAppleProplistGenerator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlAppleProplistGenerator.m; sourceTree = "<group>"; };
+		07DF1A2400668979C35ADD82 /* MPWXmlAppleProplistReader.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlAppleProplistReader.m; sourceTree = "<group>"; };
+		07DF1A2500668979C35ADD82 /* MPWXmlArchiver.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlArchiver.m; sourceTree = "<group>"; };
+		07DF1A2600668979C35ADD82 /* MPWXmlUnarchiver.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlUnarchiver.m; sourceTree = "<group>"; };
+		07DF1A2700668979C35ADD82 /* MPWXmlParser.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlParser.m; sourceTree = "<group>"; };
+		07DF1A2800668979C35ADD82 /* MPWXmlScanner16BitBE.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlScanner16BitBE.m; sourceTree = "<group>"; };
+		07DF1A2C00668979C35ADD82 /* MPWXmlScanner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlScanner.h; sourceTree = "<group>"; };
+		07DF1A2D00668979C35ADD82 /* MPWXmlElement.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlElement.h; sourceTree = "<group>"; };
+		07DF1A2E00668979C35ADD82 /* MPWXmlDOM.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlDOM.h; sourceTree = "<group>"; };
+		07DF1A2F00668979C35ADD82 /* MPWXmlAttributes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlAttributes.h; sourceTree = "<group>"; };
+		07DF1A3000668979C35ADD82 /* MPWXmlGeneratorStream.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlGeneratorStream.h; sourceTree = "<group>"; };
+		07DF1A3100668979C35ADD82 /* MPWSaxProtocol.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWSaxProtocol.h; sourceTree = "<group>"; };
+		07DF1A3400668979C35ADD82 /* MPWXmlProplistGenerator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlProplistGenerator.h; sourceTree = "<group>"; };
+		07DF1A3500668979C35ADD82 /* MPWXmlAppleProplistGenerator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlAppleProplistGenerator.h; sourceTree = "<group>"; };
+		07DF1A3600668979C35ADD82 /* MPWXmlAppleProplistReader.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlAppleProplistReader.h; sourceTree = "<group>"; };
+		07DF1A3700668979C35ADD82 /* MPWXmlArchiver.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlArchiver.h; sourceTree = "<group>"; };
+		07DF1A3800668979C35ADD82 /* MPWXmlUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlUnarchiver.h; sourceTree = "<group>"; };
+		07DF1A3900668979C35ADD82 /* XmlScannerScanCDataPseudoMacro.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XmlScannerScanCDataPseudoMacro.h; sourceTree = "<group>"; };
+		07DF1A3B00668979C35ADD82 /* MPWXmlScanner16BitBE.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlScanner16BitBE.h; sourceTree = "<group>"; };
+		07DF1A3C00668979C35ADD82 /* SaxDocumentHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SaxDocumentHandler.h; sourceTree = "<group>"; };
+		07DF1A3E00668979C35ADD82 /* XmlDelimitAttrValues.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XmlDelimitAttrValues.h; sourceTree = "<group>"; };
+		07DF1A3F00668979C35ADD82 /* XmlCommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XmlCommonMacros.h; sourceTree = "<group>"; };
+		07DF1A4100668979C35ADD82 /* test1.xml.MPWXmlScanner-result */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = "test1.xml.MPWXmlScanner-result"; sourceTree = "<group>"; };
+		07DF1A4200668979C35ADD82 /* test1.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = test1.xml; sourceTree = "<group>"; };
+		07DF1A4700668979C35ADD82 /* m.template */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = m.template; sourceTree = "<group>"; };
+		07DF1A4800668979C35ADD82 /* h.template */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = h.template; sourceTree = "<group>"; };
+		07DF1A4900668979C35ADD82 /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
+		07DF1A4B00668979C35ADD82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		1F04895012D148560069E1D4 /* dictAfterNumber.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictAfterNumber.json; sourceTree = "<group>"; };
+		1F05F7010A8339A900C8C652 /* MPWHrefScanner.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWHrefScanner.h; sourceTree = "<group>"; };
+		1F05F7020A8339A900C8C652 /* MPWHrefScanner.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWHrefScanner.m; sourceTree = "<group>"; };
+		1F0E2D0F109AC9850093F50E /* responseWithAmpersands.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = responseWithAmpersands.xmlrpc; sourceTree = "<group>"; };
+		1F18E7A00D510A3E00839569 /* MPWFastKeyedArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWFastKeyedArchiver.h; sourceTree = "<group>"; };
+		1F18E7A10D510A3E00839569 /* MPWFastKeyedArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWFastKeyedArchiver.m; sourceTree = "<group>"; };
+		1F18E7AC0D51341D00839569 /* MPWFastKeyedUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWFastKeyedUnarchiver.h; sourceTree = "<group>"; };
+		1F18E7AD0D51341D00839569 /* MPWFastKeyedUnarchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWFastKeyedUnarchiver.m; sourceTree = "<group>"; };
+		1F1E2261072C6B2A007DCDB1 /* emptyelement.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = emptyelement.xml; sourceTree = "<group>"; };
+		1F1E2291072C71A7007DCDB1 /* archiversample.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = archiversample.xml; sourceTree = "<group>"; };
+		1F1E22BE072C794E007DCDB1 /* emptyElementWithAttribute.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = emptyElementWithAttribute.xml; sourceTree = "<group>"; };
+		1F2553E90D627362007D8DAF /* MPWXmlCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPWXmlCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F2553EA0D627362007D8DAF /* MPWXmlCore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MPWXmlCore-Info.plist"; sourceTree = "<group>"; };
+		1F27429E12CC6D7B001498F9 /* glossary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = glossary.json; sourceTree = "<group>"; };
+		1F2742A112CC6DA0001498F9 /* MPWMASONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWMASONParser.h; sourceTree = "<group>"; };
+		1F2742A212CC6DA0001498F9 /* MPWMASONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWMASONParser.m; sourceTree = "<group>"; };
+		1F27431012CC7BF4001498F9 /* string.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = string.json; sourceTree = "<group>"; };
+		1F27432312CC7D16001498F9 /* dict.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dict.json; sourceTree = "<group>"; };
+		1F27433C12CC8074001498F9 /* array.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = array.json; sourceTree = "<group>"; };
+		1F27436812CC8741001498F9 /* MPWJSONWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWJSONWriter.h; sourceTree = "<group>"; };
+		1F27436912CC8741001498F9 /* MPWJSONWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWJSONWriter.m; sourceTree = "<group>"; };
+		1F2B4A790D6B893B00189FEB /* MPWOpenDocumentParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWOpenDocumentParser.h; sourceTree = "<group>"; };
+		1F2B4ADB0D6B95EF00189FEB /* MPWTagHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWTagHandler.h; sourceTree = "<group>"; };
+		1F2B4ADC0D6B95EF00189FEB /* MPWTagHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWTagHandler.m; sourceTree = "<group>"; };
+		1F2C48200E563D7E0055F0A6 /* Faehre.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Faehre.xml; sourceTree = "<group>"; };
+		1F2C49310E563EA90055F0A6 /* Faehre-iso.xml */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.xml; path = "Faehre-iso.xml"; sourceTree = "<group>"; };
+		1F2DB5CF0AB08E8400DA2427 /* empty_html.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = empty_html.html; sourceTree = "<group>"; };
+		1F2DB5D00AB08E8400DA2427 /* empty_html.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = empty_html.txt; sourceTree = "<group>"; };
+		1F2DB5D10AB08E8400DA2427 /* textwith_br.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = textwith_br.html; sourceTree = "<group>"; };
+		1F2DB5D20AB08E8400DA2427 /* textwith_br.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = textwith_br.txt; sourceTree = "<group>"; };
+		1F2DB5D30AB08E8400DA2427 /* textwith_td.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = textwith_td.html; sourceTree = "<group>"; };
+		1F2DB5D40AB08E8400DA2427 /* textwith_td.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = textwith_td.txt; sourceTree = "<group>"; };
+		1F2DB61C0AB0983F00DA2427 /* html_with_javascript.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = html_with_javascript.html; sourceTree = "<group>"; };
+		1F2DB61D0AB0983F00DA2427 /* html_with_javascript.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = html_with_javascript.txt; sourceTree = "<group>"; };
+		1F2DB6230AB09E0E00DA2427 /* naked_html_fragment.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = naked_html_fragment.html; sourceTree = "<group>"; };
+		1F2DB6240AB09E0E00DA2427 /* naked_html_fragment.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = naked_html_fragment.txt; sourceTree = "<group>"; };
+		1F2DB6550AB0B29700DA2427 /* html_text_through_tag.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = html_text_through_tag.html; sourceTree = "<group>"; };
+		1F2DB6560AB0B29700DA2427 /* html_text_through_tag.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = html_text_through_tag.txt; sourceTree = "<group>"; };
+		1F2DB6640AB0B65800DA2427 /* jap-pto.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = "jap-pto.html"; sourceTree = "<group>"; };
+		1F2DB6650AB0B65800DA2427 /* jap-pto.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = "jap-pto.txt"; sourceTree = "<group>"; };
+		1F2DB69C0AB0C2D400DA2427 /* jap-pto_upcase_meta.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = "jap-pto_upcase_meta.html"; sourceTree = "<group>"; };
+		1F2DB69D0AB0C2D400DA2427 /* jap-pto_upcase_meta.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = "jap-pto_upcase_meta.txt"; sourceTree = "<group>"; };
+		1F2DB6AC0AB0C41200DA2427 /* jap-pto_all_upcase_meta.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = "jap-pto_all_upcase_meta.html"; sourceTree = "<group>"; };
+		1F2DB6AD0AB0C41200DA2427 /* jap-pto_all_upcase_meta.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = "jap-pto_all_upcase_meta.txt"; sourceTree = "<group>"; };
+		1F2DB6B30AB0C52C00DA2427 /* entity_runon.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = entity_runon.html; sourceTree = "<group>"; };
+		1F2DB6B40AB0C52C00DA2427 /* entity_runon.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = entity_runon.txt; sourceTree = "<group>"; };
+		1F2DB6C70AB0C65700DA2427 /* close_tag_not_closed.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = close_tag_not_closed.html; sourceTree = "<group>"; };
+		1F2DB6C80AB0C65700DA2427 /* close_tag_not_closed.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = close_tag_not_closed.txt; sourceTree = "<group>"; };
+		1F3466670E09BB04001FBB20 /* nested.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = nested.xml; sourceTree = "<group>"; };
+		1F3519A90E05766900A730BF /* revision3-diggnation-quicktime.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "revision3-diggnation-quicktime.rss"; sourceTree = "<group>"; };
+		1F36076D0AC9CD51007B4CA2 /* meta_attributes.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = meta_attributes.html; sourceTree = "<group>"; };
+		1F3653EE0AC01F20008792DA /* attributes_with_double_closing_quotes.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = attributes_with_double_closing_quotes.html; sourceTree = "<group>"; };
+		1F3653F80AC0200F008792DA /* xml_comment_with_dash.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = xml_comment_with_dash.xml; sourceTree = "<group>"; };
+		1F3653FE0AC02085008792DA /* no_space_between_attributes.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = no_space_between_attributes.html; sourceTree = "<group>"; };
+		1F3C9A800BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWXmlFastInfosetParser.h; sourceTree = "<group>"; };
+		1F3C9A810BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWXmlFastInfosetParser.m; sourceTree = "<group>"; };
+		1F3C9A860BCC0C2C00732CD5 /* MPWXmlParserTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWXmlParserTesting.h; sourceTree = "<group>"; };
+		1F3C9A870BCC0C2C00732CD5 /* MPWXmlParserTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWXmlParserTesting.m; sourceTree = "<group>"; };
+		1F3C9AAD0BCC112600732CD5 /* test1.fi */ = {isa = PBXFileReference; lastKnownFileType = file; path = test1.fi; sourceTree = "<group>"; };
+		1F3C9AB30BCC137100732CD5 /* emptyelement.fi */ = {isa = PBXFileReference; lastKnownFileType = file; path = emptyelement.fi; sourceTree = "<group>"; };
+		1F3C9AB80BCC139E00732CD5 /* emptyElementWithAttribute.fi */ = {isa = PBXFileReference; lastKnownFileType = file; path = emptyElementWithAttribute.fi; sourceTree = "<group>"; };
+		1F41ADB709FE3E3A00466C82 /* attrparserunonbug.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = attrparserunonbug.html; sourceTree = "<group>"; };
+		1F421EFC10C2554D00C403D5 /* MPWXmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWXmlParser.h; sourceTree = "<group>"; };
+		1F421F0110C2555700C403D5 /* MPWMAXParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWMAXParser.h; sourceTree = "<group>"; };
+		1F42261B10C3A14800C403D5 /* checkForPenApps_with_ISO8859_claiming_UTF8.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.xml; path = checkForPenApps_with_ISO8859_claiming_UTF8.xmlrpc; sourceTree = "<group>"; };
+		1F443B4B0AAF3443006A2739 /* MPWHTMLFileTextExtractor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWHTMLFileTextExtractor.h; sourceTree = "<group>"; };
+		1F443B4C0AAF3443006A2739 /* MPWHTMLFileTextExtractor.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWHTMLFileTextExtractor.m; sourceTree = "<group>"; };
+		1F449D230C6549CB00EC276C /* Itunes_info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Itunes_info.plist; sourceTree = "<group>"; };
+		1F449D6F0C6592AB00EC276C /* MPWMAXParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWMAXParser.m; sourceTree = "<group>"; };
+		1F478F040F479FEB004D1CCE /* Dg-duplex.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Dg-duplex.htm"; sourceTree = "<group>"; };
+		1F4A855B0ACB45F40059E997 /* decor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = decor.html; sourceTree = "<group>"; };
+		1F4A855D0ACB46190059E997 /* decor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = decor.txt; sourceTree = "<group>"; };
+		1F4B0F7D0DBEB9E700639DC0 /* MPWMAXParser_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWMAXParser_private.h; sourceTree = "<group>"; };
+		1F4FCED11105101B00376799 /* MPWByteStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPWByteStream.h; path = ../MPWFoundation/Streams.subproj/MPWByteStream.h; sourceTree = SOURCE_ROOT; };
+		1F4FCED21105101B00376799 /* MPWFlattenStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPWFlattenStream.h; path = ../MPWFoundation/Streams.subproj/MPWFlattenStream.h; sourceTree = SOURCE_ROOT; };
+		1F4FCED31105101B00376799 /* MPWStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPWStream.h; path = ../MPWFoundation/Streams.subproj/MPWStream.h; sourceTree = SOURCE_ROOT; };
+		1F661E180F13EF8300C6F713 /* cdatatest1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cdatatest1.xml; sourceTree = "<group>"; };
+		1F6ED89C0D1FB04C00290F6B /* MPWNSXMLDocumentParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWNSXMLDocumentParser.h; sourceTree = "<group>"; };
+		1F6ED89D0D1FB04C00290F6B /* MPWNSXMLDocumentParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWNSXMLDocumentParser.m; sourceTree = "<group>"; };
+		1F6F08690F3EB9F300FA4183 /* mojibake_utf16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mojibake_utf16.txt; sourceTree = "<group>"; };
+		1F6F086F0F3EBB5900FA4183 /* mojibake_utf8.xhtml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mojibake_utf8.xhtml; sourceTree = "<group>"; };
+		1F6F08880F3EBFD000FA4183 /* utf8xhtml_test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = utf8xhtml_test.html; sourceTree = "<group>"; };
+		1F6F088C0F3EC08500FA4183 /* utf8xhtml_test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = utf8xhtml_test.txt; sourceTree = "<group>"; };
+		1F734A5C0AC6D89C004C624F /* attributes_with_double_closing_quotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attributes_with_double_closing_quotes.txt; sourceTree = "<group>"; };
+		1F734A610AC7D871004C624F /* no_space_between_attributes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = no_space_between_attributes.txt; sourceTree = "<group>"; };
+		1F734A6D0AC7DAEF004C624F /* space_before_tag_close.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = space_before_tag_close.html; sourceTree = "<group>"; };
+		1F734A6F0AC7DB04004C624F /* space_before_tag_close.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = space_before_tag_close.txt; sourceTree = "<group>"; };
+		1F734AD60AC8136B004C624F /* html_comment_with_dash.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = html_comment_with_dash.html; sourceTree = "<group>"; };
+		1F734AD70AC8136B004C624F /* html_comment_with_dash.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = html_comment_with_dash.txt; sourceTree = "<group>"; };
+		1F7915920BD5F60000BF5CB2 /* test3.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = test3.xml; sourceTree = "<group>"; };
+		1F7915930BD5F60000BF5CB2 /* test3.fi */ = {isa = PBXFileReference; lastKnownFileType = file; path = test3.fi; sourceTree = "<group>"; };
+		1F7A3D270DAAC51000FE9E24 /* openold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = openold.m; sourceTree = "<group>"; };
+		1F7A3D4F0DAAC8C700FE9E24 /* opennew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = opennew.m; sourceTree = "<group>"; };
+		1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWFeed.h; sourceTree = "<group>"; };
+		1F7FB2D00E00D58700A40B28 /* MPWFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWFeed.m; sourceTree = "<group>"; };
+		1F7FB2D40E00D5B900A40B28 /* NSString+extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+extras.h"; sourceTree = "<group>"; };
+		1F7FB2D50E00D5B900A40B28 /* NSString+extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+extras.m"; sourceTree = "<group>"; };
+		1F7FB3050E00F27E00A40B28 /* metaobject.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = metaobject.rss; sourceTree = "<group>"; };
+		1F83BCBA0D73717A00AF6FB4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1F8E0E380A8CE6F900F224C2 /* htmlfragment_attribute_no_value.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = htmlfragment_attribute_no_value.html; sourceTree = "<group>"; };
+		1F8E23E10AB0E8FE0073A0F7 /* jap-pto-other-meta.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = "jap-pto-other-meta.html"; sourceTree = "<group>"; };
+		1F8E23E20AB0E8FE0073A0F7 /* jap-pto-other-meta.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = "jap-pto-other-meta.txt"; sourceTree = "<group>"; };
+		1F8E23FB0AB0FD4A0073A0F7 /* textwith_th.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = textwith_th.html; sourceTree = "<group>"; };
+		1F8E23FC0AB0FD4A0073A0F7 /* textwith_th.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = textwith_th.txt; sourceTree = "<group>"; };
+		1F8E24060AB0FE980073A0F7 /* textwith_p.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = textwith_p.html; sourceTree = "<group>"; };
+		1F8E24070AB0FE980073A0F7 /* textwith_p.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = textwith_p.txt; sourceTree = "<group>"; };
+		1F8E24340AB105810073A0F7 /* textwith_multiple_body.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = textwith_multiple_body.html; sourceTree = "<group>"; };
+		1F8E24350AB105810073A0F7 /* textwith_multiple_body.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = textwith_multiple_body.txt; sourceTree = "<group>"; };
+		1F8E248E0AB209560073A0F7 /* textwith_headings.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = textwith_headings.html; sourceTree = "<group>"; };
+		1F8E248F0AB209560073A0F7 /* textwith_headings.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = textwith_headings.txt; sourceTree = "<group>"; };
+		1F90D6A60B9BC47D00BD2D9C /* MPWTemplateApply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWTemplateApply.h; sourceTree = "<group>"; };
+		1F90D6A70B9BC47D00BD2D9C /* MPWTemplateApply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWTemplateApply.m; sourceTree = "<group>"; };
+		1F90E7EC0BD587BB0074D009 /* test2.fi */ = {isa = PBXFileReference; lastKnownFileType = file; path = test2.fi; sourceTree = "<group>"; };
+		1F90E7F10BD589D60074D009 /* test2.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = test2.xml; sourceTree = "<group>"; };
+		1F9403850C68159F00E189FC /* hreftest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = hreftest.html; sourceTree = "<group>"; };
+		1F96E5FF09B62F5C0063D669 /* Info-MPWXmlKit__Framework___Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-MPWXmlKit__Framework___Upgraded_.plist"; sourceTree = "<group>"; };
+		1F96E60009B62F5C0063D669 /* MPWXmlKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPWXmlKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F9A10380D919CAC00D39D0E /* MPWAppKitXMLTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MPWAppKitXMLTesting-Info.plist"; sourceTree = "<group>"; };
+		1F9BAE6905762A2E009DD1EC /* MPWFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MPWFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F9F24080F81B25200D8A750 /* c1qt12.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = c1qt12.html; sourceTree = "<group>"; };
+		1F9F240C0F81B2B900D8A750 /* c1qt12.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = c1qt12.txt; sourceTree = "<group>"; };
+		1F9F242C0F81B9C100D8A750 /* accent_grave.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = accent_grave.html; sourceTree = "<group>"; };
+		1F9F242E0F81B9CD00D8A750 /* accent_grave.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = accent_grave.txt; sourceTree = "<group>"; };
+		1FA3D32A0F93E09600E991F2 /* stringLengthRequest.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = stringLengthRequest.xmlrpc; sourceTree = "<group>"; };
+		1FA3D32B0F93E09600E991F2 /* stringLengthResponse.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = stringLengthResponse.xmlrpc; sourceTree = "<group>"; };
+		1FA3D38E0F95706A00E991F2 /* MPWXmlRpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWXmlRpc.h; sourceTree = "<group>"; };
+		1FA3D38F0F95706A00E991F2 /* MPWXmlRpc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWXmlRpc.m; sourceTree = "<group>"; };
+		1FA3D3AA0F9572BC00E991F2 /* stringLengthResponse1.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stringLengthResponse1.xmlrpc; sourceTree = "<group>"; };
+		1FA3D3BD0F95764F00E991F2 /* getListResponse.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = getListResponse.xmlrpc; sourceTree = "<group>"; };
+		1FA3D3CA0F957A6000E991F2 /* getDictResponse.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = getDictResponse.xmlrpc; sourceTree = "<group>"; };
+		1FA3D4940F97EC9500E991F2 /* getDictRequest.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = getDictRequest.xmlrpc; sourceTree = "<group>"; };
+		1FAAD2E20DF61EC200592B29 /* mpwfoundation_imports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpwfoundation_imports.h; sourceTree = "<group>"; };
+		1FB006D90BC7580F0074E056 /* MPWBridgeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWBridgeReader.h; sourceTree = "<group>"; };
+		1FB006DA0BC7580F0074E056 /* MPWBridgeReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWBridgeReader.m; sourceTree = "<group>"; };
+		1FB43C0310BFB6EF00490AA6 /* MPWXmlKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPWXmlKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB43C0410BFB6EF00490AA6 /* Info-MPWXmlKit__Framework___Upgraded_ copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-MPWXmlKit__Framework___Upgraded_ copy.plist"; sourceTree = "<group>"; };
+		1FB43C5B10BFBCA700490AA6 /* dllmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dllmain.m; sourceTree = "<group>"; };
+		1FBF98680F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWXmlRpcGeneratorStream.h; sourceTree = "<group>"; };
+		1FBF98690F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWXmlRpcGeneratorStream.m; sourceTree = "<group>"; };
+		1FBF988E0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = getSimpleDictResponse.xmlrpc; sourceTree = "<group>"; };
+		1FBF98A10F9E7F340030ED80 /* loginRequest.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = loginRequest.xmlrpc; sourceTree = "<group>"; };
+		1FC164B90ACAFD5D007F72C8 /* metadata_unicode.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = metadata_unicode.html; sourceTree = "<group>"; };
+		1FC4D3480DFA05FC00AC1A66 /* MPWCaseInsensitiveSmallStringTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWCaseInsensitiveSmallStringTable.m; sourceTree = "<group>"; };
+		1FC4D3490DFA05FC00AC1A66 /* MPWFastInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWFastInvocation.m; sourceTree = "<group>"; };
+		1FC4D34A0DFA05FC00AC1A66 /* MPWObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWObject.m; sourceTree = "<group>"; };
+		1FC4D34B0DFA05FC00AC1A66 /* MPWObjectCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWObjectCache.m; sourceTree = "<group>"; };
+		1FC4D34C0DFA05FC00AC1A66 /* MPWSmallStringTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWSmallStringTable.m; sourceTree = "<group>"; };
+		1FC4D34D0DFA05FC00AC1A66 /* MPWSubData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWSubData.m; sourceTree = "<group>"; };
+		1FC4D35A0DFA0EC600AC1A66 /* MPWFastInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWFastInvocation.h; sourceTree = "<group>"; };
+		1FC4D35B0DFA0EC600AC1A66 /* MPWObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWObject.h; sourceTree = "<group>"; };
+		1FC4D35C0DFA0EC600AC1A66 /* MPWObjectCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWObjectCache.h; sourceTree = "<group>"; };
+		1FC4D35D0DFA0EC600AC1A66 /* MPWSmallStringTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWSmallStringTable.h; sourceTree = "<group>"; };
+		1FC4D35E0DFA0EC600AC1A66 /* MPWSubData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWSubData.h; sourceTree = "<group>"; };
+		1FC4D3650DFA0F2B00AC1A66 /* DebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugMacros.h; sourceTree = "<group>"; };
+		1FC4D3800DFA0FD000AC1A66 /* AccessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessorMacros.h; sourceTree = "<group>"; };
+		1FC4D3830DFA0FE700AC1A66 /* MPWCaseInsensitiveSmallStringTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWCaseInsensitiveSmallStringTable.h; sourceTree = "<group>"; };
+		1FC4D3870DFA102600AC1A66 /* NSInvocationAdditions_lookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSInvocationAdditions_lookup.h; sourceTree = "<group>"; };
+		1FC4D38E0DFA10A500AC1A66 /* CodingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodingAdditions.h; sourceTree = "<group>"; };
+		1FC694460A83DDED0079AA90 /* simple-xml-with-namespaces.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "simple-xml-with-namespaces.xml"; sourceTree = "<group>"; };
+		1FCD3B1A0C6964A50049EB86 /* empty_elements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = empty_elements.plist; sourceTree = "<group>"; };
+		1FCD3D3612B854FB00FF08E9 /* MPWAtomParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWAtomParser.h; sourceTree = "<group>"; };
+		1FCD3D3712B854FB00FF08E9 /* MPWAtomParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWAtomParser.m; sourceTree = "<group>"; };
+		1FCDAF8912CD9ED3008162C7 /* literals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = literals.json; sourceTree = "<group>"; };
+		1FCDB00212CDB6F8008162C7 /* numbers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numbers.json; sourceTree = "<group>"; };
+		1FCDB27612CEA771008162C7 /* states.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = states.xml; sourceTree = "<group>"; };
+		1FD5649F0E2ECAFE00607D4E /* B&I-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "B&I-Info.plist"; sourceTree = "<group>"; };
+		1FD5DB000F2CEDB000F8F769 /* libiXmlKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiXmlKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD5DC2E0F2D02A400F8F769 /* tagconflict_disambiguated_by_namespace.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = tagconflict_disambiguated_by_namespace.xml; sourceTree = "<group>"; };
+		1FDD4787110D018B00A380E0 /* numericEntities.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = numericEntities.xml; sourceTree = "<group>"; };
+		1FE39B0512D249F6005019C3 /* session.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = session.xml; sourceTree = "<group>"; };
+		1FE5F70F0E538DDF008F629B /* iso-encoded.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "iso-encoded.xml"; sourceTree = "<group>"; };
+		1FE5F72A0E53964C008F629B /* windows-encoded.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "windows-encoded.xml"; sourceTree = "<group>"; };
+		1FEBF4690A8C807500F56D44 /* htmlfragment_unquoted_attr_values.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = htmlfragment_unquoted_attr_values.html; sourceTree = "<group>"; };
+		1FEBF4C20A8C872300F56D44 /* htmlfragment_entities.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = htmlfragment_entities.html; sourceTree = "<group>"; };
+		1FF1E4400D67AD420057258D /* test4.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test4.xml; sourceTree = "<group>"; };
+		1FF8314C12D1673F00DF5E66 /* emptyelements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emptyelements.json; sourceTree = "<group>"; };
+		1FF831F312D1767500DF5E66 /* stringescapes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stringescapes.json; sourceTree = "<group>"; };
+		1FF8325512D186EC00DF5E66 /* unicodeescapes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicodeescapes.json; sourceTree = "<group>"; };
+		1FF832D212D1BAAE00DF5E66 /* MPWFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWFeedItem.h; sourceTree = "<group>"; };
+		1FF832D312D1BAAE00DF5E66 /* MPWFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWFeedItem.m; sourceTree = "<group>"; };
+		1FF832E012D1BB9400DF5E66 /* MPWAtomLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWAtomLink.h; sourceTree = "<group>"; };
+		1FF832E112D1BB9400DF5E66 /* MPWAtomLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWAtomLink.m; sourceTree = "<group>"; };
+		1FF832E612D1BBDF00DF5E66 /* MPWRSSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWRSSParser.h; sourceTree = "<group>"; };
+		1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWRSSParser.m; sourceTree = "<group>"; };
+		1FFD58790E0DACD9000AE272 /* test3_16bit.xml */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.xml; path = test3_16bit.xml; sourceTree = "<group>"; };
+		66FB6C16012ABAD5005ADD88 /* MPWXmlWrapperArchiver.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlWrapperArchiver.m; sourceTree = "<group>"; };
+		66FB6C17012ABAD5005ADD88 /* MPWXmlWrapperArchiver.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlWrapperArchiver.h; sourceTree = "<group>"; };
+		66FB6C23012ACB88005ADD88 /* MPWXmlWrapperUnarchiver.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlWrapperUnarchiver.m; sourceTree = "<group>"; };
+		66FB6C24012ACB88005ADD88 /* MPWXmlWrapperUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlWrapperUnarchiver.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F2553E70D627362007D8DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD564D30E2ED28900607D4E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F96E5F609B62F5C0063D669 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F96E5F709B62F5C0063D669 /* Foundation.framework in Frameworks */,
+				1F96E5F809B62F5C0063D669 /* MPWFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB43BFB10BFB6EF00490AA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB43BFC10BFB6EF00490AA6 /* Foundation.framework in Frameworks */,
+				1FB43BFD10BFB6EF00490AA6 /* MPWFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD5DAFE0F2CEDB000F8F769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD5DB100F2CEDED00F8F769 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07DF1A1A00668979C35ADD82 /* MPWXmlKit */ = {
+			isa = PBXGroup;
+			children = (
+				1FD5DC290F2CFD0D00F8F769 /* ExportHeaders */,
+				1FC4D32E0DFA03F500AC1A66 /* MPWFoundation_support */,
+				1FBBE2870DBD33C000A93CBA /* CoreClasses */,
+				1F7A3D240DAAC4B800FE9E24 /* tools */,
+				07DF1A1B00668979C35ADD82 /* Classes */,
+				07DF1A2A00668979C35ADD82 /* Headers */,
+				07DF1A4000668979C35ADD82 /* TestResources */,
+				07DF1A4300668979C35ADD82 /* Supporting Files */,
+				07DF1A4A00668979C35ADD82 /* External Frameworks and Libraries */,
+				07DF1A4E00668979C35ADD82 /* Products */,
+				1F96E5FF09B62F5C0063D669 /* Info-MPWXmlKit__Framework___Upgraded_.plist */,
+				1F2553EA0D627362007D8DAF /* MPWXmlCore-Info.plist */,
+				1F9A10380D919CAC00D39D0E /* MPWAppKitXMLTesting-Info.plist */,
+				1FD5649F0E2ECAFE00607D4E /* B&I-Info.plist */,
+				1FB43C0410BFB6EF00490AA6 /* Info-MPWXmlKit__Framework___Upgraded_ copy.plist */,
+			);
+			name = MPWXmlKit;
+			sourceTree = "<group>";
+		};
+		07DF1A1B00668979C35ADD82 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1F7FB2D50E00D5B900A40B28 /* NSString+extras.m */,
+				1F7FB2D00E00D58700A40B28 /* MPWFeed.m */,
+				1F05F7020A8339A900C8C652 /* MPWHrefScanner.m */,
+				07DF1A2000668979C35ADD82 /* MPWXmlGeneratorStream.m */,
+				07DF1A2200668979C35ADD82 /* MPWXmlProplistGenerator.m */,
+				07DF1A2300668979C35ADD82 /* MPWXmlAppleProplistGenerator.m */,
+				07DF1A2400668979C35ADD82 /* MPWXmlAppleProplistReader.m */,
+				07DF1A2500668979C35ADD82 /* MPWXmlArchiver.m */,
+				07DF1A2800668979C35ADD82 /* MPWXmlScanner16BitBE.m */,
+				07DF1A2600668979C35ADD82 /* MPWXmlUnarchiver.m */,
+				66FB6C16012ABAD5005ADD88 /* MPWXmlWrapperArchiver.m */,
+				66FB6C23012ACB88005ADD88 /* MPWXmlWrapperUnarchiver.m */,
+				1F90D6A70B9BC47D00BD2D9C /* MPWTemplateApply.m */,
+				1FB006DA0BC7580F0074E056 /* MPWBridgeReader.m */,
+				1F3C9A810BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.m */,
+				1F3C9A870BCC0C2C00732CD5 /* MPWXmlParserTesting.m */,
+				1F6ED89D0D1FB04C00290F6B /* MPWNSXMLDocumentParser.m */,
+				1F18E7A10D510A3E00839569 /* MPWFastKeyedArchiver.m */,
+				1F18E7AD0D51341D00839569 /* MPWFastKeyedUnarchiver.m */,
+				1FBF98680F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.h */,
+				1FBF98690F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m */,
+				1FA3D38F0F95706A00E991F2 /* MPWXmlRpc.m */,
+				1FCD3D3612B854FB00FF08E9 /* MPWAtomParser.h */,
+				1FCD3D3712B854FB00FF08E9 /* MPWAtomParser.m */,
+				1F2742A112CC6DA0001498F9 /* MPWMASONParser.h */,
+				1F2742A212CC6DA0001498F9 /* MPWMASONParser.m */,
+				1F27436812CC8741001498F9 /* MPWJSONWriter.h */,
+				1F27436912CC8741001498F9 /* MPWJSONWriter.m */,
+				1FF832D212D1BAAE00DF5E66 /* MPWFeedItem.h */,
+				1FF832D312D1BAAE00DF5E66 /* MPWFeedItem.m */,
+				1FF832E012D1BB9400DF5E66 /* MPWAtomLink.h */,
+				1FF832E112D1BB9400DF5E66 /* MPWAtomLink.m */,
+				1FF832E612D1BBDF00DF5E66 /* MPWRSSParser.h */,
+				1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		07DF1A2A00668979C35ADD82 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1F7FB2D40E00D5B900A40B28 /* NSString+extras.h */,
+				1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */,
+				1F2B4A790D6B893B00189FEB /* MPWOpenDocumentParser.h */,
+				1F18E7A00D510A3E00839569 /* MPWFastKeyedArchiver.h */,
+				1F18E7AC0D51341D00839569 /* MPWFastKeyedUnarchiver.h */,
+				1F6ED89C0D1FB04C00290F6B /* MPWNSXMLDocumentParser.h */,
+				1F3C9A860BCC0C2C00732CD5 /* MPWXmlParserTesting.h */,
+				1F3C9A800BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.h */,
+				1FB006D90BC7580F0074E056 /* MPWBridgeReader.h */,
+				1F90D6A60B9BC47D00BD2D9C /* MPWTemplateApply.h */,
+				1F443B4B0AAF3443006A2739 /* MPWHTMLFileTextExtractor.h */,
+				1F05F7010A8339A900C8C652 /* MPWHrefScanner.h */,
+				66FB6C24012ACB88005ADD88 /* MPWXmlWrapperUnarchiver.h */,
+				66FB6C17012ABAD5005ADD88 /* MPWXmlWrapperArchiver.h */,
+				07DF1A2D00668979C35ADD82 /* MPWXmlElement.h */,
+				07DF1A2E00668979C35ADD82 /* MPWXmlDOM.h */,
+				07DF1A3000668979C35ADD82 /* MPWXmlGeneratorStream.h */,
+				07DF1A3100668979C35ADD82 /* MPWSaxProtocol.h */,
+				07DF1A3400668979C35ADD82 /* MPWXmlProplistGenerator.h */,
+				07DF1A3500668979C35ADD82 /* MPWXmlAppleProplistGenerator.h */,
+				07DF1A3600668979C35ADD82 /* MPWXmlAppleProplistReader.h */,
+				07DF1A3700668979C35ADD82 /* MPWXmlArchiver.h */,
+				07DF1A3800668979C35ADD82 /* MPWXmlUnarchiver.h */,
+				07DF1A3900668979C35ADD82 /* XmlScannerScanCDataPseudoMacro.h */,
+				07DF1A3B00668979C35ADD82 /* MPWXmlScanner16BitBE.h */,
+				07DF1A3E00668979C35ADD82 /* XmlDelimitAttrValues.h */,
+				07DF1A3F00668979C35ADD82 /* XmlCommonMacros.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		07DF1A4000668979C35ADD82 /* TestResources */ = {
+			isa = PBXGroup;
+			children = (
+				1FE39B0512D249F6005019C3 /* session.xml */,
+				1FCDB27612CEA771008162C7 /* states.xml */,
+				1F42261B10C3A14800C403D5 /* checkForPenApps_with_ISO8859_claiming_UTF8.xmlrpc */,
+				1F0E2D0F109AC9850093F50E /* responseWithAmpersands.xmlrpc */,
+				1FBF98A10F9E7F340030ED80 /* loginRequest.xmlrpc */,
+				1FBF988E0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc */,
+				1FA3D4940F97EC9500E991F2 /* getDictRequest.xmlrpc */,
+				1FA3D3CA0F957A6000E991F2 /* getDictResponse.xmlrpc */,
+				1FA3D3BD0F95764F00E991F2 /* getListResponse.xmlrpc */,
+				1FA3D32A0F93E09600E991F2 /* stringLengthRequest.xmlrpc */,
+				1FA3D32B0F93E09600E991F2 /* stringLengthResponse.xmlrpc */,
+				1F9F242E0F81B9CD00D8A750 /* accent_grave.txt */,
+				1F9F242C0F81B9C100D8A750 /* accent_grave.html */,
+				1F9F24080F81B25200D8A750 /* c1qt12.html */,
+				1F9F240C0F81B2B900D8A750 /* c1qt12.txt */,
+				1F478F040F479FEB004D1CCE /* Dg-duplex.htm */,
+				1F6F088C0F3EC08500FA4183 /* utf8xhtml_test.txt */,
+				1F6F08880F3EBFD000FA4183 /* utf8xhtml_test.html */,
+				1F6F086F0F3EBB5900FA4183 /* mojibake_utf8.xhtml */,
+				1F6F08690F3EB9F300FA4183 /* mojibake_utf16.txt */,
+				1F2C49310E563EA90055F0A6 /* Faehre-iso.xml */,
+				1F2C48200E563D7E0055F0A6 /* Faehre.xml */,
+				1FE5F72A0E53964C008F629B /* windows-encoded.xml */,
+				1FE5F70F0E538DDF008F629B /* iso-encoded.xml */,
+				1FFD58790E0DACD9000AE272 /* test3_16bit.xml */,
+				1F3519A90E05766900A730BF /* revision3-diggnation-quicktime.rss */,
+				1F7FB3050E00F27E00A40B28 /* metaobject.rss */,
+				1F449D230C6549CB00EC276C /* Itunes_info.plist */,
+				1F7915920BD5F60000BF5CB2 /* test3.xml */,
+				1FF1E4400D67AD420057258D /* test4.xml */,
+				1F3466670E09BB04001FBB20 /* nested.xml */,
+				1F7915930BD5F60000BF5CB2 /* test3.fi */,
+				1F90E7F10BD589D60074D009 /* test2.xml */,
+				1F90E7EC0BD587BB0074D009 /* test2.fi */,
+				1F3C9AB80BCC139E00732CD5 /* emptyElementWithAttribute.fi */,
+				1F3C9AB30BCC137100732CD5 /* emptyelement.fi */,
+				1F3C9AAD0BCC112600732CD5 /* test1.fi */,
+				1FC164B90ACAFD5D007F72C8 /* metadata_unicode.html */,
+				1F36076D0AC9CD51007B4CA2 /* meta_attributes.html */,
+				1F734AD60AC8136B004C624F /* html_comment_with_dash.html */,
+				1F734AD70AC8136B004C624F /* html_comment_with_dash.txt */,
+				1F734A6F0AC7DB04004C624F /* space_before_tag_close.txt */,
+				1F734A6D0AC7DAEF004C624F /* space_before_tag_close.html */,
+				1F734A610AC7D871004C624F /* no_space_between_attributes.txt */,
+				1F3653EE0AC01F20008792DA /* attributes_with_double_closing_quotes.html */,
+				1F2DB6C70AB0C65700DA2427 /* close_tag_not_closed.html */,
+				1F2DB6C80AB0C65700DA2427 /* close_tag_not_closed.txt */,
+				1F8E248E0AB209560073A0F7 /* textwith_headings.html */,
+				1F8E248F0AB209560073A0F7 /* textwith_headings.txt */,
+				1F8E24340AB105810073A0F7 /* textwith_multiple_body.html */,
+				1F8E24350AB105810073A0F7 /* textwith_multiple_body.txt */,
+				1F8E24060AB0FE980073A0F7 /* textwith_p.html */,
+				1F8E24070AB0FE980073A0F7 /* textwith_p.txt */,
+				1F8E23FB0AB0FD4A0073A0F7 /* textwith_th.html */,
+				1F8E23FC0AB0FD4A0073A0F7 /* textwith_th.txt */,
+				1F8E23E10AB0E8FE0073A0F7 /* jap-pto-other-meta.html */,
+				1F8E23E20AB0E8FE0073A0F7 /* jap-pto-other-meta.txt */,
+				1F2DB6B30AB0C52C00DA2427 /* entity_runon.html */,
+				1F2DB6B40AB0C52C00DA2427 /* entity_runon.txt */,
+				1F2DB6AC0AB0C41200DA2427 /* jap-pto_all_upcase_meta.html */,
+				1F2DB6AD0AB0C41200DA2427 /* jap-pto_all_upcase_meta.txt */,
+				1F2DB69C0AB0C2D400DA2427 /* jap-pto_upcase_meta.html */,
+				1F2DB69D0AB0C2D400DA2427 /* jap-pto_upcase_meta.txt */,
+				1F2DB6640AB0B65800DA2427 /* jap-pto.html */,
+				1F2DB6650AB0B65800DA2427 /* jap-pto.txt */,
+				1F2DB6550AB0B29700DA2427 /* html_text_through_tag.html */,
+				1F2DB6560AB0B29700DA2427 /* html_text_through_tag.txt */,
+				1F2DB6230AB09E0E00DA2427 /* naked_html_fragment.html */,
+				1F2DB6240AB09E0E00DA2427 /* naked_html_fragment.txt */,
+				1F2DB61C0AB0983F00DA2427 /* html_with_javascript.html */,
+				1F2DB61D0AB0983F00DA2427 /* html_with_javascript.txt */,
+				1F2DB5CF0AB08E8400DA2427 /* empty_html.html */,
+				1F2DB5D00AB08E8400DA2427 /* empty_html.txt */,
+				1F2DB5D10AB08E8400DA2427 /* textwith_br.html */,
+				1F2DB5D20AB08E8400DA2427 /* textwith_br.txt */,
+				1F2DB5D30AB08E8400DA2427 /* textwith_td.html */,
+				1F2DB5D40AB08E8400DA2427 /* textwith_td.txt */,
+				1FC694460A83DDED0079AA90 /* simple-xml-with-namespaces.xml */,
+				1F41ADB709FE3E3A00466C82 /* attrparserunonbug.html */,
+				1F1E22BE072C794E007DCDB1 /* emptyElementWithAttribute.xml */,
+				1F1E2291072C71A7007DCDB1 /* archiversample.xml */,
+				1F1E2261072C6B2A007DCDB1 /* emptyelement.xml */,
+				07DF1A4100668979C35ADD82 /* test1.xml.MPWXmlScanner-result */,
+				07DF1A4200668979C35ADD82 /* test1.xml */,
+				1FEBF4690A8C807500F56D44 /* htmlfragment_unquoted_attr_values.html */,
+				1FEBF4C20A8C872300F56D44 /* htmlfragment_entities.html */,
+				1F8E0E380A8CE6F900F224C2 /* htmlfragment_attribute_no_value.html */,
+				1F3653F80AC0200F008792DA /* xml_comment_with_dash.xml */,
+				1F3653FE0AC02085008792DA /* no_space_between_attributes.html */,
+				1F734A5C0AC6D89C004C624F /* attributes_with_double_closing_quotes.txt */,
+				1F4A855B0ACB45F40059E997 /* decor.html */,
+				1F4A855D0ACB46190059E997 /* decor.txt */,
+				1F9403850C68159F00E189FC /* hreftest.html */,
+				1FCD3B1A0C6964A50049EB86 /* empty_elements.plist */,
+				1F661E180F13EF8300C6F713 /* cdatatest1.xml */,
+				1FD5DC2E0F2D02A400F8F769 /* tagconflict_disambiguated_by_namespace.xml */,
+				1FA3D3AA0F9572BC00E991F2 /* stringLengthResponse1.xmlrpc */,
+				1FDD4787110D018B00A380E0 /* numericEntities.xml */,
+				1F27429E12CC6D7B001498F9 /* glossary.json */,
+				1F27431012CC7BF4001498F9 /* string.json */,
+				1F27432312CC7D16001498F9 /* dict.json */,
+				1F27433C12CC8074001498F9 /* array.json */,
+				1FCDAF8912CD9ED3008162C7 /* literals.json */,
+				1FCDB00212CDB6F8008162C7 /* numbers.json */,
+				1F04895012D148560069E1D4 /* dictAfterNumber.json */,
+				1FF8314C12D1673F00DF5E66 /* emptyelements.json */,
+				1FF831F312D1767500DF5E66 /* stringescapes.json */,
+				1FF8325512D186EC00DF5E66 /* unicodeescapes.json */,
+			);
+			path = TestResources;
+			sourceTree = "<group>";
+		};
+		07DF1A4300668979C35ADD82 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FB43C5B10BFBCA700490AA6 /* dllmain.m */,
+				07DF1A4700668979C35ADD82 /* m.template */,
+				07DF1A4800668979C35ADD82 /* h.template */,
+				07DF1A4900668979C35ADD82 /* Notes.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07DF1A4A00668979C35ADD82 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1F83BCBA0D73717A00AF6FB4 /* Cocoa.framework */,
+				07DF1A4B00668979C35ADD82 /* Foundation.framework */,
+				1F9BAE6905762A2E009DD1EC /* MPWFoundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		07DF1A4E00668979C35ADD82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F96E60009B62F5C0063D669 /* MPWXmlKit.framework */,
+				1F2553E90D627362007D8DAF /* MPWXmlCore.framework */,
+				1FD5DB000F2CEDB000F8F769 /* libiXmlKit.a */,
+				1FB43C0310BFB6EF00490AA6 /* MPWXmlKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F7A3D240DAAC4B800FE9E24 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				1F7A3D270DAAC51000FE9E24 /* openold.m */,
+				1F7A3D4F0DAAC8C700FE9E24 /* opennew.m */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		1FBBE2870DBD33C000A93CBA /* CoreClasses */ = {
+			isa = PBXGroup;
+			children = (
+				07DF1A2F00668979C35ADD82 /* MPWXmlAttributes.h */,
+				07DF1A3C00668979C35ADD82 /* SaxDocumentHandler.h */,
+				1F2B4ADB0D6B95EF00189FEB /* MPWTagHandler.h */,
+				1F2B4ADC0D6B95EF00189FEB /* MPWTagHandler.m */,
+				07DF1A2C00668979C35ADD82 /* MPWXmlScanner.h */,
+				07DF1A1D00668979C35ADD82 /* MPWXmlScanner.m */,
+				07DF1A1F00668979C35ADD82 /* MPWXmlAttributes.m */,
+				07DF1A2700668979C35ADD82 /* MPWXmlParser.m */,
+				1F449D6F0C6592AB00EC276C /* MPWMAXParser.m */,
+				1F443B4C0AAF3443006A2739 /* MPWHTMLFileTextExtractor.m */,
+				1F4B0F7D0DBEB9E700639DC0 /* MPWMAXParser_private.h */,
+				1FAAD2E20DF61EC200592B29 /* mpwfoundation_imports.h */,
+				07DF1A1E00668979C35ADD82 /* MPWXmlElement.m */,
+			);
+			name = CoreClasses;
+			sourceTree = "<group>";
+		};
+		1FC4D32E0DFA03F500AC1A66 /* MPWFoundation_support */ = {
+			isa = PBXGroup;
+			children = (
+				1F4FCED11105101B00376799 /* MPWByteStream.h */,
+				1F4FCED21105101B00376799 /* MPWFlattenStream.h */,
+				1F4FCED31105101B00376799 /* MPWStream.h */,
+				1FC4D38E0DFA10A500AC1A66 /* CodingAdditions.h */,
+				1FC4D3870DFA102600AC1A66 /* NSInvocationAdditions_lookup.h */,
+				1FC4D3830DFA0FE700AC1A66 /* MPWCaseInsensitiveSmallStringTable.h */,
+				1FC4D3800DFA0FD000AC1A66 /* AccessorMacros.h */,
+				1FC4D3650DFA0F2B00AC1A66 /* DebugMacros.h */,
+				1FC4D35A0DFA0EC600AC1A66 /* MPWFastInvocation.h */,
+				1FC4D35B0DFA0EC600AC1A66 /* MPWObject.h */,
+				1FC4D35C0DFA0EC600AC1A66 /* MPWObjectCache.h */,
+				1FC4D35D0DFA0EC600AC1A66 /* MPWSmallStringTable.h */,
+				1FC4D35E0DFA0EC600AC1A66 /* MPWSubData.h */,
+				1FC4D3480DFA05FC00AC1A66 /* MPWCaseInsensitiveSmallStringTable.m */,
+				1FC4D3490DFA05FC00AC1A66 /* MPWFastInvocation.m */,
+				1FC4D34A0DFA05FC00AC1A66 /* MPWObject.m */,
+				1FC4D34B0DFA05FC00AC1A66 /* MPWObjectCache.m */,
+				1FC4D34C0DFA05FC00AC1A66 /* MPWSmallStringTable.m */,
+				1FC4D34D0DFA05FC00AC1A66 /* MPWSubData.m */,
+			);
+			path = MPWFoundation_support;
+			sourceTree = "<group>";
+		};
+		1FD5DC290F2CFD0D00F8F769 /* ExportHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				1F421F0110C2555700C403D5 /* MPWMAXParser.h */,
+				1FA3D38E0F95706A00E991F2 /* MPWXmlRpc.h */,
+				1F421EFC10C2554D00C403D5 /* MPWXmlParser.h */,
+			);
+			name = ExportHeaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1F2553E40D627362007D8DAF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4B0F9B0DBEBA7500639DC0 /* MPWMAXParser_private.h in Headers */,
+				1F8D47A00D8B1877000879BA /* MPWXmlAttributes.h in Headers */,
+				1F345E630D662E8800CA4F40 /* MPWHTMLFileTextExtractor.h in Headers */,
+				1F2B4A7B0D6B893B00189FEB /* MPWOpenDocumentParser.h in Headers */,
+				1FAAD2E30DF61EC200592B29 /* mpwfoundation_imports.h in Headers */,
+				1FC4D35F0DFA0EC600AC1A66 /* MPWFastInvocation.h in Headers */,
+				1FC4D3600DFA0EC600AC1A66 /* MPWObject.h in Headers */,
+				1FC4D3610DFA0EC600AC1A66 /* MPWObjectCache.h in Headers */,
+				1FC4D3620DFA0EC600AC1A66 /* MPWSmallStringTable.h in Headers */,
+				1FC4D3630DFA0EC600AC1A66 /* MPWSubData.h in Headers */,
+				1FC4D3660DFA0F2B00AC1A66 /* DebugMacros.h in Headers */,
+				1FC4D3810DFA0FD000AC1A66 /* AccessorMacros.h in Headers */,
+				1FC4D3840DFA0FE700AC1A66 /* MPWCaseInsensitiveSmallStringTable.h in Headers */,
+				1FC4D3880DFA102600AC1A66 /* NSInvocationAdditions_lookup.h in Headers */,
+				1FC4D38F0DFA10A500AC1A66 /* CodingAdditions.h in Headers */,
+				1F421F0010C2554D00C403D5 /* MPWXmlParser.h in Headers */,
+				1F421F0510C2555700C403D5 /* MPWMAXParser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F96E5C509B62F5C0063D669 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FAAD2E40DF61F0C00592B29 /* mpwfoundation_imports.h in Headers */,
+				1F4B0F9C0DBEBA8700639DC0 /* MPWMAXParser_private.h in Headers */,
+				1F96E5C709B62F5C0063D669 /* MPWXmlScanner.h in Headers */,
+				1F96E5C809B62F5C0063D669 /* MPWXmlElement.h in Headers */,
+				1F96E5C909B62F5C0063D669 /* MPWXmlDOM.h in Headers */,
+				1F96E5CA09B62F5C0063D669 /* MPWXmlAttributes.h in Headers */,
+				1F96E5CB09B62F5C0063D669 /* MPWXmlGeneratorStream.h in Headers */,
+				1F96E5CC09B62F5C0063D669 /* MPWSaxProtocol.h in Headers */,
+				1F96E5CF09B62F5C0063D669 /* MPWXmlProplistGenerator.h in Headers */,
+				1F96E5D009B62F5C0063D669 /* MPWXmlAppleProplistGenerator.h in Headers */,
+				1F96E5D109B62F5C0063D669 /* MPWXmlAppleProplistReader.h in Headers */,
+				1F96E5D209B62F5C0063D669 /* MPWXmlArchiver.h in Headers */,
+				1F96E5D309B62F5C0063D669 /* MPWXmlUnarchiver.h in Headers */,
+				1F96E5D409B62F5C0063D669 /* XmlScannerScanCDataPseudoMacro.h in Headers */,
+				1F96E5D609B62F5C0063D669 /* MPWXmlScanner16BitBE.h in Headers */,
+				1F96E5D709B62F5C0063D669 /* SaxDocumentHandler.h in Headers */,
+				1F96E5D909B62F5C0063D669 /* XmlDelimitAttrValues.h in Headers */,
+				1F96E5DA09B62F5C0063D669 /* XmlCommonMacros.h in Headers */,
+				1F96E5DB09B62F5C0063D669 /* MPWXmlWrapperArchiver.h in Headers */,
+				1F96E5DC09B62F5C0063D669 /* MPWXmlWrapperUnarchiver.h in Headers */,
+				1F05F7030A8339A900C8C652 /* MPWHrefScanner.h in Headers */,
+				1F443B4D0AAF3443006A2739 /* MPWHTMLFileTextExtractor.h in Headers */,
+				1F90D6A80B9BC47D00BD2D9C /* MPWTemplateApply.h in Headers */,
+				1FB006DB0BC7580F0074E056 /* MPWBridgeReader.h in Headers */,
+				1F3C9A820BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.h in Headers */,
+				1F3C9A880BCC0C2C00732CD5 /* MPWXmlParserTesting.h in Headers */,
+				1F6ED8A00D1FB04C00290F6B /* MPWNSXMLDocumentParser.h in Headers */,
+				1F18E7A20D510A3E00839569 /* MPWFastKeyedArchiver.h in Headers */,
+				1F18E7AE0D51341D00839569 /* MPWFastKeyedUnarchiver.h in Headers */,
+				1F2B4ADD0D6B95EF00189FEB /* MPWTagHandler.h in Headers */,
+				1F9BC69A0D7BEF4700B04FE8 /* MPWOpenDocumentParser.h in Headers */,
+				1F7FB2D10E00D58700A40B28 /* MPWFeed.h in Headers */,
+				1F7FB2D60E00D5B900A40B28 /* NSString+extras.h in Headers */,
+				1FA3D3900F95706A00E991F2 /* MPWXmlRpc.h in Headers */,
+				1FBF986A0F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.h in Headers */,
+				1F421EFF10C2554D00C403D5 /* MPWXmlParser.h in Headers */,
+				1F421F0410C2555700C403D5 /* MPWMAXParser.h in Headers */,
+				1FCD3D3812B854FB00FF08E9 /* MPWAtomParser.h in Headers */,
+				1F2742A312CC6DA0001498F9 /* MPWMASONParser.h in Headers */,
+				1F27436A12CC8741001498F9 /* MPWJSONWriter.h in Headers */,
+				1FF832D412D1BAAE00DF5E66 /* MPWFeedItem.h in Headers */,
+				1FF832E212D1BB9400DF5E66 /* MPWAtomLink.h in Headers */,
+				1FF832E812D1BBDF00DF5E66 /* MPWRSSParser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB43B5610BFB6EF00490AA6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB43B5710BFB6EF00490AA6 /* mpwfoundation_imports.h in Headers */,
+				1FB43B5810BFB6EF00490AA6 /* MPWMAXParser_private.h in Headers */,
+				1FB43B5910BFB6EF00490AA6 /* MPWXmlScanner.h in Headers */,
+				1FB43B5A10BFB6EF00490AA6 /* MPWXmlElement.h in Headers */,
+				1FB43B5B10BFB6EF00490AA6 /* MPWXmlDOM.h in Headers */,
+				1FB43B5C10BFB6EF00490AA6 /* MPWXmlAttributes.h in Headers */,
+				1FB43B5D10BFB6EF00490AA6 /* MPWXmlGeneratorStream.h in Headers */,
+				1FB43B5E10BFB6EF00490AA6 /* MPWSaxProtocol.h in Headers */,
+				1FB43B6010BFB6EF00490AA6 /* MPWXmlProplistGenerator.h in Headers */,
+				1FB43B6110BFB6EF00490AA6 /* MPWXmlAppleProplistGenerator.h in Headers */,
+				1FB43B6210BFB6EF00490AA6 /* MPWXmlAppleProplistReader.h in Headers */,
+				1FB43B6310BFB6EF00490AA6 /* MPWXmlArchiver.h in Headers */,
+				1FB43B6410BFB6EF00490AA6 /* MPWXmlUnarchiver.h in Headers */,
+				1FB43B6510BFB6EF00490AA6 /* XmlScannerScanCDataPseudoMacro.h in Headers */,
+				1FB43B6710BFB6EF00490AA6 /* MPWXmlScanner16BitBE.h in Headers */,
+				1FB43B6810BFB6EF00490AA6 /* SaxDocumentHandler.h in Headers */,
+				1FB43B6A10BFB6EF00490AA6 /* XmlDelimitAttrValues.h in Headers */,
+				1FB43B6B10BFB6EF00490AA6 /* XmlCommonMacros.h in Headers */,
+				1FB43B6C10BFB6EF00490AA6 /* MPWXmlWrapperArchiver.h in Headers */,
+				1FB43B6D10BFB6EF00490AA6 /* MPWXmlWrapperUnarchiver.h in Headers */,
+				1FB43B6E10BFB6EF00490AA6 /* MPWHrefScanner.h in Headers */,
+				1FB43B6F10BFB6EF00490AA6 /* MPWHTMLFileTextExtractor.h in Headers */,
+				1FB43B7010BFB6EF00490AA6 /* MPWTemplateApply.h in Headers */,
+				1FB43B7110BFB6EF00490AA6 /* MPWBridgeReader.h in Headers */,
+				1FB43B7210BFB6EF00490AA6 /* MPWXmlFastInfosetParser.h in Headers */,
+				1FB43B7310BFB6EF00490AA6 /* MPWXmlParserTesting.h in Headers */,
+				1FB43B7510BFB6EF00490AA6 /* MPWNSXMLDocumentParser.h in Headers */,
+				1FB43B7610BFB6EF00490AA6 /* MPWFastKeyedArchiver.h in Headers */,
+				1FB43B7710BFB6EF00490AA6 /* MPWFastKeyedUnarchiver.h in Headers */,
+				1FB43B7810BFB6EF00490AA6 /* MPWTagHandler.h in Headers */,
+				1FB43B7910BFB6EF00490AA6 /* MPWOpenDocumentParser.h in Headers */,
+				1FB43B7A10BFB6EF00490AA6 /* MPWFeed.h in Headers */,
+				1FB43B7B10BFB6EF00490AA6 /* NSString+extras.h in Headers */,
+				1FB43B7C10BFB6EF00490AA6 /* MPWXmlRpc.h in Headers */,
+				1FB43B7D10BFB6EF00490AA6 /* MPWXmlRpcGeneratorStream.h in Headers */,
+				1F421EFD10C2554D00C403D5 /* MPWXmlParser.h in Headers */,
+				1F421F0210C2555700C403D5 /* MPWMAXParser.h in Headers */,
+				1FCD3D3A12B854FB00FF08E9 /* MPWAtomParser.h in Headers */,
+				1F2742A512CC6DA0001498F9 /* MPWMASONParser.h in Headers */,
+				1F27436C12CC8741001498F9 /* MPWJSONWriter.h in Headers */,
+				1FF832D612D1BAAE00DF5E66 /* MPWFeedItem.h in Headers */,
+				1FF832E412D1BB9400DF5E66 /* MPWAtomLink.h in Headers */,
+				1FF832EA12D1BBDF00DF5E66 /* MPWRSSParser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD5DAFC0F2CEDB000F8F769 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD5DB970F2CEEDC00F8F769 /* MPWMAXParser_private.h in Headers */,
+				1FD5DB990F2CEEDC00F8F769 /* MPWXmlAttributes.h in Headers */,
+				1FD5DB9B0F2CEEDC00F8F769 /* MPWHTMLFileTextExtractor.h in Headers */,
+				1FD5DB9C0F2CEEDC00F8F769 /* MPWOpenDocumentParser.h in Headers */,
+				1FD5DB9D0F2CEEDC00F8F769 /* mpwfoundation_imports.h in Headers */,
+				1FD5DB9E0F2CEEDC00F8F769 /* MPWFastInvocation.h in Headers */,
+				1FD5DB9F0F2CEEDC00F8F769 /* MPWObject.h in Headers */,
+				1FD5DBA00F2CEEDC00F8F769 /* MPWObjectCache.h in Headers */,
+				1FD5DBA10F2CEEDC00F8F769 /* MPWSmallStringTable.h in Headers */,
+				1FD5DBA20F2CEEDC00F8F769 /* MPWSubData.h in Headers */,
+				1FD5DBA30F2CEEDC00F8F769 /* DebugMacros.h in Headers */,
+				1FD5DBA40F2CEEDC00F8F769 /* AccessorMacros.h in Headers */,
+				1FD5DBA50F2CEEDC00F8F769 /* MPWCaseInsensitiveSmallStringTable.h in Headers */,
+				1FD5DBA60F2CEEDC00F8F769 /* NSInvocationAdditions_lookup.h in Headers */,
+				1FD5DBA70F2CEEDC00F8F769 /* CodingAdditions.h in Headers */,
+				1F421EFE10C2554D00C403D5 /* MPWXmlParser.h in Headers */,
+				1F421F0310C2555700C403D5 /* MPWMAXParser.h in Headers */,
+				1F4FCED41105101B00376799 /* MPWByteStream.h in Headers */,
+				1F4FCED51105101B00376799 /* MPWFlattenStream.h in Headers */,
+				1F4FCED61105101B00376799 /* MPWStream.h in Headers */,
+				1FCD3D3C12B854FB00FF08E9 /* MPWAtomParser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1F2553E80D627362007D8DAF /* MPWXmlCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F2553EF0D627363007D8DAF /* Build configuration list for PBXNativeTarget "MPWXmlCore" */;
+			buildPhases = (
+				1F2553E40D627362007D8DAF /* Headers */,
+				1F2553E50D627362007D8DAF /* Resources */,
+				1F2553E60D627362007D8DAF /* Sources */,
+				1F2553E70D627362007D8DAF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MPWXmlCore;
+			productName = MPWXmlCore;
+			productReference = 1F2553E90D627362007D8DAF /* MPWXmlCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1F96E5C409B62F5C0063D669 /* MPWXmlKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F96E5FA09B62F5C0063D669 /* Build configuration list for PBXNativeTarget "MPWXmlKit" */;
+			buildPhases = (
+				1F96E5C509B62F5C0063D669 /* Headers */,
+				1F96E5DE09B62F5C0063D669 /* Resources */,
+				1F96E5E409B62F5C0063D669 /* Sources */,
+				1F96E5F609B62F5C0063D669 /* Frameworks */,
+				1F96E5F909B62F5C0063D669 /* Rez */,
+				1F734A570AC6D807004C624F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MPWXmlKit;
+			productInstallPath = /Library/Frameworks;
+			productName = "MPWXmlKit (Framework)";
+			productReference = 1F96E60009B62F5C0063D669 /* MPWXmlKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1FB43B5510BFB6EF00490AA6 /* MPWXmlKit (Windows) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FB43C0010BFB6EF00490AA6 /* Build configuration list for PBXNativeTarget "MPWXmlKit (Windows)" */;
+			buildPhases = (
+				1FB43B5610BFB6EF00490AA6 /* Headers */,
+				1FB43B7E10BFB6EF00490AA6 /* Resources */,
+				1FB43BDD10BFB6EF00490AA6 /* Sources */,
+				1FB43BFB10BFB6EF00490AA6 /* Frameworks */,
+				1FB43BFE10BFB6EF00490AA6 /* Rez */,
+				1FB43BFF10BFB6EF00490AA6 /* ShellScript */,
+			);
+			buildRules = (
+				1FB43C0710BFB75600490AA6 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "MPWXmlKit (Windows)";
+			productInstallPath = /Library/Frameworks;
+			productName = "MPWXmlKit (Framework)";
+			productReference = 1FB43C0310BFB6EF00490AA6 /* MPWXmlKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1FD5DAFF0F2CEDB000F8F769 /* iXmlKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FD5DB910F2CEE1000F8F769 /* Build configuration list for PBXNativeTarget "iXmlKit" */;
+			buildPhases = (
+				1FD5DAFC0F2CEDB000F8F769 /* Headers */,
+				1FD5DAFD0F2CEDB000F8F769 /* Sources */,
+				1FD5DAFE0F2CEDB000F8F769 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iXmlKit;
+			productName = iXmlKit;
+			productReference = 1FD5DB000F2CEDB000F8F769 /* libiXmlKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07DF1A1900668979C35ADD82 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1F39596808A0CC4600BF7444 /* Build configuration list for PBXProject "ObjectiveXML" */;
+			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 07DF1A1A00668979C35ADD82 /* MPWXmlKit */;
+			productRefGroup = 07DF1A4E00668979C35ADD82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FD564AB0E2ECB2D00607D4E /* B&I ObjectiveXML */,
+				1F2553E80D627362007D8DAF /* MPWXmlCore */,
+				1F96E5C409B62F5C0063D669 /* MPWXmlKit */,
+				1F4B0F610DBEB75A00639DC0 /* All */,
+				1FD5DAFF0F2CEDB000F8F769 /* iXmlKit */,
+				1FB43B5510BFB6EF00490AA6 /* MPWXmlKit (Windows) */,
+				1F5A6CAA1170104300E4A959 /* iXmlKit (Phone + Simulator fat) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F2553E50D627362007D8DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD5DC300F2D02A400F8F769 /* tagconflict_disambiguated_by_namespace.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F96E5DE09B62F5C0063D669 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F96E5DF09B62F5C0063D669 /* test1.xml.MPWXmlScanner-result in Resources */,
+				1F96E5E009B62F5C0063D669 /* test1.xml in Resources */,
+				1F96E5E109B62F5C0063D669 /* emptyelement.xml in Resources */,
+				1F96E5E209B62F5C0063D669 /* archiversample.xml in Resources */,
+				1F96E5E309B62F5C0063D669 /* emptyElementWithAttribute.xml in Resources */,
+				1F41ADB809FE3E3A00466C82 /* attrparserunonbug.html in Resources */,
+				1FC694470A83DDED0079AA90 /* simple-xml-with-namespaces.xml in Resources */,
+				1FEBF46A0A8C807500F56D44 /* htmlfragment_unquoted_attr_values.html in Resources */,
+				1FEBF4C30A8C872300F56D44 /* htmlfragment_entities.html in Resources */,
+				1F8E0E390A8CE6F900F224C2 /* htmlfragment_attribute_no_value.html in Resources */,
+				1F2DB5D50AB08E8400DA2427 /* empty_html.html in Resources */,
+				1F2DB5D60AB08E8400DA2427 /* empty_html.txt in Resources */,
+				1F2DB5D70AB08E8400DA2427 /* textwith_br.html in Resources */,
+				1F2DB5D80AB08E8400DA2427 /* textwith_br.txt in Resources */,
+				1F2DB5D90AB08E8400DA2427 /* textwith_td.html in Resources */,
+				1F2DB5DA0AB08E8400DA2427 /* textwith_td.txt in Resources */,
+				1F2DB61E0AB0983F00DA2427 /* html_with_javascript.html in Resources */,
+				1F2DB61F0AB0983F00DA2427 /* html_with_javascript.txt in Resources */,
+				1F2DB6250AB09E0E00DA2427 /* naked_html_fragment.html in Resources */,
+				1F2DB6260AB09E0E00DA2427 /* naked_html_fragment.txt in Resources */,
+				1F2DB6570AB0B29700DA2427 /* html_text_through_tag.html in Resources */,
+				1F2DB6580AB0B29700DA2427 /* html_text_through_tag.txt in Resources */,
+				1F2DB6660AB0B65800DA2427 /* jap-pto.html in Resources */,
+				1F2DB6670AB0B65800DA2427 /* jap-pto.txt in Resources */,
+				1F2DB69E0AB0C2D400DA2427 /* jap-pto_upcase_meta.html in Resources */,
+				1F2DB69F0AB0C2D400DA2427 /* jap-pto_upcase_meta.txt in Resources */,
+				1F2DB6AE0AB0C41200DA2427 /* jap-pto_all_upcase_meta.html in Resources */,
+				1F2DB6AF0AB0C41200DA2427 /* jap-pto_all_upcase_meta.txt in Resources */,
+				1F2DB6B50AB0C52C00DA2427 /* entity_runon.html in Resources */,
+				1F2DB6B60AB0C52C00DA2427 /* entity_runon.txt in Resources */,
+				1F2DB6C90AB0C65700DA2427 /* close_tag_not_closed.html in Resources */,
+				1F2DB6CA0AB0C65700DA2427 /* close_tag_not_closed.txt in Resources */,
+				1F8E23E30AB0E8FE0073A0F7 /* jap-pto-other-meta.html in Resources */,
+				1F8E23E40AB0E8FE0073A0F7 /* jap-pto-other-meta.txt in Resources */,
+				1F8E23FD0AB0FD4A0073A0F7 /* textwith_th.html in Resources */,
+				1F8E23FE0AB0FD4A0073A0F7 /* textwith_th.txt in Resources */,
+				1F8E24080AB0FE980073A0F7 /* textwith_p.html in Resources */,
+				1F8E24090AB0FE980073A0F7 /* textwith_p.txt in Resources */,
+				1F8E24360AB105810073A0F7 /* textwith_multiple_body.html in Resources */,
+				1F8E24370AB105810073A0F7 /* textwith_multiple_body.txt in Resources */,
+				1F8E24900AB209560073A0F7 /* textwith_headings.html in Resources */,
+				1F8E24910AB209560073A0F7 /* textwith_headings.txt in Resources */,
+				1F3653EF0AC01F20008792DA /* attributes_with_double_closing_quotes.html in Resources */,
+				1F3653F90AC0200F008792DA /* xml_comment_with_dash.xml in Resources */,
+				1F3653FF0AC02085008792DA /* no_space_between_attributes.html in Resources */,
+				1F734A5D0AC6D89C004C624F /* attributes_with_double_closing_quotes.txt in Resources */,
+				1F734A620AC7D871004C624F /* no_space_between_attributes.txt in Resources */,
+				1F734A6E0AC7DAEF004C624F /* space_before_tag_close.html in Resources */,
+				1F734A700AC7DB04004C624F /* space_before_tag_close.txt in Resources */,
+				1F734AD80AC8136B004C624F /* html_comment_with_dash.html in Resources */,
+				1F734AD90AC8136B004C624F /* html_comment_with_dash.txt in Resources */,
+				1F36076E0AC9CD51007B4CA2 /* meta_attributes.html in Resources */,
+				1FC164BA0ACAFD5D007F72C8 /* metadata_unicode.html in Resources */,
+				1F4A855C0ACB45F40059E997 /* decor.html in Resources */,
+				1F4A855E0ACB46190059E997 /* decor.txt in Resources */,
+				1F3C9AAE0BCC112600732CD5 /* test1.fi in Resources */,
+				1F3C9AB40BCC137100732CD5 /* emptyelement.fi in Resources */,
+				1F3C9AB90BCC139E00732CD5 /* emptyElementWithAttribute.fi in Resources */,
+				1F90E7ED0BD587BB0074D009 /* test2.fi in Resources */,
+				1F90E7F20BD589D60074D009 /* test2.xml in Resources */,
+				1F7915940BD5F60000BF5CB2 /* test3.xml in Resources */,
+				1F7915950BD5F60000BF5CB2 /* test3.fi in Resources */,
+				1F449D240C6549CB00EC276C /* Itunes_info.plist in Resources */,
+				1F9403860C68159F00E189FC /* hreftest.html in Resources */,
+				1FCD3B1B0C6964A50049EB86 /* empty_elements.plist in Resources */,
+				1FF1E4450D67ADD00057258D /* test4.xml in Resources */,
+				1F7FB3060E00F27E00A40B28 /* metaobject.rss in Resources */,
+				1F3519AA0E05766900A730BF /* revision3-diggnation-quicktime.rss in Resources */,
+				1F3466680E09BB04001FBB20 /* nested.xml in Resources */,
+				1FFD587A0E0DACD9000AE272 /* test3_16bit.xml in Resources */,
+				1FE5F7100E538DDF008F629B /* iso-encoded.xml in Resources */,
+				1FE5F72B0E53964C008F629B /* windows-encoded.xml in Resources */,
+				1F2C48210E563D7E0055F0A6 /* Faehre.xml in Resources */,
+				1F2C49320E563EA90055F0A6 /* Faehre-iso.xml in Resources */,
+				1F661E190F13EF8300C6F713 /* cdatatest1.xml in Resources */,
+				1FD5DC2F0F2D02A400F8F769 /* tagconflict_disambiguated_by_namespace.xml in Resources */,
+				1F6F086A0F3EB9F300FA4183 /* mojibake_utf16.txt in Resources */,
+				1F6F08700F3EBB5900FA4183 /* mojibake_utf8.xhtml in Resources */,
+				1F6F08890F3EBFD000FA4183 /* utf8xhtml_test.html in Resources */,
+				1F6F088D0F3EC08500FA4183 /* utf8xhtml_test.txt in Resources */,
+				1F478F050F479FEB004D1CCE /* Dg-duplex.htm in Resources */,
+				1F9F24090F81B25200D8A750 /* c1qt12.html in Resources */,
+				1F9F240D0F81B2B900D8A750 /* c1qt12.txt in Resources */,
+				1F9F242D0F81B9C100D8A750 /* accent_grave.html in Resources */,
+				1F9F242F0F81B9CE00D8A750 /* accent_grave.txt in Resources */,
+				1FA3D32C0F93E09600E991F2 /* stringLengthRequest.xmlrpc in Resources */,
+				1FA3D32D0F93E09600E991F2 /* stringLengthResponse.xmlrpc in Resources */,
+				1FA3D3AB0F9572BC00E991F2 /* stringLengthResponse1.xmlrpc in Resources */,
+				1FA3D3BE0F95764F00E991F2 /* getListResponse.xmlrpc in Resources */,
+				1FA3D3CB0F957A6000E991F2 /* getDictResponse.xmlrpc in Resources */,
+				1FA3D4950F97EC9500E991F2 /* getDictRequest.xmlrpc in Resources */,
+				1FBF988F0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc in Resources */,
+				1FBF98A20F9E7F340030ED80 /* loginRequest.xmlrpc in Resources */,
+				1F0E2D10109AC9850093F50E /* responseWithAmpersands.xmlrpc in Resources */,
+				1F42261D10C3A14800C403D5 /* checkForPenApps_with_ISO8859_claiming_UTF8.xmlrpc in Resources */,
+				1FDD4788110D018B00A380E0 /* numericEntities.xml in Resources */,
+				1F27429F12CC6D7B001498F9 /* glossary.json in Resources */,
+				1F27431112CC7BF4001498F9 /* string.json in Resources */,
+				1F27432412CC7D16001498F9 /* dict.json in Resources */,
+				1F27433D12CC8074001498F9 /* array.json in Resources */,
+				1FCDAF8B12CD9ED3008162C7 /* literals.json in Resources */,
+				1FCDB00412CDB6F8008162C7 /* numbers.json in Resources */,
+				1FCDB27812CEA771008162C7 /* states.xml in Resources */,
+				1F04895212D148560069E1D4 /* dictAfterNumber.json in Resources */,
+				1FF8314E12D1673F00DF5E66 /* emptyelements.json in Resources */,
+				1FF831F412D1767500DF5E66 /* stringescapes.json in Resources */,
+				1FF8325612D186EC00DF5E66 /* unicodeescapes.json in Resources */,
+				1FE39B0612D249F6005019C3 /* session.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB43B7E10BFB6EF00490AA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB43B7F10BFB6EF00490AA6 /* test1.xml.MPWXmlScanner-result in Resources */,
+				1FB43B8010BFB6EF00490AA6 /* test1.xml in Resources */,
+				1FB43B8110BFB6EF00490AA6 /* emptyelement.xml in Resources */,
+				1FB43B8210BFB6EF00490AA6 /* archiversample.xml in Resources */,
+				1FB43B8310BFB6EF00490AA6 /* emptyElementWithAttribute.xml in Resources */,
+				1FB43B8410BFB6EF00490AA6 /* attrparserunonbug.html in Resources */,
+				1FB43B8510BFB6EF00490AA6 /* simple-xml-with-namespaces.xml in Resources */,
+				1FB43B8610BFB6EF00490AA6 /* htmlfragment_unquoted_attr_values.html in Resources */,
+				1FB43B8710BFB6EF00490AA6 /* htmlfragment_entities.html in Resources */,
+				1FB43B8810BFB6EF00490AA6 /* htmlfragment_attribute_no_value.html in Resources */,
+				1FB43B8910BFB6EF00490AA6 /* empty_html.html in Resources */,
+				1FB43B8A10BFB6EF00490AA6 /* empty_html.txt in Resources */,
+				1FB43B8B10BFB6EF00490AA6 /* textwith_br.html in Resources */,
+				1FB43B8C10BFB6EF00490AA6 /* textwith_br.txt in Resources */,
+				1FB43B8D10BFB6EF00490AA6 /* textwith_td.html in Resources */,
+				1FB43B8E10BFB6EF00490AA6 /* textwith_td.txt in Resources */,
+				1FB43B8F10BFB6EF00490AA6 /* html_with_javascript.html in Resources */,
+				1FB43B9010BFB6EF00490AA6 /* html_with_javascript.txt in Resources */,
+				1FB43B9110BFB6EF00490AA6 /* naked_html_fragment.html in Resources */,
+				1FB43B9210BFB6EF00490AA6 /* naked_html_fragment.txt in Resources */,
+				1FB43B9310BFB6EF00490AA6 /* html_text_through_tag.html in Resources */,
+				1FB43B9410BFB6EF00490AA6 /* html_text_through_tag.txt in Resources */,
+				1FB43B9510BFB6EF00490AA6 /* jap-pto.html in Resources */,
+				1FB43B9610BFB6EF00490AA6 /* jap-pto.txt in Resources */,
+				1FB43B9710BFB6EF00490AA6 /* jap-pto_upcase_meta.html in Resources */,
+				1FB43B9810BFB6EF00490AA6 /* jap-pto_upcase_meta.txt in Resources */,
+				1FB43B9910BFB6EF00490AA6 /* jap-pto_all_upcase_meta.html in Resources */,
+				1FB43B9A10BFB6EF00490AA6 /* jap-pto_all_upcase_meta.txt in Resources */,
+				1FB43B9B10BFB6EF00490AA6 /* entity_runon.html in Resources */,
+				1FB43B9C10BFB6EF00490AA6 /* entity_runon.txt in Resources */,
+				1FB43B9D10BFB6EF00490AA6 /* close_tag_not_closed.html in Resources */,
+				1FB43B9E10BFB6EF00490AA6 /* close_tag_not_closed.txt in Resources */,
+				1FB43B9F10BFB6EF00490AA6 /* jap-pto-other-meta.html in Resources */,
+				1FB43BA010BFB6EF00490AA6 /* jap-pto-other-meta.txt in Resources */,
+				1FB43BA110BFB6EF00490AA6 /* textwith_th.html in Resources */,
+				1FB43BA210BFB6EF00490AA6 /* textwith_th.txt in Resources */,
+				1FB43BA310BFB6EF00490AA6 /* textwith_p.html in Resources */,
+				1FB43BA410BFB6EF00490AA6 /* textwith_p.txt in Resources */,
+				1FB43BA510BFB6EF00490AA6 /* textwith_multiple_body.html in Resources */,
+				1FB43BA610BFB6EF00490AA6 /* textwith_multiple_body.txt in Resources */,
+				1FB43BA710BFB6EF00490AA6 /* textwith_headings.html in Resources */,
+				1FB43BA810BFB6EF00490AA6 /* textwith_headings.txt in Resources */,
+				1FB43BA910BFB6EF00490AA6 /* attributes_with_double_closing_quotes.html in Resources */,
+				1FB43BAA10BFB6EF00490AA6 /* xml_comment_with_dash.xml in Resources */,
+				1FB43BAB10BFB6EF00490AA6 /* no_space_between_attributes.html in Resources */,
+				1FB43BAC10BFB6EF00490AA6 /* attributes_with_double_closing_quotes.txt in Resources */,
+				1FB43BAD10BFB6EF00490AA6 /* no_space_between_attributes.txt in Resources */,
+				1FB43BAE10BFB6EF00490AA6 /* space_before_tag_close.html in Resources */,
+				1FB43BAF10BFB6EF00490AA6 /* space_before_tag_close.txt in Resources */,
+				1FB43BB010BFB6EF00490AA6 /* html_comment_with_dash.html in Resources */,
+				1FB43BB110BFB6EF00490AA6 /* html_comment_with_dash.txt in Resources */,
+				1FB43BB210BFB6EF00490AA6 /* meta_attributes.html in Resources */,
+				1FB43BB310BFB6EF00490AA6 /* metadata_unicode.html in Resources */,
+				1FB43BB410BFB6EF00490AA6 /* decor.html in Resources */,
+				1FB43BB510BFB6EF00490AA6 /* decor.txt in Resources */,
+				1FB43BB610BFB6EF00490AA6 /* test1.fi in Resources */,
+				1FB43BB710BFB6EF00490AA6 /* emptyelement.fi in Resources */,
+				1FB43BB810BFB6EF00490AA6 /* emptyElementWithAttribute.fi in Resources */,
+				1FB43BB910BFB6EF00490AA6 /* test2.fi in Resources */,
+				1FB43BBA10BFB6EF00490AA6 /* test2.xml in Resources */,
+				1FB43BBB10BFB6EF00490AA6 /* test3.xml in Resources */,
+				1FB43BBC10BFB6EF00490AA6 /* test3.fi in Resources */,
+				1FB43BBD10BFB6EF00490AA6 /* Itunes_info.plist in Resources */,
+				1FB43BBE10BFB6EF00490AA6 /* hreftest.html in Resources */,
+				1FB43BBF10BFB6EF00490AA6 /* empty_elements.plist in Resources */,
+				1FB43BC010BFB6EF00490AA6 /* test4.xml in Resources */,
+				1FB43BC110BFB6EF00490AA6 /* metaobject.rss in Resources */,
+				1FB43BC210BFB6EF00490AA6 /* revision3-diggnation-quicktime.rss in Resources */,
+				1FB43BC310BFB6EF00490AA6 /* nested.xml in Resources */,
+				1FB43BC410BFB6EF00490AA6 /* test3_16bit.xml in Resources */,
+				1FB43BC510BFB6EF00490AA6 /* iso-encoded.xml in Resources */,
+				1FB43BC610BFB6EF00490AA6 /* windows-encoded.xml in Resources */,
+				1FB43BC710BFB6EF00490AA6 /* Faehre.xml in Resources */,
+				1FB43BC810BFB6EF00490AA6 /* Faehre-iso.xml in Resources */,
+				1FB43BC910BFB6EF00490AA6 /* cdatatest1.xml in Resources */,
+				1FB43BCA10BFB6EF00490AA6 /* tagconflict_disambiguated_by_namespace.xml in Resources */,
+				1FB43BCB10BFB6EF00490AA6 /* mojibake_utf16.txt in Resources */,
+				1FB43BCC10BFB6EF00490AA6 /* mojibake_utf8.xhtml in Resources */,
+				1FB43BCD10BFB6EF00490AA6 /* utf8xhtml_test.html in Resources */,
+				1FB43BCE10BFB6EF00490AA6 /* utf8xhtml_test.txt in Resources */,
+				1FB43BCF10BFB6EF00490AA6 /* Dg-duplex.htm in Resources */,
+				1FB43BD010BFB6EF00490AA6 /* c1qt12.html in Resources */,
+				1FB43BD110BFB6EF00490AA6 /* c1qt12.txt in Resources */,
+				1FB43BD210BFB6EF00490AA6 /* accent_grave.html in Resources */,
+				1FB43BD310BFB6EF00490AA6 /* accent_grave.txt in Resources */,
+				1FB43BD410BFB6EF00490AA6 /* stringLengthRequest.xmlrpc in Resources */,
+				1FB43BD510BFB6EF00490AA6 /* stringLengthResponse.xmlrpc in Resources */,
+				1FB43BD610BFB6EF00490AA6 /* stringLengthResponse1.xmlrpc in Resources */,
+				1FB43BD710BFB6EF00490AA6 /* getListResponse.xmlrpc in Resources */,
+				1FB43BD810BFB6EF00490AA6 /* getDictResponse.xmlrpc in Resources */,
+				1FB43BD910BFB6EF00490AA6 /* getDictRequest.xmlrpc in Resources */,
+				1FB43BDA10BFB6EF00490AA6 /* getSimpleDictResponse.xmlrpc in Resources */,
+				1FB43BDB10BFB6EF00490AA6 /* loginRequest.xmlrpc in Resources */,
+				1FB43BDC10BFB6EF00490AA6 /* responseWithAmpersands.xmlrpc in Resources */,
+				1F42261C10C3A14800C403D5 /* checkForPenApps_with_ISO8859_claiming_UTF8.xmlrpc in Resources */,
+				1FDD4789110D018B00A380E0 /* numericEntities.xml in Resources */,
+				1F2742A012CC6D7B001498F9 /* glossary.json in Resources */,
+				1F27431212CC7BF4001498F9 /* string.json in Resources */,
+				1F27432512CC7D16001498F9 /* dict.json in Resources */,
+				1F27433E12CC8074001498F9 /* array.json in Resources */,
+				1FCDAF8A12CD9ED3008162C7 /* literals.json in Resources */,
+				1FCDB00312CDB6F8008162C7 /* numbers.json in Resources */,
+				1FCDB27712CEA771008162C7 /* states.xml in Resources */,
+				1F04895112D148560069E1D4 /* dictAfterNumber.json in Resources */,
+				1FF8314D12D1673F00DF5E66 /* emptyelements.json in Resources */,
+				1FF831F512D1767500DF5E66 /* stringescapes.json in Resources */,
+				1FF8325712D186EC00DF5E66 /* unicodeescapes.json in Resources */,
+				1FE39B0712D249F6005019C3 /* session.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		1F96E5F909B62F5C0063D669 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB43BFE10BFB6EF00490AA6 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F5A6CA91170104300E4A959 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\npwd\nexport VER=4.2\nxcodebuild -configuration Release -target iXmlKit -sdk \"iphonesimulator$VER\" ARCHS=i386 DSTROOT=$CONFIGURATION_BUILD_DIR/../Release-iphonesimulator\nxcodebuild -configuration Release  -target iXmlKit -sdk \"iphoneos$VER\" ARCHS='armv6 armv7'  DSTROOT=$CONFIGURATION_BUILD_DIR/../Release-iphoneos\ncd  $CONFIGURATION_BUILD_DIR\ncd ..\nlipo -create Release-iphoneos/libiXmlKit.a Release-iphonesimulator/libiXmlKit.a -output  Release/libiXmlKit.a\n#rm Release-iphoneos/libiXmlKit.a Release-iphonesimulator/libiXmlKit.a";
+		};
+		1F734A570AC6D807004C624F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "tester=/usr/local/bin/testlogger\nframework=/Library/Frameworks/MPWXmlKit.framework/MPWXmlKit\n\nif  [ -f ${tester}  ] && [ -f ${framework} ] ; then\n\t$tester MPWXmlKit\nelse\n\techo \"warn:0: $tester or  $framework  not found, tests not run\"\nfi\n\n";
+		};
+		1FB43BFF10BFB6EF00490AA6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "tester=/usr/local/bin/testlogger\nframework=/Library/Frameworks/MPWXmlKit.framework/MPWXmlKit\n\nif  [ -f ${tester}  ] && [ -f ${framework} ] ; then\n\t$tester MPWXmlKit\nelse\n\techo \"warn:0: $tester or  $framework  not found, tests not run\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F2553E60D627362007D8DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5A6C53116EE4B800E4A959 /* MPWXmlElement.m in Sources */,
+				1F9F23EB0F818DF500D8A750 /* MPWHTMLFileTextExtractor.m in Sources */,
+				1F2553F00D627384007D8DAF /* MPWMAXParser.m in Sources */,
+				1F2553F20D6273A8007D8DAF /* MPWXmlParser.m in Sources */,
+				1F2553F30D6273BA007D8DAF /* MPWXmlScanner.m in Sources */,
+				1F2554030D6274FB007D8DAF /* MPWXmlAttributes.m in Sources */,
+				1F2B4B3F0D6BCEDD00189FEB /* MPWTagHandler.m in Sources */,
+				1FC4D34E0DFA05FC00AC1A66 /* MPWCaseInsensitiveSmallStringTable.m in Sources */,
+				1FC4D34F0DFA05FD00AC1A66 /* MPWFastInvocation.m in Sources */,
+				1FC4D3500DFA05FD00AC1A66 /* MPWObject.m in Sources */,
+				1FC4D3510DFA05FD00AC1A66 /* MPWObjectCache.m in Sources */,
+				1FC4D3520DFA05FE00AC1A66 /* MPWSmallStringTable.m in Sources */,
+				1FC4D3530DFA05FE00AC1A66 /* MPWSubData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F96E5E409B62F5C0063D669 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F96E5E609B62F5C0063D669 /* MPWXmlScanner.m in Sources */,
+				1F96E5E709B62F5C0063D669 /* MPWXmlElement.m in Sources */,
+				1F96E5E809B62F5C0063D669 /* MPWXmlAttributes.m in Sources */,
+				1F96E5E909B62F5C0063D669 /* MPWXmlGeneratorStream.m in Sources */,
+				1F96E5EB09B62F5C0063D669 /* MPWXmlProplistGenerator.m in Sources */,
+				1F96E5EC09B62F5C0063D669 /* MPWXmlAppleProplistGenerator.m in Sources */,
+				1F96E5ED09B62F5C0063D669 /* MPWXmlAppleProplistReader.m in Sources */,
+				1F96E5EE09B62F5C0063D669 /* MPWXmlArchiver.m in Sources */,
+				1F96E5EF09B62F5C0063D669 /* MPWXmlUnarchiver.m in Sources */,
+				1F96E5F009B62F5C0063D669 /* MPWXmlParser.m in Sources */,
+				1F96E5F109B62F5C0063D669 /* MPWXmlScanner16BitBE.m in Sources */,
+				1F96E5F309B62F5C0063D669 /* MPWXmlWrapperArchiver.m in Sources */,
+				1F96E5F409B62F5C0063D669 /* MPWXmlWrapperUnarchiver.m in Sources */,
+				1F05F7040A8339A900C8C652 /* MPWHrefScanner.m in Sources */,
+				1F443B4E0AAF3444006A2739 /* MPWHTMLFileTextExtractor.m in Sources */,
+				1F90D6A90B9BC47D00BD2D9C /* MPWTemplateApply.m in Sources */,
+				1FB006DC0BC7580F0074E056 /* MPWBridgeReader.m in Sources */,
+				1F3C9A830BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.m in Sources */,
+				1F3C9A890BCC0C2C00732CD5 /* MPWXmlParserTesting.m in Sources */,
+				1F449D730C6592AB00EC276C /* MPWMAXParser.m in Sources */,
+				1F6ED8A10D1FB04C00290F6B /* MPWNSXMLDocumentParser.m in Sources */,
+				1F18E7A30D510A3E00839569 /* MPWFastKeyedArchiver.m in Sources */,
+				1F18E7AF0D51341D00839569 /* MPWFastKeyedUnarchiver.m in Sources */,
+				1F2B4ADE0D6B95EF00189FEB /* MPWTagHandler.m in Sources */,
+				1F7FB2D20E00D58700A40B28 /* MPWFeed.m in Sources */,
+				1F7FB2D70E00D5B900A40B28 /* NSString+extras.m in Sources */,
+				1FA3D3910F95706A00E991F2 /* MPWXmlRpc.m in Sources */,
+				1FBF986B0F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m in Sources */,
+				1FCD3D3912B854FB00FF08E9 /* MPWAtomParser.m in Sources */,
+				1F2742A412CC6DA0001498F9 /* MPWMASONParser.m in Sources */,
+				1F27436B12CC8741001498F9 /* MPWJSONWriter.m in Sources */,
+				1FF832D512D1BAAE00DF5E66 /* MPWFeedItem.m in Sources */,
+				1FF832E312D1BB9400DF5E66 /* MPWAtomLink.m in Sources */,
+				1FF832E912D1BBDF00DF5E66 /* MPWRSSParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB43BDD10BFB6EF00490AA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB43BDE10BFB6EF00490AA6 /* MPWXmlScanner.m in Sources */,
+				1FB43BDF10BFB6EF00490AA6 /* MPWXmlElement.m in Sources */,
+				1FB43BE010BFB6EF00490AA6 /* MPWXmlAttributes.m in Sources */,
+				1FB43BE110BFB6EF00490AA6 /* MPWXmlGeneratorStream.m in Sources */,
+				1FB43BE210BFB6EF00490AA6 /* MPWXmlProplistGenerator.m in Sources */,
+				1FB43BE310BFB6EF00490AA6 /* MPWXmlAppleProplistGenerator.m in Sources */,
+				1FB43BE510BFB6EF00490AA6 /* MPWXmlArchiver.m in Sources */,
+				1FB43BE610BFB6EF00490AA6 /* MPWXmlUnarchiver.m in Sources */,
+				1FB43BE710BFB6EF00490AA6 /* MPWXmlParser.m in Sources */,
+				1FB43BE810BFB6EF00490AA6 /* MPWXmlScanner16BitBE.m in Sources */,
+				1FB43BEA10BFB6EF00490AA6 /* MPWXmlWrapperArchiver.m in Sources */,
+				1FB43BEB10BFB6EF00490AA6 /* MPWXmlWrapperUnarchiver.m in Sources */,
+				1FB43BEC10BFB6EF00490AA6 /* MPWHrefScanner.m in Sources */,
+				1FB43BED10BFB6EF00490AA6 /* MPWHTMLFileTextExtractor.m in Sources */,
+				1FB43BEE10BFB6EF00490AA6 /* MPWTemplateApply.m in Sources */,
+				1FB43BEF10BFB6EF00490AA6 /* MPWBridgeReader.m in Sources */,
+				1FB43BF010BFB6EF00490AA6 /* MPWXmlFastInfosetParser.m in Sources */,
+				1FB43BF110BFB6EF00490AA6 /* MPWXmlParserTesting.m in Sources */,
+				1FB43BF210BFB6EF00490AA6 /* MPWMAXParser.m in Sources */,
+				1FB43BF310BFB6EF00490AA6 /* MPWNSXMLDocumentParser.m in Sources */,
+				1FB43BF410BFB6EF00490AA6 /* MPWFastKeyedArchiver.m in Sources */,
+				1FB43BF510BFB6EF00490AA6 /* MPWFastKeyedUnarchiver.m in Sources */,
+				1FB43BF610BFB6EF00490AA6 /* MPWTagHandler.m in Sources */,
+				1FB43BF710BFB6EF00490AA6 /* MPWFeed.m in Sources */,
+				1FB43BF810BFB6EF00490AA6 /* NSString+extras.m in Sources */,
+				1FB43BF910BFB6EF00490AA6 /* MPWXmlRpc.m in Sources */,
+				1FB43BFA10BFB6EF00490AA6 /* MPWXmlRpcGeneratorStream.m in Sources */,
+				1FB43C5C10BFBCA700490AA6 /* dllmain.m in Sources */,
+				1FCD3D3B12B854FB00FF08E9 /* MPWAtomParser.m in Sources */,
+				1F2742A612CC6DA0001498F9 /* MPWMASONParser.m in Sources */,
+				1F27436D12CC8741001498F9 /* MPWJSONWriter.m in Sources */,
+				1FF832D712D1BAAE00DF5E66 /* MPWFeedItem.m in Sources */,
+				1FF832E512D1BB9400DF5E66 /* MPWAtomLink.m in Sources */,
+				1FF832EB12D1BBDF00DF5E66 /* MPWRSSParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD5DAFD0F2CEDB000F8F769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5A6D3411702BBB00E4A959 /* MPWXmlElement.m in Sources */,
+				1F4FCE9E110454A700376799 /* MPWXmlGeneratorStream.m in Sources */,
+				1F4FCE9F110454A700376799 /* MPWXmlRpc.m in Sources */,
+				1F4FCEA0110454A700376799 /* MPWXmlRpcGeneratorStream.m in Sources */,
+				1FD5DB050F2CEDD500F8F769 /* MPWMAXParser.m in Sources */,
+				1FD5DB060F2CEDD500F8F769 /* MPWXmlParser.m in Sources */,
+				1FD5DB070F2CEDD500F8F769 /* MPWXmlScanner.m in Sources */,
+				1FD5DB080F2CEDD500F8F769 /* MPWXmlAttributes.m in Sources */,
+				1FD5DB090F2CEDD500F8F769 /* MPWTagHandler.m in Sources */,
+				1FCD3D3D12B854FB00FF08E9 /* MPWAtomParser.m in Sources */,
+				1FB148E612C82036000AA99F /* MPWFeed.m in Sources */,
+				1F22FA3D12D13E8D0032C890 /* MPWMASONParser.m in Sources */,
+				1F22FA3E12D13E940032C890 /* MPWXmlAppleProplistReader.m in Sources */,
+				1FE39B9F12D26779005019C3 /* MPWRSSParser.m in Sources */,
+				1FE39BB212D26804005019C3 /* MPWFeedItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F4B0F6C0DBEB76900639DC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F96E5C409B62F5C0063D669 /* MPWXmlKit */;
+			targetProxy = 1F4B0F6B0DBEB76900639DC0 /* PBXContainerItemProxy */;
+		};
+		1FC4D3160DFA034400AC1A66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F2553E80D627362007D8DAF /* MPWXmlCore */;
+			targetProxy = 1FC4D3150DFA034400AC1A66 /* PBXContainerItemProxy */;
+		};
+		1FD564B30E2ECB3400607D4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F2553E80D627362007D8DAF /* MPWXmlCore */;
+			targetProxy = 1FD564B20E2ECB3400607D4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1F2553EB0D627363007D8DAF /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					x86_64,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					Darwin,
+					MPWXmlCoreOnly,
+				);
+				INFOPLIST_FILE = "MPWXmlCore-Info.plist";
+				INSTALL_PATH = /System/Library/PrivateFrameworks/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build/Deployment\"";
+				OTHER_LDFLAGS = "-headerpad_max_install_names";
+				PREBINDING = NO;
+				PRODUCT_NAME = MPWXmlCore;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		1F39596908A0CC4600BF7444 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx;
+			};
+			name = Development;
+		};
+		1F4B0F650DBEB75A00639DC0 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+			};
+			name = Development;
+		};
+		1F5A6CAD1170104400E4A959 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = 4.2;
+				PRODUCT_NAME = "iXmlKit (Phone + Simulator fat)";
+			};
+			name = Development;
+		};
+		1F5A6CAE1170104400E4A959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_VERSION = 4.2;
+				PRODUCT_NAME = "iXmlKit (Phone + Simulator fat)";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1F96E5FB09B62F5C0063D669 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					/Volumes/Users/marcel/programming/Kits/MPWFoundation/build,
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
+				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRINCIPAL_CLASS = "";
+				PRODUCT_NAME = MPWXmlKit;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		1FB43C0110BFB6EF00490AA6 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					/Volumes/Users/marcel/programming/Kits/MPWFoundation/build,
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
+				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_ copy.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRINCIPAL_CLASS = "";
+				PRODUCT_NAME = MPWXmlKit;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		1FB43C0210BFB6EF00490AA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_SUFFIX = .1.0.dll;
+				FRAMEWORK_SEARCH_PATHS = "/Developer/Cocotron/1.0/Windows/i386/Frameworks/**";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
+				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "./**";
+				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_ copy.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-Wl,--image-base=0x40000000",
+					"-B,static",
+					"-lffi",
+					"-B,dynamic",
+					"-shared",
+					"-lwsock32",
+					"-Wl,--out-implib,$TARGET_BUILD_DIR/MPWXmlKit.framework/libMPWXmlKit.a",
+					"-Wl,--export-all-symbols",
+				);
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRINCIPAL_CLASS = "";
+				PRODUCT_NAME = MPWXmlKit;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1FD564AE0E2ECB2D00607D4E /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /System/Library/PrivateFrameworks/;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "B&I ObjectiveXML";
+			};
+			name = Development;
+		};
+		1FD5DB010F2CEDB000F8F769 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					i386,
+					armv6,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					Darwin,
+					MPWXmlCoreOnly,
+				);
+				GCC_VERSION = 4.2;
+				PREBINDING = NO;
+				PRODUCT_NAME = iXmlKit;
+				SDKROOT = iphoneos3.1.2;
+				VALID_ARCHS = "i386 armv6";
+			};
+			name = Development;
+		};
+		1FD5DC150F2CFC8E00F8F769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1FD5DC160F2CFC8E00F8F769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					x86_64,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /System/Library/PrivateFrameworks/;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "B&I ObjectiveXML";
+			};
+			name = Release;
+		};
+		1FD5DC170F2CFC8E00F8F769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					/Volumes/Users/marcel/programming/Kits/MPWFoundation/build,
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
+				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
+				INSTALL_PATH = "@rpath/Frameworks/";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRINCIPAL_CLASS = "";
+				PRODUCT_NAME = MPWXmlKit;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1FD5DC180F2CFC8E00F8F769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					x86_64,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					Darwin,
+					MPWXmlCoreOnly,
+				);
+				INFOPLIST_FILE = "MPWXmlCore-Info.plist";
+				INSTALL_PATH = /System/Library/PrivateFrameworks/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build/Deployment\"";
+				OTHER_LDFLAGS = "-headerpad_max_install_names";
+				PREBINDING = NO;
+				PRODUCT_NAME = MPWXmlCore;
+				ZERO_LINK = YES;
+			};
+			name = Release;
+		};
+		1FD5DC1B0F2CFC8E00F8F769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+			};
+			name = Release;
+		};
+		1FD5DC1C0F2CFC8E00F8F769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					Darwin,
+					MPWXmlCoreOnly,
+				);
+				GCC_VERSION = 4.2;
+				HEADER_SEARCH_PATHS = /Library/Headers;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = iXmlKit;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv6";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F2553EF0D627363007D8DAF /* Build configuration list for PBXNativeTarget "MPWXmlCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F2553EB0D627363007D8DAF /* Development */,
+				1FD5DC180F2CFC8E00F8F769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		1F39596808A0CC4600BF7444 /* Build configuration list for PBXProject "ObjectiveXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F39596908A0CC4600BF7444 /* Development */,
+				1FD5DC150F2CFC8E00F8F769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		1F4B0F6E0DBEB78C00639DC0 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F4B0F650DBEB75A00639DC0 /* Development */,
+				1FD5DC1B0F2CFC8E00F8F769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		1F5A6CC11170105400E4A959 /* Build configuration list for PBXAggregateTarget "iXmlKit (Phone + Simulator fat)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5A6CAD1170104400E4A959 /* Development */,
+				1F5A6CAE1170104400E4A959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		1F96E5FA09B62F5C0063D669 /* Build configuration list for PBXNativeTarget "MPWXmlKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F96E5FB09B62F5C0063D669 /* Development */,
+				1FD5DC170F2CFC8E00F8F769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		1FB43C0010BFB6EF00490AA6 /* Build configuration list for PBXNativeTarget "MPWXmlKit (Windows)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB43C0110BFB6EF00490AA6 /* Development */,
+				1FB43C0210BFB6EF00490AA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		1FD564B50E2ECB5F00607D4E /* Build configuration list for PBXAggregateTarget "B&I ObjectiveXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD564AE0E2ECB2D00607D4E /* Development */,
+				1FD5DC160F2CFC8E00F8F769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		1FD5DB910F2CEE1000F8F769 /* Build configuration list for PBXNativeTarget "iXmlKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD5DB010F2CEDB000F8F769 /* Development */,
+				1FD5DC1C0F2CFC8E00F8F769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07DF1A1900668979C35ADD82 /* Project object */;
+}

@@ -1,0 +1,10 @@
+# shell script goes here
+pwd
+export VER=3.1.3
+CONFIGURATION_BUILD_DIR=~/programming/Build/Release
+xcodebuild -configuration Release -target iXmlKit -sdk "iphonesimulator$VER" ARCHS=i386 DSTROOT=$CONFIGURATION_BUILD_DIR/../Release-iphonesimulator GCC_VERSION=4.2
+xcodebuild -configuration Release  -target iXmlKit -sdk "iphoneos$VER" ARCHS=armv6  DSTROOT=$CONFIGURATION_BUILD_DIR/../Release-iphoneos GCC_VERSION=4.2
+cd  $CONFIGURATION_BUILD_DIR
+cd ..
+lipo -create Release-iphoneos/libiXmlKit.a Release-iphonesimulator/libiXmlKit.a -output  Release/libiXmlKit.a
+rm Release-iphoneos/libiXmlKit.a Release-iphonesimulator/libiXmlKit.a

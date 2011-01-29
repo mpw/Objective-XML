@@ -1,0 +1,6 @@
+These are classes required from MPWFoundation, copied here in
+order to allow MPWXmlCore to build without any external 
+framework references.
+
+They should not be modified, or if modified, the changes must
+be synchronized back with MPWFoundation.

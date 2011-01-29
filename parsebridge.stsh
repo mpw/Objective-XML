@@ -1,0 +1,6 @@
+#!/usr/local/bin/stsh
+ NSBundle loadFramework:'MPWXmlKit'.
+parser := MPWBridgeReader new.
+data := NSData dataWithContentsOfFile:'/System/Library/Frameworks/Foundation.framework/Resources/BridgeSupport/Foundation.bridgesupport'.
+parser parse:data.
+stdout println:parser constants.

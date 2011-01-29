@@ -1,0 +1,8 @@
+#!/usr/local/bin/stsh 
+#-sendRequest:name  to:urlString 
+ context loadFramework:'MPWXmlKit'.
+ xmlrpc := MPWXmlRpc new.
+ arg := nil.
+ args count > 0 ifTrue: [ arg := args lastObject. ].
+ payload := xmlrpc generateRequest:name withStringArg:arg.
+ xmlrpc resultOfSendingEncodedRequest:payload toEndpoint:urlString.

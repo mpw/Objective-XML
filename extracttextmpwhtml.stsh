@@ -1,0 +1,10 @@
+#!/usr/local/bin/stsh
+xmlkit := NSBundle bundleWithPath:'/Library/Frameworks/MPWXmlKit.framework'.
+xmlkit load.
+text:=NSHTMLFileTextExtractor extractTextFromPath:(args objectAtIndex:0) maxLength:10000000 attributes:nil.
+text := text mutableCopy autorelease.
+lf := NSString stringWithUnichar:10.
+cr := NSString stringWithUnichar:13.
+text replaceOccurrencesOfString:cr withString:lf options:0 range:(1 to: text length - 1).
+utf16data :=text dataUsingEncoding:4.
+stdout println:utf16data.

@@ -1,0 +1,8 @@
+#!/usr/local/bin/stsh 
+#-sendRequest:filename to:serviceString
+ baseUrlString := 'http://app2-test.pensoft.local:15000/cgi-bin/WebObjects/LSDesktopServer.woa/xmlrpc/'
+ urlString := baseUrlString stringByAppendingString:serviceString.
+ context loadFramework:'MPWXmlKit'.
+ payload := NSData dataWithContentsOfFile:filename.
+ xmlrpc := MPWXmlRpc new.
+ xmlrpc resultOfSendingEncodedRequest:payload toEndpoint:urlString.

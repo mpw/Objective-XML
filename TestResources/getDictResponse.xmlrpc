@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<methodResponse><params><param><value><struct><member><name>Some double</name><value><double>47.11</double></value></member><member><name>Some integer</name><value><i4>42</i4></value></member><member><name>Date</name><value><dateTime.iso8601>20090414T19:12:45</dateTime.iso8601></value></member><member><name>String</name><value>hello world</value></member></struct></value></param></params></methodResponse>
