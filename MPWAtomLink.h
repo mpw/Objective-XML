@@ -10,7 +10,10 @@
 
 
 @interface MPWAtomLink : NSObject {
-
+	NSString *href;
+	NSString *rel;
+	NSString *type;
 }
+
 
 @end

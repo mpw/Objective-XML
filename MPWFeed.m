@@ -11,8 +11,7 @@
 
 #import "MPWFeed.h"
 #import "NSString+extras.h"
-#import <MPWFoundation/DebugMacros.h>
-#import <MPWFoundation/AccessorMacros.h>
+#import "mpwfoundation_imports.h"
 #import "MPWMAXParser.h"
 #import "MPWXmlAttributes.h"
 #import "MPWFeedItem.h"

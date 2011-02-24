@@ -32,6 +32,7 @@
 #import <MPWFoundation/MPWFlattenStream.h>
 #import <MPWFoundation/MPWByteStream.h>
 #import <MPWFoundation/MPWSubData.h>
+#import <MPWFoundation/MPWBlockInvocation.h>
 
 
 #endif

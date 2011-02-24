@@ -15,10 +15,10 @@
 	NSString		*guid;
 	NSString		*title;
 	NSString		*category;
-	NSString		*link;
 	NSString		*imageLink;
 	NSString		*pubDate;
 	NSDictionary	*remainder;
+	NSMutableArray	*links;
 }
 
 -(NSString*)guid;

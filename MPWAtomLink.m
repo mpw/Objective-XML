@@ -7,8 +7,21 @@
 //
 
 #import "MPWAtomLink.h"
-
+#import "mpwfoundation_imports.h"
 
 @implementation MPWAtomLink
+
+objectAccessor( NSString*, href, setHref )
+objectAccessor( NSString*, rel, setRel )
+objectAccessor( NSString*, type , setType )
+
+
+-(void)dealloc
+{
+	[href release];
+	[rel release];
+	[type release];
+	[super dealloc];
+}
 
 @end

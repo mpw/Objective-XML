@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Pencasts</title>
+  <link rel="first" href="http://www.livescribe.com/services/community/pencast/category/Creative.atom?start= 0&amp;fetchSize=20" title="First" />
+  <link rel="next" href="http://www.livescribe.com/services/community/pencast/category/Creative.atom?start=20&amp;fetchSize=20" title="Next" />
+  <id>tag:livescribe.com,2011-02-16:/services/community/pencast</id>
+  <updated>2011-02-17T07:32:25Z</updated>
+  <entry>
+    <title>Thomas Jefferson</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C610000000011977FE32EB174C4D4A" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=sZNlKwVxlsRM" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=sZNlKwVxlsRM" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C610000000011977FE32EB174C4D4A&amp;audio=PRS-fb4b86ec&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C610000000011977FE32EB174C4D4A&amp;page=0" />
+    <author>
+      <name>Colin Mahan</name>
+      <email>cmahan@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-22:/services/community/pencast/sZNlKwVxlsRM</id>
+    <published>2008-04-23T06:18:36Z</published>
+    <summary type="html">Paper Replay President Thomas Jefferson.</summary>
+    <duration xmlns="">27032</duration>
+  </entry>
+  <entry>
+    <title>Zachary Taylor</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C628000000011977DAD20899C4EEDC" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=WgFDkRtzkV1C" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=WgFDkRtzkV1C" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C628000000011977DAD20899C4EEDC&amp;audio=PRS-10fe011ab&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C628000000011977DAD20899C4EEDC&amp;page=0" />
+    <author>
+      <name>Colin Mahan</name>
+      <email>cmahan@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-04-23:/services/community/pencast/WgFDkRtzkV1C</id>
+    <published>2008-04-23T23:24:16Z</published>
+    <summary type="html">Paper Replay President Zachary Taylor.</summary>
+    <duration xmlns="">29111</duration>
+  </entry>
+  <entry>
+    <title>Initial notes for a poem</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6B2000000011977DAD20899C4EEDC" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=V62CGVPsWFpx" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=V62CGVPsWFpx" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6B2000000011977DAD20899C4EEDC&amp;page=0" />
+    <author>
+      <name>Michael Penman</name>
+      <email>makmak@emailtreo.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-02:/services/community/pencast/V62CGVPsWFpx</id>
+    <published>2008-05-02T18:35:39Z</published>
+    <summary type="html">These are the intitial notes/ideas/scribbles for poem I was just inspired to write.</summary>
+    <duration xmlns="">0</duration>
+  </entry>
+  <entry>
+    <title>The Suitcase in Pamuk</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6BB030000011977DAD20899C4EEDC" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=zQvXVvsJsstp" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=zQvXVvsJsstp" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6BB030000011977DAD20899C4EEDC&amp;page=0" />
+    <author>
+      <name>Wm. Anthony Connolly</name>
+      <email>wconnolly@centurytel.net</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-13:/services/community/pencast/zQvXVvsJsstp</id>
+    <published>2008-05-13T21:50:55Z</published>
+    <summary type="html">Suitcase as holder of secrets, inner lives.</summary>
+    <duration xmlns="">0</duration>
+  </entry>
+  <entry>
+    <title>fun at the park</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C686060000011977FE32EB174C4D4A" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=cZckF4zkwbk8" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=cZckF4zkwbk8" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C686060000011977FE32EB174C4D4A&amp;audio=PRS-ec1de7cb&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C686060000011977FE32EB174C4D4A&amp;page=0" />
+    <author>
+      <name>Jason Howard</name>
+      <email>jhoward@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-05-16:/services/community/pencast/cZckF4zkwbk8</id>
+    <published>2008-05-16T21:36:12Z</published>
+    <summary type="html">fun at the park</summary>
+    <duration xmlns="">241574</duration>
+  </entry>
+  <entry>
+    <title>Billie - Rough Sketch</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6B1030000011A24AF5644DED56972" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=hXkwRGBzP066" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=hXkwRGBzP066" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6B1030000011A24AF5644DED56972&amp;page=0" />
+    <author>
+      <name>Julie Zakar</name>
+      <email>cruelhazel@gmail.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-06-01:/services/community/pencast/hXkwRGBzP066</id>
+    <published>2008-06-02T06:28:26Z</published>
+    <summary type="html">Rough Billie Holiday sketch for the Womusic project. First time using pen to sketch, usually use graphite. It's a challenge getting all the lines to go right on the first go.
+Could have been worse. :-)</summary>
+    <duration xmlns="">0</duration>
+  </entry>
+  <entry>
+    <title>Three little words</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C619070000011A24B6DB93FBCDEC15" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=7nsMmVKCwKNg" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=7nsMmVKCwKNg" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C619070000011A24B6DB93FBCDEC15&amp;audio=PRS-f2e93e98&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C619070000011A24B6DB93FBCDEC15&amp;page=0" />
+    <author>
+      <name>Jeff Coleman</name>
+      <email>jeffceth@gmail.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-06-09:/services/community/pencast/7nsMmVKCwKNg</id>
+    <published>2008-06-09T18:47:58Z</published>
+    <summary type="html">Just a little something inspired by the someone special in my life.  That would be you, V ;)</summary>
+    <duration xmlns="">49677</duration>
+  </entry>
+  <entry>
+    <title>Billie Sings</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C697070000011A24AF5644DED56972" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=fdkWv0qJZGGt" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=fdkWv0qJZGGt" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C697070000011A24AF5644DED56972&amp;audio=PRS-11ac7c979&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C697070000011A24AF5644DED56972&amp;page=0" />
+    <author>
+      <name>Julie Zakar</name>
+      <email>cruelhazel@gmail.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-06-11:/services/community/pencast/fdkWv0qJZGGt</id>
+    <published>2008-06-11T08:07:10Z</published>
+    <summary type="html">First foray into the art/audio link-up. Sketch of Billie Holiday, with Strange Fruit playing in the background. The pen failed to record some vital strokes in the nose region, which is why... well, you see it. Also, either I need to learn to draw faster or I need to find longer music, because the song ends at about 3:20... and the whole ordeal is about 5 minutes. So, for a minute and a half, all you hear is me being scratch-happy.
+ALSO, the pen is a bit sketchy (no pun intended) with hooking up some of the strokes, so I'm really not that satisfied with this one. It's far from the fluidity I hoped for. Also, it seems to prefer the big sweeping strokes to the tiny strokes I often use. Also, it is angry when your paper is part audio-sync and part static. But you asked for audio, and I am wont to supply you.
+
+(P.S. I know my handwriting looks terrible. I prefer to think of it as "post-modern".)</summary>
+    <duration xmlns="">300621</duration>
+  </entry>
+  <entry>
+    <title>Livescribe Pulse Smartpen in Chinese</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C582010000011A98644B35C338CAD8" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=7ZT7NmP7vJS0" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=7ZT7NmP7vJS0" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C582010000011A98644B35C338CAD8&amp;audio=PRS-24382f1c0&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C582010000011A98644B35C338CAD8&amp;page=0" />
+    <author>
+      <name>Helen Thomas</name>
+      <email>hthomas@livescribe.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-06-23:/services/community/pencast/7ZT7NmP7vJS0</id>
+    <published>2008-06-23T21:12:39Z</published>
+    <summary type="html">The Chinese trademark and product name for Livescribe and Pulse Smartpen.</summary>
+    <duration xmlns="">151488</duration>
+  </entry>
+  <entry>
+    <title>Robert</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C602050000011AB7939A9E601BD3F4" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=DsMhjhlwV888" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=DsMhjhlwV888" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C602050000011AB7939A9E601BD3F4&amp;page=0" />
+    <author>
+      <name>William Miller</name>
+      <email>billy@whimdesigns.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-06-29:/services/community/pencast/DsMhjhlwV888</id>
+    <published>2008-06-30T04:39:37Z</published>
+    <summary type="html">This is my first Portrait.</summary>
+    <duration xmlns="">0</duration>
+  </entry>
+  <entry>
+    <title>Robert 06.27.2008 8:09p</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6EE040000011AB7B883E2D887A50B" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=HmDtkmmzFkbz" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=HmDtkmmzFkbz" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6EE040000011AB7B883E2D887A50B&amp;audio=PRS-a970f586&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6EE040000011AB7B883E2D887A50B&amp;page=0" />
+    <author>
+      <name>William Miller</name>
+      <email>billy@whimdesigns.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-06-29:/services/community/pencast/HmDtkmmzFkbz</id>
+    <published>2008-06-30T05:02:44Z</published>
+    <summary type="html">My First Digital Portrait</summary>
+    <duration xmlns="">89856</duration>
+  </entry>
+  <entry>
+    <title>Ken Ziggy Coffee 06.29.2008 10:10a</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C65E000000011B03C6E73C0E062953" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=V05C8blC55Mf" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=V05C8blC55Mf" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C65E000000011B03C6E73C0E062953&amp;audio=PRS-b1990c21&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C65E000000011B03C6E73C0E062953&amp;page=0" />
+    <author>
+      <name>William Miller</name>
+      <email>billy@whimdesigns.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-07-08:/services/community/pencast/V05C8blC55Mf</id>
+    <published>2008-07-09T01:15:00Z</published>
+    <summary type="html">Having Breakfast and Coffee and drawing to start the day.</summary>
+    <duration xmlns="">251904</duration>
+  </entry>
+  <entry>
+    <title>Sally 07.01.2008 6:17p</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C539000000011B03BC8A43CE216E08" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=xqtQZrtNXsq7" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=xqtQZrtNXsq7" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C539000000011B03BC8A43CE216E08&amp;audio=PRS-bda37917&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C539000000011B03BC8A43CE216E08&amp;page=0" />
+    <author>
+      <name>William Miller</name>
+      <email>billy@whimdesigns.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-07-08:/services/community/pencast/xqtQZrtNXsq7</id>
+    <published>2008-07-09T01:27:59Z</published>
+    <summary type="html">My 2nd Digital Portrait. Experimenting with time, voice recording, areas, and styles of drawing, contour is my main style now.</summary>
+    <duration xmlns="">256832</duration>
+  </entry>
+  <entry>
+    <title>Draw 07.08.2008 7:46p</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C657000000011B03BF1481CE216E08" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=PCjvqb1sqc1S" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=PCjvqb1sqc1S" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C657000000011B03BF1481CE216E08&amp;audio=PRS-e2013e07&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C657000000011B03BF1481CE216E08&amp;page=0" />
+    <author>
+      <name>William Miller</name>
+      <email>billy@whimdesigns.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-07-08:/services/community/pencast/PCjvqb1sqc1S</id>
+    <published>2008-07-09T01:44:21Z</published>
+    <summary type="html">Just a random drawing one evening.</summary>
+    <duration xmlns="">263360</duration>
+  </entry>
+  <entry>
+    <title>My wish</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C677020000011B03C6E73C0E062953" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=kzGkg6dvjXXJ" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=kzGkg6dvjXXJ" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C677020000011B03C6E73C0E062953&amp;audio=PRS-7c99a90c&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C677020000011B03C6E73C0E062953&amp;page=0" />
+    <author>
+      <name>Chong Xu</name>
+      <email>xuchong@vip.163.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-07-11:/services/community/pencast/kzGkg6dvjXXJ</id>
+    <published>2008-07-12T05:49:48Z</published>
+    <summary type="html">It would be more convenient if Pulse Smartpen can do some setup with Nav Plus</summary>
+    <duration xmlns="">330944</duration>
+  </entry>
+  <entry>
+    <title>dotPiano session</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6C8020000011B03BF1481CE216E08" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=2H8GnZhSM2np" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=2H8GnZhSM2np" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6C8020000011B03BF1481CE216E08&amp;audio=PRS-f1a0ff90&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C6C8020000011B03BF1481CE216E08&amp;page=0" />
+    <author>
+      <name>John Rodrigues</name>
+      <email>info@cadsmith.org</email>
+    </author>
+    <id>tag:livescribe.com,2008-07-12:/services/community/pencast/2H8GnZhSM2np</id>
+    <published>2008-07-12T23:32:59Z</published>
+    <summary type="html" />
+    <duration xmlns="">165952</duration>
+  </entry>
+  <entry>
+    <title>Diving Story</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6D70F0000011BA9AB5D769B1E8645" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=0RDgNrrW7F2W" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=0RDgNrrW7F2W" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6D70F0000011BA9AB5D769B1E8645&amp;audio=PRS-179c47dc3&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6D70F0000011BA9AB5D769B1E8645&amp;page=0" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6D70F0000011BA9AB5D769B1E8645&amp;page=1" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6D70F0000011BA9AB5D769B1E8645&amp;page=2" />
+    <author>
+      <name>Lee-Ellen Marvin</name>
+      <email>lmarvin@twcny.rr.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-08-18:/services/community/pencast/0RDgNrrW7F2W</id>
+    <published>2008-08-18T14:22:32Z</published>
+    <summary type="html">I'm a professional storyteller, and I often draw story boards to develop new material. Here's my first experiment with both speaking and drawing a brand new story based on a childhood memory.</summary>
+    <duration xmlns="">404480</duration>
+  </entry>
+  <entry>
+    <title>A Mind of Mercury: 8.16.08</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5BA020000011BD6F9A84BA8254847" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=vWn7X6xCXgzn" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=vWn7X6xCXgzn" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5BA020000011BD6F9A84BA8254847&amp;audio=PRS-e924283e&amp;fileName=audio-0_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C5BA020000011BD6F9A84BA8254847&amp;page=0" />
+    <author>
+      <name>Adam Nicholas Burke</name>
+      <email>adamnicholasb@gmail.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-08-18:/services/community/pencast/vWn7X6xCXgzn</id>
+    <published>2008-08-19T06:52:29Z</published>
+    <summary type="html">The streets where buzz buzzing with all types of people, yet we couldn't find a soul. In our attempt to cherry pick the perfect group of people to talk to about the Pulse, we had allowed the best hotspots in Berkeley to get fished out by the other Scribes. Although we did get the chance to talk to a couple of wary cops that rode some kick-ass mountain bikes. Frustrated and cold, my group and I flopped down at an outdoor Cafe. While Kenji got himself an espresso, this is what I scribbled down as I sat on the summit of my self made mountain.</summary>
+    <duration xmlns="">234496</duration>
+  </entry>
+  <entry>
+    <title>Its recording.</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C50E070000011C1B45E05A8FDAC96E" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=cV5lZBcwdBml" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=cV5lZBcwdBml" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C50E070000011C1B45E05A8FDAC96E&amp;audio=PRS-378891cbc&amp;fileName=audio-0_fix.aac" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C50E070000011C1B45E05A8FDAC96E&amp;audio=PRS-378891cbc&amp;fileName=audio-1_fix.aac" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C50E070000011C1B45E05A8FDAC96E&amp;audio=PRS-378891cbc&amp;fileName=audio-2_fix.aac" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C50E070000011C1B45E05A8FDAC96E&amp;audio=PRS-378891cbc&amp;fileName=audio-3_fix.aac" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C50E070000011C1B45E05A8FDAC96E&amp;audio=PRS-378891cbc&amp;fileName=audio-4_fix.aac" />
+    <link rel="audio" type="audio/x-mp4" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C50E070000011C1B45E05A8FDAC96E&amp;audio=PRS-378891cbc&amp;fileName=audio-5_fix.aac" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80115000009C50E070000011C1B45E05A8FDAC96E&amp;page=0" />
+    <author>
+      <name>Adam Nicholas Burke</name>
+      <email>adamnicholasb@gmail.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-09-02:/services/community/pencast/cV5lZBcwdBml</id>
+    <published>2008-09-02T07:12:35Z</published>
+    <summary type="html">It was a beautiful summer-night; the crickets were chirping.</summary>
+    <duration xmlns="">23744</duration>
+  </entry>
+  <entry>
+    <title>Glee by Dela Ahmad</title>
+    <link rel="self" type="application/pcc+xml" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C567090000011C255A72E2C226A9D2" />
+    <link rel="alternate" type="text/html" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/MLSOverviewPage?sid=CnCN7ThXZ7V1" />
+    <link rel="thumbnail" type="image/gif" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/pencastPreview?sid=CnCN7ThXZ7V1" />
+    <link rel="altthumb" type="image/gif" href="http://www.livescribe.com/images/icons/default_thumb_small.gif" />
+    <link rel="strokes" type="application/pcc" href="http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C567090000011C255A72E2C226A9D2&amp;page=0" />
+    <author>
+      <name>Dela Amira Ahmad</name>
+      <email>dela.amira@ebigant.com</email>
+    </author>
+    <id>tag:livescribe.com,2008-09-05:/services/community/pencast/CnCN7ThXZ7V1</id>
+    <published>2008-09-05T13:19:36Z</published>
+    <summary type="html">Title: Glee</summary>
+    <duration xmlns="">0</duration>
+  </entry>
+</feed>
+

@@ -11,11 +11,16 @@
 
 @implementation MPWJSONWriter
 
+-(void)writeKey:(NSString*)aKey
+{
+    [self writeString:aKey];
+    [self appendBytes:": " length:2];
+}
+
 -(void)writeObject:anObject forKey:aKey
 {
     [self writeIndent];
-    [self writeString:aKey];
-    [self appendBytes:": " length:2];
+	[self writeKey:aKey];
     [self writeObject:anObject];
 
 }
@@ -146,6 +151,11 @@
 	[self printf:@"%g",number];
 }
 
+
+//------------
+
+
+
 @end
 
 
@@ -179,24 +189,6 @@
 
 @implementation MPWJSONWriter(testing)
 
-+_testStream {
-	return [self streamWithTarget:[NSMutableString string]];
-}
-
-+_encode:anObject
-{
-	MPWJSONWriter *writer=[self _testStream];
-//	NSLog(@"stream: %@",writer);
-	[writer writeObject:anObject];
-	[writer close];
-	return [writer target];
-}
-
-+(void)testWriteString
-{
-	IDEXPECT( [self _encode:@"hello world"], @"\"hello world\"", @"string encode");
-}
-
 +(void)testWriteArray
 {
 	IDEXPECT( ([self _encode:[NSArray arrayWithObjects:@"hello",@"world",nil]]), 
@@ -220,13 +212,6 @@
 	IDEXPECT( [self _encode:[NSNull null]], @"null", @"null");
 }
 
-+(void)testWriteIntegers
-{
-	IDEXPECT( [self _encode:[NSNumber numberWithInt:42]], @"42", @"42");
-	IDEXPECT( [self _encode:[NSNumber numberWithInt:1]], @"1", @"1");
-	IDEXPECT( [self _encode:[NSNumber numberWithInt:0]], @"0", @"0");
-	IDEXPECT( [self _encode:[NSNumber numberWithInt:-1]], @"-1", @"1");
-}
 
 +(void)testEscapeStrings
 {

@@ -32,11 +32,13 @@ scalarAccessor( Class, feedClass , setFeedClass )
 	[[self xmlparser] setHandler:self forElements:[NSArray arrayWithObjects:@"rss",@"item",@"channel",@"title",@"enclosure",nil] inNamespace:nil
 				prefix:@"" map:nil];
 	[[self xmlparser] setUndefinedTagAction:MAX_ACTION_PLIST];
+#if 0
 	[[self xmlparser] handleElement:@"channel" withBlock:^(id elements, id attributes, id parser) {
 			//	NSLog(@"got channel"); 
 			[self setHeaderItems:[elements asDictionary]];
 			return nil;
 	}];
+#endif	
 }
 
 -init
@@ -59,7 +61,7 @@ scalarAccessor( Class, feedClass , setFeedClass )
 	return [parser buildPlistWithChildren:children attributes:attributes parser:parser];
 }	
 
--channelElement1:children attributes:attributes parser:parser
+-channelElement:children attributes:attributes parser:parser
 {
 //	NSLog(@"got channel"); 
 	[self setHeaderItems:[children asDictionary]];

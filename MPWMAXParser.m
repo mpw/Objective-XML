@@ -14,7 +14,6 @@
 #import "MPWMAXParser_private.h"
 #import "SaxDocumentHandler.h"
 #import "MPWXmlElement.h"
-#import <MPWFoundation/MPWBlockInvocation.h>
 
 
 #if TARGET_OS_IPHONE
