@@ -124,6 +124,7 @@ extern NSString *MPWXMLPCDataKey;
 -(void)setMaxDepthAllowed:(NSInteger)maxDepth;
 -(BOOL)isCurrentElementIncomplete;
 
+-(void)abortParsing;
 -(id)parseResult;														//	root of the parse-tree constructed (valid after parse is complete)
 -(void)setDelegate:handler;
 -(NSError*)parserError;

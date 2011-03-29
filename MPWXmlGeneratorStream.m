@@ -238,7 +238,8 @@ static const char *scanCData( const char *currentPtr, const char *endPtr )
 
 -(void)writeNSDataContent:(NSData*)data
 {
-    [self writeCData:data];
+    FORWARD(data);
+//    [self writeCData:data];
 }
 
 -(void)writeString:aString

@@ -11,7 +11,7 @@
 @class MPWMAXParser;
 
 @interface MPWRSSParser : NSObject {
-	Class feedClass;
+	Class feedClass,feedItemClass;
 	MPWMAXParser *xmlparser;
 	NSMutableArray *items;
 	NSDictionary	*headerItems;

@@ -37,7 +37,7 @@ objectAccessor( NSDictionary*, remainder, setRemainder )
 	[guid release];
 	[title release];
 	[category release];
-	[link release];
+	[links release];
 	[imageLink release];
 	[pubDate release];
 	[super dealloc];

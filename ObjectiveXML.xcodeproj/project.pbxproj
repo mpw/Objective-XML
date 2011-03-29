@@ -112,6 +112,9 @@
 		1F3653EF0AC01F20008792DA /* attributes_with_double_closing_quotes.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653EE0AC01F20008792DA /* attributes_with_double_closing_quotes.html */; };
 		1F3653F90AC0200F008792DA /* xml_comment_with_dash.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653F80AC0200F008792DA /* xml_comment_with_dash.xml */; };
 		1F3653FF0AC02085008792DA /* no_space_between_attributes.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653FE0AC02085008792DA /* no_space_between_attributes.html */; };
+		1F37D26413257FCF0021A5EF /* MPWFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F37D2EB132582210021A5EF /* MPWAtomLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E112D1BB9400DF5E66 /* MPWAtomLink.m */; };
+		1F37D2EC132582250021A5EF /* MPWAtomLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832E012D1BB9400DF5E66 /* MPWAtomLink.h */; };
 		1F3C9A820BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3C9A800BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.h */; };
 		1F3C9A830BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C9A810BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.m */; };
 		1F3C9A880BCC0C2C00732CD5 /* MPWXmlParserTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3C9A860BCC0C2C00732CD5 /* MPWXmlParserTesting.h */; };
@@ -1254,6 +1257,8 @@
 				1F4FCED51105101B00376799 /* MPWFlattenStream.h in Headers */,
 				1F4FCED61105101B00376799 /* MPWStream.h in Headers */,
 				1FCD3D3C12B854FB00FF08E9 /* MPWAtomParser.h in Headers */,
+				1F37D26413257FCF0021A5EF /* MPWFeed.h in Headers */,
+				1F37D2EC132582250021A5EF /* MPWAtomLink.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1793,6 +1798,7 @@
 				1F22FA3E12D13E940032C890 /* MPWXmlAppleProplistReader.m in Sources */,
 				1FE39B9F12D26779005019C3 /* MPWRSSParser.m in Sources */,
 				1FE39BB212D26804005019C3 /* MPWFeedItem.m in Sources */,
+				1F37D2EB132582210021A5EF /* MPWAtomLink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

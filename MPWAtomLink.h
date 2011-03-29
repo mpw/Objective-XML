@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "mpwfoundation_imports.h"
 
 
 @interface MPWAtomLink : NSObject {
@@ -15,5 +16,8 @@
 	NSString *type;
 }
 
+objectAccessor_h( NSString*, href, setHref )
+objectAccessor_h( NSString*, rel, setRel )
+objectAccessor_h( NSString*, type , setType )
 
 @end

@@ -35,10 +35,13 @@ objectAccessor( NSString*, version, setVersion )
 	return self;
 }
 
+-(Class)feedItemClass { return [MPWFeedItem class]; }
+
 - (MPWFeed *) initWithData: (NSData *) rssData normalize: (BOOL) fl {
 	
 	id parser =[[[MPWRSSParser alloc] init] autorelease];
 	[parser setFeedClass:[self class]];
+	[parser setFeedItemClass:[self feedItemClass]];
 	[self release];
 //	NSLog(@"parser feedClass: %@",[parser feedClass]);
 	self = [[parser parsedData:rssData] retain];

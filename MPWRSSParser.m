@@ -24,6 +24,7 @@ objectAccessor( MPWMAXParser*, xmlparser, setXmlparser )
 objectAccessor( NSMutableArray*, items, setItems )
 objectAccessor( NSDictionary*, headerItems, setHeaderItems )
 scalarAccessor( Class, feedClass , setFeedClass )
+scalarAccessor( Class, feedItemClass , setFeedItemClass )
 
 
 -(void)createParser
@@ -92,7 +93,7 @@ scalarAccessor( Class, feedClass , setFeedClass )
 	return keys;
 }
 
--(Class)feedItemClass { return [MPWFeedItem class]; }
+// -(Class)feedItemClass { return [MPWFeedItem class]; }
 
 -itemElement:children attributes:attributes parser:parser
 {

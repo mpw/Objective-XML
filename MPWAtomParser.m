@@ -57,6 +57,7 @@
 
 @end
 
+#import "mpwfoundation_imports.h"
 
 @implementation MPWAtomParser(testing)
 
