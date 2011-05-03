@@ -534,7 +534,7 @@ idAccessor( nonWSCharSet, setNonWSCharSet )
     IDEXPECT( [catcher xxxMessageNameAtIndex:4],@"parserDidEndDocument:" , @"4" );
 }
 
-#ifndef WINDOWS
+#if !WINDOWS && !LINUX
 +(void)testUTF8XmlMojibake
 {
 	NSData  *mojibake_source=[self frameworkResource:@"mojibake_utf8" category:@"xhtml"];

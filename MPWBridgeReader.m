@@ -74,7 +74,7 @@ idAccessor( loadedSet, setLoadedSet )
 		[name getCString:symbol maxLength:250];
 		symbol[ [name length] ] =0;
 		
-#ifndef WINDOWS
+#if !WINDOWS &&  !LINUX
 		id* ptr=dlsym( RTLD_DEFAULT, symbol );
 		if ( ptr && *ptr )  {
 			[context bindValue:*ptr toVariableNamed:[name stringValue]];

@@ -216,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>1FDC9F5D133D3ED400FE2C3A</string>
+						<string>1F3C7C20136FE467009C0697</string>
 						<key>history</key>
 						<array>
-							<string>1F37D3AA132622830021A5EF</string>
+							<string>1FE5B669134231BA001AC05D</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -272,6 +272,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -315,19 +317,19 @@
 								<string>07DF1A4A00668979C35ADD82</string>
 								<string>07DF1A4E00668979C35ADD82</string>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>1F3C7C0D136FE342009C0697</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>52</integer>
-									<integer>18</integer>
-									<integer>0</integer>
+									<integer>220</integer>
+									<integer>212</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 623}, {258, 626}}</string>
+							<string>{{0, 3216}, {258, 626}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -357,14 +359,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MPWRSSParser.h</string>
+								<string>mpwfoundation_imports.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -372,11 +372,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MPWRSSParser.h</string>
+										<string>mpwfoundation_imports.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1FDC9F5C133D3ED400FE2C3A</string>
+										<string>1F3C7C1F136FE467009C0697</string>
 										<key>history</key>
 										<array>
 											<string>1FBF9D0F0FA6DD0C0030ED80</string>
@@ -421,7 +421,6 @@
 											<string>1FCDB15412CE6469008162C7</string>
 											<string>1FCDB15D12CE6469008162C7</string>
 											<string>1F22F92112D13CB50032C890</string>
-											<string>1F22F94512D13D880032C890</string>
 											<string>1F22FA7312D140530032C890</string>
 											<string>1F04896A12D149BB0069E1D4</string>
 											<string>1F04897812D14A8B0069E1D4</string>
@@ -441,7 +440,6 @@
 											<string>1F8C380212E16642004C7B75</string>
 											<string>1FA0089812E3AF0F00465E13</string>
 											<string>1F6943FC12F94765001D409B</string>
-											<string>1F69441B12F94972001D409B</string>
 											<string>1F1E72231317A1A900761991</string>
 											<string>1F1E72261317A1A900761991</string>
 											<string>1F1E72271317A1A900761991</string>
@@ -457,7 +455,9 @@
 											<string>1F37D34A132584590021A5EF</string>
 											<string>1F37D370132588DE0021A5EF</string>
 											<string>1F37D371132588DE0021A5EF</string>
-											<string>1F37D3A9132622830021A5EF</string>
+											<string>1FE5B664134231BA001AC05D</string>
+											<string>1F3C7C1D136FE467009C0697</string>
+											<string>1F3C7C1E136FE467009C0697</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -469,14 +469,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {855, 494}}</string>
+								<string>{{0, 0}, {855, 484}}</string>
 								<key>RubberWindowFrame</key>
 								<string>228 97 1135 685 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>494pt</string>
+							<string>484pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -489,14 +489,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 499}, {855, 145}}</string>
+								<string>{{0, 489}, {855, 155}}</string>
 								<key>RubberWindowFrame</key>
 								<string>228 97 1135 685 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>145pt</string>
+							<string>155pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -515,9 +515,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>1FDC9F23133D375E00FE2C3A</string>
+				<string>1F3C7C0F136FE342009C0697</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>1FDC9F24133D375E00FE2C3A</string>
+				<string>1F3C7C10136FE342009C0697</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -654,8 +654,8 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>1F78228012DAB63E00E2DB02</string>
-		<string>1F6AFEEF0E6F90060001B085</string>
 		<string>/Users/marcel/programming/Kits/MPWXmlKit/ObjectiveXML.xcodeproj</string>
+		<string>1F6AFEEF0E6F90060001B085</string>
 	</array>
 	<key>WindowString</key>
 	<string>228 97 1135 685 0 0 1440 878 </string>
@@ -679,7 +679,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>mpwfoundation_imports.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -737,7 +737,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1F6AFEEF0E6F90060001B085</string>
-				<string>1FDC9F26133D375E00FE2C3A</string>
+				<string>1F3C7C12136FE342009C0697</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -857,13 +857,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>1FDC9F27133D375E00FE2C3A</string>
+				<string>1F3C7C13136FE342009C0697</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>1FDC9F28133D375E00FE2C3A</string>
-				<string>1FDC9F29133D375E00FE2C3A</string>
-				<string>1FDC9F2A133D375E00FE2C3A</string>
-				<string>1FDC9F2B133D375E00FE2C3A</string>
-				<string>1FDC9F2C133D375E00FE2C3A</string>
+				<string>1F3C7C14136FE342009C0697</string>
+				<string>1F3C7C15136FE342009C0697</string>
+				<string>1F3C7C16136FE342009C0697</string>
+				<string>1F3C7C17136FE342009C0697</string>
+				<string>1F3C7C18136FE342009C0697</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -897,7 +897,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MPWAtomParser.m</string>
+										<string>MPWMAXParser.h</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -953,8 +953,8 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D57069F1CE1000CFCEE</string>
-				<string>1F37D34E132584590021A5EF</string>
-				<string>1F37D34F132584590021A5EF</string>
+				<string>1FE5B671134231BA001AC05D</string>
+				<string>1FE5B672134231BA001AC05D</string>
 				<string>1CDD528C0622207200134675</string>
 				<string>1CD0528E0623707200166675</string>
 			</array>

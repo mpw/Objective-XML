@@ -1074,6 +1074,10 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 
 #endif
 
+#ifndef kCFStringEncodingInvalidId
+#define kCFStringEncodingInvalidId (0xffffffffU)
+#endif
+
 -(void)setStringEncodingFromIANACharset:(NSString*)charSetName
 {
 	CFStringEncoding cf_encoding = CFStringConvertIANACharSetNameToEncoding( (CFStringRef)charSetName );
