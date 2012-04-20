@@ -98,26 +98,41 @@ THE POSSIBILITY OF SUCH DAMAGE.
 }
 
 
--(void)writeAttribute:(NSString*)attributName value:(NSString*)attributeValue
+-(void)writeAttribute:(NSString*)attributeName value:(NSString*)attributeValue
 {
-	
+	FORWARDCHARS(" ");
+    [target writeString:attributeName];
+    FORWARDCHARS("=\"");
+    [target writeString:attributeValue];
+    FORWARDCHARS("\"");
 }
 
--writeStartTag:(const char*)name attributes:attrs single:(BOOL)isSingle
+-(void)beginStartTag:(const char*)name
 {
     [self writeIndent];
     FORWARDCHARS( "<" );
     FORWARDCHARS( name );
-    if ( attrs && [attrs length] ) {
-        FORWARDCHARS(" ");
-        [self writeObject:attrs];
-    }
+}
+
+-(void)endStartTag:(const char*)name single:(BOOL)isSingle
+{
     if ( isSingle ) {
         FORWARDCHARS("/>");
     } else {
 		tagStack[curTagDepth++]=name;
         FORWARDCHARS(">");
     }
+}
+
+
+-writeStartTag:(const char*)name attributes:attrs single:(BOOL)isSingle
+{
+    [self beginStartTag:name];
+    if ( attrs && [attrs length] ) {
+        FORWARDCHARS(" ");
+        [self writeObject:attrs];
+    }
+    [self endStartTag:name single:isSingle];
 	return self;
 }
 
@@ -305,10 +320,11 @@ boolAccessor( shouldIndent, setShouldIndent )
 
 -(void)writeString:(NSString*)string
 {
-	NSData *utf8data=[string dataUsingEncoding:NSUTF8StringEncoding];
+    int maxLen = [string length] * 4;
+    NSUInteger length=0;
+    char utf8bytes[  maxLen ];
+    int utf8len=[string getBytes:utf8bytes maxLength:maxLen-1 usedLength:&length encoding:NSUTF8StringEncoding options:0 range:NSMakeRange(0,[string length]) remainingRange:NULL];
 	int base=0;
-	const char *utf8bytes=[utf8data bytes];
-	int length=[utf8data length];
 	int i;
 	for (i=0;i<length;i++) {
 		char ch=utf8bytes[i];
@@ -333,7 +349,8 @@ boolAccessor( shouldIndent, setShouldIndent )
 			base=i+1;
 		}
 	}
-//	NSLog(@"final flush bytes at %d-%d of %d",base,i-base,length);
+
+//    NSLog(@"final flush bytes at %d-%d of %d",base,i-base,length);
 	[self appendBytes:utf8bytes+base length:length-base];
 }
 

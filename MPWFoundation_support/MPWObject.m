@@ -168,7 +168,6 @@ void releaseMPWObjects( MPWObject **objs, unsigned count )
                         selector:@selector(initializeThreaded)
                             name:NSWillBecomeMultiThreadedNotification
                           object:nil];
-		_collecting=IS_OBJC_GC_ON;
         inited=YES;
     }
 }

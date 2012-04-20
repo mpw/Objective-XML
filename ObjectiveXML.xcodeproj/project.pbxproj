@@ -298,7 +298,6 @@
 		1F3C7C00136FE2EF009C0697 /* MPWAtomLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E112D1BB9400DF5E66 /* MPWAtomLink.m */; };
 		1F3C7C01136FE2EF009C0697 /* MPWRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */; };
 		1F3C7C03136FE2EF009C0697 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF1A4B00668979C35ADD82 /* Foundation.framework */; };
-		1F3C7C04136FE2EF009C0697 /* MPWFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9BAE6905762A2E009DD1EC /* MPWFoundation.framework */; };
 		1F3C9A820BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3C9A800BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.h */; };
 		1F3C9A830BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C9A810BCC0BDC00732CD5 /* MPWXmlFastInfosetParser.m */; };
 		1F3C9A880BCC0C2C00732CD5 /* MPWXmlParserTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3C9A860BCC0C2C00732CD5 /* MPWXmlParserTesting.h */; };
@@ -350,6 +349,7 @@
 		1F734AD90AC8136B004C624F /* html_comment_with_dash.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F734AD70AC8136B004C624F /* html_comment_with_dash.txt */; };
 		1F7915940BD5F60000BF5CB2 /* test3.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F7915920BD5F60000BF5CB2 /* test3.xml */; };
 		1F7915950BD5F60000BF5CB2 /* test3.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F7915930BD5F60000BF5CB2 /* test3.fi */; };
+		1F7CFA5813E212E900FB926E /* MPWFoundationLinux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7CFA5713E212E900FB926E /* MPWFoundationLinux.framework */; };
 		1F7FB2D10E00D58700A40B28 /* MPWFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F7FB2D20E00D58700A40B28 /* MPWFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FB2D00E00D58700A40B28 /* MPWFeed.m */; };
 		1F7FB2D60E00D5B900A40B28 /* NSString+extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2D40E00D5B900A40B28 /* NSString+extras.h */; };
@@ -852,6 +852,7 @@
 		1F7915930BD5F60000BF5CB2 /* test3.fi */ = {isa = PBXFileReference; lastKnownFileType = file; path = test3.fi; sourceTree = "<group>"; };
 		1F7A3D270DAAC51000FE9E24 /* openold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = openold.m; sourceTree = "<group>"; };
 		1F7A3D4F0DAAC8C700FE9E24 /* opennew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = opennew.m; sourceTree = "<group>"; };
+		1F7CFA5713E212E900FB926E /* MPWFoundationLinux.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MPWFoundationLinux.framework; path = "../../../Library/Developer/Xcode/DerivedData/metaproducts-frbgyznjeqtcxocedsnxdniqbnzz/Build/Products/Release/MPWFoundationLinux.framework"; sourceTree = "<group>"; };
 		1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWFeed.h; sourceTree = "<group>"; };
 		1F7FB2D00E00D58700A40B28 /* MPWFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWFeed.m; sourceTree = "<group>"; };
 		1F7FB2D40E00D5B900A40B28 /* NSString+extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+extras.h"; sourceTree = "<group>"; };
@@ -963,8 +964,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7CFA5813E212E900FB926E /* MPWFoundationLinux.framework in Frameworks */,
 				1F3C7C03136FE2EF009C0697 /* Foundation.framework in Frameworks */,
-				1F3C7C04136FE2EF009C0697 /* MPWFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,6 +1002,7 @@
 		07DF1A1A00668979C35ADD82 /* MPWXmlKit */ = {
 			isa = PBXGroup;
 			children = (
+				1F7CFA5713E212E900FB926E /* MPWFoundationLinux.framework */,
 				1FD5DC290F2CFD0D00F8F769 /* ExportHeaders */,
 				1FC4D32E0DFA03F500AC1A66 /* MPWFoundation_support */,
 				1FBBE2870DBD33C000A93CBA /* CoreClasses */,
@@ -1547,7 +1549,6 @@
 				1F3C7BDF136FE2EF009C0697 /* Sources */,
 				1F3C7C02136FE2EF009C0697 /* Frameworks */,
 				1F3C7C05136FE2EF009C0697 /* Rez */,
-				1F3C7C06136FE2EF009C0697 /* ShellScript */,
 			);
 			buildRules = (
 				1F3C7C07136FE2EF009C0697 /* PBXBuildRule */,
@@ -2036,19 +2037,6 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F3C7C06136FE2EF009C0697 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "tester=/usr/local/bin/testlogger\nframework=/Library/Frameworks/MPWXmlKit.framework/MPWXmlKit\n\nif  [ -f ${tester}  ] && [ -f ${framework} ] ; then\n\t$tester MPWXmlKit\nelse\n\techo \"warn:0: $tester or  $framework  not found, tests not run\"\nfi\n\n";
-		};
 		1F5A6CA91170104300E4A959 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2073,7 +2061,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "tester=/usr/local/bin/testlogger\nframework=/Library/Frameworks/MPWXmlKit.framework/MPWXmlKit\n\nif  [ -f ${tester}  ] && [ -f ${framework} ] ; then\n\t$tester MPWXmlKit\nelse\n\techo \"warn:0: $tester or  $framework  not found, tests not run\"\nfi\n\n";
+			shellScript = "tester=/usr/local/bin/testlogger\nframework=${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\n\nif  [ -f ${tester}  ]  ; then\n    $tester ${framework}\nelse\n\techo \"warn:0: $tester or  $framework  not found, tests not run\"\nfi\n\n";
 		};
 		1FB43BFF10BFB6EF00490AA6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2306,6 +2294,7 @@
 				OTHER_LDFLAGS = "-headerpad_max_install_names";
 				PREBINDING = NO;
 				PRODUCT_NAME = MPWXmlCore;
+				SKIP_INSTALL = YES;
 				ZERO_LINK = YES;
 			};
 			name = Development;
@@ -2331,10 +2320,12 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 					/Volumes/Users/marcel/programming/Kits/MPWFoundation/build,
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/metaproducts-frbgyznjeqtcxocedsnxdniqbnzz/Build/Products/Release\"",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
 				FRAMEWORK_VERSION = A;
@@ -2346,6 +2337,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
+				GCC_VERSION = org.cocotron.1.0.linux.i386.gcc.4.3.1;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_ copy 2.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks/";
@@ -2374,8 +2366,12 @@
 				ARCHS = i386;
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
 				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
-				FRAMEWORK_SEARCH_PATHS = /Developer/Cocotron/1.0/Windows/i386/Frameworks;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Developer/Cocotron/1.0/Windows/i386/Frameworks,
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/metaproducts-frbgyznjeqtcxocedsnxdniqbnzz/Build/Products/Release\"",
+				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2449,7 +2445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2468,6 +2464,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks/";
@@ -2480,6 +2477,7 @@
 				PRINCIPAL_CLASS = "";
 				PRODUCT_NAME = MPWXmlKit;
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -2610,7 +2608,7 @@
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = iXmlKit;
 				SDKROOT = iphoneos3.1.2;
@@ -2674,6 +2672,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
 				INSTALL_PATH = "@rpath/Frameworks/";
@@ -2686,6 +2685,7 @@
 				PRINCIPAL_CLASS = "";
 				PRODUCT_NAME = MPWXmlKit;
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -2728,6 +2728,7 @@
 				OTHER_LDFLAGS = "-headerpad_max_install_names";
 				PREBINDING = NO;
 				PRODUCT_NAME = MPWXmlCore;
+				SKIP_INSTALL = YES;
 				ZERO_LINK = YES;
 			};
 			name = Release;
@@ -2754,7 +2755,7 @@
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = /Library/Headers;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "";

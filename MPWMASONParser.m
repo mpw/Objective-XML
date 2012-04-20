@@ -13,8 +13,8 @@
 
 @implementation MPWMASONParser
 
-objectAccessor( MPWPListBuilder *, builder, setBuilder )
-objectAccessor( MPWSmallStringTable *, commonStrings, setCommonStrings )
+objectAccessor( MPWPListBuilder, builder, setBuilder )
+objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 
 -initWithTarget:aTarget
 {

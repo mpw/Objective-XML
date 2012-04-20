@@ -38,8 +38,8 @@ idAccessor( defaultNamespaceHandler, setDefaultNamespaceHandler	)
 boolAccessor( reportIgnoreableWhitespace, setReportIgnoreableWhitespace )
 boolAccessor( ignoreCase, setIgnoreCase )
 scalarAccessor( NSInteger, maxDepthAllowed, setMaxDepthAllowed )
-objectAccessor( NSData*, buffer, setBuffer )
-objectAccessor( NSURL*, url, setUrl )
+objectAccessor( NSData, buffer, setBuffer )
+objectAccessor( NSURL, url, setUrl )
 
 #define MAKEDATA( start, length )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , length )
 
@@ -68,7 +68,7 @@ boolAccessor( shouldProcessNamespaces, setShouldProcessNamespaces )
 boolAccessor( shouldReportNamespacePrefixes, setShouldReportNamespacePrefixes )
 boolAccessor( autotranslateUTF8, setAutotranslateUTF8 )
 boolAccessor( enforceTagNesting, setEnforceTagNesting )
-objectAccessor( NSError *, parserError, setParserError  )
+objectAccessor( NSError, parserError, setParserError  )
 
 
 static inline BOOL extractNameSpace( const char *start, int len, const char **strippedTagPtr, int *namespaceLen, int *tagLen )
@@ -102,7 +102,7 @@ static inline BOOL extractNameSpace( const char *start, int len, const char **st
 //     id pool=[[NSAutoreleasePool alloc] init];
    self = [super init];
 //	NSLog(@"init");
-	[self setScanner:[[NSXMLScanner alloc] init]];
+	[self setScanner:[[[NSXMLScanner alloc] init] autorelease]];
 //	NSLog(@"scanner");
 	[[self scanner] setDelegate:self];
 	
@@ -641,7 +641,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 			return NO;
 		} else {
 			while (  tagStackLen>0  && ![CURRENTTAG isEqual: endName] ) {
-				NSLog(@"stack[%d] non matching end-tags: on-stack '%@' close-tag encountered: '%@'",tagStackLen,CURRENTTAG,endName);
+				NSLog(@"stack[%ld] non matching end-tags: on-stack '%@' close-tag encountered: '%@'",tagStackLen,CURRENTTAG,endName);
 				POPTAG;
 			}
 			return YES;
@@ -718,6 +718,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	while ( tagStackLen > 0 ) {
 		POPTAG;
 	}
+    [parseResult release];
     free( _elementStack );
     [_attributes release];
 //	[namespacePrefixToURIMap release];
@@ -1376,9 +1377,11 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 				[result addEntriesFromDictionary:[attributes asDictionary]];
 			}
 		}
-	} else {
+	} else if ( [attributes count] ) {
 		result = [attributes asDictionary];
-	}
+	} else {
+        result = @"";
+    }
 	return [result retain];
 }
 

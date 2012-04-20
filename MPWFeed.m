@@ -20,9 +20,9 @@
 @implementation MPWFeed
 
 
-objectAccessor( NSDictionary*, headerItems, setHeaderItems )
-objectAccessor( NSArray* , newsItems, setNewsItems )
-objectAccessor( NSString*, version, setVersion )
+objectAccessor( NSDictionary, headerItems, setHeaderItems )
+objectAccessor( NSArray, newsItems, setNewsItems )
+objectAccessor( NSString, version, setVersion )
 //  MAX XML parsing callbacks  
 
 
@@ -121,6 +121,7 @@ objectAccessor( NSString*, version, setVersion )
 	INTEXPECT( [newsItems count], 25 , @"number of news items");
 	id item1=[newsItems objectAtIndex:0];
 	IDEXPECT( [item1 title], @"Diggnation - The Crazy Episode Taped Live in New York City" , @"number of news items");
+//    NSLog(@"item1 remainder: %@",[item1 remainder]);
 	IDEXPECT( [[[item1 remainder] objectForKey:@"enclosure"] objectForKey:@"url"], @"http://www.podtrac.com/pts/redirect.m4v/bitcast-a.bitgravity.com/revision3/web/diggnation/0154/diggnation--0154--2008-06-12studbeez--small.m4v" , @"enclosure url");
 //	NSLog(@"newsItems: %@",newsItems);
 }

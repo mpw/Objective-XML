@@ -73,7 +73,7 @@
 	return result;
 }
 
-objectAccessor( NSData*, fiData , _setFiData )
+objectAccessor( NSData, fiData , _setFiData )
 
 -(void)setFiData:(NSData*)xmldata
 {

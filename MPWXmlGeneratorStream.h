@@ -46,6 +46,10 @@ THE POSSIBILITY OF SUCH DAMAGE.
 -startTag:(const char*)tag;
 -writeCloseTag:(const char*)name;
 -closeTag;
+-(void)writeAttribute:(NSString*)attributeName value:(NSString*)attributeValue;
+-(void)beginStartTag:(const char*)name;
+-(void)endStartTag:(const char*)name single:(BOOL)isSingle;
+
 -writeElementName:(const char*)name attributes:attrs contents:contents;
 -writeElementName:(const char*)name contents:contents;
 -writeContentObject:anObject;

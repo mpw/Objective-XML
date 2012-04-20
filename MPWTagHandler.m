@@ -12,7 +12,7 @@
 
 @implementation MPWTagHandler
 
-objectAccessor( NSDictionary* , exceptionMap, setExceptionMap )
+objectAccessor( NSDictionary , exceptionMap, setExceptionMap )
 idAccessor( attributeMap, setAttributeMap )
 idAccessor( namespaceString, setNamespaceString )
 idAccessor( tagMap, setTagMap )

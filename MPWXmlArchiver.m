@@ -32,7 +32,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #import "MPWXmlGeneratorStream.h"
 
 #import "MPWXmlUnarchiver.h"
-
+#import <objc/objc.h>
 #import "mpwfoundation_imports.h"
 
 @implementation MPWXmlArchiver
@@ -136,7 +136,9 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
     id oldObject=currentObject;
     id encodedObject = [anObject replacementObjectForCoder:self];
     Class objectClass=[encodedObject classForArchiver];
-    const char* className=class_getName( objectClass );
+//    const char* className=class_getName( objectClass );
+    const char* className=[[objectClass className] UTF8String];
+    
     NSInteger objid = NSCountMapTable(objectTable);
     NSMapInsert( objectTable, anObject, (void*)objid );
     currentObject = encodedObject;

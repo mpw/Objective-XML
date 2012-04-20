@@ -3,7 +3,7 @@
 //  ObjectiveXML
 //
 //  Created by Marcel Weiher on 1/3/11.
-//  Copyright 2011 Marcel Weiher. All rights reserved.
+//  Copyright 2012 Marcel Weiher. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

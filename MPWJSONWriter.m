@@ -23,7 +23,7 @@
 	[self writeKey:aKey];
     [self writeObject:anObject];
 
-}
+} 
 
 -(void)beginArray
 {
@@ -79,7 +79,8 @@
 //	NSLog(@"==== JSONriter writeString: %@",anObject);
     [self appendBytes:"\"" length:1];
 	[anObject getCString:buffer maxLength:maxLen encoding:NSUTF8StringEncoding];
-	NSLog(@"length of UTF8: %d",strlen(buffer));
+
+//	NSLog(@"length of UTF8: %d",strlen(buffer));
 	while ( *cur ) {
 		char *escapeSequence=NULL;
 		char unicodeEscapeBuf[16];
@@ -174,7 +175,8 @@
 
 -(void)writeOnJSONStream:aStream
 {
-	if ( [self isKindOfClass:NSClassFromString(@"NSCFBoolean")] ) {
+ //   NSLog(@"obj: %@ className: %@",self,[self className]);
+	if ( [[self className] rangeOfString:@"Boolean"].length > 0)  {
 		[aStream writeBoolean:[self boolValue]];
 	} else if ( CFNumberIsFloatType( (CFNumberRef)self ) ) {
 		[aStream writeFloat:[self doubleValue]];
@@ -192,7 +194,7 @@
 +(void)testWriteArray
 {
 	IDEXPECT( ([self _encode:[NSArray arrayWithObjects:@"hello",@"world",nil]]), 
-			 @"[ \"hello\",\"world\"] ", @"array encode");
+			 @"[ \"hello\",\"world\"] ", @"array encode" );
 }
 
 +(void)testWriteDict
@@ -207,6 +209,7 @@
 
 +(void)testWriteLiterals
 {
+    NSLog(@"bool %@ / %@",[NSNumber numberWithBool:YES],[[NSNumber numberWithBool:YES] class]);
 	IDEXPECT( [self _encode:[NSNumber numberWithBool:YES]], @"true", @"true");
 	IDEXPECT( [self _encode:[NSNumber numberWithBool:NO]], @"false", @"false");
 	IDEXPECT( [self _encode:[NSNull null]], @"null", @"null");

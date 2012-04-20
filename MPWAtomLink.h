@@ -3,7 +3,7 @@
 //  ObjectiveXML
 //
 //  Created by Marcel Weiher on 1/3/11.
-//  Copyright 2011 Marcel Weiher. All rights reserved.
+//  Copyright 2012 Marcel Weiher. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -16,8 +16,8 @@
 	NSString *type;
 }
 
-objectAccessor_h( NSString*, href, setHref )
-objectAccessor_h( NSString*, rel, setRel )
-objectAccessor_h( NSString*, type , setType )
+objectAccessor_h( NSString, href, setHref )
+objectAccessor_h( NSString, rel, setRel )
+objectAccessor_h( NSString, type , setType )
 
 @end

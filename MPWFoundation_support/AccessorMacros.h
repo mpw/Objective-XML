@@ -1,5 +1,5 @@
 /*
-	Copyright (c) 2001-2006 Marcel Weiher. All rights reserved.
+	Copyright (c) 2001-2012 by Marcel Weiher. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -29,6 +29,10 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 THE POSSIBILITY OF SUCH DAMAGE.
 
 */
+
+#ifndef ACCESSOR_MACROS
+#define ACCESSOR_MACROS
+
 
 
 //---	This file expands the accessor macros
@@ -75,10 +79,13 @@ THE POSSIBILITY OF SUCH DAMAGE.
 }\
 
 #define objectAccessor( objectType, var, setVar ) \
-readAccessor( objectType, var )\
-setAccessor( objectType, var,setVar )
+readAccessor( objectType*, var )\
+setAccessor( objectType*, var,setVar )
 
-#define idAccessor( var, setVar ) objectAccessor( id, var, setVar )
+#define idAccessor( var, setVar )\
+readAccessor( id, var )\
+setAccessor( id, var,setVar )
+
 
 #define relayAccessor( var, setVar, delegate )\
 relayReadAccessor( var , delegate )\
@@ -94,7 +101,7 @@ setAccessor( id, var, setVar )
 -(void)setVar:(scalarType)newVar; \
 -(scalarType)var;
 
-#define objectAccessor_h( objectType, var, setVar )   scalarAccessor_h( objectType, var, setVar )
+#define objectAccessor_h( objectType, var, setVar )   scalarAccessor_h( objectType*, var, setVar )
 
 #define intAccessor( var, setVar )	scalarAccessor( int, var, setVar )
 #define intAccessor_h( var, setVar )	scalarAccessor_h( int, var, setVar )
@@ -102,6 +109,17 @@ setAccessor( id, var, setVar )
 #define floatAccessor_h(var,setVar )  scalarAccessor_h( float, var, setVar )
 #define boolAccessor(var,setVar )  scalarAccessor( BOOL, var, setVar )
 #define boolAccessor_h(var,setVar )  scalarAccessor_h( BOOL, var, setVar )
+
+#define lazyAccessor( type, var ,setVar, computeVar )   \
+	readAccessorName( type,var, _##var ) \
+	setAccessor( type, var, setVar ) \
+-(type)var { \
+	if ( ![self _##var] )  { \
+		[self setVar:[self computeVar]]; \
+	}  \
+	return [self _##var]; \
+} \
+
 
 //--- compatibility:
 
@@ -135,3 +153,4 @@ setAccessor( id, var, setVar )
 #define ASSIGNCOPY(var,value) ASSIGN(var,[(value) copy])
 #endif
 
+#endif

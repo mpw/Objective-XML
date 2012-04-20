@@ -3,7 +3,7 @@
 //  ObjectiveXML
 //
 //  Created by Marcel Weiher on 1/3/11.
-//  Copyright 2011 Marcel Weiher. All rights reserved.
+//  Copyright 2012 Marcel Weiher. All rights reserved.
 //
 
 #import "MPWRSSParser.h"
@@ -20,9 +20,9 @@
 
 
 
-objectAccessor( MPWMAXParser*, xmlparser, setXmlparser )
-objectAccessor( NSMutableArray*, items, setItems )
-objectAccessor( NSDictionary*, headerItems, setHeaderItems )
+objectAccessor( MPWMAXParser, xmlparser, setXmlparser )
+objectAccessor( NSMutableArray, items, setItems )
+objectAccessor( NSDictionary, headerItems, setHeaderItems )
 scalarAccessor( Class, feedClass , setFeedClass )
 scalarAccessor( Class, feedItemClass , setFeedItemClass )
 

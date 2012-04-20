@@ -3,7 +3,7 @@
 //  ObjectiveXML
 //
 //  Created by Marcel Weiher on 1/3/11.
-//  Copyright 2011 Marcel Weiher. All rights reserved.
+//  Copyright 2012 Marcel Weiher. All rights reserved.
 //
 
 #import "MPWFeedItem.h"
@@ -12,13 +12,13 @@
 
 @implementation MPWFeedItem
 
-objectAccessor( NSString*, guid, setGuid )
-objectAccessor( NSString*, title, setTitle )
-objectAccessor( NSString*, category, setCategory )
-objectAccessor( NSArray*, links, setLinks )
-objectAccessor( NSString*, imageLink, setImageLink )
-objectAccessor( NSString*, pubDate, setPubDate )
-objectAccessor( NSDictionary*, remainder, setRemainder )
+objectAccessor( NSString, guid, setGuid )
+objectAccessor( NSString, title, setTitle )
+objectAccessor( NSString, category, setCategory )
+objectAccessor( NSArray, links, setLinks )
+objectAccessor( NSString, imageLink, setImageLink )
+objectAccessor( NSString, pubDate, setPubDate )
+objectAccessor( NSDictionary, remainder, setRemainder )
 
 -(void)setLink:(NSString*)aLink
 {

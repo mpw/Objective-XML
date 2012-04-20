@@ -139,7 +139,7 @@ idAccessor( objClass, setObjClass )
 
 @implementation XmlDecoder
 
-objectAccessor( ObjectHolder* , currentObjectHolder, setCurrentObjectHolder )
+objectAccessor( ObjectHolder , currentObjectHolder, setCurrentObjectHolder )
 idAccessor( currentObject ,setCurrentObject )
 idAccessor( classVersionTable, setClassVersionTable )
 intAccessor( currentValue, setCurrentValue )

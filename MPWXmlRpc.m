@@ -11,8 +11,8 @@
 #import "MPWXmlRpcGeneratorStream.h"
 @implementation MPWXmlRpc
 
-objectAccessor( MPWMAXParser* , parser, setParser )
-objectAccessor( MPWXmlRpcGeneratorStream* , generator, setGenerator )
+objectAccessor( MPWMAXParser , parser, setParser )
+objectAccessor( MPWXmlRpcGeneratorStream , generator, setGenerator )
 
 
 -init
