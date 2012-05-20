@@ -46,7 +46,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -(BOOL)endElement:(const char*)start length:(int)len
 {
-    id endName;
+    id endName=nil;
 	id prefix=nil;
 	id fullyQualified=nil;
 	id namespaceURI=nil;
@@ -57,7 +57,21 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	RECORDSCANPOSITION( start, len );
     start+=2;
     len-=3;
+#if 1
+    id openTag=CURRENTTAG;
+    char *b=[openTag bytes];
+    for (int i=0;i<len;i++) {
+        if ( start[i]!=b[i]) {
+            endName=TAGFORCSTRING( start, len); //  MPWUniqueStringWithCString( start, len );
+            break;
+        }
+    }
+    if (!endName) {
+        endName=openTag;
+    }
+#else
     endName=TAGFORCSTRING( start, len); //  MPWUniqueStringWithCString( start, len );
+#endif
 //   NSLog(@"end element </%@>, currentTag: %@ tagStackLen: %d",endName,CURRENTTAG,tagStackLen);
 	if ( shouldProcessNamespaces &&  (namespaceLocation= memchr( start,':',len)) ) {
 		fullyQualified=endName;

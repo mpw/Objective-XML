@@ -1,7 +1,7 @@
 /*
 	DeubgMacros.h 
 
-    Copyright (c) 1997-2006 Marcel Weiher. All rights reserved.
+    Copyright (c) 1997-2012 by Marcel Weiher. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -32,6 +32,10 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 
+#ifndef DEBUGMACROS
+#define DEBUGMACROS
+
+
 
 #import <Foundation/Foundation.h>
 //#import <Foundation/NSDebug.h>
@@ -43,37 +47,37 @@ static inline BOOL _idsAreEqual( id a, id b ) {
 }
 #define ROUNDTOINTFORTEST( aValue )   ((int)round(aValue))
 #define EXPECTTRUE( got , msg ) \
-		NSAssert1( (got) , ([NSString stringWithFormat:@"%@ was expected to be true",msg]),@"");
+NSAssert1( (got) , ([NSString stringWithFormat:@"%@ was false instead of expected true",msg]),@"");
 #define EXPECTFALSE( got , msg ) \
-		NSAssert1( !(got) , ([NSString stringWithFormat:@"%@ was expected to be false",msg]),@"");
+NSAssert1( !(got) , ([NSString stringWithFormat:@"%@ was true instead of expected false",msg]),@"");
 #define EXPECTNOTNIL( got , msg ) \
-		NSAssert1( (got)!=NULL, ([NSString stringWithFormat:@"%@ was expected to be non-nil but was nil",msg]),@"");
+NSAssert1( (got)!=NULL, ([NSString stringWithFormat:@"%@ was nil but expected non-nil",msg]),@"");
 #define EXPECTNIL( got , msg ) \
-		NSAssert1( (got) == nil , ([NSString stringWithFormat:@"%@ was expected to be nil but was %p instead",msg,got]),@"");
+NSAssert1( (got) == nil , ([NSString stringWithFormat:@"%@ was %p instead of nil",msg,got]),@"");
 #define INTEXPECT( got, expect, msg  ) \
-        NSAssert1((expect)==(got) , ([NSString stringWithFormat:@"%@ got %d instead of expected %d",msg,got,expect]),@"");
+NSAssert1((expect)==(got) , ([NSString stringWithFormat:@"got %d instead of expected %d for %@",got,expect,msg]),@"");
 #define RECTEXPECT( rect, ex,ey,ew,eh , msg) \
-		{ \
-			int _ax=ROUNDTOINTFORTEST(rect.origin.x);\
-			int _ay=ROUNDTOINTFORTEST(rect.origin.y);\
-			int _aw=ROUNDTOINTFORTEST(rect.size.width);\
-			int _ah=ROUNDTOINTFORTEST(rect.size.height);\
-	    NSAssert1( _ax==ex &&  _ay==ey && \
-				   _aw==ew && _ah==eh , \
-					 ([NSString stringWithFormat:@"%@ got %@ instead of expected %@",msg, \
-					NSStringFromRect(NSMakeRect(_ax, _ay, _aw, _ah)),\
-					NSStringFromRect(NSMakeRect(ex, ey, ew, eh))]),@""); \
-		}
+{ \
+int _ax=ROUNDTOINTFORTEST(rect.origin.x);\
+int _ay=ROUNDTOINTFORTEST(rect.origin.y);\
+int _aw=ROUNDTOINTFORTEST(rect.size.width);\
+int _ah=ROUNDTOINTFORTEST(rect.size.height);\
+NSAssert1( _ax==ex &&  _ay==ey && \
+_aw==ew && _ah==eh , \
+([NSString stringWithFormat:@"%@ instead of expected %@ for %@", \
+NSStringFromRect(NSMakeRect(_ax, _ay, _aw, _ah)),\
+NSStringFromRect(NSMakeRect(ex, ey, ew, eh)),msg]),@""); \
+}
 #define FLOATEXPECT( got, expect, msg  ) \
-		NSAssert1((expect)==(got) , ([NSString stringWithFormat:@"%@ got %g instead of expected %g",msg,got,expect]),@"");
+NSAssert1((expect)==(got) , ([NSString stringWithFormat:@"%g instead of expected %g for %@",got,expect,msg]),@"");
 
 #define FLOATEXPECTTOLERANCE( got, expect, tol, msg  ) \
-		NSAssert1(fabs((expect)-(got)) < (tol) ,  ([NSString stringWithFormat:@"%@ got %g instead of expected %g",msg,got,expect]),@"");
+NSAssert1(fabs((expect)-(got)) < (tol) ,  ([NSString stringWithFormat:@"got %g instead of expected %g for %@",got,expect,msg]),@"");
 
 #define _IDEXPECT(  got,  expected,  msg,  self,  _cmd ) { \
-    id _expected=expected;\
-    id _got = got; \
-    NSAssert1( _idsAreEqual(_expected,_got),  ([NSString stringWithFormat:@"%@ got '%@' instead of expected '%@'",msg,_got,_expected]),@""); \
+id _expected=expected;\
+id _got = got; \
+NSAssert1( _idsAreEqual(_expected,_got),  ([NSString stringWithFormat:@"got '%@' instead of expected '%@' for %@",_got,_expected,msg]),@""); \
 } 
 
 #define IDEXPECT( got , expected, msg )  _IDEXPECT( got, expected, msg, self, _cmd )
@@ -204,3 +208,9 @@ static inline BOOL _idsAreEqual( id a, id b ) {
 #define	LEAVE6	D6PRINTF0(@"leave");
 #define	LEAVE12	D12PRINTF0(@"leave");
 
+#define MPWConvertVarToString( x ) ({  typeof(x) _Y_=x; \
+MPWConvertToString(&_Y_,@encode(typeof(_Y_))); })
+
+#define LOG(x)  NSLog(@"%s: '%@'",#x,MPWConvertVarToString(x))
+
+#endif

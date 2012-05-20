@@ -50,7 +50,7 @@ typedef enum {
 #define  CURRENTCHARCOUNT  (currentPtr - currentString)
 #define  CURRENTBYTECOUNT  ((char*)currentPtr - (char*)currentString)
 
-#define  SECURECALLBACK( callback )  if ( callback == NULL ) { callback = (void*)processDummy; NSLog(@"empty callback"); }
+#define  SECURECALLBACK( callback )  if ( callback == NULL ) { callback = (void*)processDummy;  }
 #define  XMLKITCALLBACK( whichCallBack )  whichCallBack( clientData, NULL, currentString, CURRENTCHARCOUNT,spaceOffset )
 
 
@@ -60,7 +60,7 @@ typedef BOOL (*AttrFunc) (void *target, void* dummySel,const xmlchar *, unsigned
 
 static BOOL processDummy( void *dummyTarget ,void *dummySel ,const xmlchar *textPtr, unsigned int charCount,unsigned int nameLen)
 {
-    NSLog(@"dummy processor");
+//    NSLog(@"dummy processor");
          
           
     return YES;
@@ -164,27 +164,6 @@ static int scanXml(
         const xmlchar *currentString = currentPtr;
         int spaceOffset=0;
         ProcessFunc currentCallback;
-//		NSLog(@"top of loop");
-/*
-		if (  isspace(*currentPtr) ) {
-//			NSLog(@"scan space: '%c'",*currentPtr);
-            currentPtr++;
-            while ( INRANGE && isspace(*currentPtr) ) {
-                currentPtr++;
-            }
-            if ( !INRANGE || ISOPENTAG(*currentPtr) ) {
-                XMLKITCALLBACK( spaceCallback );
-                scanState = inTag;
-            }
-        }
-		
-//			  NSLog(@"char '%c' isopentag: %d",*currentPtr,ISOPENTAG(*currentPtr));
-			  while ( INRANGE && !ISOPENTAG(*currentPtr) && !ISAMPERSAND(*currentPtr) ) {
-                    currentPtr++;
-                }
-                spaceOffset=CURRENTCHARCOUNT;
-                if ( ISAMPERSAND(*currentPtr) ) {
-*/
 
 		//--- scan up to the beginning of a tag (the initial '<' )
 		

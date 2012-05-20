@@ -857,15 +857,7 @@ typedef char xmlchar;
 
 -getTagForCString:(const char*)cstr length:(int)len
 {
-#ifdef MPWXmlCoreOnly 
 	return MAKEDATA( cstr, len );
-#else
-	if (  IS_OBJC_GC_ON ) {
-		return MPWUniqueStringWithCString(cstr, len);
-	} else {
-		return MAKEDATA( cstr, len );
-	}
-#endif	
 }
 
 

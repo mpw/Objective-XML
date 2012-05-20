@@ -21,12 +21,19 @@ scalarAccessor( id, target, _setTarget )
 idAccessor( result, setResult )
 boolAccessor( useCaching, _setUseCaching )
 
+intAccessor(numargs, setNumargs)
+
 extern id objc_msgSend( id receiver, SEL _cmd, ... );
 
 -init
 {
 	self = [super init];
-	invokeFun=[self methodForSelector:@selector(resultOfInvoking)];
+    if ( self )  {
+        if ( !invokeFun) {
+            invokeFun=[self methodForSelector:@selector(resultOfInvoking)];
+        }
+        numargs=-1;
+    }
 	return self;
 }
 
@@ -109,6 +116,11 @@ extern id objc_msgSend( id receiver, SEL _cmd, ... );
 -(void)invoke
 {
 	[self setResult:[self resultOfInvoking]];
+}
+
+-(void)setReturnValue:(void*)retval
+{
+	[self setResult:*(id*)retvale];
 }
 
 -(void)dealloc

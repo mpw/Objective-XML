@@ -11,9 +11,28 @@
 #import "MPWMAXParser_private.h"
 #import "mpwfoundation_imports.h"
 
-#if RELEASE
-#warning release, not compiling tests!
-#else 
+@interface EmptySAXClient : NSObject
+
+@end
+
+@implementation EmptySAXClient
+
+-(void)parserDidStartDocument:parser {}
+-(void)parserDidEndDocument:parser{}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {}
+- (void)parser:(NSXMLParser *)parser foundCDATA:(NSData *)data {}
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {}
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {}
+-(void)parser:aParser didStartMappingPrefix:aPrefix toURI: uri {}
+-(void)parser:aParser didEndMappingPrefix:aPrefix {}
+-(NSData*)parser:aParser resolveExternalEntityName:name systemID:systemId { return nil;}
+
+-(void)characters:characterData{}
+-(void)cdata:cdataData{}
+-(void)setDocumentLocator:locator{}
+
+@end
 
 @implementation MPWXmlParserTesting
 
@@ -659,4 +678,3 @@ idAccessor( nonWSCharSet, setNonWSCharSet )
 
 @end
 
-#endif

@@ -31,6 +31,7 @@
 -resultOfInvokingWithArgs:(id*)newArgs count:(int)count;
 -(void)setUseCaching:(BOOL)doCaching;
 -(SEL)selector;
+intAccessor_h(numargs, setNumargs)
 @end
 
 @interface NSInvocation(convenience)
