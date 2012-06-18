@@ -53,3 +53,18 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 
 @end
+
+
+@protocol MPWXmlScannerDelegate
+
+-(BOOL)beginElement:(const char*)fullyQualifedPtr length:(int)len nameLen:(int)fullyQualifiedLen;
+-(BOOL)endElement:(const char*)fullyQualifedPtr length:(int)fullyQualifiedLen;
+-(BOOL)makeText:(const char*)start length:(int)len firstEntityOffset:(int)entityOffset;
+-(BOOL)makeSpace:(const char*)start length:(int)len;
+-(BOOL)makeCData:(const char*)start length:(int)len;
+-(BOOL)makeSgml:(const char*)start length:(int)len nameLen:(int)nameEnd;
+-(BOOL)makePI:(const char*)start length:(int)len nameLen:(int)nameLen;
+-(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen;
+-(BOOL)makeEntityRef:(const char*)start length:(int)len;
+
+@end

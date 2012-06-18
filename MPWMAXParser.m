@@ -400,7 +400,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 		if (  extractNameSpace( fullyQualifedPtr, fullyQualifiedLen, &tagStartPtr, &namespaceLen, &tagLen ) ) {
 			handler=[self handlerForPrefix:fullyQualifedPtr length:namespaceLen];
 //			NSLog(@"handler for fully qualifed : '%.*s' is %@",fullyQualifiedLen,fullyQualifedPtr,handler);
-		}
+        }
 		int integerTag = 0; // [handler integerTagForElementName:tagStartPtr length:tagLen];
 		currentElement->integerTag=integerTag;
 //		NSLog(@"integer tag: %d",integerTag);
@@ -468,8 +468,6 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 
 	lastTagWasOpen=YES;
 	charactersAreSpace=YES;
-//	allowed[++allowedIndex]=characterDataAllowedTags ? [characterDataAllowedTags objectForCString:start+1 length:nameLen-1] : YES;
-//	NSLog(@"allowedIndex: %d",allowedIndex);
     if ( fullyQualifedPtr[len-2]=='/' ) {
 		// trailing '/>' means this is an empty element
         isEmpty=YES;
@@ -478,13 +476,13 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
             fullyQualifiedLen--;
         }
     }
+    //--- remove brackets from name
     fullyQualifedPtr++;
     fullyQualifiedLen--;
     len-=2;
 
-//	NSLog(@"begin tag, tagStackLen: %d",tagStackLen);
+    //--- support for partial parsing to a specified depth (for lazy DOM parser...)
 	if ( tagStackLen > maxDepthAllowed ) {
-//		NSLog(@"going to skip at level %d, chilren: %x",tagStackLen,currentElement->children);
 		NSXMLElementInfo* previous=(((NSXMLElementInfo*)_elementStack)+tagStackLen-1 );
 		previous->isIncomplete=YES;
 
@@ -493,7 +491,6 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 		} else {
 			lastTagWasOpen=NO;
 		}
-//		NSLog(@"after push, level %d",tagStackLen);
 		return YES;
 	}
 	currentElement->isIncomplete=NO;
@@ -575,10 +572,10 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 
 -(void)flushPureSpace
 {
-	[[self currentChildren] pop:numSpacesOnStack];
-//	NSLog(@"flushPureSpace(%d)",numSpacesOnStack);
-//	[self popAndRelease:numSpacesOnStack];
-	numSpacesOnStack=0;
+    if ( numSpacesOnStack) {
+        [[self currentChildren] pop:numSpacesOnStack];
+        numSpacesOnStack=0;
+    }
 }
 
 -(BOOL)endElement:(const char*)fullyQualifedPtr length:(int)fullyQualifiedLen 
@@ -592,9 +589,11 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	startPtr=fullyQualifedPtr;
 	tagLen=fullyQualifiedLen;
 	int len=tagLen;
-	id handler=nil;
+	id handler=defaultNamespaceHandler;
 	NSXMLElementInfo *currentElement = &CURRENTELEMENT;
 //	allowedIndex--;
+
+    
 	if ( currentElement ) {
 		currentElement->end = startPtr + len+1;
 	}
@@ -609,16 +608,15 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	}
 	if (  extractNameSpace( fullyQualifedPtr, fullyQualifiedLen, &startPtr, &namespaceLen, &tagLen ) ) {
 		handler=[self handlerForPrefix:fullyQualifedPtr length:namespaceLen];
-	}
+    }
 	if ( handler ) {
 		endName=[handler getTagForCString:startPtr length:tagLen];
-//		NSLog(@"got unique tag: '%@',%p non-unique: '%@'",endName,endName,TAGFORCSTRING( fullyQualifedPtr, fullyQualifiedLen));
 	}
 	if ( !endName ) {
+//        NSLog(@"did not get endName ('%.*s') from handler %@",tagLen,startPtr,handler);
 		endName=TAGFORCSTRING( fullyQualifedPtr, fullyQualifiedLen);
 	}
 	
-//    endName=TAGFORCSTRING( startPtr, len); //  MPWUniqueStringWithCString( start, len );
 #if 0
 		NSLog(@"end element: <%@> stackDepth %d stack: %@",endName,tagStackLen,[self _fullTagStackString]);
 #endif	

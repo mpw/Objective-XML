@@ -463,3 +463,11 @@ static int _collecting=NO;
 
 @end
 
+@implementation NSData(propertyList)
+
+-propertyList
+{
+    return [NSPropertyListSerialization propertyListWithData:self options:0  format:nil error:nil];
+}
+
+@end

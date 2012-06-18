@@ -455,9 +455,11 @@ static id object=nil;
 {
     ignoreSpace=YES;
 
-//	NSLog(@"end with '%@', object=%@ count = %d",endName,object,[objects count]);
+	NSLog(@"end with '%@', object=%@ count = %d",endName,object,[objects count]);
 //	NSLog(@"class = %@/%x",NSClassFromString( endName ),NSClassFromString( endName ));
-    if ( [self classForName:[NSString stringWithString: endName]]) {
+    NSString *s=[endName stringValue];
+    
+    if ( [self classForName:s]) {
         id newObject;
 //		NSLog(@" will decode object with %@",[self currentObject]);
         newObject=[decoder decodeObjectHolder:[self currentObject] withObjectTable:objectTable];

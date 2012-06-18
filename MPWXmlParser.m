@@ -59,7 +59,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
     len-=3;
 #if 1
     id openTag=CURRENTTAG;
-    char *b=[openTag bytes];
+    const char *b=[openTag bytes];
     for (int i=0;i<len;i++) {
         if ( start[i]!=b[i]) {
             endName=TAGFORCSTRING( start, len); //  MPWUniqueStringWithCString( start, len );

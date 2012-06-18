@@ -323,7 +323,7 @@ boolAccessor( shouldIndent, setShouldIndent )
     int maxLen = [string length] * 4;
     NSUInteger length=0;
     char utf8bytes[  maxLen ];
-    int utf8len=[string getBytes:utf8bytes maxLength:maxLen-1 usedLength:&length encoding:NSUTF8StringEncoding options:0 range:NSMakeRange(0,[string length]) remainingRange:NULL];
+    [string getBytes:utf8bytes maxLength:maxLen-1 usedLength:&length encoding:NSUTF8StringEncoding options:0 range:NSMakeRange(0,[string length]) remainingRange:NULL];
 	int base=0;
 	int i;
 	for (i=0;i<length;i++) {

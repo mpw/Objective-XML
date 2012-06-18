@@ -65,7 +65,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 	id keys[count/2+1],values[count/2+1];
 	int i;
 	for (i=0;i<count/2;i++) {
-		keys[i]=objs[i*2];
+		keys[i]=[NSString stringWithString:objs[i*2]];
 		values[i]=objs[i*2+1];
 	}
 	return [[NSDictionary alloc] initWithObjects:values forKeys:keys count:count/2];
@@ -171,19 +171,24 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 	return (id)CFDateCreate( allocator, CFGregorianDateGetAbsoluteTime(date, NULL));
 }
 
--trueElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
-{
-	return [true_value retain];
-}
-
 -keyElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {
-	return [self stringElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser];
+    if ( [children count]==1) {
+        MPWSubData *d=[children lastObject];
+        return MPWUniqueStringWithCString([d bytes],[d length]);
+    } else {
+        return [self stringElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser];
+    }
 }
 
 -falseElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {
 	return [false_value retain];
+}
+
+-trueElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
+{
+	return [true_value retain];
 }
 
 
@@ -213,7 +218,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 	id result;
 	[parser parse:[self frameworkResource:@"Itunes_info" category:@"plist"]];
 	result = [parser parseResult];
-//	NSLog(@"property list result: %@",result);
+	NSLog(@"property list result: %@",result);
 //	NSLog(@"property list target: %@",[parser target]);
 	INTEXPECT( [result count], 23 ,@"items in top level dict" );
 	INTEXPECT( [[result objectForKey:@"DummyInteger"] intValue], 42 ,@"my dummy integer" );
@@ -224,12 +229,13 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 
 }
 
-+(void)testEmptyElemmentsPlist
++(void)testEmptyElementsPlist
 {
 	id parser = [self parser];
 	id result;
 	[parser parse:[self frameworkResource:@"empty_elements" category:@"plist"]];
 	result = [parser parseResult];
+    NSLog(@"testEmptyElemmentsPlist result: %@",result);
 	INTEXPECT( [result count], 4 ,@"items in top level dict" );
 	INTEXPECT( [[result objectForKey:@"DummyInteger"] intValue], 42 ,@"my dummy integer" );
 	IDEXPECT( [result objectForKey:@"DummyInteger"], [NSNumber numberWithInt:42], @"dummy integer is not a string");
@@ -242,7 +248,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 +testSelectors {
 	return [NSArray arrayWithObjects:
 		@"testItunesInfoPlist",
-		@"testEmptyElemmentsPlist",
+		@"testEmptyElementsPlist",
 		nil];
 }
 
