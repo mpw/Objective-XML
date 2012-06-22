@@ -100,7 +100,7 @@ scalarAccessor( id, delegate, _setDelegate )
 		pi			= [delegate methodForSelector:@selector(makePI:length:nameLen:)];
 		openTag		= [delegate methodForSelector:@selector(beginElement:length:nameLen:namespaceLen:)];
 		closeTag	= [delegate methodForSelector:@selector(endElement:length:namespaceLen:)];
-		attVal		= [delegate methodForSelector:@selector(attributeName:length:value:length:namespaceLen:)];
+		attVal		= [delegate methodForSelector:@selector(attributeName:length:value:length:namespaceLen:valueHasHighBit:)];
 		entityRef	= [delegate methodForSelector:@selector(makeEntityRef:length:)];
 	}
 }
@@ -178,7 +178,7 @@ typedef enum {
 
 
 typedef BOOL (*ProcessFunc) (void *target, void* dummySel,const xmlchar *, unsigned int length,unsigned int nameLen,int namespaceLen);
-typedef BOOL (*AttrFunc) (void *target, void* dummySel,const xmlchar *, unsigned int ,const xmlchar *,unsigned int, int namespaceLen);
+typedef BOOL (*AttrFunc) (void *target, void* dummySel,const xmlchar *, unsigned int ,const xmlchar *,unsigned int, int namespaceLen, BOOL valueHasHighBit);
 
 
 static BOOL processDummy( void *dummyTarget ,void *dummySel ,const xmlchar *textPtr, unsigned int charCount,unsigned int nameLen)
@@ -444,7 +444,7 @@ static int scanXml(
             xmlchar attValDelim=' ';
             const xmlchar *attValStart,*attValEnd;
             scanStateType saveState = scanState;
-            
+            int attrNameSpaceLen=0;
             //--- scan over any leading whitesspace
             
             while ( INRANGE &&  isspace(*currentPtr)) {
@@ -455,6 +455,13 @@ static int scanXml(
             
             attNameStart=currentPtr;
             scanState=inAttributeName;
+            while ( INRANGE && *currentPtr != '=' && !ISCLOSETAG(*currentPtr) && !ISNAMESPACEDELIMITER(*currentPtr)) {
+                currentPtr++;
+            }
+            if ( ISNAMESPACEDELIMITER(*currentPtr)) {
+                attrNameSpaceLen=currentPtr-attNameStart;
+                currentPtr++;
+            }
             while ( INRANGE && *currentPtr != '=' && !ISCLOSETAG(*currentPtr)) {
                 currentPtr++;
             }
@@ -470,7 +477,7 @@ static int scanXml(
             }
             
             //---	scan over the '='
-            
+            xmlchar valueMask=0;
             if ( INRANGE && !ISCLOSETAG( *currentPtr ) ) {
                 
                 currentPtr++;
@@ -491,6 +498,7 @@ static int scanXml(
                 attValStart=currentPtr;
                 scanState=inAttributeValue;
                 while ( INRANGE && *currentPtr != attValDelim && !ISCLOSETAG(*currentPtr)) {
+                    valueMask |= *currentPtr;
                     currentPtr++;
                 }
                 attValEnd=currentPtr;
@@ -505,7 +513,8 @@ static int scanXml(
                 attValStart=attNameEnd;
                 attValEnd=attValStart;
             }
-            attributeValueCallBack( clientData, NULL, attNameStart, attNameEnd-attNameStart, attValStart, attValEnd-attValStart,0 );
+            BOOL valueHasHighBit= (valueMask & 0x80)==0x80;
+            attributeValueCallBack( clientData, NULL, attNameStart, attNameEnd-attNameStart, attValStart, attValEnd-attValStart,attrNameSpaceLen, valueHasHighBit );
             if ( INRANGE && attValDelim!=' ' && *currentPtr == attValDelim ) {
                 currentPtr++;
             }

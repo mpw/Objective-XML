@@ -114,7 +114,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
     }
 }
 
--(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen namespaceLen:(int)namespaceLen
+-(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen namespaceLen:(int)namespaceLen valueHasHighBit:(BOOL)highBit
 	/*"
 	"*/
 {

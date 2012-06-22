@@ -257,7 +257,7 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 }
 
 
--(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen namespaceLen:(int)namespaceLen
+-(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen namespaceLen:(int)namespaceLen valueHasHighBit:(BOOL)highBit
 	/*"
 	"*/
 {
@@ -268,7 +268,7 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 	if ( tagStackLen > maxDepthAllowed ) {
 		return YES;
 	}
-	if ( YES ) {
+	if ( highBit ) {
 		int i;
 		for (i=0;i< valueLen;i++ ) {
 			if ( valueStart[i] & 128 ) {
@@ -282,6 +282,23 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 		value = MAKEDATA( valueStart, valueLen );
 	}
 //	NSLog(@"name: '%.*s' value: '%.*s'",nameLen,nameStart,valueLen,valueStart);
+    
+    if ( namespaceLen > 0 ) {
+        strippedStart=nameStart+namespaceLen+1;
+        strippedNameLen=nameLen - namespaceLen-1;
+		name = MAKEDATA( strippedStart, strippedNameLen );
+//        NSLog(@"name: %@",name);
+//        NSLog(@"namespace: %.*s",namespaceLen, nameStart);
+		if ( namespaceLen==5 && !strncmp( "xmlns", nameStart, 5 ) ) {
+			[self handleNameSpaceAttribute:name withValue:value];
+			return YES;
+		}
+    } else {
+        strippedStart=nameStart;
+        strippedNameLen=nameLen;
+		name = MAKEDATA( nameStart, nameLen );
+    }
+#if 0
 	if (  extractNameSpace( nameStart, nameLen, &strippedStart, &namespaceLen, &strippedNameLen ) ) {
 		name = MAKEDATA( strippedStart, strippedNameLen );
 		if ( namespaceLen==5 && !strncmp( "xmlns", nameStart, 5 ) ) {
@@ -290,8 +307,10 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 		}
 		handler=[self handlerForPrefix:nameStart length:namespaceLen];
 	} else {
-		name = MAKEDATA( nameStart, nameLen );
+        name = MAKEDATA( nameStart, nameLen );
+
 	}
+#endif
 	if (  !_attributes && attributeCache ) {
 //		NSLog(@"attributes, getObject: %p %p",attributeCache->getObject,[attributeCache getObjectIMP]);
 		id att=GETOBJECT(  attributeCache);
