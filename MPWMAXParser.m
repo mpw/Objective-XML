@@ -257,12 +257,12 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 }
 
 
--(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen
+-(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen namespaceLen:(int)namespaceLen
 	/*"
 	"*/
 {
 	const char *strippedStart;
-	int namespaceLen,strippedNameLen;
+	int strippedNameLen;
 	id  handler=defaultNamespaceHandler;
 	id name,value=nil,valueToRelease=nil;
 	if ( tagStackLen > maxDepthAllowed ) {

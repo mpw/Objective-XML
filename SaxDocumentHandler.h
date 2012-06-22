@@ -65,7 +65,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 -(BOOL)makeCData:(const char*)start length:(int)len;
 -(BOOL)makeSgml:(const char*)start length:(int)len nameLen:(int)nameEnd;
 -(BOOL)makePI:(const char*)start length:(int)len nameLen:(int)nameLen;
--(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen;
+-(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen namespaceLen:(int)namespaceLen;
 -(BOOL)makeEntityRef:(const char*)start length:(int)len;
 
 @end

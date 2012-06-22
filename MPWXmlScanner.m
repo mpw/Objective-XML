@@ -100,7 +100,7 @@ scalarAccessor( id, delegate, _setDelegate )
 		pi			= [delegate methodForSelector:@selector(makePI:length:nameLen:)];
 		openTag		= [delegate methodForSelector:@selector(beginElement:length:nameLen:namespaceLen:)];
 		closeTag	= [delegate methodForSelector:@selector(endElement:length:namespaceLen:)];
-		attVal		= [delegate methodForSelector:@selector(attributeName:length:value:length:)];
+		attVal		= [delegate methodForSelector:@selector(attributeName:length:value:length:namespaceLen:)];
 		entityRef	= [delegate methodForSelector:@selector(makeEntityRef:length:)];
 	}
 }
@@ -178,7 +178,7 @@ typedef enum {
 
 
 typedef BOOL (*ProcessFunc) (void *target, void* dummySel,const xmlchar *, unsigned int length,unsigned int nameLen,int namespaceLen);
-typedef BOOL (*AttrFunc) (void *target, void* dummySel,const xmlchar *, unsigned int ,const xmlchar *,unsigned int);
+typedef BOOL (*AttrFunc) (void *target, void* dummySel,const xmlchar *, unsigned int ,const xmlchar *,unsigned int, int namespaceLen);
 
 
 static BOOL processDummy( void *dummyTarget ,void *dummySel ,const xmlchar *textPtr, unsigned int charCount,unsigned int nameLen)
@@ -505,7 +505,7 @@ static int scanXml(
                 attValStart=attNameEnd;
                 attValEnd=attValStart;
             }
-            attributeValueCallBack( clientData, NULL, attNameStart, attNameEnd-attNameStart, attValStart, attValEnd-attValStart );
+            attributeValueCallBack( clientData, NULL, attNameStart, attNameEnd-attNameStart, attValStart, attValEnd-attValStart,0 );
             if ( INRANGE && attValDelim!=' ' && *currentPtr == attValDelim ) {
                 currentPtr++;
             }
