@@ -151,8 +151,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
 +(void)testEmptyXmlParse
 {
 	id dom = [self domForResource:@"test1" category:@"xml"];
-	NSLog(@"%@ %@",self,NSStringFromSelector(_cmd));
-	NSLog(@"dom %@",[dom class]);
+//	NSLog(@"%@ %@",self,NSStringFromSelector(_cmd));
+//	NSLog(@"dom %@",[dom class]);
 	IDEXPECT( [dom name], @"xml" , @"name" );
 	INTEXPECT( [dom childCount], 0 , @"number of children" );
 }

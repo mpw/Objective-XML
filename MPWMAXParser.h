@@ -136,6 +136,9 @@ extern NSString *MPWXMLPCDataKey;
 
 -(id )setHandler:(id)handler forElements:(NSArray*)elementNames inNamespace:(NSString*)namespaceString
 							   prefix:(NSString*)prefix map:(NSDictionary*)map;
+-(id)setHandler:handler forElements:(NSArray*)elementNames;
+
+
 
 //---	Configure tag(1) messages to be sent for specific tags in a specific namespace (nil for the default namespace)
 //---	Messages will be sent to a specific handler object.  The map dictionary allows XML tag names that are not
@@ -144,6 +147,7 @@ extern NSString *MPWXMLPCDataKey;
 
 -(id )setHandler:(id)handler forTags:(NSArray*)tagNamespace inNamespace:(NSString*)namespaceString 
 						       prefix:(NSString*)prefix map:(NSDictionary*)map;
+-(id)setHandler:handler forTags:(NSArray*)tags;
 
 //---	Declare attributes we expect to handle for a specific namespace and assign them sequentially numbered integer
 //---	tags for easy and efficient retrieval.  (Tags are also required to disambiguate potentially overlapping 

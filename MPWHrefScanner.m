@@ -46,12 +46,14 @@ idAccessor( hrefs, setHrefs )
 -init
 {
 	self=[super init];
-	[self setHrefs:[NSMutableArray array]];
-	//---	prepare the parser for HTML parsing
-	[self setIgnoreCase:YES];
-	[self setEnforceTagNesting:NO];
-	//---	these are the tags we're interested in
-	[self setHandler:self forTags:[NSArray arrayWithObjects:@"a",@"area",@"base",nil] inNamespace:nil prefix:@"" map:nil ];
+    @autoreleasepool {
+        [self setHrefs:[NSMutableArray array]];
+        //---	prepare the parser for HTML parsing
+        [self setIgnoreCase:YES];
+        [self setEnforceTagNesting:NO];
+        //---	these are the tags we're interested in
+        [self setHandler:self forTags:[NSArray arrayWithObjects:@"a",@"area",@"base",nil] ];
+    }
 	return self;
 }
 
@@ -102,20 +104,41 @@ idAccessor( hrefs, setHrefs )
 
 +(void)testBasicHrefs
 {
-	id data=[self frameworkResource:@"hreftest" category:@"html"];
-	id parser=[self parser];
-	id hrefs;
-	[parser parse:data];
-	hrefs=[parser hrefs];
-	INTEXPECT( [hrefs count], 4, @"number of hrefs");
+//   NSLog(@"will do testBasicHrefs");
+    @autoreleasepool {
+        id data=[self frameworkResource:@"hreftest" category:@"html"];
+        @autoreleasepool {
+            id parser=[[self alloc] init];
+            id hrefs;
+//            NSLog(@"will parse hrefs");
+            @autoreleasepool {
+                [parser parse:data];
+            }
+//            NSLog(@"did parse hrefs will check");
+            @autoreleasepool {
+                hrefs=[parser hrefs];
+            }
+            INTEXPECT( (int)[hrefs count], 4, @"number of hrefs");
+//            NSLog(@"will release parser");
+            [parser release];
+//            NSLog(@"did release parser, will pop inner pool");
+        }
+//        NSLog(@"did pop middle pool");
+    }
+//    NSLog(@"did do testBasicHrefs");
 }
 
 +testSelectors
 {
-	return [NSArray arrayWithObjects:
-		@"testBasicHrefs",
-		nil];
+    return [self focusSelectors];
 }
+
++focusSelectors {
+	return [NSArray arrayWithObjects:
+            @"testBasicHrefs",
+            nil];
+}
+
 
 @end
 

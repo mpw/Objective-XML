@@ -575,7 +575,7 @@ idAccessor( data, setData )
     if ( [aData length] >= 2 ) {
         const unsigned short *chars=(unsigned short*)[aData bytes];
         if ( *chars == 0xfffe ||  *chars == 0xfeff  ) {
-			NSLog(@"convert 16 bit to 8 bit!");
+//			NSLog(@"convert 16 bit to 8 bit!");
 			aData=[self convert16BitUnicodeToUTF8:aData];
 		}
     }

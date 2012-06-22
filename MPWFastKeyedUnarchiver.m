@@ -89,7 +89,7 @@ typedef enum {
 	id parseResult;
 	parser=[MPWMAXParser parser];
 	[parser setHandler:self forElements:[NSArray arrayWithObjects:@"integer",@"object",nil]
-				inNamespace:nil prefix:@"" map:nil];
+				];
 	[parser declareAttributes:[NSArray arrayWithObjects:@"key",@"class",@"id",nil]
 				 inNamespace:nil];
 

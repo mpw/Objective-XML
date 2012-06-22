@@ -58,13 +58,16 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 	
 }
 
--(NSString*)makeReatinedJSONStringStart:(const char*)start length:(int)len
+-(NSString*)makeRetainedJSONStringStart:(const char*)start length:(int)len
 {
 	NSString *curstr;
 	if ( commonStrings  ) {
+//        NSLog(@"will attempt to fetch cstring '%.*s' from common strings",len,start);
+//        NSLog(@"common strings: %@",commonStrings);
 		NSString *res=OBJECTFORSTRINGLENGTH( commonStrings, start, len );
+//        NSLog(@"did fetch: %@",res);
 		if ( res ) {
-			return res;
+			return [res retain];
 		}
 	}
 //	return MAKEDATA( start , len );
@@ -130,7 +133,6 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 
 -parsedData:(NSData*)jsonData
 {
-//	NSLog(@"=== start JSON parse builder: %@",[jsonData stringValue]);
 #if USE_BUILDER
 	[self setBuilder:[MPWPListBuilder builder]];
 #endif	
@@ -142,7 +144,6 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 	while (curptr < endptr ) {
 		switch (*curptr) {
 			case '{':
-//				NSLog(@"Start dict");
 #if USE_BUILDER				
 				[builder beginDict];
 #else				
@@ -150,7 +151,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 #endif				
 				inDict=YES;
 				inArray=NO;
-//				NSLog(@"{ -- start dict");
+//                NSLog(@"{ -- start dict");
 				curptr++;
 				break;
 			case '}':
@@ -193,7 +194,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 					}
 					curptr++;
 				}
-				curstr = [self makeReatinedJSONStringStart:stringstart length:curptr-stringstart];
+				curstr = [self makeRetainedJSONStringStart:stringstart length:curptr-stringstart];
 //				NSLog(@"found string: '%@'  curptr: %c",curstr,*curptr);
 				curptr++;
 //				NSLog(@"curptr after end of string skip: %c",*curptr);
@@ -406,19 +407,19 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 {
 	NSArray *emptyElementResults=[self _parseJSONResource:@"emptyelements"];
 	EXPECTNOTNIL( emptyElementResults, @"nested dicts");
-	INTEXPECT( [emptyElementResults count], 3, @"num elements");
+	INTEXPECT( (int)[emptyElementResults count], 3, @"num elements");
 	EXPECTTRUE( [[emptyElementResults objectAtIndex:0] isKindOfClass:[NSDictionary class]], @"1st is a dictionary" );
 	EXPECTTRUE( [[emptyElementResults objectAtIndex:1] isKindOfClass:[NSArray class]], @"2nd is an array" );
 	EXPECTTRUE( [[emptyElementResults objectAtIndex:2] isKindOfClass:[NSString class]], @"3rd is a string" );
-	INTEXPECT( [[emptyElementResults objectAtIndex:0] count], 0 , @"dict empty");
-	INTEXPECT( [[emptyElementResults objectAtIndex:1] count], 0 , @"array empty");
-	INTEXPECT( [[emptyElementResults objectAtIndex:2] length], 0 , @"string empty");
+	INTEXPECT( (int)[[emptyElementResults objectAtIndex:0] count], 0 , @"dict empty");
+	INTEXPECT( (int)[[emptyElementResults objectAtIndex:1] count], 0 , @"array empty");
+	INTEXPECT( (int)[[emptyElementResults objectAtIndex:2] length], 0 , @"string empty");
 }
 
 +(void)testStringEscapes
 {
 	NSArray *escapedStrings=[self _parseJSONResource:@"stringescapes"];
-	INTEXPECT( [escapedStrings count], 8, @"number of strings");
+	INTEXPECT( (int)[escapedStrings count], 8, @"number of strings");
 	IDEXPECT( [escapedStrings objectAtIndex:0], @"\"", @"quote");
 	IDEXPECT( [escapedStrings objectAtIndex:1], @"\\", @"backslash");
 	IDEXPECT( [escapedStrings objectAtIndex:2], @"/", @"slash");
@@ -429,19 +430,40 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 	IDEXPECT( [escapedStrings objectAtIndex:7], @"\t", @"");
 }
 
+
 +(void)testCommonStrings
 {
-	MPWMASONParser *parser=[MPWMASONParser parser];
-	NSData *json=[self frameworkResource:@"array" category:@"json"];
-	NSString *string1=@"first";
-	NSString *string2=@"second";
-	NSArray *array=[parser parsedData:json];
-	EXPECTFALSE( [array objectAtIndex:0] == string1 ,@"did not expect the same string for string1");
-	EXPECTFALSE( [array objectAtIndex:1] == string2 ,@"did not expect the same string for string2");
-	[parser setFrequentStrings:[NSArray arrayWithObjects:string1,string2,nil]];
-	array=[parser parsedData:json];
-	EXPECTTRUE( [array objectAtIndex:0] == string1 ,@"expected the same string for string1");
-	EXPECTTRUE( [array objectAtIndex:1] == string2 ,@"expected the same string for string2");
+    @autoreleasepool {
+        MPWMASONParser *parser=nil;
+        @autoreleasepool {
+            parser=[[MPWMASONParser alloc] init];
+        }
+
+        NSData *json=[self frameworkResource:@"array" category:@"json"];
+        NSString *string1=@"first";
+        NSString *string2=@"second";
+//        NSLog(@"will parse");
+        NSArray *array=[parser parsedData:json];
+//        NSLog(@"did parse");
+        EXPECTFALSE( [array objectAtIndex:0] == string1 ,@"did not expect the same string for string1");
+        EXPECTFALSE( [array objectAtIndex:1] == string2 ,@"did not expect the same string for string2");
+        @autoreleasepool {
+            [parser setFrequentStrings:[NSArray arrayWithObjects:string1,string2,nil]];
+        }
+//        NSLog(@"before parse with frequent strings");
+        @autoreleasepool {
+            array=[[parser parsedData:json] retain];
+        }
+        
+//        NSLog(@"after parse with frequent strings");
+//        NSLog(@"parser retainCount: %d",[parser retainCount]);
+        [parser release];
+//        NSLog(@"result array: %@",array);
+        EXPECTTRUE( [array objectAtIndex:0] == string1 ,@"expected the same string for string1");
+        EXPECTTRUE( [array objectAtIndex:1] == string2 ,@"expected the same string for string2");
+        [array release];
+    }
+//    NSLog(@"after test pool");
 }
 
 +(void)testUnicodeEscapes
@@ -472,6 +494,11 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 			@"testUnicodeEscapes",
 			@"testCommonStrings",
 			nil];
+}
+
++focusTests
+{
+    return [self testSelectors];
 }
 
 @end

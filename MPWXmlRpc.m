@@ -269,7 +269,7 @@ objectAccessor( MPWXmlRpcGeneratorStream , generator, setGenerator )
 		NSLog(@"did try to parse result: %@",result);
 		EXPECTTRUE( NO, @"didn't raise");
 	NS_HANDLER
-		NSLog(@"did raise properly");
+//		NSLog(@"did raise properly");
 	NS_ENDHANDLER
 	NS_DURING
 		NSLog(@"will try to parse");
@@ -277,7 +277,7 @@ objectAccessor( MPWXmlRpcGeneratorStream , generator, setGenerator )
 		NSLog(@"did try to parse result: %@",result);
 		EXPECTTRUE( NO, @"didn't raise");
 	NS_HANDLER
-		NSLog(@"did raise properly");
+//		NSLog(@"did raise properly");
 	NS_ENDHANDLER
 	//	EXPECTTRUE( NO, @"implemented");
 }

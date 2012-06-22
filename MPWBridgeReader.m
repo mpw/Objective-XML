@@ -91,8 +91,7 @@ idAccessor( loadedSet, setLoadedSet )
 	if ( xmlData ) {
 		id parser=[MPWMAXParser parser];
 
-		[parser setHandler:self forTags:[NSArray arrayWithObjects:@"enum",@"constant",@"depends_on",nil] inNamespace:nil 
-						       prefix:@"" map:nil];
+		[parser setHandler:self forTags:[NSArray arrayWithObjects:@"enum",@"constant",@"depends_on",nil]];
 
 
 		[parser parse:xmlData];

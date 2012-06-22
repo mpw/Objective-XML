@@ -46,7 +46,7 @@ objectAccessor( NSURL, url, setUrl )
 #define POPTAG						( [((NSXMLElementInfo*)_elementStack)[--tagStackLen].elementName release])
 #define PUSHTAG(aTag) {\
     if ( tagStackLen > tagStackCapacity ) {\
-        [self _growTagStack:tagStackCapacity * 2];\
+        [self _growTagStack:(tagStackCapacity+2) * 2];\
     }\
     ((NSXMLElementInfo*)_elementStack)[tagStackLen++].elementName=[aTag retain];\
 }
@@ -55,8 +55,8 @@ objectAccessor( NSURL, url, setUrl )
 #define	INITIALOBJECTSTACKDEPTH 100
 
 //static Class uniqueStringClass=nil;
-static Class SubDataClass = nil;
-static Class XmlAttributeClass =nil;
+//static Class SubDataClass = nil;
+//static Class XmlAttributeClass =nil;
 
 idAccessor( parseResult, setParseResult )
 idAccessor( version, setVersion )
@@ -102,7 +102,12 @@ static inline BOOL extractNameSpace( const char *start, int len, const char **st
 //     id pool=[[NSAutoreleasePool alloc] init];
    self = [super init];
 //	NSLog(@"init");
-	[self setScanner:[[[NSXMLScanner alloc] init] autorelease]];
+    @autoreleasepool {
+        [self setScanner:[[[NSXMLScanner alloc] init] autorelease]];
+    }
+
+    @autoreleasepool {
+
 //	NSLog(@"scanner");
 	[[self scanner] setDelegate:self];
 	
@@ -125,11 +130,11 @@ static inline BOOL extractNameSpace( const char *start, int len, const char **st
 	tagStackLen=0;
 //	NSLog(@"before setDefaultNamespaceHandler");
 	[self setDefaultNamespaceHandler:nil];
-    if ( !XmlAttributeClass ) {
-        XmlAttributeClass=[MPWXMLAttributes class];
+//  if ( !XmlAttributeClass ) {
+//        XmlAttributeClass=[MPWXMLAttributes class];
  //       uniqueStringClass=[MPWUniqueString class];
-        SubDataClass = [MPWSubData class];
-    }
+//        SubDataClass = [MPWSubData class];
+//    }
     [self setDelegate:self];
 	[self setReportIgnoreableWhitespace:NO];
 	namespaceHandlers=[[NSMutableDictionary alloc] init];
@@ -140,6 +145,7 @@ static inline BOOL extractNameSpace( const char *start, int len, const char **st
 //	NSLog(@"after setHandler");
 //	[pool release];
 	autotranslateUTF8=YES;
+    }
 	return self;
 }
 
@@ -312,12 +318,14 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 {
 	id handler=namespace ? [namespaceHandlers objectForKey:namespace] : defaultNamespaceHandler ;
 	if ( !handler ) {
-		handler=[[[MPWTagHandler alloc] init] autorelease];
-		if ( namespace ) {
-			[namespaceHandlers  setObject:handler forKey:namespace];
-		} else {
-			[self setDefaultNamespaceHandler:handler];
-		}
+        @autoreleasepool {
+            handler=[[[MPWTagHandler alloc] init] autorelease];
+            if ( namespace ) {
+                [namespaceHandlers  setObject:handler forKey:namespace];
+            } else {
+                [self setDefaultNamespaceHandler:handler];
+            }
+        }
 	}
 	return handler;
 }
@@ -333,22 +341,33 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 -(id)setHandler:handler forElements:(NSArray*)elementNames inNamespace:(NSString*)namespace prefix:(NSString*)prefix map:(NSDictionary*)map
 {
 	id tagHandler=[self createNamespaceHandlerIfNecessary:namespace];
-//	NSLog(@"setHandler, did create tag handler %p",tagHandler);
-//	NSLog(@"setHandler, did create tag handler %@",tagHandler);
 	[tagHandler setExceptionMap:map];
-//	NSLog(@"setHandler, did setExceptionMap");
 	[tagHandler initializeActionMapWithTags:elementNames target:handler prefix:prefix];
-//	NSLog(@"setHandler, did initializeActionMapWithTags");
 	[tagHandler setUndeclaredElementHandler:handler backup:self];
-//	NSLog(@"setHandler, did setUndeclaredElementHandler");
 	return tagHandler;
+}
+
+-(id)setHandler:handler forElements:(NSArray*)elementNames
+{
+    return [self setHandler:handler forElements:elementNames inNamespace:nil prefix:@"" map:nil];
 }
 
 -(id)setHandler:handler forTags:(NSArray*)tags inNamespace:(NSString*)namespaceString prefix:(NSString*)prefix map:(NSDictionary*)map
 {
-	id tagHandler=[self createNamespaceHandlerIfNecessary:namespaceString];
-	[tagHandler initializeTagActionMapWithTags:tags caseInsensitive:[self ignoreCase] target:handler prefix:prefix];
-	return tagHandler;
+	id tagHandler=nil;
+    
+    @autoreleasepool {
+        tagHandler=[[self createNamespaceHandlerIfNecessary:namespaceString] retain];
+    }
+    @autoreleasepool {
+        [tagHandler initializeTagActionMapWithTags:tags caseInsensitive:[self ignoreCase] target:handler prefix:prefix];
+    }
+	return [tagHandler autorelease];
+}
+
+-(id)setHandler:handler forTags:(NSArray*)tags
+{
+    return [self setHandler:handler forTags:tags inNamespace:nil prefix:@"" map:nil];
 }
 
 
@@ -600,7 +619,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	
 //	NSLog(@"end tag, tagStackLen: %d",tagStackLen);
 	if ( tagStackLen-1 > maxDepthAllowed ) {
-//		NSLog(@"endElemnet going to skip at level %d, children: %x",tagStackLen,currentElement->children);
+//		NSLog(@"endElement going to skip at level %d, children: %x",tagStackLen,currentElement->children);
 		POPTAG;
 //		NSLog(@"after pop %d",tagStackLen);
 		lastTagWasOpen=NO;
@@ -629,6 +648,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	numSpacesOnStack=0;
 	lastTagWasOpen=NO;
     if ( CURRENTTAG == endName || [CURRENTTAG isEqual: endName] ) {
+//        NSLog(@"will do stackProcessing tag: %@",CURRENTTAG);
 		[self parserDoStackProcessingForEndElementStartPtr:fullyQualifedPtr len: fullyQualifiedLen tag:CURRENTTAG];
 //		NSLog(@"end tag end, tagStackLen: %d",tagStackLen);
         return YES;
@@ -682,7 +702,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	RECORDSCANPOSITION( start, len );
 	if (  tagStackLen > 0 && tagStackLen < maxDepthAllowed/* && lastTagWasOpen */ ) {
 		numSpacesOnStack++;
-       PUSHOBJECT( [@" " retain] /* [MAKEDATA( start, len ) retain] */ ,MPWXMLPCDataKey, nil );
+     PUSHOBJECT( [@" " retain] /* [MAKEDATA( start, len ) retain] */ ,MPWXMLPCDataKey, nil );
 //	   NSLog(@"after space push, currentElement: %@",[self currentChildren]);
     } else {
 //		NSLog(@"suppressing characters, tagStackLen: %d",tagStackLen);
@@ -693,6 +713,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 -(void)dealloc
 {
 	int i;
+    
 	[namespacePrefixToURIMap release];
 	[defaultNamespaceHandler release];
 	[namespaceHandlers release];
@@ -700,6 +721,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 //	NSLog(@"-[%p:%@ dealloc] stack tagStackLen: %d",self,[self class],tagStackLen );
     [dataCache release];
 	[scanner release];
+    scanner=nil;
 	[data release];
 	[url release];
     [self setDelegate:nil];
@@ -775,12 +797,10 @@ static IMP unknownMethod;
 
 -(void)_growTagStack:(unsigned)newCapacity
 {
+//    NSLog(@"growStack to: %d",newCapacity);
 	void *newStack = ALLOC_POINTERS( (newCapacity+10)* sizeof (NSXMLElementInfo)  );
 	memset( newStack, 0,  (newCapacity+5) * sizeof (NSXMLElementInfo) );
 	memcpy( newStack, _elementStack, tagStackCapacity * sizeof (NSXMLElementInfo) );
-    if ( _elementStack && !IS_OBJC_GC_ON) {
-		free( _elementStack );
-	}
 	_elementStack=newStack;
     tagStackCapacity=newCapacity;
 }
@@ -1593,7 +1613,7 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	[parser setUndefinedTagAction:MAX_ACTION_PLIST];
 	NSDictionary *result=[parser parsedData:xmldata];
 	EXPECTNOTNIL( xmldata , @"source");
-	NSLog(@"result: %@",result);
+//	NSLog(@"result: %@",result);
 	IDEXPECT( [result objectForKey:@"zero"], @"0" , @"hex ");
 	IDEXPECT( [result objectForKey:@"one"], @"1" , @"decimal ");
 }
@@ -1812,6 +1832,9 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 #endif
 			nil];
 }
+
+
+
 
 @end
 #endif

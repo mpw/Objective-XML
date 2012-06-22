@@ -16,10 +16,7 @@
 -(NSArray*)feedItemsForXml:(NSData*)xmlData
 {
 	id parser = [MPWMAXParser parser];
-	[parser setHandler:self forElements:[NSArray arrayWithObjects:@"feed", @"entry",@"link",nil]
-//	 [parser setHandler:self forElements:[NSArray arrayWithObjects:@"feed", @"entry",@"title",@"id",@"link",@"duration",nil]
-		   inNamespace:nil prefix:@"" map:nil];
-//	NSLog(@"atom parser's XML parser: %@",parser);
+	[parser setHandler:self forElements:[NSArray arrayWithObjects:@"feed", @"entry",@"link",nil]];
 	NSArray *entries = [parser parsedData:xmlData];
 //	NSLog(@"did parse to: %@",entries);
 	return entries;

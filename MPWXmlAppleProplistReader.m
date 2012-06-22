@@ -38,10 +38,9 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 {
     self = [super init];
 	allocator = kCFAllocatorSystemDefault; // CFAllocatorGetDefault();
-	true_value = [NSNumber numberWithBool:YES];
-	false_value = [NSNumber numberWithBool:NO];
-	[self setHandler:self forElements:[NSArray arrayWithObjects:@"key",@"string",@"date",@"data",@"dict",@"array",@"integer",@"real",@"true",@"false",@"plist",nil]
-				inNamespace:nil prefix:@"" map:nil];
+	true_value = [[NSNumber numberWithBool:YES] retain];
+	false_value = [[NSNumber numberWithBool:NO] retain];
+	[self setHandler:self forElements:[NSArray arrayWithObjects:@"key",@"string",@"date",@"data",@"dict",@"array",@"integer",@"real",@"true",@"false",@"plist",nil]];
 
 
 	return self;
@@ -59,7 +58,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 }
 
 -dictElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
-{
+{    
 	id *objs=[children _pointerToObjects];
 	int count=[children count];
 	id keys[count/2+1],values[count/2+1];
@@ -175,7 +174,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 {
     if ( [children count]==1) {
         MPWSubData *d=[children lastObject];
-        return MPWUniqueStringWithCString([d bytes],[d length]);
+        return [MPWUniqueStringWithCString([d bytes],[d length]) retain];
     } else {
         return [self stringElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser];
     }
@@ -218,7 +217,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 	id result;
 	[parser parse:[self frameworkResource:@"Itunes_info" category:@"plist"]];
 	result = [parser parseResult];
-	NSLog(@"property list result: %@",result);
+//	NSLog(@"property list result: %@",result);
 //	NSLog(@"property list target: %@",[parser target]);
 	INTEXPECT( [result count], 23 ,@"items in top level dict" );
 	INTEXPECT( [[result objectForKey:@"DummyInteger"] intValue], 42 ,@"my dummy integer" );
@@ -235,8 +234,8 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 	id result;
 	[parser parse:[self frameworkResource:@"empty_elements" category:@"plist"]];
 	result = [parser parseResult];
-    NSLog(@"testEmptyElemmentsPlist result: %@",result);
-	INTEXPECT( [result count], 4 ,@"items in top level dict" );
+//    NSLog(@"testEmptyElementsPlist result: %@",result);
+	INTEXPECT( (int)[result count], 4 ,@"items in top level dict" );
 	INTEXPECT( [[result objectForKey:@"DummyInteger"] intValue], 42 ,@"my dummy integer" );
 	IDEXPECT( [result objectForKey:@"DummyInteger"], [NSNumber numberWithInt:42], @"dummy integer is not a string");
 	IDEXPECT( [result objectForKey:@"LSRequiresNativeExecution"], [NSNumber numberWithBool:YES], @"true");

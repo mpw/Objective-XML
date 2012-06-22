@@ -27,7 +27,7 @@ idAccessor( element2actionMap, setElement2actionMap )
 -_actionInvocationForAlreadyMappedTag:(NSString*)tag suffix:(NSString*)suffix defaultSelector:(SEL)defaultSelector target:actionTarget
 {
 	int tagLen=[tag length],suffixLen=[suffix length];
-	char selName[ tagLen + suffixLen + 2];
+	char selName[ tagLen + suffixLen + 200];
 	SEL selector;
 	id invocation;
 	int encoding=NSUTF8StringEncoding;
@@ -73,23 +73,23 @@ idAccessor( element2actionMap, setElement2actionMap )
 
 -actionMapWithTags:(NSArray*)keys caseInsensitive:(BOOL)caseInsensitive target:actionTarget suffix:(NSString*)suffix
 {
-	id map;
+	id map=nil;
 	Class tableClass = (caseInsensitive ? [MPWCaseInsensitiveSmallStringTable class] : [MPWSmallStringTable class]);
 	id invocations=[NSMutableArray array];
-//	NSLog(@"-[MPWTagHandler actionMapWithTags:%@ caseInsensitive:%d target:%@ suffix:%@]",keys,caseInsensitive,actionTarget,suffix);
-//	NSLog(@"will do keys (pointer): %p",keys);
-//	NSLog(@"will do keys: %@",keys);
-	for ( id key in keys ) {
-//		NSLog(@"key: %@",key);
-		[invocations addObject:[self actionInvocationForElement:key target:actionTarget suffix:suffix]];
-	}
-//	NSLog(@"did do keys wil do table");
-//	NSLog(@"did do keys wil do table with keys: %@ invocations: %@",keys,invocations);
-	map=[[[tableClass alloc] initWithKeys:keys values:invocations] autorelease];
-//	NSLog(@"got table");
-//	[map setDefaultValue:[self actionInvocationForElement:@"undeclared" target:actionTarget suffix:suffix]];
-	return map;
-//	[tagMap setDefaultValue:@"default"];
+    @autoreleasepool {
+//        NSLog(@"actionMap will create actionInvocations");
+        for ( id key in keys ) {
+            [invocations addObject:[self actionInvocationForElement:key target:actionTarget suffix:suffix]];
+        }
+//        NSLog(@"actionMap did create actionInvocations");
+    }
+    @autoreleasepool {
+//        NSLog(@"actionMap will create string table");
+        map=[[tableClass alloc] initWithKeys:keys values:invocations];
+//        NSLog(@"actionMap did create string table");
+    }
+//    NSLog(@"map: %@",map);
+	return [map autorelease];
 }
 
 -(void)setUndeclaredElementHandler:handler backup:backup
@@ -122,7 +122,9 @@ idAccessor( element2actionMap, setElement2actionMap )
 
 -(void)initializeTagActionMapWithTags:(NSArray*)keys caseInsensitive:(BOOL)caseInsensitive target:actionTarget prefix:prefix
 {
+    @autoreleasepool {
 	[self setTag2actionMap:[self actionMapWithTags:keys caseInsensitive:caseInsensitive target:actionTarget suffix:[prefix stringByAppendingString:@"Tag:parser:"]]];
+    }
 }
 
 -(void)setInvocation:anInvocation forElement:(NSString*)tagName
@@ -168,17 +170,19 @@ idAccessor( element2actionMap, setElement2actionMap )
 
 -description
 {
-	return [NSString stringWithFormat:@"<%@/%x:  %@>",[self class],self,namespaceString];
+	return [NSString stringWithFormat:@"<%@/%p:  %@>",[self class],self,namespaceString];
 }
 
 -(void)dealloc
 {
+//    NSLog(@"tag handler dealloc");
 	[element2actionMap release];
 	[tag2actionMap release];
 	[tagMap release];
 	[exceptionMap release];
 	[attributeMap release];
 	[super dealloc];
+//    NSLog(@"tag handler did dealloc");
 }
 
 @end
