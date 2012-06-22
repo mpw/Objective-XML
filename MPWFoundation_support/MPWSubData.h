@@ -1,4 +1,4 @@
-/* MPWSubData.h Copyright (c) 1998-2000 by Marcel Weiher, All Rights Reserved.
+/* MPWSubData.h Copyright (c) 1998-2012 by Marcel Weiher, All Rights Reserved.
 
 
 Redistribution and use in source and binary forms, with or without
@@ -33,10 +33,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #import <Foundation/Foundation.h>
 #import "AccessorMacros.h"
+#import "MPWObject.h"
 
 @interface MPWSubData : NSString <NSCoding>		//	make these NSString compatible
 {
-    int		_retainCount;						//	also make them MPWObject compatible
+    int		__retainCount;						//	also make them MPWObject compatible
+	int		flags;
     NSData*	myData;
     const void *myBytes;
     unsigned int myLength;

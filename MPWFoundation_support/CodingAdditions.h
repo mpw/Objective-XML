@@ -1,4 +1,4 @@
-/* CodingAdditions.h Copyright (c) 1998-2000 by Marcel Weiher, All Rights Reserved.
+/* CodingAdditions.h Copyright (c) 1998-2012 by Marcel Weiher, All Rights Reserved.
 
 
 Redistribution and use in source and binary forms, with or without
@@ -39,11 +39,11 @@ THE POSSIBILITY OF SUCH DAMAGE.
 //#define  QUICKSTRING( str )	(MPWUniqueString( (str), (sizeof (str))-1))
 #define  QUICKSTRING( str )	( @str )
 
-#define encodeVarName( coder, var, name )	[(coder) encodeValueOfObjCType:@encode(typeof(var)) at:(void*)&var withName:QUICKSTRING(name)];
-#define decodeVarName( coder, var, name )	[(coder) decodeValueOfObjCType:@encode(typeof(var)) at:(void*)&var withName:QUICKSTRING(name)];
+#define encodeVarName( coder, var, name )	[(coder) encodeValueOfObjCType:@encode(typeof(var)) at:(void*)&var withName:name];
+#define decodeVarName( coder, var, name )	[(coder) decodeValueOfObjCType:@encode(typeof(var)) at:(void*)&var withName:name];
 
-#define encodeArrayName( coder, var, name,elemCount )	[(coder) encodeArrayOfObjCType:@encode(typeof(*var)) count:elemCount at:(void*)var withName:QUICKSTRING(name)];
-#define decodeArrayName( coder, var, name,elemCount )	[(coder) decodeArrayOfObjCType:@encode(typeof(*var)) count:elemCount at:(void*)var withName:QUICKSTRING(name)];
+#define encodeArrayName( coder, var, name,elemCount )	[(coder) encodeArrayOfObjCType:@encode(typeof(*var)) count:elemCount at:(void*)var withName:name];
+#define decodeArrayName( coder, var, name,elemCount )	[(coder) decodeArrayOfObjCType:@encode(typeof(*var)) count:elemCount at:(void*)var withName:name];
 
 #define decodeVar( coder, var )			decodeVarName( coder, var, #var )
 #define encodeVar( coder, var ) 		encodeVarName( coder, var, #var )
@@ -54,10 +54,10 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -(void)encodeObject:anObject withName:aName;
 -decodeObjectWithName:aName;
--(void)encodeValueOfObjCType:(const char*)type at:(const void*)var withName:(NSString*)name;
--(void)decodeValueOfObjCType:(const char*)type at:(void*)var withName:(NSString*)name;
--(void)encodeArrayOfObjCType:(const char*)type count:(unsigned)count at:(const void*)var withName:(NSString*)name;
--(void)decodeArrayOfObjCType:(const char*)type count:(unsigned)count at:(void*)var withName:(NSString*)name;
+-(void)encodeValueOfObjCType:(const char*)type at:(const void*)var withName:(const char*)name;
+-(void)decodeValueOfObjCType:(const char*)type at:(void*)var withName:(const char*)name;
+-(void)encodeArrayOfObjCType:(const char*)type count:(unsigned)count at:(const void*)var withName:(const char*)name;
+-(void)decodeArrayOfObjCType:(const char*)type count:(unsigned)count at:(void*)var withName:(const char*)name;
 -(void)encodeKey:aKey ofObject:anObject;
 -(void)decodeKey:aKey ofObject:anObject;
 

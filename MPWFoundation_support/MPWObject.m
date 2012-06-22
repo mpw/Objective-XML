@@ -1,4 +1,4 @@
-/* MPWObject.m Copyright (c) 1998-2000 by Marcel Weiher, All Rights Reserved.
+/* MPWObject.m Copyright (c) 1998-2012 by Marcel Weiher, All Rights Reserved.
 
 
 Redistribution and use in source and binary forms, with or without
@@ -34,6 +34,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 //#define LOCKING
 
 #import "MPWObject.h"
+#import "MPWObject_fastrc.h"
 #import <Foundation/Foundation.h>
 
 #undef Darwin
@@ -86,17 +87,32 @@ extern void __CFSpinUnlock( unsigned int *lock );
 #define LOCK(l)
 #define UNLOCK(l)
 #define INIT_LOCK(l)
+#define INCREMENT( var )	var++;
+#define DECREMENT( var )    var--;
+
+#endif
+/*
+#else
+//#error no locking primitive!
+#define LOCK(l)
+#define UNLOCK(l)
+#define INIT_LOCK(l)
 #include <libkern/OSAtomic.h>
 #define INCREMENT( var )   (OSAtomicIncrement32(&var))
 #define DECREMENT( var )   (OSAtomicDecrement32(&var))
 
 #endif
-
+*/
 //#warning retainMPWObject
 static int _collecting=NO;
 
+#define MPWAssert1( expr, str, arg )  
+//#define MPWAssert1( expr, str, arg )  if ( !(expr) ) { NSLog( str,arg);  }
+//#define MPWAssert1( expr, str, arg )  if ( !(expr) ) { [NSException raise:@"assert" format:str,arg];  }
+
 id retainMPWObject( MPWObject *obj )
 {
+	MPWAssert1( [obj isMPWObject] , @"trying to retainMPWObject a %@",[obj class]);
 	if ( !_collecting ) {
 		LOCK(retain_lock);
 		INCREMENT( obj->_retainCount );
@@ -110,6 +126,7 @@ void retainMPWObjects( MPWObject **objs, unsigned count )
 	if ( !_collecting ) {
 		LOCK(retain_lock);
 		for (i=0;i<count;i++) {
+			MPWAssert1( [objs[i] isMPWObject] , @"trying to retainMPWObject a %@",[objs[i]  class]);
 			if ( objs[i] ) {
 				INCREMENT( objs[i]->_retainCount );
 			}
@@ -121,6 +138,7 @@ void retainMPWObjects( MPWObject **objs, unsigned count )
 void releaseMPWObject( MPWObject *obj )
 {
     if ( obj && !_collecting ) {
+		MPWAssert1( [obj isMPWObject] , @"trying to releaseMPWObject a %@",[obj  class]);
         LOCK(retain_lock);
         DECREMENT( obj->_retainCount);
         UNLOCK(retain_lock);
@@ -140,6 +158,7 @@ void releaseMPWObjects( MPWObject **objs, unsigned count )
 			if ( objs[i] ) {
 				DECREMENT( objs[i]->_retainCount);
 				if ( objs[i]->_retainCount < 0 ) {
+					MPWAssert1( [objs[i] isMPWObject] , @"trying to releaseMPWObjects a %@",[objs[i]  class]);
 					UNLOCK(retain_lock);
 					[objs[i] dealloc];
 					LOCK(retain_lock);
@@ -150,6 +169,11 @@ void releaseMPWObjects( MPWObject **objs, unsigned count )
 	}
 }
 
+@implementation NSObject(isMPWObject)
+
+-(BOOL)isMPWObject { return NO; }
+
+@end
 
 
 
@@ -158,6 +182,7 @@ void releaseMPWObjects( MPWObject **objs, unsigned count )
      Provides a base object when fast reference counting is needed.
 "*/
 
+-(BOOL)isMPWObject { return YES; }
 
 +(void)initialize
 {
@@ -168,6 +193,7 @@ void releaseMPWObjects( MPWObject **objs, unsigned count )
                         selector:@selector(initializeThreaded)
                             name:NSWillBecomeMultiThreadedNotification
                           object:nil];
+//		_collecting=IS_OBJC_GC_ON;
         inited=YES;
     }
 }
@@ -204,7 +230,7 @@ void releaseMPWObjects( MPWObject **objs, unsigned count )
 
 -(NSString*)copyrightString
 {
-    return @"Copyright 1998-2008 by Marcel Weiher, All Rights Reserved.";
+    return @"Copyright 1998-2012 by Marcel Weiher, All Rights Reserved.";
 }
 
 @end

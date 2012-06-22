@@ -1,4 +1,4 @@
-/* MPWObject.h Copyright (c) 1998-2000 by Marcel Weiher, All Rights Reserved.
+/* MPWObject.h Copyright (c) 1998-2012 by Marcel Weiher, All Rights Reserved.
 
 
 Redistribution and use in source and binary forms, with or without
@@ -42,25 +42,13 @@ THE POSSIBILITY OF SUCH DAMAGE.
 }
 
 @end
-
-static inline id _retainMPWObject( MPWObject *obj ) {
-    if ( obj ) {
-        (obj->_retainCount)++; 
-    }
-    return obj;
-}
-
-static inline void _releaseMPWObject( MPWObject *obj ) {
-    if (obj && (--(obj->_retainCount) < 0)  ) {
-        [obj dealloc];
-    }
-}
 extern id retainMPWObject( MPWObject *obj );
 extern void retainMPWObjects( MPWObject **objs, unsigned count );
 extern void releaseMPWObject( MPWObject *obj );
 extern void releaseMPWObjects( MPWObject **objs, unsigned count );
 
 #if __OBJC_GC__
+#include <objc/objc-auto.h>
 #define	IS_OBJC_GC_ON  objc_collecting_enabled()
 #define	ALLOC_POINTERS( size )  NSAllocateCollectable( (size), NSScannedOption)
 #else

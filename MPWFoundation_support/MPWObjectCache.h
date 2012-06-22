@@ -1,4 +1,4 @@
-/* MPWObjectCache.h Copyright (c) 1998-2000 by Marcel Weiher, All Rights Reserved.
+/* MPWObjectCache.h Copyright (c) 1998-2012 by Marcel Weiher, All Rights Reserved.
 
 
 Redistribution and use in source and binary forms, with or without
@@ -33,8 +33,11 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #import "MPWObject.h"
 #import "AccessorMacros.h"
+#import <pthread.h>
 
-@interface MPWObjectCache : MPWObject
+@class MPWObject;
+
+@interface MPWObjectCache : MPWObject  
 {
     MPWObject **objs;
     Class	objClass;
@@ -51,7 +54,6 @@ THE POSSIBILITY OF SUCH DAMAGE.
     IMP		releaseImp;
     SEL		reInitSelector;
     IMP		reInitImp;
-	NSZone*	myZone;
 }
 
 +cacheWithCapacity:(int)newCap class:(Class)newClass;
@@ -69,17 +71,25 @@ scalarAccessor_h( SEL, reInitSelector, setReInitSelector )
 
 //#define	GETOBJECT( cache )		([(cache) getObject])
 
-#define CACHING_ALLOC( selector, size, unsafe ) \
-static MPWObjectCache* cache=nil;\
+
+
+#define CACHING_ALLOC( selector,size, unsafe  ) \
+static pthread_key_t key=0;\
+static void __objc_cache_destructor( void *objref )  { [(id)objref release]; }\
 +selector\
 {\
-    if ( cache == nil ) {\
-       cache = [[MPWObjectCache alloc] initWithCapacity:size class:self];\
-       [cache setUnsafeFastAlloc:unsafe];\
-       [cache makeThreadSafeOnDemand];\
-    }\
-    return GETOBJECT( cache );\
-}\
-idAccessor( cache, setCache )\
+	if ( !key ) {\
+		pthread_key_create(&key, __objc_cache_destructor);\
+	}\
+	MPWObjectCache *cache=pthread_getspecific( key  );\
+	if ( !cache ) {\
+/*        NSLog(@"will create a local cache for %@ for thread %p",NSStringFromClass(self),[NSThread currentThread]); */\
+		cache = [[MPWObjectCache alloc] initWithCapacity:size class:self];\
+		[cache setUnsafeFastAlloc:unsafe];\
+		pthread_setspecific( key, cache );\
+	}\
+	return GETOBJECT(cache);\
+}
+
 
 @end

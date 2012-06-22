@@ -1,4 +1,4 @@
-/* MPWSubData.m Copyright (c) 1998-2000 by Marcel Weiher, All Rights Reserved.
+/* MPWSubData.m Copyright (c) 1998-2012 by Marcel Weiher, All Rights Reserved.
 
 
 Redistribution and use in source and binary forms, with or without
@@ -37,11 +37,6 @@ THE POSSIBILITY OF SUCH DAMAGE.
 //#import <MPWFoundation/bytecoding.h>
 #import "DebugMacros.h"
 
-#if TARGET_OS_IPHONE
-#defne CFMakeCollectable(x)   (x)
-#endif
-
-
 
 @interface NSObject(validate)
 
@@ -65,12 +60,15 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 @implementation MPWSubData
 
+
 boolAccessor( mustUnique, setMustUnique )
 
 +(void)inititialize
 {
 	[MPWObject initialize];
 }
+
+-(BOOL)isMPWObject { return YES; }
 
 #ifdef GNUSTEP
 
@@ -106,7 +104,7 @@ boolAccessor( mustUnique, setMustUnique )
 
 - (NSUInteger)retainCount
 {
-    return _retainCount+1;
+    return __retainCount+1;
 }
 
 - (oneway void)release
@@ -132,7 +130,7 @@ boolAccessor( mustUnique, setMustUnique )
 	while ( offset < myLength && isdigit( bytes[offset] ) ) {
 		value=value*10 + (bytes[offset++]-'0');
 	}
-	return value;
+	return value * sign;
 
 }
 
@@ -151,6 +149,7 @@ boolAccessor( mustUnique, setMustUnique )
 {
 	return  kCFStringEncodingUTF8;
 }
+
 
 -copyWithZone:(NSZone*)aZone
 {
@@ -185,7 +184,6 @@ boolAccessor( mustUnique, setMustUnique )
 
 -(unichar)characterAtIndex:(NSUInteger)index
 {
-//	NSLog(@"characterAtIndex: %d",index);
     if ( index < myLength ) {
         return ((unsigned char*)myBytes)[index];
     } else {
@@ -197,21 +195,19 @@ boolAccessor( mustUnique, setMustUnique )
 
 -(BOOL)isEqual:other
 {
-	const char *otherCString;
     if ( self == other ) {
         return YES;
     }
-	if ( myLength == [other length] ) {
-		if ( *(Class*)other == isa ) {
-			int otherLen=[other length];
-			const void *otherBytes=[other bytes];
-			return otherLen==myLength &&
-            ((otherBytes==myBytes) || !strncmp( [other bytes],myBytes, myLength ));
-		} else if ( otherCString = (const char*)[other _fastCStringContents:NO] ) {
-			return  !strncmp( myBytes, otherCString, myLength );
-		} else {
-			return [self compare:other] == 0;
-		}
+	if ( *(Class*)other == isa ) {
+		int otherLen=[other length];
+		const void *otherBytes=[other bytes];
+		return otherLen==myLength &&
+		((otherBytes==myBytes) || !strncmp( [other bytes],myBytes, myLength ));
+		//		} else if ( otherCString = (const char*)[other _fastCStringContents:NO] ) {
+		//			return  !strncmp( myBytes, otherCString, myLength );
+	}
+	if ( [other respondsToSelector:@selector(length)] &&  myLength == [other length] ) {
+		return [self compare:other] == 0;
 	} else {
 		return NO;
 	}	
@@ -219,7 +215,6 @@ boolAccessor( mustUnique, setMustUnique )
 
 -(const char *)_fastCStringContents:(BOOL)flag
 {
-//	NSLog(@"_fastCStringContents");
 	if (!flag) {
 		return myBytes;
 	} else {
@@ -232,30 +227,18 @@ boolAccessor( mustUnique, setMustUnique )
     return myBytes;
 }
 
-
--stringValue
-{
-    return [[[NSString alloc] initWithBytes:myBytes length:myLength encoding:NSUTF8StringEncoding] autorelease];
-}
-
 -(const char*)cString
 {
-	return [[self stringValue] UTF8String];
+    return [[[self copy] autorelease] cString];
 }
 
 -(void)getCharacters:(unichar*)buf range:(NSRange)range
 {
     if ( range.location + range.length <= myLength ) {
-		int highByte=0;
         int i;
         for (i=0;i<range.length;i++) {
-			int curByte=((unsigned char*)myBytes)[i+range.location];
-			highByte|=curByte;
-            buf[i]=curByte;
+            buf[i]=((unsigned char*)myBytes)[i+range.location];
         }
-		if ( (highByte & 0x80 ) ) {
-			
-		}
     } else {
         [NSException raise:@"OutOfRange" format:@"range (%d,%d) out of range (%d)",range.location,range.length,myLength];
     }
@@ -281,7 +264,6 @@ boolAccessor( mustUnique, setMustUnique )
 -(void)getCString:(char*)buffer maxLength:(NSUInteger)len
 {
 	int copyLen=MIN(len,myLength);
-//	NSLog(@"getCString");
 	memcpy(buffer,myBytes,copyLen);
 }
 
@@ -307,7 +289,7 @@ boolAccessor( mustUnique, setMustUnique )
     return myLength;
 }
 
--(NSUInteger)cStringLength
+-(unsigned int)cStringLength
 {
     return myLength;
 }
@@ -330,6 +312,11 @@ boolAccessor( mustUnique, setMustUnique )
 		free( (void*)myBytes);
 	}
     [super dealloc];
+}
+
+-stringValue
+{
+    return [[self copy] autorelease];
 }
 
 -stringRepresentation
@@ -386,7 +373,7 @@ boolAccessor( mustUnique, setMustUnique )
 {
     int offset = [self offset];
     encodeVar( aCoder, myData );
-    //    [aCoder encodeValueOfObjCType:@encode(typeof(offset)) at:&offset withName:@"offset"]
+    //    [aCoder encodeValueOfObjCType:@encode(typeof(offset)) at:&offset withName:"offset"]
     encodeVar( aCoder, offset );
     encodeVar( aCoder, myLength );
 }
@@ -412,8 +399,17 @@ boolAccessor( mustUnique, setMustUnique )
 
 @end
 
-#ifndef RELEASE
 @implementation MPWSubData(testing)
+
++_subDataWithString:(char *)string 
+{
+	int len=strlen(string);
+	NSData *data = [NSData dataWithBytes:string length:len];
+	MPWSubData *subData = [[[MPWSubData alloc] initWithData:data bytes:[data bytes] length:len] autorelease];
+	return subData;
+}
+
+#if ! TARGET_OS_IPHONE
 
 +(void)testSubDataProtectsAgainstNilOriginalData
 {
@@ -424,15 +420,24 @@ boolAccessor( mustUnique, setMustUnique )
 	NS_ENDHANDLER
 	NSAssert1( subData == nil ,@"subData should not have initialized",nil);
 }
+#endif
+
++(void)testSubDataIntValue
+{
+	INTEXPECT( [[self _subDataWithString:"-4"] intValue] , -4, @"negative subdata");
+	INTEXPECT( [[self _subDataWithString:"4"] intValue] , 4, @"positive subdata");
+}
 
 +testSelectors
 {
 	return [NSArray arrayWithObjects:
-		@"testSubDataProtectsAgainstNilOriginalData",
+			@"testSubDataProtectsAgainstNilOriginalData",
+			@"testSubDataIntValue",
 		nil];
 }
 
 
 @end
+#ifndef RELEASE
 
 #endif

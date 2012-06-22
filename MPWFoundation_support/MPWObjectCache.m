@@ -1,4 +1,4 @@
-/* MPWObjectCache.m Copyright (c) 1998-2000 by Marcel Weiher, All Rights Reserved.
+/* MPWObjectCache.m Copyright (c) 1998-2012 by Marcel Weiher, All Rights Reserved.
 
 
 Redistribution and use in source and binary forms, with or without
@@ -53,12 +53,6 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 static int _collecting=NO;
 
-
-+(void)initialize
-{
-	_collecting=IS_OBJC_GC_ON;
-}
-
 -initWithCapacity:(int)newCap class:(Class)newClass allocSel:(SEL)aSel initSel:(SEL)iSel
 {
     self = [super init];
@@ -84,17 +78,7 @@ static int _collecting=NO;
 	} else {
 		removeFromCacheImp=NULL;
 	}
-/*
-    allocImp = objc_msg_lookup(newClass, allocSel);
-    initImp = objc_class_msg_lookup( newClass, initSel);
-    retainImp = objc_class_msg_lookup( newClass, @selector(retain));
-    autoreleaseImp = objc_class_msg_lookup( newClass, @selector(autorelease));
-    retainCountImp = objc_class_msg_lookup( newClass, @selector(retainCount));
- */
     objs = calloc( newCap+2, sizeof *objs);
-//    for (i=0;i<newCap;i++ ) {
-//        objs[i]=initImp( allocImp( objClass, allocSel ),initSel);
-//    }
     cacheSize = newCap;
     getObject = [self getObjectIMP];
     return self;
@@ -136,6 +120,7 @@ static int _collecting=NO;
     Return a pointer to the method getObject for fast calls to the allocator.
 "*/
 {
+	[self getObject];
     return [self methodForSelector:@selector(getObject)];
 }
 
@@ -195,7 +180,7 @@ intAccessor( hits, setHits )
 		for (i=objIndex,maxIndex=MIN(objIndex+4,cacheSize);i<maxIndex;i++) {
 			obj=objs[i];
 			if ( obj != nil ) {
-				if ((NSInteger)retainCountImp( obj, @selector(retainCount)) <= 1 ) {
+				if ((int)retainCountImp( obj, @selector(retainCount)) <= 1 ) {
 					break;
 				} else {
 					obj=nil;
@@ -263,6 +248,12 @@ intAccessor( hits, setHits )
 //        mutex_free( (mutex_t)cachelock );
     }
     [super dealloc];
+}
+
+-description
+{
+	return [NSString stringWithFormat:@"<%@:%p: class: %@ getObject: %p/%p  >",
+			[self class],self,objClass,[self getObjectIMP],getObject];
 }
 
 @end
