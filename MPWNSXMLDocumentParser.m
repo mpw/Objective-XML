@@ -80,6 +80,14 @@ THE POSSIBILITY OF SUCH DAMAGE.
     return YES;
 }
 
+-(void)flushPureSpace
+{
+    if ( numSpacesOnStack) {
+       [[self currentChildren] pop:numSpacesOnStack];
+        numSpacesOnStack=0;
+    }
+}
+
 
 -(BOOL)makeSpace:(const char*)start length:(int)len 
 {
@@ -195,10 +203,11 @@ THE POSSIBILITY OF SUCH DAMAGE.
 {
 	NSXMLDocument* dom = [self domForResource:@"archiversample" category:@"xml"];
 	NSXMLElement *child0,*child1;
-//	NSLog(@"dom=%@",dom);
+	NSLog(@"dom=%@",dom);
 	IDEXPECT( [dom name] , @"MPWSubData", @"top level");
-//	NSLog(@"[[dom childAtIndex:0] name]=%@",[[dom childAtIndex:0] name]);
-//	NSLog(@"[[dom childAtIndex:1] name]=%@",[[dom childAtIndex:1] name]);
+	NSLog(@"[dom childAtIndex:0]=%@",[dom childAtIndex:0]);
+	NSLog(@"[[dom childAtIndex:0] name]=%@",[[dom childAtIndex:0] name]);
+	NSLog(@"[[dom childAtIndex:1] name]=%@",[[dom childAtIndex:1] name]);
 	IDEXPECT( [[dom childAtIndex:0] name], @"myData" , @"child 1" );
 	child0=(NSXMLElement*)[dom childAtIndex:0];
 	INTEXPECT( [[child0 attributes] count], 1 , @"1 attribute" );

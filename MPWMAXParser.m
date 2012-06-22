@@ -490,7 +490,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	if (  charactersAreSpace &&  !reportIgnoreableWhitespace) {
 //		NSLog(@"characters before begin: %.*s were space",nameLen,start);
 		[self flushPureSpace];
-	}
+    }
 
 	lastTagWasOpen=YES;
 	charactersAreSpace=YES;
@@ -601,12 +601,20 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	return CURRENTELEMENT.isIncomplete;
 }
 
+-(void)reportIgnoredWhitespace
+{
+    NSLog(@"===reportIgnoredSpace===");
+   for (int i=0; i<numSpacesOnStack;i++) {
+        PUSHOBJECT( [@" " retain] /* [MAKEDATA( start, len ) retain] */ ,MPWXMLPCDataKey, nil );
+    }
+    numSpacesOnStack=0;
+}
 
 -(void)flushPureSpace
 {
+    numSpacesOnStack=0;
     if ( numSpacesOnStack) {
-        [[self currentChildren] pop:numSpacesOnStack];
-        numSpacesOnStack=0;
+//        [[self currentChildren] pop:numSpacesOnStack];
     }
 }
 
@@ -666,7 +674,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	if ( !lastTagWasOpen && charactersAreSpace && !reportIgnoreableWhitespace ) {
 //		NSLog(@"characters before end: %.*s were space",len,startPtr);
 		[self flushPureSpace];
-	}
+    }
 	charactersAreSpace=YES;
 	numSpacesOnStack=0;
 	lastTagWasOpen=NO;
@@ -721,11 +729,10 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 
 -(BOOL)makeSpace:(const char*)start length:(int)len 
 {
-//	NSLog(@"makeSpace with %d chars",len);
 	RECORDSCANPOSITION( start, len );
 	if (  tagStackLen > 0 && tagStackLen < maxDepthAllowed/* && lastTagWasOpen */ ) {
 		numSpacesOnStack++;
-     PUSHOBJECT( [@" " retain] /* [MAKEDATA( start, len ) retain] */ ,MPWXMLPCDataKey, nil );
+//     PUSHOBJECT( [@" " retain] /* [MAKEDATA( start, len ) retain] */ ,MPWXMLPCDataKey, nil );
 //	   NSLog(@"after space push, currentElement: %@",[self currentChildren]);
     } else {
 //		NSLog(@"suppressing characters, tagStackLen: %d",tagStackLen);
