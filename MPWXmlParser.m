@@ -120,14 +120,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
 {
 	id name = MAKEDATA( nameStart, nameLen );
 	id value=nil;
-	if ( autotranslateUTF8 ) {
-		int i;
-		for (i=0;i< valueLen;i++ ) {
-			if ( valueStart[i] & 128 ) {
-				value = [(id)CFStringCreateWithBytes(NULL, (const unsigned char*)valueStart, valueLen, kCFStringEncodingUTF8, NO) autorelease];
-				break;
-			}
-		}
+	if ( autotranslateUTF8 && highBit) {
+        value = [(id)CFStringCreateWithBytes(NULL, (const unsigned char*)valueStart, valueLen, kCFStringEncodingUTF8, NO) autorelease];
 	}
 	if (! value ) {
 		value = MAKEDATA( valueStart, valueLen );
