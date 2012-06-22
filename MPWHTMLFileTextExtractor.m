@@ -67,8 +67,7 @@ idAccessor( metadata, setMetadata )
 	return NO;
 }
 
-
--(BOOL)beginElement:(const char*)start length:(int)len nameLen:(int)nameLen
+-(BOOL)beginElement:(const char*)start length:(int)len nameLen:(int)nameLen namespaceLen:(int)namespaceLen
 {
 	const char *tagBase=start+1;
 //	NSLog(@"beginElement: %.*s",len,start);
@@ -103,7 +102,7 @@ idAccessor( metadata, setMetadata )
 	return YES;
 }
 
--(BOOL)endElement:(const  char*)start length:(int)len
+-(BOOL)endElement:(const  char*)start length:(int)len namespaceLen:(int)namespaceLen
 {
 	const  char *tagBase=start+2;
 	len-=3;

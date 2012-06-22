@@ -467,13 +467,14 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 
 
 
--(BOOL)beginElement:(const char*)fullyQualifedPtr length:(int)len nameLen:(int)fullyQualifiedLen
+-(BOOL)beginElement:(const char*)fullyQualifedPtr length:(int)len nameLen:(int)fullyQualifiedLen namespaceLen:(int)namespaceLen
 {
 	const char *tagStartPtr=fullyQualifedPtr;
-	int namespaceLen=0,tagLen=fullyQualifiedLen;
+	int tagLen=fullyQualifiedLen;
    id tag=nil;
     BOOL isEmpty=NO;
 	id handler=defaultNamespaceHandler;
+    namespaceLen=0;
 	NSXMLElementInfo *currentElement = (((NSXMLElementInfo*)_elementStack)+tagStackLen );
 	RECORDSCANPOSITION( fullyQualifedPtr, len );
 	if ( currentElement ) {
@@ -597,10 +598,10 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
     }
 }
 
--(BOOL)endElement:(const char*)fullyQualifedPtr length:(int)fullyQualifiedLen 
+-(BOOL)endElement:(const char*)fullyQualifedPtr length:(int)fullyQualifiedLen namespaceLen:(int)namespaceLen
 {
 	const char *startPtr;
-	int namespaceLen=0,tagLen;
+	int tagLen;
 	id endName=nil;
 	RECORDSCANPOSITION( fullyQualifedPtr, fullyQualifiedLen );
     fullyQualifedPtr+=2;
@@ -609,6 +610,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	tagLen=fullyQualifiedLen;
 	int len=tagLen;
 	id handler=defaultNamespaceHandler;
+    namespaceLen=0;
 	NSXMLElementInfo *currentElement = &CURRENTELEMENT;
 //	allowedIndex--;
 

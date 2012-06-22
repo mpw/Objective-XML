@@ -56,9 +56,10 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 
 @protocol MPWXmlScannerDelegate
+@optional
 
--(BOOL)beginElement:(const char*)fullyQualifedPtr length:(int)len nameLen:(int)fullyQualifiedLen;
--(BOOL)endElement:(const char*)fullyQualifedPtr length:(int)fullyQualifiedLen;
+-(BOOL)beginElement:(const char*)fullyQualifedPtr length:(int)len nameLen:(int)fullyQualifiedLen namespaceLen:(int)namespaceLen;
+-(BOOL)endElement:(const char*)fullyQualifedPtr length:(int)fullyQualifiedLen namespaceLen:(int)namespaceLen;
 -(BOOL)makeText:(const char*)start length:(int)len firstEntityOffset:(int)entityOffset;
 -(BOOL)makeSpace:(const char*)start length:(int)len;
 -(BOOL)makeCData:(const char*)start length:(int)len;

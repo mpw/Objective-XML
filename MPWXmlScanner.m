@@ -98,8 +98,8 @@ scalarAccessor( id, delegate, _setDelegate )
 		cdataTagCallback = [delegate methodForSelector:@selector(makeCData:length:)];
 		sgml		= [delegate methodForSelector:@selector(makeSgml:length:nameLen:)];
 		pi			= [delegate methodForSelector:@selector(makePI:length:nameLen:)];
-		openTag		= [delegate methodForSelector:@selector(beginElement:length:nameLen:)];
-		closeTag	= [delegate methodForSelector:@selector(endElement:length:)];
+		openTag		= [delegate methodForSelector:@selector(beginElement:length:nameLen:namespaceLen:)];
+		closeTag	= [delegate methodForSelector:@selector(endElement:length:namespaceLen:)];
 		attVal		= [delegate methodForSelector:@selector(attributeName:length:value:length:)];
 		entityRef	= [delegate methodForSelector:@selector(makeEntityRef:length:)];
 	}

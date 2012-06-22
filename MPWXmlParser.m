@@ -44,7 +44,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	return self;
 }
 
--(BOOL)endElement:(const char*)start length:(int)len
+-(BOOL)endElement:(const char*)start length:(int)len namespaceLen:(int)namespaceLen
 {
     id endName=nil;
 	id prefix=nil;
@@ -53,7 +53,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
     const char *namespaceLocation=NULL;
 	const char *namespacePrefix=NULL;
 //	const char *namespace;
-	int namespaceLen;
+
 	RECORDSCANPOSITION( start, len );
     start+=2;
     len-=3;
@@ -152,13 +152,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
 }
 
 
--(BOOL)beginElement:(const char*)start length:(int)len nameLen:(int)nameLen
+-(BOOL)beginElement:(const char*)start length:(int)len nameLen:(int)nameLen namespaceLen:(int)namespaceLen
 {
 	id namespaceURI=nil;
 	id fullyQualifiedTag=nil;
 	id namespacePrefixTag=nil;
 	const char *namespace;
-	int namespaceLen;
    id tag=nil;
     BOOL isEmpty=NO;
 	RECORDSCANPOSITION( start, len );
