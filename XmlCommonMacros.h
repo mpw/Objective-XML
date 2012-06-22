@@ -13,6 +13,10 @@
 #ifndef ISCLOSETAG
 #define ISCLOSETAG(x)	((x)==XMLCHAR('>'))
 #endif
+#ifndef ISNAMESPACEDELIMITER
+#define ISNAMESPACEDELIMITER(x)    ((x)==XMLCHAR(':'))
+#endif
+
 #ifndef ISAMPERSAND
 #define ISAMPERSAND(x)	((x)==XMLCHAR('&'))
 #endif

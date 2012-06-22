@@ -174,10 +174,10 @@ typedef enum {
 #define  CURRENTBYTECOUNT  ((char*)currentPtr - (char*)currentString)
 
 #define  SECURECALLBACK( callback )  if ( callback == NULL ) { callback = (void*)processDummy;  }
-#define  XMLKITCALLBACK( whichCallBack )  whichCallBack( clientData, NULL, currentString, CURRENTCHARCOUNT,spaceOffset )
+#define  XMLKITCALLBACK( whichCallBack )  whichCallBack( clientData, NULL, currentString, CURRENTCHARCOUNT,spaceOffset ,namespaceLen )
 
 
-typedef BOOL (*ProcessFunc) (void *target, void* dummySel,const xmlchar *, unsigned int length,unsigned int nameLen);
+typedef BOOL (*ProcessFunc) (void *target, void* dummySel,const xmlchar *, unsigned int length,unsigned int nameLen,int namespaceLen);
 typedef BOOL (*AttrFunc) (void *target, void* dummySel,const xmlchar *, unsigned int ,const xmlchar *,unsigned int);
 
 
@@ -286,6 +286,7 @@ static int scanXml(
     while ( currentPtr < endPtr ) {
         const xmlchar *currentString = currentPtr;
         int spaceOffset=0;
+        int namespaceLen=0;
         ProcessFunc currentCallback;
         
 		//--- scan up to the beginning of a tag (the initial '<' )
@@ -296,6 +297,7 @@ static int scanXml(
 			currentPtr++;
 		}
 		spaceOffset=CURRENTCHARCOUNT;
+        namespaceLen=0;
         while ( INRANGE && !ISOPENTAG(*currentPtr)  ) {
 			//			NSLog(@"char '%c' isopentag: %d",*currentPtr,ISOPENTAG(*currentPtr));
 			if ( CHARSLEFT(2) && ISAMPERSAND( *currentPtr) && !isspace(currentPtr[1]) ) {
@@ -416,10 +418,20 @@ static int scanXml(
         // --- scan over name of tag
         
         //			  NSLog(@"scan over name or tag: %c",*currentPtr);
+        while ( INRANGE && !isspace(*currentPtr) && !ISCLOSETAG(*currentPtr) && !ISNAMESPACEDELIMITER(*currentPtr) ) {
+            currentPtr++;
+        }
+        if ( ISNAMESPACEDELIMITER(*currentPtr)) {
+            namespaceLen=CURRENTCHARCOUNT;
+        }
         while ( INRANGE && !isspace(*currentPtr) && !ISCLOSETAG(*currentPtr) ) {
             currentPtr++;
         }
-        spaceOffset=CURRENTCHARCOUNT;
+        if ( currentCallback==closeTagCallback ) {
+            spaceOffset=namespaceLen;
+        } else {
+            spaceOffset=CURRENTCHARCOUNT;
+        }
         //			  NSLog(@"did scan over name or tag: %c, charCount: %d",*currentPtr,CURRENTCHARCOUNT);
         //			  NSLog(@"scan attributes");
         

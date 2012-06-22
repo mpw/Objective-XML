@@ -61,6 +61,7 @@ idAccessor( hrefs, setHrefs )
 
 -handleHref:attributes
 {
+    NSLog(@"handleHref: %@",attributes);
 	id href=[attributes objectForCaseInsensitiveKey:@"href"];
 	[hrefs addObject:href];
 	return nil;
