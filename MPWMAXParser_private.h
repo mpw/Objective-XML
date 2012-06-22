@@ -31,6 +31,7 @@ typedef struct _NSXMLElementInfo {
 	const char  *end;
 	BOOL		isIncomplete;
 	int			integerTag;
+    int         fullyQualifiedLen;
 } NSXMLElementInfo;
 
 #define	INITIALTAGSTACKDEPTH 20

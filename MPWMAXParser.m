@@ -485,6 +485,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	RECORDSCANPOSITION( fullyQualifedPtr, len );
 	if ( currentElement ) {
 		currentElement->start = fullyQualifedPtr;
+		currentElement->fullyQualifiedLen = fullyQualifiedLen;
 	}
 
 	if (  charactersAreSpace &&  !reportIgnoreableWhitespace) {
@@ -603,7 +604,6 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 
 -(void)reportIgnoredWhitespace
 {
-    NSLog(@"===reportIgnoredSpace===");
    for (int i=0; i<numSpacesOnStack;i++) {
         PUSHOBJECT( [@" " retain] /* [MAKEDATA( start, len ) retain] */ ,MPWXMLPCDataKey, nil );
     }
@@ -638,6 +638,24 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
     
 	if ( currentElement ) {
 		currentElement->end = startPtr + len+1;
+//        NSLog(@"currentElement tag name: '%.*s'",currentElement->fullyQualifiedLen-1,currentElement->start+1);
+//        NSLog(@"endElement = '%.*s'",fullyQualifiedLen,fullyQualifedPtr);
+        if ( fullyQualifiedLen == currentElement->fullyQualifiedLen-1) {
+            const char *p1=currentElement->start+1;
+            const char *p2=fullyQualifedPtr;
+            const char *p1end=p1+fullyQualifiedLen;
+            int len=fullyQualifiedLen;
+            BOOL ok=YES;
+            while ( p1 < p1end) {
+                if ( *p1++ != *p2++ ) {
+                    ok=NO;
+                    break;
+                }
+            }
+            if ( ok) {
+                endName=currentElement->elementName;
+            }
+        }
 	}
 	
 //	NSLog(@"end tag, tagStackLen: %d",tagStackLen);
@@ -659,7 +677,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
         tagLen=fullyQualifiedLen;
     }
     
-	if ( handler ) {
+	if ( !endName && handler ) {
 		endName=[handler getTagForCString:startPtr length:tagLen];
 	}
 	if ( !endName ) {
