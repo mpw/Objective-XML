@@ -174,7 +174,11 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 {
     if ( [children count]==1) {
         MPWSubData *d=[children lastObject];
+#if 1
+        return [[[NSString alloc] initWithBytes:[d bytes] length:[d length] encoding:NSUTF8StringEncoding] autorelease];
+#else
         return [MPWUniqueStringWithCString([d bytes],[d length]) retain];
+#endif
     } else {
         return [self stringElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser];
     }

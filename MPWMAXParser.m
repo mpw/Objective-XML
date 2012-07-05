@@ -202,7 +202,7 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 	if ( tagStackLen > 0 ) { \
 		[currentChildrenNoCheck( ((NSXMLElementInfo*)_elementStack), tagStackLen, attributeCache )  setValueAndRelease:anObject forAttribute:aKey namespace:aNamespace]; \
 	} else { \
-		parseResult=anObject; \
+		[self setParseResult:anObject];\
 	}\
 
 

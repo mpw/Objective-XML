@@ -56,7 +56,6 @@
 		1F1E71A51316A9ED00761991 /* atomfeed.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E71A41316A9ED00761991 /* atomfeed.xml */; };
 		1F1E71A61316A9ED00761991 /* atomfeed.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E71A41316A9ED00761991 /* atomfeed.xml */; };
 		1F22FA3D12D13E8D0032C890 /* MPWMASONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2742A212CC6DA0001498F9 /* MPWMASONParser.m */; };
-		1F22FA3E12D13E940032C890 /* MPWXmlAppleProplistReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2400668979C35ADD82 /* MPWXmlAppleProplistReader.m */; };
 		1F2553F00D627384007D8DAF /* MPWMAXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F449D6F0C6592AB00EC276C /* MPWMAXParser.m */; };
 		1F2553F20D6273A8007D8DAF /* MPWXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2700668979C35ADD82 /* MPWXmlParser.m */; };
 		1F2553F30D6273BA007D8DAF /* MPWXmlScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1D00668979C35ADD82 /* MPWXmlScanner.m */; };
@@ -588,6 +587,7 @@
 		1FB43BFC10BFB6EF00490AA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF1A4B00668979C35ADD82 /* Foundation.framework */; };
 		1FB43BFD10BFB6EF00490AA6 /* MPWFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9BAE6905762A2E009DD1EC /* MPWFoundation.framework */; };
 		1FB43C5C10BFBCA700490AA6 /* dllmain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB43C5B10BFBCA700490AA6 /* dllmain.m */; };
+		1FB751F515A07C3600408140 /* MPWXmlAppleProplistReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2400668979C35ADD82 /* MPWXmlAppleProplistReader.m */; };
 		1FBF986A0F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBF98680F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.h */; };
 		1FBF986B0F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF98690F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m */; };
 		1FBF988F0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF988E0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc */; };
@@ -2234,10 +2234,10 @@
 				1FCD3D3D12B854FB00FF08E9 /* MPWAtomParser.m in Sources */,
 				1FB148E612C82036000AA99F /* MPWFeed.m in Sources */,
 				1F22FA3D12D13E8D0032C890 /* MPWMASONParser.m in Sources */,
-				1F22FA3E12D13E940032C890 /* MPWXmlAppleProplistReader.m in Sources */,
 				1FE39B9F12D26779005019C3 /* MPWRSSParser.m in Sources */,
 				1FE39BB212D26804005019C3 /* MPWFeedItem.m in Sources */,
 				1F37D2EB132582210021A5EF /* MPWAtomLink.m in Sources */,
+				1FB751F515A07C3600408140 /* MPWXmlAppleProplistReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2599,10 +2599,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					i386,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_GC = unsupported;
@@ -2747,10 +2745,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "${TARGET_BUILD_DIR}/../Release/";
 				GCC_DYNAMIC_NO_PIC = NO;
