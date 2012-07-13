@@ -10,6 +10,8 @@
 #import "MPWXmlAttributes.h"
 #import "AccessorMacros.h"
 
+@class MPWTagAction,MPWTagHandler;
+
 @interface MPWXMLAttributes(privateProtocol)
 
 //---	append values with keys and tags
@@ -32,6 +34,8 @@ typedef struct _NSXMLElementInfo {
 	BOOL		isIncomplete;
 	int			integerTag;
     int         fullyQualifiedLen;
+    MPWTagAction *action;
+    MPWTagHandler *handler;
 } NSXMLElementInfo;
 
 #define	INITIALTAGSTACKDEPTH 20

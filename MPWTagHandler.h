@@ -36,10 +36,14 @@
 
 //---	getting FastInvocations for names
 
+
+/*
 -elementHandlerInvocationForCString:(const char*)cstr length:(int)len;
 -tagHandlerInvocationForCString:(const char*)cstr length:(int)len;
+*/
 -namespaceString;
 -(void)setNamespaceString:(id)newNamespaceString;
+-actionForCString:(const char*)aCstring length:(int)len;
 
 
 @end

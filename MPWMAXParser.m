@@ -424,41 +424,20 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 
 - (void)parserDoStackProcessingForEndElementStartPtr:(const char*)fullyQualifedPtr len:(int)fullyQualifiedLen namespaceLen:(int)namespaceLen tag:tag
 {
-	const char *tagStartPtr=fullyQualifedPtr;
-	int tagLen=fullyQualifiedLen;
 	id result=nil;
-	id handler=defaultNamespaceHandler;
-//	namespaceLen=0;
 	if ( tagStackLen >0 ) {
 		NSXMLElementInfo *currentElement = &CURRENTELEMENT;
+        id handler=currentElement->handler;
 		id attrs=currentElement->attributes;
 		id children = currentElement->children;
-//		id *childPointer=[children _pointerToObjects];
-		MPWFastInvocation* invocation; 
-//		int childCount=[children count];
-//		NSLog(@"parserDoStackProcessin attributes for %@ are: %@",CURRENTELEMENT.elementName,attrs);
-        if ( namespaceLen){
-			handler=[self handlerForPrefix:fullyQualifedPtr length:namespaceLen];
-            tagStartPtr=fullyQualifedPtr+namespaceLen+1;
-            tagLen=fullyQualifiedLen-namespaceLen-1;
-        } else {
-            tagStartPtr=fullyQualifedPtr;
-            tagLen=fullyQualifiedLen;
-        }
-//		if (  extractNameSpace( fullyQualifedPtr, fullyQualifiedLen, &tagStartPtr, &namespaceLen, &tagLen ) ) {
-//			NSLog(@"handler for fully qualifed : '%.*s' is %@",fullyQualifiedLen,fullyQualifedPtr,handler);
-//        }
-		int integerTag = 0; // [handler integerTagForElementName:tagStartPtr length:tagLen];
+        MPWTagAction *action= currentElement->action;
+		MPWFastInvocation* invocation=[action elementAction];
+        int integerTag = 0; // [handler integerTagForElementName:tagStartPtr length:tagLen];
 		currentElement->integerTag=integerTag;
 //		NSLog(@"integer tag: %d",integerTag);
 #if 0
-		NSLog(@"parserDoStackProcessingForEndElementStartPtr: '%.*s' with '%.*s' and '%.*s'",
-			fullyQualifiedLen,fullyQualifedPtr,
-			namespaceLen,fullyQualifedPtr,
-			tagLen,tagStartPtr);
 //		NSLog(@"parserDoStackProcessingForEndElementStartPtr: tagStackLen = %d children = %@",tagStackLen,children);
 #endif	
-			invocation = [handler elementHandlerInvocationForCString:tagStartPtr length:tagLen];
 			{
 				id args[3]={ children, attrs ,self};
 //				NSLog(@"will invoke: %@/%@",[invocation target],NSStringFromSelector([invocation selector]));
@@ -501,7 +480,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	int tagLen=fullyQualifiedLen;
    id tag=nil;
     BOOL isEmpty=NO;
-	id handler=defaultNamespaceHandler;
+	MPWTagHandler* handler=defaultNamespaceHandler;
  	NSXMLElementInfo *currentElement = (((NSXMLElementInfo*)_elementStack)+tagStackLen );
 	RECORDSCANPOSITION( fullyQualifedPtr, len );
 	if ( currentElement ) {
@@ -542,9 +521,13 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 		return YES;
 	}
 	currentElement->isIncomplete=NO;
+    currentElement->action=nil;
     if ( fullyQualifiedLen > 0 ) {
 		id attrs=_attributes;
 //		id prefixTag=nil;
+        
+        //--- handle namespace
+        
         if ( namespaceLen > 0) {
             namespaceLen-=1;
             tagLen-=namespaceLen+2;
@@ -554,11 +537,16 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
             tagStartPtr=fullyQualifedPtr;
             tagLen=fullyQualifiedLen;
         }
+        currentElement->handler=handler;
+        
+        //---- meta tags need special case handling (charset decl.)
+        
 		if ( tagLen == 4 && !strncasecmp(tagStartPtr, "meta", 4) ) {
 			[self handleMetaTag];
 		}
 		if ( handler ) {
-			tag=[handler getTagForCString:tagStartPtr length:tagLen];
+            currentElement->action=[handler actionForCString:tagStartPtr length:tagLen];
+			tag=[currentElement->action tagName];
 //			NSLog(@"got unique tag: '%@',%p non-unique: '%@'",tag,tag,TAGFORCSTRING( fullyQualifedPtr, fullyQualifiedLen));
 		}
 		if ( !tag ) {
@@ -589,7 +577,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 //		PUSHOBJECT( retainMPWObject( attrs ) );
 #if 1
 		if ( 1 ) {
-			id invocation = [handler tagHandlerInvocationForCString:tagStartPtr length:tagLen];
+			id invocation = [currentElement->action tagAction];
 			{
 				id args[2]={  attrs, self };
 				[invocation resultOfInvokingWithArgs:args count:2];
@@ -652,8 +640,8 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	startPtr=fullyQualifedPtr;
 	tagLen=fullyQualifiedLen;
 	int len=tagLen;
-	id handler=defaultNamespaceHandler;
 	NSXMLElementInfo *currentElement = &CURRENTELEMENT;
+	id handler=currentElement->handler;
 //	allowedIndex--;
 
     
@@ -691,7 +679,6 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
         tagLen-=namespaceLen-1;
         startPtr=fullyQualifedPtr+namespaceLen-1;
         namespaceLen-=2;
-       handler=[self handlerForPrefix:fullyQualifedPtr length:namespaceLen];
 //        NSLog(@"startPtr: %.*s namespace: '%.*s'",tagLen,startPtr,namespaceLen,fullyQualifedPtr);
     } else {
         startPtr=fullyQualifedPtr;
@@ -699,7 +686,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
     }
     
 	if ( !endName && handler ) {
-		endName=[handler getTagForCString:startPtr length:tagLen];
+		endName=[currentElement->action tagName];
 	}
 	if ( !endName ) {
 //        NSLog(@"did not get endName ('%.*s') from handler %@",tagLen,startPtr,handler);

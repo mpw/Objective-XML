@@ -92,17 +92,17 @@ boolAccessor(isCaseInsensitive, setIsCaseInsensitive)
     return [self actionForCString:aCstring length:strlen(aCstring)];
 }
 
--getTagForCString:(const char*)cstr length:(int)len
+-getTagForCString1:(const char*)cstr length:(int)len
 {
     return [[self actionForCString:cstr length:len] tagName];
 }
 
--elementHandlerInvocationForCString:(const char*)cstr length:(int)len
+-elementHandlerInvocationForCString1:(const char*)cstr length:(int)len
 {
     return [[self actionForCString:cstr length:len] elementAction];
 }
 
--tagHandlerInvocationForCString:(const char*)cstr length:(int)len
+-tagHandlerInvocationForCString1:(const char*)cstr length:(int)len
 {
     return [[self actionForCString:cstr length:len] tagAction];
 }
@@ -172,7 +172,7 @@ boolAccessor(isCaseInsensitive, setIsCaseInsensitive)
 	id handler=[[[MPWTagHandler alloc] init] autorelease];
 	id invocation;
 	[handler initializeElementActionMapWithTags:[NSArray arrayWithObjects:@"dummy",nil] target:self prefix:@""];
-	invocation = [handler elementHandlerInvocationForCString:"dummy" length:5];
+	invocation = [[handler actionForCString:"dummy" length:5] elementAction];
     EXPECTNOTNIL(invocation, @"invocation");
 	IDEXPECT( [invocation resultOfInvoking], @"53", @"result of invoking");
     
@@ -183,7 +183,7 @@ boolAccessor(isCaseInsensitive, setIsCaseInsensitive)
 	id handler=[[[MPWTagHandler alloc] init] autorelease];
 	id invocation;
 	[handler initializeElementActionMapWithTags:[NSArray arrayWithObjects:@"dummy",nil] target:self prefix:@"Namespace"];
-	invocation = [handler elementHandlerInvocationForCString:"dummy" length:5];
+	invocation = [[handler actionForCString:"dummy" length:5] elementAction];
     EXPECTNOTNIL(invocation, @"invocation");
 	IDEXPECT( [invocation resultOfInvoking], @"62", @"result of invoking");
     
