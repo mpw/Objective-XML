@@ -30,18 +30,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #import "MPWXmlAttributes.h"
 #import "mpwfoundation_imports.h"
-#import "MPWTagHandler.h"
+//#import "MPWTagHandler.h"
 
 @implementation MPWXMLAttributes
 
 //CACHING_ALLOC( attributes, 10, NO )
 
-static int _collecting=NO;
-
-+(void)initialize
-{
-	_collecting = IS_OBJC_GC_ON;
-}
 
 
 
@@ -239,11 +233,9 @@ static int _collecting=NO;
 
 -(void)_freeBuffersIfAllocated
 {
-	if ( !_collecting ) {
-		if ( keys != builtinKeys )		free(keys);
-		if ( values != builtinValues )	free(values);
-		if ( namespaces != builtinNamespace )		free(namespaces);
-	}
+	if ( keys != builtinKeys )		free(keys);
+	if ( values != builtinValues )	free(values);
+	if ( namespaces != builtinNamespace )		free(namespaces);
 }
 
 -(void)_growCapacity

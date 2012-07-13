@@ -7,6 +7,7 @@
 //
 
 #import "MPWTagHandler.h"
+#import "MPWTagAction.h"
 #import "mpwfoundation_imports.h"
 #import <objc/objc.h>
 
@@ -15,152 +16,48 @@
 objectAccessor( NSDictionary , exceptionMap, setExceptionMap )
 idAccessor( attributeMap, setAttributeMap )
 idAccessor( namespaceString, setNamespaceString )
-idAccessor( tagMap, setTagMap )
-idAccessor( tag2actionMap, setTag2actionMap )
-idAccessor( element2actionMap, setElement2actionMap )
-
--(SEL)defaultElementSelector
+objectAccessor(NSMutableDictionary, tagDict, setTagDict)
+objectAccessor(MPWSmallStringTable, tagTable, setTagTable)
+objectAccessor(MPWTagAction, undeclared, setUndeclared )
+boolAccessor(isCaseInsensitive, setIsCaseInsensitive)
+-init
 {
-	return @selector(defaultElement:attributes:parser:);
+    self=[super init];
+    [self setTagDict:[NSMutableDictionary dictionaryWithCapacity:5]];
+    return self;
 }
 
--_actionInvocationForAlreadyMappedTag:(NSString*)tag suffix:(NSString*)suffix defaultSelector:(SEL)defaultSelector target:actionTarget
++tagHandler
 {
-	int tagLen=[tag length],suffixLen=[suffix length];
-	char selName[ tagLen + suffixLen + 200];
-	SEL selector;
-	id invocation;
-	int encoding=NSUTF8StringEncoding;
-#if WINDOWS
-	encoding=NSISOLatin1StringEncoding;
-#endif
-//	NSLog(@"_actionInvocationForAlreadyMappedTag");
-	[tag getCString:selName maxLength:tagLen+1 encoding:encoding];
-	[suffix getCString:selName+tagLen maxLength:suffixLen+1 encoding:encoding];
-	selName[tagLen+suffixLen]=0;
-//	NSLog(@"selName: '%s'",selName);
-//	selector=sel_getUid( selName );
-	selector=NSSelectorFromString( [NSString stringWithCString:selName encoding:encoding] );
-//	NSLog(@"selector '%p'",selector);
-	if ( !selector || ![actionTarget respondsToSelector:selector] ) {
-		selector=defaultSelector;
-	}
-//	NSLog(@"will create invocation");
-	invocation = [[MPWFastInvocation new] autorelease];
-//	NSLog(@"did create invocation");
-	[invocation setSelector:selector];
-//	NSLog(@"tag: %@ actionTarget: %x/%@, %s",tag,actionTarget,actionTarget,selName);
-	[invocation setTarget:actionTarget];
-	[invocation setUseCaching:YES];
-//	NSLog(@"return the invocation");
-	return invocation;
+    return [[[self alloc] init] autorelease];
 }
 
--actionInvocationForTag:(NSString*)tag suffix:(NSString*)suffix defaultSelector:(SEL)defaultSelector target:actionTarget 
+-(void)addTag:(NSString*)tag
 {
-	id mappedTag=[exceptionMap objectForKey:tag];
-	if ( mappedTag ) {
-		tag=mappedTag;
-	}
-	return [self _actionInvocationForAlreadyMappedTag:tag suffix:suffix defaultSelector:defaultSelector target:actionTarget];
-}
-
-
--actionInvocationForElement:(NSString*)tag target:actionTarget suffix:suffix
-{
-	return [self actionInvocationForTag:tag suffix:suffix defaultSelector:[self defaultElementSelector] target:actionTarget];
-}
-
--actionMapWithTags:(NSArray*)keys caseInsensitive:(BOOL)caseInsensitive target:actionTarget suffix:(NSString*)suffix
-{
-	id map=nil;
-	Class tableClass = (caseInsensitive ? [MPWCaseInsensitiveSmallStringTable class] : [MPWSmallStringTable class]);
-	id invocations=[NSMutableArray array];
-    @autoreleasepool {
-//        NSLog(@"actionMap will create actionInvocations");
-        for ( id key in keys ) {
-            [invocations addObject:[self actionInvocationForElement:key target:actionTarget suffix:suffix]];
-        }
-//        NSLog(@"actionMap did create actionInvocations");
+    if ( ![[self tagDict] objectForKey:tag]) {
+        MPWTagAction *action=[[[MPWTagAction alloc] initWithTagName:tag] autorelease];
+        [[self tagDict] setObject:action forKey:tag];
     }
-    @autoreleasepool {
-//        NSLog(@"actionMap will create string table");
-        map=[[tableClass alloc] initWithKeys:keys values:invocations];
-//        NSLog(@"actionMap did create string table");
-    }
-//    NSLog(@"map: %@",map);
-	return [map autorelease];
 }
+
+-(MPWTagAction*)tagForKey:(NSString*)tag
+{
+    return [[self tagDict] objectForKey:tag];
+}
+
+
 
 -(void)setUndeclaredElementHandler:handler backup:backup
 {
-	id realTarget=nil;
-	id invocation=nil;
-	if ( [handler respondsToSelector:@selector(undeclaredElement:attributes:parser:)] ) {
-		realTarget=handler;
-	} else {
-		realTarget=backup;
-	}
-	invocation = [self actionInvocationForElement:@"undeclared" target:realTarget suffix:@"Element:attributes:parser:"];
-	[element2actionMap setDefaultValue:invocation];
-}
-
--(void)initializeActionMapWithTags:(NSArray*)keys caseInsensitive:(BOOL)caseInsensitive target:actionTarget
-{
-	Class tableClass = (caseInsensitive ? [MPWCaseInsensitiveSmallStringTable class] : [MPWSmallStringTable class]);
-	[self setElement2actionMap:[self actionMapWithTags:keys caseInsensitive:caseInsensitive target:actionTarget suffix:@"Element:attributes:parser:"]];
-	[self setTagMap:[[[tableClass alloc] initWithKeys:keys values:keys] autorelease]];
-}
-
--(void)initializeActionMapWithTags:(NSArray*)keys target:actionTarget prefix:prefix
-{
-	Class tableClass = (NO ? [MPWCaseInsensitiveSmallStringTable class] : [MPWSmallStringTable class]);
-//	NSLog(@"tableClass: %@",tableClass);
-	[self setElement2actionMap:[self actionMapWithTags:keys caseInsensitive:NO target:actionTarget suffix:[prefix stringByAppendingString:@"Element:attributes:parser:"]] ];
-	[self setTagMap:[[[tableClass alloc] initWithKeys:keys values:keys] autorelease]];
-}
-
--(void)initializeTagActionMapWithTags:(NSArray*)keys caseInsensitive:(BOOL)caseInsensitive target:actionTarget prefix:prefix
-{
-    @autoreleasepool {
-	[self setTag2actionMap:[self actionMapWithTags:keys caseInsensitive:caseInsensitive target:actionTarget suffix:[prefix stringByAppendingString:@"Tag:parser:"]]];
-    }
-}
-
--(void)setInvocation:anInvocation forElement:(NSString*)tagName
-{
-	[element2actionMap setObject:anInvocation forKey:tagName];
+    MPWTagAction *u = [MPWTagAction undeclaredElementAction];
+    [u setElementInvocationForTarget:handler backup:backup];
+    [[self tagDict] setObject:u forKey:[u tagName]];
+    [u setTagName:nil];
+    [self setUndeclared:u];
+    
 }
 
 
--(void)initializeTagActionMapWithTags:(NSArray*)keys caseInsensitive:(BOOL)caseInsensitive target:actionTarget
-{
-	[self initializeTagActionMapWithTags:keys caseInsensitive:caseInsensitive target:actionTarget prefix:@""];
-}
-
--(void)initializeActionMapWithTags:(NSArray*)keys target:actionTarget
-{
-//	NSLog(@"-[MWPTagHandler initializeActionMapWithTags:%@ target:%@]",keys,actionTarget);
-	[self initializeActionMapWithTags:keys caseInsensitive:0 target:actionTarget];
-
-}
-
-
--getTagForCString:(const char*)cstr length:(int)len
-{
-	id tag = [tagMap objectForCString:(char*)cstr length:len];
-	return tag;
-}
-
--elementHandlerInvocationForCString:(const char*)cstr length:(int)len
-{
-	return [element2actionMap objectForCString:(char*)cstr length:len];
-}
-
--tagHandlerInvocationForCString:(const char*)cstr length:(int)len
-{
-	return [tag2actionMap objectForCString:(char*)cstr length:len];
-}
 
 -(void)declareAttributes:(NSArray*)attributes 
 {
@@ -176,17 +73,82 @@ idAccessor( element2actionMap, setElement2actionMap )
 -(void)dealloc
 {
 //    NSLog(@"tag handler dealloc");
-	[element2actionMap release];
-	[tag2actionMap release];
-	[tagMap release];
 	[exceptionMap release];
 	[attributeMap release];
 	[super dealloc];
 //    NSLog(@"tag handler did dealloc");
 }
 
+-actionForCString:(const char*)aCstring length:(int)len
+{
+    if (!tagTable) {
+        [self buildLookupTables];
+    }
+    return [tagTable objectForCString:aCstring length:len];
+}
+
+-actionForCString:(const char*)aCstring
+{
+    return [self actionForCString:aCstring length:strlen(aCstring)];
+}
+
+-getTagForCString:(const char*)cstr length:(int)len
+{
+    return [[self actionForCString:cstr length:len] tagName];
+}
+
+-elementHandlerInvocationForCString:(const char*)cstr length:(int)len
+{
+    return [[self actionForCString:cstr length:len] elementAction];
+}
+
+-tagHandlerInvocationForCString:(const char*)cstr length:(int)len
+{
+    return [[self actionForCString:cstr length:len] tagAction];
+}
+
+
+-(void)buildLookupTables
+{
+    Class tableClass= isCaseInsensitive ? [MPWCaseInsensitiveSmallStringTable class] : [MPWSmallStringTable class];
+    NSArray *keys=[[self tagDict] allKeys];
+    NSArray *values=[[[self tagDict] collect] objectForKey:[keys each]];
+    MPWSmallStringTable *stringTable = [[[tableClass alloc] initWithKeys:keys values:values] autorelease];
+    [stringTable setDefaultValue:[self undeclared]];
+    [self setTagTable:stringTable];
+}
+
+-(void)initializeElementActionMapWithTags:(NSArray*)keys target:actionTarget prefix:prefix
+{
+    for ( NSString *key in keys ){
+        [self addTag:key];
+        MPWTagAction *action=[self tagForKey:key];
+        [action setNamespacePrefix:prefix];
+        [action setElementInvocationForTarget:actionTarget backup:nil];
+        
+    }
+}
+
+-(void)initializeTagActionMapWithTags:(NSArray*)keys target:actionTarget prefix:prefix
+{
+    for ( NSString *key in keys ){
+        [self addTag:key];
+        MPWTagAction *action=[self tagForKey:key];
+        [action setTagInvocationForTarget:actionTarget];
+        
+    }
+}
+
+-(void)setInvocation:anInvocation forElement:(NSString*)tagName
+{
+    MPWTagAction* action = [[self tagDict] objectForKey:tagName];
+    [action setElementAction:anInvocation];
+    
+}
+
+
 @end
-#ifndef RELEASE
+
 
 @interface MPWTagHandlerTesting : NSObject {}
 
@@ -197,29 +159,94 @@ idAccessor( element2actionMap, setElement2actionMap )
 
 +dummyElement:children attributes:attrs parser:paser
 {
-	return @"42";
+	return @"53";
+}
+
++dummyNamespaceElement:children attributes:attrs parser:paser
+{
+	return @"62";
 }
 
 +(void)testElementHandlerForCString
 {
 	id handler=[[[MPWTagHandler alloc] init] autorelease];
 	id invocation;
-	[handler initializeActionMapWithTags:[NSArray arrayWithObjects:@"dummy",nil] target:self prefix:@""];
+	[handler initializeElementActionMapWithTags:[NSArray arrayWithObjects:@"dummy",nil] target:self prefix:@""];
 	invocation = [handler elementHandlerInvocationForCString:"dummy" length:5];
-	NSLog(@"invocation: %x",invocation);
-	NSAssert1( invocation != nil , @"invocation %x should not ben nil",invocation);
-	IDEXPECT( [invocation resultOfInvoking], @"42", @"result of invoking");
-
+    EXPECTNOTNIL(invocation, @"invocation");
+	IDEXPECT( [invocation resultOfInvoking], @"53", @"result of invoking");
+    
 }
+
++(void)testElementHandlerForCStringWithPrefix
+{
+	id handler=[[[MPWTagHandler alloc] init] autorelease];
+	id invocation;
+	[handler initializeElementActionMapWithTags:[NSArray arrayWithObjects:@"dummy",nil] target:self prefix:@"Namespace"];
+	invocation = [handler elementHandlerInvocationForCString:"dummy" length:5];
+    EXPECTNOTNIL(invocation, @"invocation");
+	IDEXPECT( [invocation resultOfInvoking], @"62", @"result of invoking");
+    
+}
+
++(void)testTagHandlerCreatesActions
+{
+	id handler=[MPWTagHandler tagHandler];
+    [handler addTag:@"hello"];
+    EXPECTNOTNIL([handler tagForKey:@"hello"], @"hello retrieved");
+}
+
++(void)testCreateCstringLookupFromActionsDict
+{
+	id handler=[MPWTagHandler tagHandler];
+    [handler addTag:@"hello"];
+    MPWTagAction *action=[handler tagForKey:@"hello"];
+    EXPECTNOTNIL(action, @"hello retrieved");
+    MPWTagAction *action1=[handler actionForCString:"hello"];
+    EXPECTNOTNIL(action1, @"after setup yet");
+    IDEXPECT(action, action1, @"retrieved via base dict and small string table");
+    EXPECTNIL([handler actionForCString:"hello1"], @"hello1 should not be in table");
+}
+
++(void)testMakeElementActions
+{
+	id handler=[MPWTagHandler tagHandler];
+	[handler initializeElementActionMapWithTags:[NSArray arrayWithObjects:@"dummy",nil] target:self prefix:@""];
+    MPWTagAction *dummyAction=[handler tagForKey:@"dummy"];
+    EXPECTNOTNIL(dummyAction, @"dummy action retrieved from nsdict");
+    IDEXPECT([dummyAction tagName], @"dummy", @"retrieved tag name");
+    MPWFastInvocation *elementInvocation=[dummyAction elementAction];
+    EXPECTNOTNIL(elementInvocation, @"element action");
+    IDEXPECT(NSStringFromSelector([elementInvocation selector]),@"dummyElement:attributes:parser:",@"selector");
+    IDEXPECT([elementInvocation target],self,@"target")
+    MPWTagAction *action1=[handler actionForCString:"dummy"];
+    MPWFastInvocation *invocation1=[action1 elementAction];
+    IDEXPECT(NSStringFromSelector([invocation1 selector]),@"dummyElement:attributes:parser:",@"selector");
+}
+
++(void)testMakeTagActions
+{
+	id handler=[MPWTagHandler tagHandler];
+	[handler initializeTagActionMapWithTags:[NSArray arrayWithObjects:@"dummy",nil] target:self prefix:@""];
+    MPWTagAction *action1=[handler actionForCString:"dummy"];
+    MPWFastInvocation *invocation1=[action1 tagAction];
+    IDEXPECT(NSStringFromSelector([invocation1 selector]),@"dummyTag:parser:",@"selector");
+}
+
+
 
 +(NSArray*)testSelectors
 {
 	return [NSArray arrayWithObjects:
-				@"testElementHandlerForCString",
+            @"testElementHandlerForCString",
+            @"testElementHandlerForCStringWithPrefix",
+            @"testTagHandlerCreatesActions",
+            @"testCreateCstringLookupFromActionsDict",
+            @"testMakeElementActions",
+            @"testMakeTagActions",
 				nil];
 }	
 
 
 @end
 
-#endif

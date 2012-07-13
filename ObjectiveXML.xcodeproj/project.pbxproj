@@ -349,6 +349,16 @@
 		1F7915940BD5F60000BF5CB2 /* test3.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F7915920BD5F60000BF5CB2 /* test3.xml */; };
 		1F7915950BD5F60000BF5CB2 /* test3.fi in Resources */ = {isa = PBXBuildFile; fileRef = 1F7915930BD5F60000BF5CB2 /* test3.fi */; };
 		1F7CFA5813E212E900FB926E /* MPWFoundationLinux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7CFA5713E212E900FB926E /* MPWFoundationLinux.framework */; };
+		1F7EC2FB15AF3142009C36B5 /* MPWTagAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7EC2F915AF3142009C36B5 /* MPWTagAction.h */; };
+		1F7EC2FC15AF3142009C36B5 /* MPWTagAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7EC2F915AF3142009C36B5 /* MPWTagAction.h */; };
+		1F7EC2FD15AF3142009C36B5 /* MPWTagAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7EC2F915AF3142009C36B5 /* MPWTagAction.h */; };
+		1F7EC2FE15AF3142009C36B5 /* MPWTagAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7EC2F915AF3142009C36B5 /* MPWTagAction.h */; };
+		1F7EC2FF15AF3142009C36B5 /* MPWTagAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7EC2F915AF3142009C36B5 /* MPWTagAction.h */; };
+		1F7EC30015AF3142009C36B5 /* MPWTagAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EC2FA15AF3142009C36B5 /* MPWTagAction.m */; };
+		1F7EC30115AF3142009C36B5 /* MPWTagAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EC2FA15AF3142009C36B5 /* MPWTagAction.m */; };
+		1F7EC30215AF3142009C36B5 /* MPWTagAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EC2FA15AF3142009C36B5 /* MPWTagAction.m */; };
+		1F7EC30315AF3142009C36B5 /* MPWTagAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EC2FA15AF3142009C36B5 /* MPWTagAction.m */; };
+		1F7EC30415AF3142009C36B5 /* MPWTagAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EC2FA15AF3142009C36B5 /* MPWTagAction.m */; };
 		1F7FB2D10E00D58700A40B28 /* MPWFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F7FB2D20E00D58700A40B28 /* MPWFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FB2D00E00D58700A40B28 /* MPWFeed.m */; };
 		1F7FB2D60E00D5B900A40B28 /* NSString+extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2D40E00D5B900A40B28 /* NSString+extras.h */; };
@@ -853,6 +863,8 @@
 		1F7A3D270DAAC51000FE9E24 /* openold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = openold.m; sourceTree = "<group>"; };
 		1F7A3D4F0DAAC8C700FE9E24 /* opennew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = opennew.m; sourceTree = "<group>"; };
 		1F7CFA5713E212E900FB926E /* MPWFoundationLinux.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MPWFoundationLinux.framework; path = "../../../Library/Developer/Xcode/DerivedData/metaproducts-frbgyznjeqtcxocedsnxdniqbnzz/Build/Products/Release/MPWFoundationLinux.framework"; sourceTree = "<group>"; };
+		1F7EC2F915AF3142009C36B5 /* MPWTagAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWTagAction.h; sourceTree = "<group>"; };
+		1F7EC2FA15AF3142009C36B5 /* MPWTagAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWTagAction.m; sourceTree = "<group>"; };
 		1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWFeed.h; sourceTree = "<group>"; };
 		1F7FB2D00E00D58700A40B28 /* MPWFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWFeed.m; sourceTree = "<group>"; };
 		1F7FB2D40E00D5B900A40B28 /* NSString+extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+extras.h"; sourceTree = "<group>"; };
@@ -1272,6 +1284,8 @@
 				1F4B0F7D0DBEB9E700639DC0 /* MPWMAXParser_private.h */,
 				1FAAD2E20DF61EC200592B29 /* mpwfoundation_imports.h */,
 				07DF1A1E00668979C35ADD82 /* MPWXmlElement.m */,
+				1F7EC2F915AF3142009C36B5 /* MPWTagAction.h */,
+				1F7EC2FA15AF3142009C36B5 /* MPWTagAction.m */,
 			);
 			name = CoreClasses;
 			sourceTree = "<group>";
@@ -1336,6 +1350,7 @@
 				1FC4D38F0DFA10A500AC1A66 /* CodingAdditions.h in Headers */,
 				1F421F0010C2554D00C403D5 /* MPWXmlParser.h in Headers */,
 				1F421F0510C2555700C403D5 /* MPWMAXParser.h in Headers */,
+				1F7EC2FB15AF3142009C36B5 /* MPWTagAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1386,6 +1401,7 @@
 				1F3C7B6E136FE2EF009C0697 /* MPWFeedItem.h in Headers */,
 				1F3C7B6F136FE2EF009C0697 /* MPWAtomLink.h in Headers */,
 				1F3C7B70136FE2EF009C0697 /* MPWRSSParser.h in Headers */,
+				1F7EC2FF15AF3142009C36B5 /* MPWTagAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1436,6 +1452,7 @@
 				1FF832D412D1BAAE00DF5E66 /* MPWFeedItem.h in Headers */,
 				1FF832E212D1BB9400DF5E66 /* MPWAtomLink.h in Headers */,
 				1FF832E812D1BBDF00DF5E66 /* MPWRSSParser.h in Headers */,
+				1F7EC2FC15AF3142009C36B5 /* MPWTagAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1486,6 +1503,7 @@
 				1FF832D612D1BAAE00DF5E66 /* MPWFeedItem.h in Headers */,
 				1FF832E412D1BB9400DF5E66 /* MPWAtomLink.h in Headers */,
 				1FF832EA12D1BBDF00DF5E66 /* MPWRSSParser.h in Headers */,
+				1F7EC2FE15AF3142009C36B5 /* MPWTagAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1516,6 +1534,7 @@
 				1FCD3D3C12B854FB00FF08E9 /* MPWAtomParser.h in Headers */,
 				1F37D26413257FCF0021A5EF /* MPWFeed.h in Headers */,
 				1F37D2EC132582250021A5EF /* MPWAtomLink.h in Headers */,
+				1F7EC2FD15AF3142009C36B5 /* MPWTagAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2096,6 +2115,7 @@
 				1FC4D3510DFA05FD00AC1A66 /* MPWObjectCache.m in Sources */,
 				1FC4D3520DFA05FE00AC1A66 /* MPWSmallStringTable.m in Sources */,
 				1FC4D3530DFA05FE00AC1A66 /* MPWSubData.m in Sources */,
+				1F7EC30015AF3142009C36B5 /* MPWTagAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2133,6 +2153,7 @@
 				1F3C7BFF136FE2EF009C0697 /* MPWFeedItem.m in Sources */,
 				1F3C7C00136FE2EF009C0697 /* MPWAtomLink.m in Sources */,
 				1F3C7C01136FE2EF009C0697 /* MPWRSSParser.m in Sources */,
+				1F7EC30415AF3142009C36B5 /* MPWTagAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2174,6 +2195,7 @@
 				1FF832D512D1BAAE00DF5E66 /* MPWFeedItem.m in Sources */,
 				1FF832E312D1BB9400DF5E66 /* MPWAtomLink.m in Sources */,
 				1FF832E912D1BBDF00DF5E66 /* MPWRSSParser.m in Sources */,
+				1F7EC30115AF3142009C36B5 /* MPWTagAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2215,6 +2237,7 @@
 				1FF832D712D1BAAE00DF5E66 /* MPWFeedItem.m in Sources */,
 				1FF832E512D1BB9400DF5E66 /* MPWAtomLink.m in Sources */,
 				1FF832EB12D1BBDF00DF5E66 /* MPWRSSParser.m in Sources */,
+				1F7EC30315AF3142009C36B5 /* MPWTagAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2238,6 +2261,7 @@
 				1FE39BB212D26804005019C3 /* MPWFeedItem.m in Sources */,
 				1F37D2EB132582210021A5EF /* MPWAtomLink.m in Sources */,
 				1FB751F515A07C3600408140 /* MPWXmlAppleProplistReader.m in Sources */,
+				1F7EC30215AF3142009C36B5 /* MPWTagAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

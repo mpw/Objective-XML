@@ -35,7 +35,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #import "MPWHrefScanner.h"
 #import "MPWXmlAttributes.h"
-#import "MPWTagHandler.h"
+//#import "MPWTagHandler.h"
 #import "mpwfoundation_imports.h"
 
 @implementation MPWHrefScanner

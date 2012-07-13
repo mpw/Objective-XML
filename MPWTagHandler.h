@@ -8,23 +8,29 @@
 
 #import <Foundation/Foundation.h>
 
+@class MPWSmallStringTable,MPWTagAction;
 
 @interface MPWTagHandler : NSObject {
-	id	element2actionMap;
-	id	tag2actionMap;
-	id  tagMap;
 	id	exceptionMap;
 	id	attributeMap;
 	id	namespaceString;
+    NSMutableDictionary *tagDict;
+    MPWSmallStringTable *tagTable;
+    MPWTagAction *undeclared;
+    BOOL isCaseInsensitive;
 }
 
+-(void)setIsCaseInsensitive:(BOOL)caseSensitivty;
 -(void)setExceptionMap:(NSDictionary*)map;
 -(void)declareAttributes:(NSArray*)attributes;
 
--(void)initializeActionMapWithTags:(NSArray*)keys target:actionTarget prefix:prefix;
--(void)initializeTagActionMapWithTags:(NSArray*)keys caseInsensitive:(BOOL)caseInsensitive target:actionTarget prefix:prefix;
+
 -(void)setUndeclaredElementHandler:handler backup:backup;
 -(void)setInvocation:anInvocation forElement:(NSString*)tagName;
+
+-(void)initializeElementActionMapWithTags:(NSArray*)keys target:actionTarget prefix:prefix;
+
+-(void)initializeTagActionMapWithTags:(NSArray*)keys target:actionTarget prefix:prefix;
 
 
 

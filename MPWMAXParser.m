@@ -329,8 +329,7 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 -(void)initializeActionMapWithTags:elementNames target:actionTarget
 {
 	id tagHandler=[[[MPWTagHandler alloc] init] autorelease];
-	[tagHandler initializeActionMapWithTags:elementNames target:actionTarget];
-//	NSLog(@"initializeActionMapWithTags: %@ target: %@",elementNames,target);
+	[tagHandler initializeElementActionMapWithTags:elementNames target:actionTarget prefix:@""];
 	[self setDefaultNamespaceHandler:tagHandler];
 }
 
@@ -362,8 +361,10 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 {
 	id tagHandler=[self createNamespaceHandlerIfNecessary:namespace];
 	[tagHandler setExceptionMap:map];
-	[tagHandler initializeActionMapWithTags:elementNames target:handler prefix:prefix];
+	[tagHandler initializeElementActionMapWithTags:elementNames target:handler prefix:prefix];
 	[tagHandler setUndeclaredElementHandler:handler backup:self];
+    [tagHandler setIsCaseInsensitive:ignoreCase];
+
 	return tagHandler;
 }
 
@@ -380,7 +381,8 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
         tagHandler=[[self createNamespaceHandlerIfNecessary:namespaceString] retain];
     }
     @autoreleasepool {
-        [tagHandler initializeTagActionMapWithTags:tags caseInsensitive:[self ignoreCase] target:handler prefix:prefix];
+        [tagHandler initializeTagActionMapWithTags:tags target:handler prefix:prefix];
+        [tagHandler setIsCaseInsensitive:ignoreCase];
     }
 	return [tagHandler autorelease];
 }
