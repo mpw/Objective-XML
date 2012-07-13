@@ -12,10 +12,11 @@
 
 @interface MPWTagAction : NSObject
 {
-    NSString *tagName;
     NSString *mappedName;
     NSString *tagNamespace;
     NSString *namespacePrefix;
+    @public
+    NSString *tagName;
     MPWFastInvocation *tagAction;
     MPWFastInvocation *elementAction;
 }

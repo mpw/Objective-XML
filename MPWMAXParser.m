@@ -14,7 +14,7 @@
 #import "MPWMAXParser_private.h"
 #import "SaxDocumentHandler.h"
 #import "MPWXmlElement.h"
-
+#import "MPWTagAction.h"
 
 #if TARGET_OS_IPHONE
 #define CFMakeCollectable(x)   (x)
@@ -422,7 +422,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 }
 
 
-- (void)parserDoStackProcessingForEndElementStartPtr:(const char*)fullyQualifedPtr len:(int)fullyQualifiedLen namespaceLen:(int)namespaceLen tag:tag
+- (void)parserDoStackProcessingForEndTag:tag
 {
 	id result=nil;
 	if ( tagStackLen >0 ) {
@@ -431,14 +431,15 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 		id attrs=currentElement->attributes;
 		id children = currentElement->children;
         MPWTagAction *action= currentElement->action;
-		MPWFastInvocation* invocation=[action elementAction];
         int integerTag = 0; // [handler integerTagForElementName:tagStartPtr length:tagLen];
 		currentElement->integerTag=integerTag;
 //		NSLog(@"integer tag: %d",integerTag);
 #if 0
 //		NSLog(@"parserDoStackProcessingForEndElementStartPtr: tagStackLen = %d children = %@",tagStackLen,children);
 #endif	
+       if ( action ) 
 			{
+                MPWFastInvocation* invocation=action->elementAction;
 				id args[3]={ children, attrs ,self};
 //				NSLog(@"will invoke: %@/%@",[invocation target],NSStringFromSelector([invocation selector]));
 				result = [invocation resultOfInvokingWithArgs:args count:3];
@@ -522,6 +523,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	}
 	currentElement->isIncomplete=NO;
     currentElement->action=nil;
+    MPWTagAction *action=nil;
     if ( fullyQualifiedLen > 0 ) {
 		id attrs=_attributes;
 //		id prefixTag=nil;
@@ -538,7 +540,8 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
             tagLen=fullyQualifiedLen;
         }
         currentElement->handler=handler;
-        
+        action= currentElement->action;
+
         //---- meta tags need special case handling (charset decl.)
         
 		if ( tagLen == 4 && !strncasecmp(tagStartPtr, "meta", 4) ) {
@@ -546,6 +549,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 		}
 		if ( handler ) {
             currentElement->action=[handler actionForCString:tagStartPtr length:tagLen];
+            action=currentElement->action;
 			tag=[currentElement->action tagName];
 //			NSLog(@"got unique tag: '%@',%p non-unique: '%@'",tag,tag,TAGFORCSTRING( fullyQualifedPtr, fullyQualifiedLen));
 		}
@@ -576,8 +580,10 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 		}
 //		PUSHOBJECT( retainMPWObject( attrs ) );
 #if 1
-		if ( 1 ) {
-			id invocation = [currentElement->action tagAction];
+
+		if ( action ) {
+			id invocation = action->tagAction;
+            if ( invocation)
 			{
 				id args[2]={  attrs, self };
 				[invocation resultOfInvokingWithArgs:args count:2];
@@ -592,7 +598,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 //			NSLog(@"empty element with '%.*s'",nameLen,start);
 
 //            [tag retain];
-			[self parserDoStackProcessingForEndElementStartPtr:fullyQualifedPtr len:fullyQualifiedLen namespaceLen:namespaceLen tag:tag];
+			[self parserDoStackProcessingForEndTag:tag];
 			lastTagWasOpen=NO;
 //			NSLog(@"after empty element with '%.*s'",nameLen,start);
 //			NSLog(@"finished processing empty element");
@@ -641,6 +647,8 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	tagLen=fullyQualifiedLen;
 	int len=tagLen;
 	NSXMLElementInfo *currentElement = &CURRENTELEMENT;
+    MPWTagAction *action= currentElement->action;
+
 	id handler=currentElement->handler;
 //	allowedIndex--;
 
@@ -685,8 +693,8 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
         tagLen=fullyQualifiedLen;
     }
     
-	if ( !endName && handler ) {
-		endName=[currentElement->action tagName];
+	if ( !endName  && action ) {
+		endName=action->tagName;
 	}
 	if ( !endName ) {
 //        NSLog(@"did not get endName ('%.*s') from handler %@",tagLen,startPtr,handler);
@@ -706,7 +714,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	lastTagWasOpen=NO;
     if ( CURRENTTAG == endName || [CURRENTTAG isEqual: endName] ) {
 //        NSLog(@"will do stackProcessing tag: %@",CURRENTTAG);
-		[self parserDoStackProcessingForEndElementStartPtr:fullyQualifedPtr len: fullyQualifiedLen namespaceLen:namespaceLen tag:CURRENTTAG];
+		[self parserDoStackProcessingForEndTag:CURRENTTAG];
 //		NSLog(@"end tag end, tagStackLen: %d",tagStackLen);
         return YES;
     } else {
