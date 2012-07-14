@@ -25,9 +25,13 @@ static void doNothing() { }
 static BOOL returnYes() { return YES; }
 static BOOL returnNo() { return NO; }
 
+#if 0
 NSString *MPWXMLCDataKey=@"MPWXMLCDataKey";
 NSString *MPWXMLPCDataKey=@"MPWXMLPCDataKey";
-
+#else
+NSString *MPWXMLCDataKey=nil;
+NSString *MPWXMLPCDataKey=nil;
+#endif
 
 @implementation MPWMAXParser
 

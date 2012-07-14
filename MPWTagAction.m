@@ -79,7 +79,6 @@ objectAccessor(MPWFastInvocation, elementAction, setElementAction)
     BOOL primaryHasSelector=[self targetRespondsToElementSelector:primaryTarget];
     BOOL backupHasSelector=[self targetRespondsToElementSelector:backupTarget];
     BOOL primaryHasDefault=[primaryTarget respondsToSelector:[self defaultElementSelector]];
-    
     if ( !primaryHasSelector) {
         if ( backupHasSelector || !primaryHasDefault ) {
             target=backupTarget;
@@ -87,6 +86,7 @@ objectAccessor(MPWFastInvocation, elementAction, setElementAction)
     }
     [invocation setTarget:target];
     [invocation setSelector:[self elementSelectorForTarget:target]];
+    [invocation setUseCaching:YES];
     return invocation;
 }
 
@@ -100,6 +100,7 @@ objectAccessor(MPWFastInvocation, elementAction, setElementAction)
     MPWFastInvocation *invocation=[[MPWFastInvocation new] autorelease];
     [invocation setTarget:primaryTarget];
     [invocation setSelector:[self tagSelector]];
+    [invocation setUseCaching:YES];
     [self setTagAction:invocation];
 }
 
