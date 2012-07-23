@@ -76,6 +76,7 @@ extern NSString *MPWXMLPCDataKey;
     NSInteger				tagStackLen,tagStackCapacity,maxDepthAllowed;
     IMP						beginElement,endElement,characterDataAllowed;
 	IMP						characters,cdata,uniqueTagForCString;
+    IMP                     tagHandlerForPrefix,prefixMapObjectForCString;
 	MPWXMLAttributes*		_attributes;
 
 	NSMutableDictionary*	namespacePrefixToURIMap;

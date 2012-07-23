@@ -84,7 +84,7 @@ boolAccessor(isCaseInsensitive, setIsCaseInsensitive)
     if (!tagTable) {
         [self buildLookupTables];
     }
-    return [tagTable objectForCString:aCstring length:len];
+    return OBJECTFORSTRINGLENGTH(tagTable, aCstring, len);
 }
 
 -actionForCString:(const char*)aCstring

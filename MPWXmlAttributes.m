@@ -42,14 +42,26 @@ THE POSSIBILITY OF SUCH DAMAGE.
 -(void)pop:(int)n
 {
 	n=MIN(n,attrCount);
-	while( n-- > 0 ) {
-		attrCount--;
-		[keys[attrCount] release];
-		[values[attrCount] release];
-		keys[attrCount]=nil;
-		values[attrCount]=nil;
-		namespaces[attrCount]=nil;
-	}
+    int remaining=attrCount-n;
+    id *keyPtr=keys+remaining;
+    id *valPtr=values+remaining;
+    id *namespacePtr=namespaces+remaining;
+    id *keyLimit=keys+attrCount;
+    while ( keyPtr < keyLimit) {
+        if ( *keyPtr ) {
+            [*keyPtr release];
+            *keyPtr=nil;
+        }
+        if ( *valPtr ) {
+            [*valPtr release];
+            *valPtr=nil;
+        }
+        *namespacePtr=nil;
+        keyPtr++;
+        valPtr++;
+        namespacePtr++;
+    }
+    attrCount-=n;
 }
 
 

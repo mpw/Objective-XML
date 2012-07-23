@@ -58,10 +58,6 @@ objectAccessor( NSURL, url, setUrl )
 
 #define	INITIALOBJECTSTACKDEPTH 100
 
-//static Class uniqueStringClass=nil;
-//static Class SubDataClass = nil;
-//static Class XmlAttributeClass =nil;
-
 idAccessor( parseResult, setParseResult )
 idAccessor( version, setVersion )
 idAccessor( scanner, setScanner )
@@ -135,11 +131,7 @@ static inline BOOL extractNameSpace( const char *start, int len, const char **st
 	tagStackLen=0;
 //	NSLog(@"before setDefaultNamespaceHandler");
 	[self setDefaultNamespaceHandler:nil];
-//  if ( !XmlAttributeClass ) {
-//        XmlAttributeClass=[MPWXMLAttributes class];
- //       uniqueStringClass=[MPWUniqueString class];
-//        SubDataClass = [MPWSubData class];
-//    }
+
     [self setDelegate:self];
 	[self setReportIgnoreableWhitespace:NO];
 	namespaceHandlers=[[NSMutableDictionary alloc] init];
@@ -150,6 +142,7 @@ static inline BOOL extractNameSpace( const char *start, int len, const char **st
 //	NSLog(@"after setHandler");
 //	[pool release];
 	autotranslateUTF8=YES;
+        tagHandlerForPrefix=[self methodForSelector:@selector(handlerForPrefix:length:)];
     }
 	return self;
 }
@@ -253,7 +246,8 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 		[self rebuildPrefixHandlerMap];
 	}
 //	NSLog(@"getting handler for prefix: '%.*s'",prefixLen,prefixString);
-	handler = [prefix2HandlerMap objectForCString:(char*)prefixString length:prefixLen];
+    handler = prefixMapObjectForCString( prefix2HandlerMap, @selector(objectForCString:length:), prefixString, prefixLen);
+//	handler = [prefix2HandlerMap objectForCString:(char*)prefixString length:prefixLen];
 	if ( !handler ) {
 		handler=defaultNamespaceHandler;
 	}
@@ -267,8 +261,9 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 {
 	const char *strippedStart;
 	int strippedNameLen;
-//	id  handler=defaultNamespaceHandler;
-	id name,value=nil,valueToRelease=nil;
+	id  handler=defaultNamespaceHandler;
+	id name=nil,value=nil,valueToRelease=nil;
+    BOOL isNamespace=NO;
 	if ( tagStackLen > maxDepthAllowed ) {
 		return YES;
 	}
@@ -290,39 +285,43 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
     if ( namespaceLen > 0 ) {
         strippedStart=nameStart+namespaceLen+1;
         strippedNameLen=nameLen - namespaceLen-1;
-		name = MAKEDATA( strippedStart, strippedNameLen );
-//        NSLog(@"name: %@",name);
-//        NSLog(@"namespace: %.*s",namespaceLen, nameStart);
-		if ( namespaceLen==5 && !strncmp( "xmlns", nameStart, 5 ) ) {
-			[self handleNameSpaceAttribute:name withValue:value];
-			return YES;
-		}
+        if ( namespaceLen==5 && !strncmp( "xmlns", nameStart, 5 ) ) {
+            isNamespace=YES;
+        }
+        @try {
+            if ( !isNamespace) {
+                handler=tagHandlerForPrefix(self,@selector(handlerForPrefix:length:), nameStart, namespaceLen);
+            }
+        } @catch (id e) {
+            NSLog(@"---- raised in getting handler for prefix: %@",e);
+        
+        }
     } else {
         strippedStart=nameStart;
         strippedNameLen=nameLen;
-		name = MAKEDATA( nameStart, nameLen );
     }
-#if 0
-	if (  extractNameSpace( nameStart, nameLen, &strippedStart, &namespaceLen, &strippedNameLen ) ) {
-		name = MAKEDATA( strippedStart, strippedNameLen );
-		if ( namespaceLen==5 && !strncmp( "xmlns", nameStart, 5 ) ) {
-			[self handleNameSpaceAttribute:name withValue:value];
-			return YES;
-		}
-		handler=[self handlerForPrefix:nameStart length:namespaceLen];
-	} else {
-        name = MAKEDATA( nameStart, nameLen );
+    if ( YES ) {
+        MPWTagAction *action=[handler actionForCString:strippedStart length:strippedNameLen];
+        if (action) {
+            name=action->tagName;
+        }
+//        NSLog(@"name for '%.*s' = '%@",strippedNameLen,strippedStart,name);
+    }
+    if (!name)  {
+        name = MAKEDATA( strippedStart, strippedNameLen );
+    }
 
-	}
-#endif
 	if (  !_attributes && attributeCache ) {
-//		NSLog(@"attributes, getObject: %p %p",attributeCache->getObject,[attributeCache getObjectIMP]);
 		id att=GETOBJECT(  attributeCache);
 		[self _setAttributes:att];
 		[att removeAllObjects];
 	}
 //	NSLog(@"tag for '%@' in '%@' is %d",name, [namespacePrefixToURIMap objectForKey:MAKEDATA(nameStart,namespaceLen)] ,integerTagForAttributeName);
-	[_attributes setValue:value forAttribute:name];
+    if ( isNamespace) {
+        [self handleNameSpaceAttribute:name withValue:value];
+    } else {
+        [_attributes setValue:value forAttribute:name];
+    }
 
 	return YES;
 }
@@ -415,8 +414,9 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 			[handler setNamespaceString:namespaceString];
 		}
 	}
-//	NSLog(@"handlers %@ for prefixes: %@",handlers,activePrefixes);
+	NSLog(@"--- handlers %@ for prefixes: %@",handlers,activePrefixes);
 	[self setPrefix2HandlerMap:[[[MPWSmallStringTable alloc] initWithKeys:activePrefixes values:handlers] autorelease]];
+    prefixMapObjectForCString=[prefix2HandlerMap methodForSelector:@selector(objectForCString:length:)];
 	[pool release];
 }
 
@@ -567,10 +567,11 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 //		NSLog(@"beginelement: %@/%x",documentHandler,beginElement);
 #if 1
 		if ( !attrs ) {
-			 id _emptyDict=nil;
+			static id _emptyDict=nil;
 			if ( !_emptyDict ) {
 				_emptyDict=GETOBJECT( (MPWObjectCache*)attributeCache ); //  [[NSXMLAttributes alloc] init];
 				[_emptyDict removeAllObjects];
+                [_emptyDict retain];
 			}
 			attrs=_emptyDict;
 		}
@@ -1653,6 +1654,7 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	[parser parse:xmldata];
 	parseResult=[parser parseResult];
 	INTEXPECT( [parseResult count], 2, @"number of elements");
+    NSLog(@"=== testParseElementsToXMLAttributesWithNamespaces parseResult: %@",parseResult);
 	IDEXPECT( [parseResult objectForUniqueKey:titleKey], @"First Title", @"first title, unqualified by namespace");
 	IDEXPECT( [parseResult objectForUniqueKey:titleKey namespace:ns1], @"Second Title", @"second title, namspace1" );
 	IDEXPECT( [parseResult objectForUniqueKey:titleKey namespace:ns2], @"First Title", @"first title, namspace2" );
