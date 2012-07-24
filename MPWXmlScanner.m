@@ -89,19 +89,20 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 scalarAccessor( id, delegate, _setDelegate )
 
+#define IMPSEL( theSel )   [delegate methodForSelector:@selector(theSel) ]
 
 -(void)_initDelegation
 {
 	if ( nil != delegate ) {
-		text		= [delegate methodForSelector:@selector(makeText:length:firstEntityOffset:)];
-		space		= [delegate methodForSelector:@selector(makeSpace:length:)];
-		cdataTagCallback = [delegate methodForSelector:@selector(makeCData:length:)];
-		sgml		= [delegate methodForSelector:@selector(makeSgml:length:nameLen:)];
-		pi			= [delegate methodForSelector:@selector(makePI:length:nameLen:)];
-		openTag		= [delegate methodForSelector:@selector(beginElement:length:nameLen:namespaceLen:)];
-		closeTag	= [delegate methodForSelector:@selector(endElement:length:namespaceLen:)];
-		attVal		= [delegate methodForSelector:@selector(attributeName:length:value:length:namespaceLen:valueHasHighBit:)];
-		entityRef	= [delegate methodForSelector:@selector(makeEntityRef:length:)];
+         text            = IMPSEL(makeText:length:firstEntityOffset:);
+         space           = IMPSEL(makeSpace:length:);
+         cdataTagCallback = IMPSEL(makeCData:length:);
+         sgml            = IMPSEL(makeSgml:length:nameLen:);
+         pi                      = IMPSEL(makePI:length:nameLen:);
+         openTag         = IMPSEL(beginElement:length:nameLen:namespaceLen:);
+         closeTag        = IMPSEL(endElement:length:namespaceLen:);
+         attVal          = IMPSEL(attributeName:length:value:length:namespaceLen:valueHasHighBit:);
+         entityRef       = IMPSEL(makeEntityRef:length:);
 	}
 }
 
