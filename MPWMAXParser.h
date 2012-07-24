@@ -161,6 +161,11 @@ extern NSString *MPWXMLPCDataKey;
 
 -buildPlistWithChildren:(MPWXMLAttributes*)children attributes:(MPWXMLAttributes*)attributes parser:(MPWMAXParser*)parser;
 
+#if NS_BLOCKS_AVAILABLE
+typedef id (^xmlElementBlock)(id elements, id attributes, id parser );
+
+-(void)handleElement:(NSString*)elementName withBlock:(xmlElementBlock)aBlock;
+#endif
 
 @end
 

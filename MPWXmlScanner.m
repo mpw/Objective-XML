@@ -31,7 +31,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #import "MPWXmlScanner.h"
 #import "MPWXmlScanner16BitBE.h"
 #import "mpwfoundation_imports.h"
-
+#import <objc/message.h>
 #if 0
 
 @interface NSData(swapBytes)
@@ -567,6 +567,7 @@ idAccessor( data, setData )
 	BOOL success=NO;
 	id oldData=[[self data] retain];
 	[self setData:aData];
+    
     success=(scanXml( [data bytes], [data length] / sizeof(xmlchar),  openTag, closeTag, sgml,pi,entityRef, text,space,cdataTagCallback,attVal, delegate )==SCAN_OK);
 	[self setData:oldData];
     [oldData release];

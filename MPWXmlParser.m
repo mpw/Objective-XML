@@ -146,75 +146,111 @@ THE POSSIBILITY OF SUCH DAMAGE.
 }
 
 
--(BOOL)beginElement:(const char*)start length:(int)len nameLen:(int)nameLen namespaceLen:(int)namespaceLen
+-(BOOL)beginElement:(const char*)fullyQualifedPtr length:(int)len nameLen:(int)fullyQualifiedLen namespaceLen:(int)namespaceLen
 {
-	id namespaceURI=nil;
-	id fullyQualifiedTag=nil;
-	id namespacePrefixTag=nil;
-	const char *namespace;
-   id tag=nil;
+	const char *tagStartPtr=fullyQualifedPtr;
+	int tagLen=fullyQualifiedLen;
+    id tag=nil;
     BOOL isEmpty=NO;
-	RECORDSCANPOSITION( start, len );
-//    NSLog(@"start[len-2]=='%c'",start[len-2]);
-    if ( start[len-2]=='/' ) {
+    NSString *namespacePrefixTag=nil,*namespaceURI=nil;
+    NSString *fullyQualifiedTag=nil;
+ 	NSXMLElementInfo *currentElement = (((NSXMLElementInfo*)_elementStack)+tagStackLen );
+	RECORDSCANPOSITION( fullyQualifedPtr, len );
+	if ( currentElement ) {
+		currentElement->start = fullyQualifedPtr;
+		currentElement->fullyQualifiedLen = fullyQualifiedLen;
+	}
+    
+	if ( NO && charactersAreSpace &&  !reportIgnoreableWhitespace) {
+        //		NSLog(@"characters before begin: %.*s were space",nameLen,start);
+		[self flushPureSpace];
+    }
+    
+	lastTagWasOpen=YES;
+	charactersAreSpace=YES;
+    if ( fullyQualifedPtr[len-2]=='/' ) {
+		// trailing '/>' means this is an empty element
         isEmpty=YES;
-        if ( start[nameLen-1]=='/' ) {
-            nameLen--;
+        if ( fullyQualifedPtr[fullyQualifiedLen-1]=='/' ) {
+			//  if it's  '<name/>', we must also adjust the name length
+            fullyQualifiedLen--;
         }
     }
-    start++;
-    nameLen--;
+    //--- remove brackets from name
+    fullyQualifedPtr++;
+    fullyQualifiedLen--;
     len-=2;
-//	NSLog(@"begin tag, tagStackLen: %d",tagStackLen);
+    
+    //--- support for partial parsing to a specified depth (for lazy DOM parser...)
 
-    if ( nameLen > 0 ) {
+    
+	currentElement->isIncomplete=NO;
+    if ( fullyQualifiedLen > 0 ) {
 		id attrs=_attributes;
-//		id prefixTag=nil;
-		
-		//---  interpret HTML meta-tags to figure out content encoding if it's likely we are parsing HTML
-		
-		if ( nameLen == 4 && ignoreCase && !enforceTagNesting && !strncasecmp(start, "meta", 4) ) {
+        //		id prefixTag=nil;
+        
+        //--- handle namespace
+        fullyQualifiedTag=TAGFORCSTRING( fullyQualifedPtr, fullyQualifiedLen);
+
+        if ( namespaceLen > 0) {
+            namespaceLen-=1;
+            tagLen-=namespaceLen+2;
+            tagStartPtr=fullyQualifedPtr+namespaceLen+1;
+            id namespacePrefixTag=TAGFORCSTRING( fullyQualifedPtr, namespaceLen );
+            namespaceURI=[namespacePrefixToURIMap objectForKey:namespacePrefixTag];
+			tag=TAGFORCSTRING( tagStartPtr, tagLen);
+        } else {
+            tagStartPtr=fullyQualifedPtr;
+            tagLen=fullyQualifiedLen;
+            tag=fullyQualifiedTag;
+        }
+        
+        //---- meta tags need special case handling (charset decl.)
+        
+		if ( tagLen == 4 && !strncasecmp(tagStartPtr, "meta", 4) ) {
 			[self handleMetaTag];
 		}
-		
-		tag=TAGFORCSTRING( start, nameLen);
-		if ( shouldProcessNamespaces && (namespace = memchr( start, ':', nameLen )) ) {
-			fullyQualifiedTag=tag;
-			namespaceLen=nameLen-(namespace-start)-1;
-			tag=TAGFORCSTRING( namespace+1, namespaceLen );
-			namespacePrefixTag=TAGFORCSTRING( start, namespace-start );
-			namespaceURI=[namespacePrefixToURIMap objectForKey:namespacePrefixTag];
-//			NSLog(@"namespaceprefix: %@ tag: %@ uri: %@ fully qualified: %@",namespacePrefixTag,tag,namespaceURI, fullyQualifiedTag);
-		} else {
-//			NSLog(@"no namespace");
-		}	
-        PUSHTAG(tag);
-//		NSLog(@"begin element: <%@ %@%s> tagdepth=%d",tag,_attributes,isEmpty?"/":"",tagStackLen);
-//		NSLog(@"beginelement: %@/%x",documentHandler,beginElement);
-		if ( !attrs ) {
-			if ( !emptyDict ) {
-				emptyDict=[[MPWXMLAttributes alloc] init];
-			}
-			attrs=emptyDict;
+
+		if ( !tag ) {
 		}
-//		fprintf(stderr,"BEGINELEMENT: self=%p beginElement: %p documentHandler: %p\n",self,beginElement,documentHandler);
-        BEGINELEMENT( tag,  namespaceURI, fullyQualifiedTag	,attrs );
+        PUSHTAG( tag);
+#if 0
+		NSLog(@"begin element: <%@> stackDepth %d stack: %@",tag,tagStackLen,[self _fullTagStackString]);
+#endif	
+        //		NSLog(@"beginelement: %@/%x",documentHandler,beginElement);
+#if 1
+		if ( !attrs ) {
+			static id _emptyDict=nil;
+			if ( !_emptyDict ) {
+				_emptyDict=GETOBJECT( (MPWObjectCache*)attributeCache ); //  [[NSXMLAttributes alloc] init];
+				[_emptyDict removeAllObjects];
+                [_emptyDict retain];
+			}
+			attrs=_emptyDict;
+		}
+#endif		
+       BEGINELEMENT( tag,  namespaceURI, fullyQualifiedTag    ,attrs );
+
+        
+        //		fprintf(stderr,"BEGINELEMENT: self=%p beginElement: %p documentHandler: %p\n",self,beginElement,documentHandler);
+		
 		if ( _attributes ) {
 			[self clearAttributes];
 		}
         if ( isEmpty ) {
             [tag retain];
             POPTAG;
-//			[documentHandler parser:self didEndElement:tag namespaceURI:namespaceURI qualifiedName:fullyQualifiedTag];
+            lastTagWasOpen=NO;
             ENDELEMENT(tag,namespaceURI,fullyQualifiedTag);
-           [tag release];
+            [tag release];
+
         }
     } else {
         NSLog(@"nameLen <= 0!");
     }
-//	NSLog(@"begin tag (end), tagStackLen: %d",tagStackLen);
+    //	NSLog(@"begin tag (end), tagStackLen: %d",tagStackLen);
     return YES;
-}    
+}
 
 -(BOOL)makeSpace:(const char*)start length:(int)len 
 /*"

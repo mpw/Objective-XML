@@ -47,7 +47,8 @@ objectAccessor( NSURL, url, setUrl )
 
 #define MAKEDATA( start, length )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , length )
 
-#define POPTAG						( [((NSXMLElementInfo*)_elementStack)[--tagStackLen].elementName release])
+#define POPTAGNORELEASE						(((NSXMLElementInfo*)_elementStack)[--tagStackLen].elementName)
+#define POPTAG						( [POPTAGNORELEASE release])
 #define PUSHTAG(aTag) {\
     if ( tagStackLen > tagStackCapacity ) {\
         [self _growTagStack:(tagStackCapacity+2) * 2];\
@@ -414,7 +415,6 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 			[handler setNamespaceString:namespaceString];
 		}
 	}
-	NSLog(@"--- handlers %@ for prefixes: %@",handlers,activePrefixes);
 	[self setPrefix2HandlerMap:[[[MPWSmallStringTable alloc] initWithKeys:activePrefixes values:handlers] autorelease]];
     prefixMapObjectForCString=[prefix2HandlerMap methodForSelector:@selector(objectForCString:length:)];
 	[pool release];
@@ -450,21 +450,13 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 //				NSLog(@"did invoke");
 			}
 		[children removeAllObjects];
-		[CURRENTELEMENT.attributes release]; //=retainMPWObject( attrs ) ;
+        releaseMPWObject(CURRENTELEMENT.attributes);
 		CURRENTELEMENT.attributes=nil;
-		[tag retain];
-		POPTAG;
+        id lastElementName=POPTAGNORELEASE;
 		if ( result ) {
-//			int integerTag = [handler integerTagForElementName:tagStartPtr length:tagLen];
-
-//			if ( integerTag < 0 ) {
-//				NSLog(@"couldn't get integer tag for '%.*s' from %@",tagLen,tagStartPtr,handler);
-//			}
-//			NSLog(@"push for tag: %@ handler: %p %@",tag,handler,[handler namespaceString]);
 			PUSHOBJECT( result, tag, handler );
 		}
-		[tag release];
-//		[attrs removeAllObjects];
+		[lastElementName release];
 	
 	
 //		NSLog(@"got an invocation: %@ for '%.*s'",invocation,len,startPtr);
@@ -600,15 +592,8 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 			[self clearAttributes];
 		}
         if ( isEmpty ) {
-//			NSLog(@"empty element with '%.*s'",nameLen,start);
-
-//            [tag retain];
 			[self parserDoStackProcessingForEndTag:tag];
 			lastTagWasOpen=NO;
-//			NSLog(@"after empty element with '%.*s'",nameLen,start);
-//			NSLog(@"finished processing empty element");
-//           [tag release];
-//		   allowedIndex--;
         }
     } else {
         NSLog(@"nameLen <= 0!");
