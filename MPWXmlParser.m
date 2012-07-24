@@ -73,7 +73,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
     endName=TAGFORCSTRING( start, len); //  MPWUniqueStringWithCString( start, len );
 #endif
 //   NSLog(@"end element </%@>, currentTag: %@ tagStackLen: %d",endName,CURRENTTAG,tagStackLen);
-	if ( shouldProcessNamespaces &&  (namespaceLocation= memchr( start,':',len)) ) {
+    if ( shouldProcessNamespaces &&  (namespaceLen>1)) {
+        namespaceLocation=start+namespaceLen-2;
 		fullyQualified=endName;
 		namespacePrefix=start;
 		namespaceLen=len-(namespaceLocation-start)-1; //   namespaceLocation-namespacePrefix-1;
