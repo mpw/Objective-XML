@@ -39,8 +39,13 @@ typedef struct _NSXMLElementInfo {
 } NSXMLElementInfo;
 
 #define	INITIALTAGSTACKDEPTH 20
-#define MAKEDATA( start, length )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , length )
-//#define MAKEDATA( start, len )		[self makeData:start length:len]
+
+
+//#define MAKEDATA( dataStart, dataLength )   [NSData dataWithBytes:dataStart length:dataLength]
+#define MAKEDATA( dataStart, dataLength )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, dataStart , dataLength )
+
+
+
 
 /*  cached IMPs fro SAX document handler methods */
 
@@ -54,7 +59,12 @@ typedef struct _NSXMLElementInfo {
 #define ENDELEMENT(tag,namespaceURI,fullyQualified)				endElement(documentHandler, ENDELEMENTSELECTOR , self,tag,namespaceURI,fullyQualified )
 
 #define RECORDSCANPOSITION( start, length )			lastGoodPosition=start+length
-#define TAGFORCSTRING( cstr, len )  uniqueTagForCString(self, @selector(getTagForCString:length:) , cstr, len )
+
+//#define TAGFORCSTRING( cstr, cstrlen)   [[[NSString alloc] initWithBytes:cstr length:cstrlen encoding:NSUTF8StringEncoding] autorelease]
+#define TAGFORCSTRING( cstr, cstrlen)   MAKEDATA( (cstr), (cstrlen) )
+
+
+
 #define	CHARACTERDATAALLOWED		characterDataAllowed( self, @selector(characterDataAllowed:), self )
 #define	CHARACTERS( c )				characters( characterHandler , CHARACTERSSELECTOR,self, c )
 #define	CDATA( c )					cdata( characterHandler ,CDATASELECTOR,self, c )
