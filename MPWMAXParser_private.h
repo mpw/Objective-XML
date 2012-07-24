@@ -47,7 +47,7 @@ typedef struct _NSXMLElementInfo {
 
 
 
-/*  cached IMPs fro SAX document handler methods */
+/*  cached IMPs from SAX document handler methods */
 
 #define	BEGINELEMENTSELECTOR		@selector(parser:didStartElement:namespaceURI:qualifiedName:attributes:)
 #define	ENDELEMENTSELECTOR		    @selector(parser:didEndElement:namespaceURI:qualifiedName:)
