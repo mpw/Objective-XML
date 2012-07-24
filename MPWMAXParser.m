@@ -451,6 +451,9 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 			}
 		[children removeAllObjects];
         releaseMPWObject(CURRENTELEMENT.attributes);
+        if ( [CURRENTELEMENT.attributes retainCount] <= 1 ) {
+            [CURRENTELEMENT.attributes removeAllObjects];
+        }
 		CURRENTELEMENT.attributes=nil;
         id lastElementName=POPTAGNORELEASE;
 		if ( result ) {
