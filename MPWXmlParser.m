@@ -231,8 +231,9 @@ THE POSSIBILITY OF SUCH DAMAGE.
 		}
 #endif		
        BEGINELEMENT( tag,  namespaceURI, fullyQualifiedTag    ,attrs );
-
-        
+        if ([attrs retainCount] <= 2 )  {
+            [attrs removeAllObjects];
+        }
         //		fprintf(stderr,"BEGINELEMENT: self=%p beginElement: %p documentHandler: %p\n",self,beginElement,documentHandler);
 		
 		if ( _attributes ) {
