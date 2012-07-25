@@ -151,11 +151,6 @@ boolAccessor( isIncomplete, setIsIncomplete )
     [super dealloc];
 }
 
--(void)flattenOntoStream:aStream
-{
-    [aStream writeElementName:[[self name] cString] attributes:@"" contents:subelements];
-}
-
 -(void)writeObject:anObject
 {
     [self addElement:anObject];
