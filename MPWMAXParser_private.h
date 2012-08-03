@@ -40,10 +40,13 @@ typedef struct _NSXMLElementInfo {
 
 #define	INITIALTAGSTACKDEPTH 20
 
+#define DEOPTIMIZE_ALLOCATION 0
 
-//#define MAKEDATA( dataStart, dataLength )   [NSData dataWithBytes:dataStart length:dataLength]
+#if DEOPTIMIZE_ALLOCATION
+#define MAKEDATA( dataStart, dataLength )   [NSData dataWithBytes:dataStart length:dataLength]
+#else
 #define MAKEDATA( dataStart, dataLength )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, dataStart , dataLength )
-
+#endif
 
 
 
@@ -60,9 +63,11 @@ typedef struct _NSXMLElementInfo {
 
 #define RECORDSCANPOSITION( start, length )			lastGoodPosition=start+length
 
-//#define TAGFORCSTRING( cstr, cstrlen)   [[[NSString alloc] initWithBytes:cstr length:cstrlen encoding:NSUTF8StringEncoding] autorelease]
+#if DEOPTIMIZE_ALLOCATION
+#define TAGFORCSTRING( cstr, cstrlen)   [[[NSString alloc] initWithBytes:cstr length:cstrlen encoding:NSUTF8StringEncoding] autorelease]
+#else
 #define TAGFORCSTRING( cstr, cstrlen)   MAKEDATA( (cstr), (cstrlen) )
-
+#endif
 
 
 #define	CHARACTERDATAALLOWED		characterDataAllowed( self, @selector(characterDataAllowed:), self )
