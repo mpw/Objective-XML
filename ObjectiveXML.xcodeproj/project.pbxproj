@@ -404,7 +404,7 @@
 		1F96E5E109B62F5C0063D669 /* emptyelement.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E2261072C6B2A007DCDB1 /* emptyelement.xml */; };
 		1F96E5E209B62F5C0063D669 /* archiversample.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E2291072C71A7007DCDB1 /* archiversample.xml */; };
 		1F96E5E309B62F5C0063D669 /* emptyElementWithAttribute.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E22BE072C794E007DCDB1 /* emptyElementWithAttribute.xml */; };
-		1F96E5E609B62F5C0063D669 /* MPWXmlScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1D00668979C35ADD82 /* MPWXmlScanner.m */; settings = {ATTRIBUTES = (); }; };
+		1F96E5E609B62F5C0063D669 /* MPWXmlScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1D00668979C35ADD82 /* MPWXmlScanner.m */; settings = {ATTRIBUTES = (); COMPILER_FLAGS = "-O3 -funroll-loops"; }; };
 		1F96E5E709B62F5C0063D669 /* MPWXmlElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1E00668979C35ADD82 /* MPWXmlElement.m */; settings = {ATTRIBUTES = (); }; };
 		1F96E5E809B62F5C0063D669 /* MPWXmlAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1F00668979C35ADD82 /* MPWXmlAttributes.m */; settings = {ATTRIBUTES = (); }; };
 		1F96E5E909B62F5C0063D669 /* MPWXmlGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2000668979C35ADD82 /* MPWXmlGeneratorStream.m */; settings = {ATTRIBUTES = (); }; };
@@ -2484,7 +2484,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
@@ -2626,14 +2626,20 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
 				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					/Library/Frameworks/,
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
 				GCC_VERSION = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PREBINDING = NO;
 				PRODUCT_NAME = iXmlKit;
-				SDKROOT = iphoneos3.1.2;
+				SDKROOT = iphoneos;
 				VALID_ARCHS = "i386 armv6";
 			};
 			name = Development;
@@ -2690,7 +2696,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
@@ -2772,14 +2778,18 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
 				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "${TARGET_BUILD_DIR}/../Release/";
+				FRAMEWORK_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					/Library/Frameworks/,
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = /Library/Headers;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = iXmlKit;
