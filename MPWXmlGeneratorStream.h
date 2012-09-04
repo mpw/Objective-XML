@@ -30,7 +30,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #import <Foundation/Foundation.h>
 #import "mpwfoundation_imports.h"
-//#import <MPWXmlKit/SaxDocumentHandler.h>
+//#import <ObjectiveXML/SaxDocumentHandler.h>
 
 @interface MPWXmlGeneratorStream : MPWFlattenStream //<SaxDocumentHandler>
 {

@@ -82,7 +82,7 @@ objectAccessor( NSString, version, setVersion )
 
 @implementation MPWFeed(testing)
 
-+_parseTestFeedFile:(NSString*)filename
++(MPWFeed*)_parseTestFeedFile:(NSString*)filename
 {
 	id rssData = [self frameworkResource:filename category:@"rss"];
 	return [[[self alloc] initWithData:rssData normalize: NO] autorelease];

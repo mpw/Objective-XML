@@ -34,7 +34,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 
 */
-#import <MPWXmlKit/MPWXmlUnarchiver.h>
+#import <ObjectiveXML/MPWXmlUnarchiver.h>
 
 
 @interface MPWXmlWrapperUnarchiver : MPWXmlUnarchiver {

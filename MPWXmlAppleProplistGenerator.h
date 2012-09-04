@@ -28,7 +28,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 , created  on Sat 17-Jul-1999 */
 
-#import <MPWXmlKit/MPWXmlProplistGenerator.h>
+#import <ObjectiveXML/MPWXmlProplistGenerator.h>
 
 @interface MPWXmlAppleProplistGenerator : MPWXmlProplistGenerator
 {

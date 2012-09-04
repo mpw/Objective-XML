@@ -111,7 +111,7 @@
 		1F3653EF0AC01F20008792DA /* attributes_with_double_closing_quotes.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653EE0AC01F20008792DA /* attributes_with_double_closing_quotes.html */; };
 		1F3653F90AC0200F008792DA /* xml_comment_with_dash.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653F80AC0200F008792DA /* xml_comment_with_dash.xml */; };
 		1F3653FF0AC02085008792DA /* no_space_between_attributes.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F3653FE0AC02085008792DA /* no_space_between_attributes.html */; };
-		1F37D26413257FCF0021A5EF /* MPWFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F37D26413257FCF0021A5EF /* MPWFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7FB2CF0E00D58700A40B28 /* MPWFeed.h */; settings = {ATTRIBUTES = (); }; };
 		1F37D2EB132582210021A5EF /* MPWAtomLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E112D1BB9400DF5E66 /* MPWAtomLink.m */; };
 		1F37D2EC132582250021A5EF /* MPWAtomLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832E012D1BB9400DF5E66 /* MPWAtomLink.h */; };
 		1F3C7B46136FE2EF009C0697 /* mpwfoundation_imports.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FAAD2E20DF61EC200592B29 /* mpwfoundation_imports.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -888,7 +888,7 @@
 		1F90E7F10BD589D60074D009 /* test2.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = test2.xml; sourceTree = "<group>"; };
 		1F9403850C68159F00E189FC /* hreftest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = hreftest.html; sourceTree = "<group>"; };
 		1F96E5FF09B62F5C0063D669 /* Info-MPWXmlKit__Framework___Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-MPWXmlKit__Framework___Upgraded_.plist"; sourceTree = "<group>"; };
-		1F96E60009B62F5C0063D669 /* MPWXmlKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPWXmlKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F96E60009B62F5C0063D669 /* ObjectiveXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectiveXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9A10380D919CAC00D39D0E /* MPWAppKitXMLTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MPWAppKitXMLTesting-Info.plist"; sourceTree = "<group>"; };
 		1F9BAE6905762A2E009DD1EC /* MPWFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MPWFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9F24080F81B25200D8A750 /* c1qt12.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = c1qt12.html; sourceTree = "<group>"; };
@@ -1250,7 +1250,7 @@
 		07DF1A4E00668979C35ADD82 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1F96E60009B62F5C0063D669 /* MPWXmlKit.framework */,
+				1F96E60009B62F5C0063D669 /* ObjectiveXML.framework */,
 				1F2553E90D627362007D8DAF /* MPWXmlCore.framework */,
 				1FD5DB000F2CEDB000F8F769 /* libiXmlKit.a */,
 				1FB43C0310BFB6EF00490AA6 /* MPWXmlKit.framework */,
@@ -1513,6 +1513,7 @@
 			files = (
 				1FD5DB970F2CEEDC00F8F769 /* MPWMAXParser_private.h in Headers */,
 				1FD5DB990F2CEEDC00F8F769 /* MPWXmlAttributes.h in Headers */,
+				1F37D26413257FCF0021A5EF /* MPWFeed.h in Headers */,
 				1FD5DB9B0F2CEEDC00F8F769 /* MPWHTMLFileTextExtractor.h in Headers */,
 				1FD5DB9C0F2CEEDC00F8F769 /* MPWOpenDocumentParser.h in Headers */,
 				1FD5DB9D0F2CEEDC00F8F769 /* mpwfoundation_imports.h in Headers */,
@@ -1532,7 +1533,6 @@
 				1F4FCED51105101B00376799 /* MPWFlattenStream.h in Headers */,
 				1F4FCED61105101B00376799 /* MPWStream.h in Headers */,
 				1FCD3D3C12B854FB00FF08E9 /* MPWAtomParser.h in Headers */,
-				1F37D26413257FCF0021A5EF /* MPWFeed.h in Headers */,
 				1F37D2EC132582250021A5EF /* MPWAtomLink.h in Headers */,
 				1F7EC2FD15AF3142009C36B5 /* MPWTagAction.h in Headers */,
 			);
@@ -1541,9 +1541,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1F2553E80D627362007D8DAF /* MPWXmlCore */ = {
+		1F2553E80D627362007D8DAF /* ObjXMLCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F2553EF0D627363007D8DAF /* Build configuration list for PBXNativeTarget "MPWXmlCore" */;
+			buildConfigurationList = 1F2553EF0D627363007D8DAF /* Build configuration list for PBXNativeTarget "ObjXMLCore" */;
 			buildPhases = (
 				1F2553E40D627362007D8DAF /* Headers */,
 				1F2553E50D627362007D8DAF /* Resources */,
@@ -1554,14 +1554,14 @@
 			);
 			dependencies = (
 			);
-			name = MPWXmlCore;
+			name = ObjXMLCore;
 			productName = MPWXmlCore;
 			productReference = 1F2553E90D627362007D8DAF /* MPWXmlCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1F3C7B44136FE2EF009C0697 /* MPWXmlKit (Linux) */ = {
+		1F3C7B44136FE2EF009C0697 /* ObjectiveXML (Linux) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F3C7C08136FE2EF009C0697 /* Build configuration list for PBXNativeTarget "MPWXmlKit (Linux)" */;
+			buildConfigurationList = 1F3C7C08136FE2EF009C0697 /* Build configuration list for PBXNativeTarget "ObjectiveXML (Linux)" */;
 			buildPhases = (
 				1F3C7B45136FE2EF009C0697 /* Headers */,
 				1F3C7B71136FE2EF009C0697 /* Resources */,
@@ -1574,15 +1574,15 @@
 			);
 			dependencies = (
 			);
-			name = "MPWXmlKit (Linux)";
+			name = "ObjectiveXML (Linux)";
 			productInstallPath = /Library/Frameworks;
 			productName = "MPWXmlKit (Framework)";
 			productReference = 1F3C7C0B136FE2EF009C0697 /* MPWXmlKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1F96E5C409B62F5C0063D669 /* MPWXmlKit */ = {
+		1F96E5C409B62F5C0063D669 /* ObjectiveXML */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F96E5FA09B62F5C0063D669 /* Build configuration list for PBXNativeTarget "MPWXmlKit" */;
+			buildConfigurationList = 1F96E5FA09B62F5C0063D669 /* Build configuration list for PBXNativeTarget "ObjectiveXML" */;
 			buildPhases = (
 				1F96E5C509B62F5C0063D669 /* Headers */,
 				1F96E5DE09B62F5C0063D669 /* Resources */,
@@ -1595,15 +1595,15 @@
 			);
 			dependencies = (
 			);
-			name = MPWXmlKit;
+			name = ObjectiveXML;
 			productInstallPath = /Library/Frameworks;
 			productName = "MPWXmlKit (Framework)";
-			productReference = 1F96E60009B62F5C0063D669 /* MPWXmlKit.framework */;
+			productReference = 1F96E60009B62F5C0063D669 /* ObjectiveXML.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1FB43B5510BFB6EF00490AA6 /* MPWXmlKit (Windows) */ = {
+		1FB43B5510BFB6EF00490AA6 /* ObjectiveXML (Windows) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FB43C0010BFB6EF00490AA6 /* Build configuration list for PBXNativeTarget "MPWXmlKit (Windows)" */;
+			buildConfigurationList = 1FB43C0010BFB6EF00490AA6 /* Build configuration list for PBXNativeTarget "ObjectiveXML (Windows)" */;
 			buildPhases = (
 				1FB43B5610BFB6EF00490AA6 /* Headers */,
 				1FB43B7E10BFB6EF00490AA6 /* Resources */,
@@ -1617,15 +1617,15 @@
 			);
 			dependencies = (
 			);
-			name = "MPWXmlKit (Windows)";
+			name = "ObjectiveXML (Windows)";
 			productInstallPath = /Library/Frameworks;
 			productName = "MPWXmlKit (Framework)";
 			productReference = 1FB43C0310BFB6EF00490AA6 /* MPWXmlKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1FD5DAFF0F2CEDB000F8F769 /* iXmlKit */ = {
+		1FD5DAFF0F2CEDB000F8F769 /* iObjectiveXML */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FD5DB910F2CEE1000F8F769 /* Build configuration list for PBXNativeTarget "iXmlKit" */;
+			buildConfigurationList = 1FD5DB910F2CEE1000F8F769 /* Build configuration list for PBXNativeTarget "iObjectiveXML" */;
 			buildPhases = (
 				1FD5DAFC0F2CEDB000F8F769 /* Headers */,
 				1FD5DAFD0F2CEDB000F8F769 /* Sources */,
@@ -1635,7 +1635,7 @@
 			);
 			dependencies = (
 			);
-			name = iXmlKit;
+			name = iObjectiveXML;
 			productName = iXmlKit;
 			productReference = 1FD5DB000F2CEDB000F8F769 /* libiXmlKit.a */;
 			productType = "com.apple.product-type.library.static";
@@ -1661,13 +1661,13 @@
 			projectRoot = "";
 			targets = (
 				1FD564AB0E2ECB2D00607D4E /* B&I ObjectiveXML */,
-				1F2553E80D627362007D8DAF /* MPWXmlCore */,
-				1F96E5C409B62F5C0063D669 /* MPWXmlKit */,
+				1F2553E80D627362007D8DAF /* ObjXMLCore */,
+				1F96E5C409B62F5C0063D669 /* ObjectiveXML */,
 				1F4B0F610DBEB75A00639DC0 /* All */,
-				1FD5DAFF0F2CEDB000F8F769 /* iXmlKit */,
-				1FB43B5510BFB6EF00490AA6 /* MPWXmlKit (Windows) */,
+				1FD5DAFF0F2CEDB000F8F769 /* iObjectiveXML */,
+				1FB43B5510BFB6EF00490AA6 /* ObjectiveXML (Windows) */,
 				1F5A6CAA1170104300E4A959 /* iXmlKit (Phone + Simulator fat) */,
-				1F3C7B44136FE2EF009C0697 /* MPWXmlKit (Linux) */,
+				1F3C7B44136FE2EF009C0697 /* ObjectiveXML (Linux) */,
 			);
 		};
 /* End PBXProject section */
@@ -2270,17 +2270,17 @@
 /* Begin PBXTargetDependency section */
 		1F4B0F6C0DBEB76900639DC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1F96E5C409B62F5C0063D669 /* MPWXmlKit */;
+			target = 1F96E5C409B62F5C0063D669 /* ObjectiveXML */;
 			targetProxy = 1F4B0F6B0DBEB76900639DC0 /* PBXContainerItemProxy */;
 		};
 		1FC4D3160DFA034400AC1A66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1F2553E80D627362007D8DAF /* MPWXmlCore */;
+			target = 1F2553E80D627362007D8DAF /* ObjXMLCore */;
 			targetProxy = 1FC4D3150DFA034400AC1A66 /* PBXContainerItemProxy */;
 		};
 		1FD564B30E2ECB3400607D4E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1F2553E80D627362007D8DAF /* MPWXmlCore */;
+			target = 1F2553E80D627362007D8DAF /* ObjXMLCore */;
 			targetProxy = 1FD564B20E2ECB3400607D4E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2473,16 +2473,10 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-					/Volumes/Users/marcel/programming/Kits/MPWFoundation/build,
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
+				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2491,7 +2485,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks/";
+				INSTALL_PATH = "@rpath/Frameworks/\n";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -2499,7 +2493,7 @@
 				OTHER_REZFLAGS = "";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRINCIPAL_CLASS = "";
-				PRODUCT_NAME = MPWXmlKit;
+				PRODUCT_NAME = ObjectiveXML;
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = YES;
 				WARNING_CFLAGS = (
@@ -2610,6 +2604,8 @@
 		1FD564AE0E2ECB2D00607D4E /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2640,6 +2636,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = iXmlKit;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				VALID_ARCHS = "i386 armv6";
 			};
 			name = Development;
@@ -2685,16 +2682,10 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-					/Volumes/Users/marcel/programming/Kits/MPWFoundation/build,
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
+				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2703,7 +2694,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
-				INSTALL_PATH = "@rpath/Frameworks/";
+				INSTALL_PATH = "@rpath/Frameworks/\n";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -2711,7 +2702,7 @@
 				OTHER_REZFLAGS = "";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRINCIPAL_CLASS = "";
-				PRODUCT_NAME = MPWXmlKit;
+				PRODUCT_NAME = ObjectiveXML;
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = YES;
 				WARNING_CFLAGS = (
@@ -2794,6 +2785,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = iXmlKit;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv6";
 			};
 			name = Release;
@@ -2801,7 +2793,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F2553EF0D627363007D8DAF /* Build configuration list for PBXNativeTarget "MPWXmlCore" */ = {
+		1F2553EF0D627363007D8DAF /* Build configuration list for PBXNativeTarget "ObjXMLCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F2553EB0D627363007D8DAF /* Development */,
@@ -2819,7 +2811,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		1F3C7C08136FE2EF009C0697 /* Build configuration list for PBXNativeTarget "MPWXmlKit (Linux)" */ = {
+		1F3C7C08136FE2EF009C0697 /* Build configuration list for PBXNativeTarget "ObjectiveXML (Linux)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F3C7C09136FE2EF009C0697 /* Development */,
@@ -2846,7 +2838,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		1F96E5FA09B62F5C0063D669 /* Build configuration list for PBXNativeTarget "MPWXmlKit" */ = {
+		1F96E5FA09B62F5C0063D669 /* Build configuration list for PBXNativeTarget "ObjectiveXML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F96E5FB09B62F5C0063D669 /* Development */,
@@ -2855,7 +2847,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		1FB43C0010BFB6EF00490AA6 /* Build configuration list for PBXNativeTarget "MPWXmlKit (Windows)" */ = {
+		1FB43C0010BFB6EF00490AA6 /* Build configuration list for PBXNativeTarget "ObjectiveXML (Windows)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FB43C0110BFB6EF00490AA6 /* Development */,
@@ -2873,7 +2865,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		1FD5DB910F2CEE1000F8F769 /* Build configuration list for PBXNativeTarget "iXmlKit" */ = {
+		1FD5DB910F2CEE1000F8F769 /* Build configuration list for PBXNativeTarget "iObjectiveXML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FD5DB010F2CEDB000F8F769 /* Development */,
