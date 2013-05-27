@@ -54,7 +54,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -(void)cr
 {
-    FORWARD(@"\n");
+    FORWARDCHARS("\n");
     atBOL=YES;
 }
 -(void)indent
@@ -71,11 +71,10 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -(void)writeIndent
 {
+    char spaces[]="                                                                                                                           ";
     if ( atBOL && shouldIndent ) {
-        int i;
-        for (i=0;i<indent;i++ ){
-            FORWARD(@" ");
-        }
+        int numSpacesToOutput = MIN( indent, sizeof spaces - 2);
+        [target appendBytes:spaces length:numSpacesToOutput];
         atBOL=NO;
     }
 }
@@ -104,6 +103,15 @@ THE POSSIBILITY OF SUCH DAMAGE.
     [target writeString:attributeName];
     FORWARDCHARS("=\"");
     [target writeString:attributeValue];
+    FORWARDCHARS("\"");
+}
+
+-(void)writeCStrAttribute:(const char*)attributeName value:(const char*)attributeValue
+{
+	FORWARDCHARS(" ");
+    FORWARDCHARS(attributeName);
+    FORWARDCHARS("=\"");
+    FORWARDCHARS(attributeValue);
     FORWARDCHARS("\"");
 }
 

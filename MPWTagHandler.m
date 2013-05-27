@@ -36,6 +36,7 @@ boolAccessor(isCaseInsensitive, setIsCaseInsensitive)
 {
     if ( ![[self tagDict] objectForKey:tag]) {
         MPWTagAction *action=[[[MPWTagAction alloc] initWithTagName:tag] autorelease];
+        [action setMappedName:[[self exceptionMap] objectForKey:tag]];
         [[self tagDict] setObject:action forKey:tag];
     }
 }

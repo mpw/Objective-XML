@@ -252,7 +252,7 @@ objectAccessor( MPWXmlRpcGeneratorStream , generator, setGenerator )
 	IDEXPECT( [parsedRequest objectForKey:@"methodName"], @"login", @"method name");
 //	NSLog(@"parsedRequest: %@",parsedRequest);
 	NSArray *allParams=[[parsedRequest objectForKey:@"params"] allValues];
-	NSString *method = [allParams objectAtIndex:0];
+//	NSString *method = [allParams objectAtIndex:0];
 	NSArray *restParams = [allParams subarrayWithRange:NSMakeRange(1, [allParams count]-1)];
 //	NSLog(@"allParams: %@",allParams);
 	EXPECTNOTNIL( allParams, @"params");

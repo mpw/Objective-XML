@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -1645,8 +1645,11 @@
 /* Begin PBXProject section */
 		07DF1A1900668979C35ADD82 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
 			buildConfigurationList = 1F39596808A0CC4600BF7444 /* Build configuration list for PBXProject "ObjectiveXML" */;
-			compatibilityVersion = "Xcode 3.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -2294,12 +2297,12 @@
 					x86_64,
 					i386,
 				);
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2316,7 +2319,6 @@
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build/Deployment\"";
 				OTHER_LDFLAGS = "-headerpad_max_install_names";
-				PREBINDING = NO;
 				PRODUCT_NAME = MPWXmlCore;
 				SKIP_INSTALL = YES;
 				ZERO_LINK = YES;
@@ -2326,11 +2328,17 @@
 		1F39596908A0CC4600BF7444 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = macosx;
 			};
@@ -2341,6 +2349,7 @@
 			buildSettings = {
 				ARCHS = i386;
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2354,14 +2363,13 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
-				GCC_VERSION = org.cocotron.1.0.linux.i386.gcc.4.3.1;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_ copy 2.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks/";
@@ -2389,6 +2397,7 @@
 			buildSettings = {
 				ARCHS = i386;
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .so;
@@ -2399,14 +2408,13 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mpwfoundation_imports.h;
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
-				GCC_VERSION = org.cocotron.1.0.linux.i386.gcc.4.3.1;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "./**";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_ copy 2.plist";
 				INSTALL_PATH = "@rpath/Frameworks/";
@@ -2415,7 +2423,6 @@
 				OTHER_LDFLAGS = "-shared";
 				OTHER_LIBTOOL_FLAGS = "";
 				OTHER_REZFLAGS = "";
-				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRINCIPAL_CLASS = "";
 				PRODUCT_NAME = MPWXmlKit;
@@ -2433,6 +2440,7 @@
 		1F4B0F650DBEB75A00639DC0 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2443,11 +2451,12 @@
 		1F5A6CAD1170104400E4A959 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "iXmlKit (Phone + Simulator fat)";
 			};
 			name = Development;
@@ -2455,11 +2464,11 @@
 		1F5A6CAE1170104400E4A959 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_GC = unsupported;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "iXmlKit (Phone + Simulator fat)";
 				ZERO_LINK = NO;
 			};
@@ -2468,15 +2477,14 @@
 		1F96E5FB09B62F5C0063D669 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2511,6 +2519,7 @@
 			buildSettings = {
 				ARCHS = i386;
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2522,7 +2531,6 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -2556,13 +2564,13 @@
 			buildSettings = {
 				ARCHS = i386;
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				EXECUTABLE_SUFFIX = .1.0.dll;
 				FRAMEWORK_SEARCH_PATHS = "/Developer/Cocotron/1.0/Windows/i386/Frameworks/**";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build\"";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -2587,7 +2595,6 @@
 				);
 				OTHER_LIBTOOL_FLAGS = "";
 				OTHER_REZFLAGS = "";
-				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRINCIPAL_CLASS = "";
 				PRODUCT_NAME = MPWXmlKit;
@@ -2604,8 +2611,8 @@
 		1FD564AE0E2ECB2D00607D4E /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2619,8 +2626,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"<Multiple",
@@ -2633,7 +2639,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = Darwin;
 				GCC_VERSION = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PREBINDING = NO;
 				PRODUCT_NAME = iXmlKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2644,14 +2649,20 @@
 		1FD5DC150F2CFC8E00F8F769 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = macosx;
 			};
@@ -2665,6 +2676,7 @@
 					ppc,
 					x86_64,
 				);
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2677,15 +2689,14 @@
 		1FD5DC170F2CFC8E00F8F769 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2723,12 +2734,12 @@
 					x86_64,
 					i386,
 				);
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2745,7 +2756,6 @@
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../Build/Deployment\"";
 				OTHER_LDFLAGS = "-headerpad_max_install_names";
-				PREBINDING = NO;
 				PRODUCT_NAME = MPWXmlCore;
 				SKIP_INSTALL = YES;
 				ZERO_LINK = YES;
@@ -2755,6 +2765,7 @@
 		1FD5DC1B0F2CFC8E00F8F769 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2766,8 +2777,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"<Multiple",
@@ -2782,7 +2792,6 @@
 				HEADER_SEARCH_PATHS = /Library/Headers;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "";
-				PREBINDING = NO;
 				PRODUCT_NAME = iXmlKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

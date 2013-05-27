@@ -144,7 +144,12 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
     currentObject = encodedObject;
 	
     [self writeClass:objectClass];
-    [target writeStartTag:className attributes:[NSString stringWithFormat:@"id='%x'",objid] single:NO];
+    [target beginStartTag:className];
+    char ptrval[50];
+    sprintf(ptrval, "%x",(int)objid);
+    [target writeCStrAttribute:"id" value:ptrval];
+    [target endStartTag:className single:NO];
+
     [target indent];
     [target cr];
     ivarIndex=0;

@@ -15,6 +15,7 @@
 #import "SaxDocumentHandler.h"
 #import "MPWXmlElement.h"
 #import "MPWTagAction.h"
+#import <MPWFoundation/MPWBlockInvocation.h>
 
 #if TARGET_OS_IPHONE
 #define CFMakeCollectable(x)   (x)
@@ -45,17 +46,17 @@ scalarAccessor( NSInteger, maxDepthAllowed, setMaxDepthAllowed )
 objectAccessor( NSData, buffer, setBuffer )
 objectAccessor( NSURL, url, setUrl )
 
-#define MAKEDATA( start, length )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , length )
+// #define MAKEDATA( start, length )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , length )
 
 #define POPTAGNORELEASE						(((NSXMLElementInfo*)_elementStack)[--tagStackLen].elementName)
-#define POPTAG						( [POPTAGNORELEASE release])
-#define PUSHTAG(aTag) {\
-    if ( tagStackLen > tagStackCapacity ) {\
-        [self _growTagStack:(tagStackCapacity+2) * 2];\
-    }\
-    ((NSXMLElementInfo*)_elementStack)[tagStackLen++].elementName=[aTag retain];\
-}
-#define TAGFORCSTRING( cstr, len )  uniqueTagForCString(self, @selector(getTagForCString:length:) , cstr, len )
+// #define POPTAG						( [POPTAGNORELEASE release])
+// #define PUSHTAG(aTag) {\
+//    if ( tagStackLen > tagStackCapacity ) {\
+//        [self _growTagStack:(tagStackCapacity+2) * 2];\
+//    }\
+//    ((NSXMLElementInfo*)_elementStack)[tagStackLen++].elementName=[aTag retain];\
+// }
+//#define TAGFORCSTRING( cstr, len )  uniqueTagForCString(self, @selector(getTagForCString:length:) , cstr, len )
 
 #define	INITIALOBJECTSTACKDEPTH 100
 
@@ -634,8 +635,8 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 
 	
     RECORDSCANPOSITION( fullyQualifedPtr, fullyQualifiedLen );
-    fullyQualifedPtr+=2;
-    fullyQualifiedLen-=3;
+    fullyQualifedPtr+=2;                // skip over '</' of end-tag
+    fullyQualifiedLen-=3;               // and also remove '>'
 	startPtr=fullyQualifedPtr;
 	tagLen=fullyQualifiedLen;
 	int len=tagLen;
@@ -654,7 +655,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
             const char *p1=currentElement->start+1;
             const char *p2=fullyQualifedPtr;
             const char *p1end=p1+fullyQualifiedLen;
-            int len=fullyQualifiedLen;
+//            int len=fullyQualifiedLen;
             BOOL ok=YES;
             while ( p1 < p1end) {
                 if ( *p1++ != *p2++ ) {
@@ -717,7 +718,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 			return NO;
 		} else {
 			while (  tagStackLen>0  && ![CURRENTTAG isEqual: endName] ) {
-				NSLog(@"stack[%ld] non matching end-tags: on-stack '%@' close-tag encountered: '%@'",tagStackLen,CURRENTTAG,endName);
+				NSLog(@"stack[%ld] non matching end-tags: on-stack '%@' close-tag encountered: '%@'",(int)tagStackLen,CURRENTTAG,endName);
 				POPTAG;
 			}
 			return YES;
@@ -1045,7 +1046,7 @@ typedef char xmlchar;
 		}
 	} else if ( start[0]=='#'  ) {
 		char *conversionString="%d";
-		char buffer[20];
+		char hexValueBuffer[20];
 		
 		if ( tolower( start[1]) =='x' ) {
 			start++;
@@ -1053,9 +1054,9 @@ typedef char xmlchar;
 		}
 		int value;
 		unichar univalue;
-		memcpy( buffer, start+1, 16 );
-		buffer[16]=0;
-		sscanf(buffer, conversionString,&value);
+		memcpy( hexValueBuffer, start+1, 16 );
+		hexValueBuffer[16]=0;
+		sscanf(hexValueBuffer, conversionString,&value);
 		univalue=value;
 		resolved=[NSString stringWithCharacters:&univalue length:1];
 	}
@@ -1279,7 +1280,7 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 		[theRequest setValue:@"ObjectiveXML" forHTTPHeaderField:@"User-Agent"];
 		[theRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"]; 
 		isReceivingData=YES;
-		id connection=[[[NSURLConnection alloc] initWithRequest:theRequest delegate:self] autorelease];
+		[[[NSURLConnection alloc] initWithRequest:theRequest delegate:self] autorelease];
 		if ( [documentHandler respondsToSelector:@selector(parserDidStartDocument:) ] ) {
 			[documentHandler parserDidStartDocument:(NSXMLParser*)self];
 		}
@@ -1302,20 +1303,23 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	BOOL success=YES;
 //	NSLog(@"parseDataFromURL: %@",xmlUrl);
 	if (  [self startParsingFromURL:xmlUrl] ) {
-		NS_DURING
-		while (  isReceivingData ) {
-            [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-//			NSLog(@"loop did run");
-		}
-//		NSLog(@"end of loop");
-		NS_HANDLER
-		if ( ![[localException name] isEqual:@"abort"] ) {
-			NSLog(@"got exception: %@",localException);
-			success=NO;
-		} else {
-			NSLog(@"got abort");
-		}
-		NS_ENDHANDLER
+		@try {
+            while (  isReceivingData ) {
+//                NSLog(@"will run runloop %@",[NSRunLoop currentRunLoop]);
+                [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+//                NSLog(@"loop did run");
+            }
+//            NSLog(@"end of loop");
+        }
+        @catch (NSException *exception) {
+            if ( ![[exception name] isEqual:@"abort"] ) {
+                NSLog(@"got exception: %@",exception);
+                success=NO;
+            } else {
+                NSLog(@"got abort");
+            }
+
+        }
 	}
 	return success;
 }
@@ -1505,7 +1509,9 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)ioError {
 			isReceivingData=NO;
 	[self setParserError:ioError];
-	[NSException raise:@"connectionFailed" format:@"network error: %@",ioError];
+//    isReceivingData=NO;
+    NSLog(@"got an I/O error: %@",ioError);
+    [NSException raise:@"connectionFailed" format:@"network error: %@",ioError];
 }
 
 // Called when a chunk of data has been downloaded.
@@ -1576,7 +1582,7 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 +(void)testXMLVersion
 {
 	id xmldata=[self frameworkResource:@"windows-encoded" category:@"xml"];
-	id parser=[self parser];
+	MPWMAXParser* parser=[self parser];
 //	NSLog(@"parser version before parse: %@",[parser version]);
 	[parser parse:xmldata];
 //	NSLog(@"parser version: %@",[parser version]);

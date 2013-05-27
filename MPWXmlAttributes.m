@@ -95,7 +95,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	int i,max;
 	NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithCapacity:[self count] - [excludedKeys count]];
 	for ( i=0,max=[self count];i<max; i++ ) {
-		if ( ! [excludedKeys containsObject:keys[i]] ) {
+		if ( ! [excludedKeys containsObject:keys[i]] && values[i] && keys[i] ) {
 			[dict setObject:values[i] forKey:keys[i]];
 		}
 	}

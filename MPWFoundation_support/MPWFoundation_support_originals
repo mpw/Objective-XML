@@ -18,3 +18,4 @@ $operator MPWSmallStringTable.m $MPWFOUNDATION/Collections.subproj/MPWSmallStrin
 $operator MPWSubData.h $MPWFOUNDATION/Collections.subproj/MPWSubData.h
 $operator MPWSubData.m $MPWFOUNDATION/Collections.subproj/MPWSubData.m
 $operator NSInvocationAdditions_lookup.h $MPWFOUNDATION/NSInvocationAdditions_lookup.h
+$operator MPWObject_fastrc.h $MPWFOUNDATION/MPWObject_fastrc.h

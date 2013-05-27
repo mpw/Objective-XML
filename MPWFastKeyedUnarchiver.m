@@ -177,7 +177,7 @@ typedef enum {
 				*(int*)ptr = [self decodeIntForKey:nil];
 				break;
 			default:
-				NSLog(@"wanted to decode %s at %x",type,ptr);
+				NSLog(@"wanted to decode %s at %p",type,ptr);
 		}
 	}
 }
