@@ -93,13 +93,13 @@ objectAccessor( NSData, fiData , _setFiData )
 
 -parseNamespace
 {
-	[NSException raise:@"notsupported" format:@"method %s not implemented",_cmd];
+	[NSException raise:@"notsupported" format:@"method %@ not implemented",NSStringFromSelector(_cmd)];
 	return self;
 }
 
 -parsePrefix
 {
-	[NSException raise:@"notsupported" format:@"method %s not implemented",_cmd];
+	[NSException raise:@"notsupported" format:@"method %@ not implemented",NSStringFromSelector(_cmd)];
 	return self;
 }
 

@@ -331,7 +331,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -(NSString*)description
 {
-	id descr=[NSMutableString stringWithFormat:@"<%@/%x with values:\n",[self class],self];
+	id descr=[NSMutableString stringWithFormat:@"<%@/%p with values:\n",[self class],self];
 	int i;
 	for (i=0;i<attrCount;i++) {
 		[descr appendFormat:@" attribute[%d] %@='%@' namespace: %p %@\n",i,keys[i],values[i],namespaces[i],[namespaces[i] namespaceString]];

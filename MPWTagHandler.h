@@ -3,7 +3,7 @@
 //  MPWXmlKit
 //
 //  Created by Marcel Weiher on 2/19/08.
-//  Copyright 2008 __MyCompanyName__. All rights reserved.
+//  Copyright 2008 Marcel Weiher. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

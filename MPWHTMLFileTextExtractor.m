@@ -3,7 +3,7 @@
 //  AKCmds
 //
 //  Created by  on 29/7/06.
-//  Copyright 2006 __MyCompanyName__. All rights reserved.
+//  Copyright 2006 Marcel Weiher. All rights reserved.
 //
 
 #import "MPWHTMLFileTextExtractor.h"

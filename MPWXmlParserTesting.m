@@ -3,7 +3,7 @@
 //  MPWXmlKit
 //
 //  Created by Marcel Weiher on 10/4/07.
-//  Copyright 2007 __MyCompanyName__. All rights reserved.
+//  Copyright 2007 Marcel Weiher. All rights reserved.
 //
 
 #import "MPWXmlParserTesting.h"

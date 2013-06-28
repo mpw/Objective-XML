@@ -54,6 +54,7 @@ extern NSString *MPWXMLPCDataKey;
 -(NSString*)combinedText;
 -(void)copyValueOfKey:(NSString*)xmlkey toObject:targetObject usingKey:(NSString*)targetKey;
 -(void)copyValueOfKey:xmlkey toObject:targetObject;
+-lastObject;
 
 @end
 

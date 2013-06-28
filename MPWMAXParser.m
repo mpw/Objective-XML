@@ -643,7 +643,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 	NSXMLElementInfo *currentElement = &CURRENTELEMENT;
     MPWTagAction *action= currentElement->action;
 
-	id handler=currentElement->handler;
+//	id handler=currentElement->handler;
 //	allowedIndex--;
 
     
@@ -718,7 +718,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 			return NO;
 		} else {
 			while (  tagStackLen>0  && ![CURRENTTAG isEqual: endName] ) {
-				NSLog(@"stack[%ld] non matching end-tags: on-stack '%@' close-tag encountered: '%@'",(int)tagStackLen,CURRENTTAG,endName);
+				NSLog(@"stack[%ld] non matching end-tags: on-stack '%@' close-tag encountered: '%@'",(long)tagStackLen,CURRENTTAG,endName);
 				POPTAG;
 			}
 			return YES;
@@ -1665,7 +1665,7 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	id penApps=[[topLevel objectAtIndex:0] valueForKeyPath:@"value.array.data"];
 	INTEXPECT( [penApps count], 5 , @"number of top level returns");
 //	IDEXPECT([[[penApps objectAtIndex:4] objectForKey:@"struct"] objectAtIndex:3],@"bozo",@"bozo");
-	id spanishDescription=[[[[penApps objectAtIndex:4] objectForKey:@"struct"] objectAtIndex:3] valueForKeyPath:@"value.string"];
+//	id spanishDescription=[[[[penApps objectAtIndex:4] objectForKey:@"struct"] objectAtIndex:3] valueForKeyPath:@"value.string"];
 //	IDEXPECT( [spanishDescription description], @"The American Heritage® Spanish Dictionary, Second Edition at your fingertips.", @"result");
 	INTEXPECT( [parser dataEncoding], NSUTF8StringEncoding, @"UTF8 ?");
 }

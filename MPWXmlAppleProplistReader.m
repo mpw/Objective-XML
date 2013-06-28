@@ -117,13 +117,13 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 	return (id)CFNumberCreate( allocator, kCFNumberDoubleType, &val );
 }
 
--integerElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
+-integerElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {
 	id subdata=[children lastObject];
 	return [self integerElementAtPtr:[subdata bytes] length:[subdata length]];
 }
 
--stringElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
+-stringElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {
 	id result=nil;
 	int count=[children count];
