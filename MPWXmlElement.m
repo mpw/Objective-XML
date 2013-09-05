@@ -167,7 +167,7 @@ boolAccessor( isIncomplete, setIsIncomplete )
 -description
 {
     return [NSString stringWithFormat:@"%@: name=%@, attributes=%@, subelements=%@/%@",
-        isa,[self name],[self attributes],[subelements class],subelements];
+        [self class],[self name],[self attributes],[subelements class],subelements];
 }
 
 -attributeForKey:aKey

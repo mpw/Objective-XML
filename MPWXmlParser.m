@@ -96,7 +96,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
     } else {
 		if ( enforceTagNesting ) {
 			[self setParserError:[NSError errorWithDomain:@"XML" code:76 userInfo:nil]];
-			[NSException raise:@"non-matching tags" format:@"non matching tags expecting: '%@' (at %d) actual end tag: '%@' tag stack:%@",[self currentTag],tagStackLen ,endName,[self _fullTagStackString]];
+			[NSException raise:@"non-matching tags" format:@"non matching tags expecting: '%@' (at %ld) actual end tag: '%@' tag stack:%@",[self currentTag],(long)tagStackLen ,endName,[self _fullTagStackString]];
 			return NO;
 		} else {
 			while ( ![CURRENTTAG isEqual: endName] && tagStackLen>0 ) {
@@ -153,7 +153,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	int tagLen=fullyQualifiedLen;
     id tag=nil;
     BOOL isEmpty=NO;
-    NSString *namespacePrefixTag=nil,*namespaceURI=nil;
+//  NSString *namespacePrefixTag=nil;
+    NSString *namespaceURI=nil;
     NSString *fullyQualifiedTag=nil;
  	NSXMLElementInfo *currentElement = (((NSXMLElementInfo*)_elementStack)+tagStackLen );
 	RECORDSCANPOSITION( fullyQualifedPtr, len );

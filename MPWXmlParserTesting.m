@@ -633,7 +633,7 @@ idAccessor( nonWSCharSet, setNonWSCharSet )
 	EXPECTFALSE( [ns_parser parse], @"parsing should fail");
 	EXPECTNOTNIL( [ns_parser parserError], @"parse error");
 
-	INTEXPECT( [[ns_parser parserError] code],76, @"error code");
+	INTEXPECT( [[ns_parser parserError] code],111, @"error code");
 
 	EXPECTFALSE( [parser parse], @"parsing should fail");
 	EXPECTNOTNIL( [parser parserError], @"parse error");

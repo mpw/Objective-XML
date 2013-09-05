@@ -34,6 +34,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #import "MPWXmlUnarchiver.h"
 #import <objc/objc.h>
 #import "mpwfoundation_imports.h"
+#import <objc/runtime.h>
 
 @implementation MPWXmlArchiver
 
@@ -137,7 +138,7 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
     id encodedObject = [anObject replacementObjectForCoder:self];
     Class objectClass=[encodedObject classForArchiver];
 //    const char* className=class_getName( objectClass );
-    const char* className=[[objectClass className] UTF8String];
+    const char* className=class_getName( objectClass);
     
     NSInteger objid = NSCountMapTable(objectTable);
     NSMapInsert( objectTable, anObject, (void*)objid );
@@ -150,12 +151,12 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
     [target writeCStrAttribute:"id" value:ptrval];
     [target endStartTag:className single:NO];
 
-    [target indent];
-    [target cr];
+//    [target indent];
+//    [target cr];
     ivarIndex=0;
     [currentObject encodeWithXmlCoder:self];
 //    [currentObject release];
-    [target outdent];
+//    [target outdent];
     [target closeTag];
     ivarIndex=oldIndex;
     currentObject=oldObject;
@@ -168,7 +169,7 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
     if ( !(ref=(NSInteger)NSMapGet(objectTable,anObject )) ) {
 //        [objectTable addObject:anObject];
         if ( cname ) {
-            [target writeStartTag:cname attributes:@"valuetype='@'" single:NO];
+            [target writeStartTag:cname attributes:@"t='@'" single:NO];
             [target indent];
             [target cr];
         }
@@ -194,17 +195,26 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
         [*(id*)address encodeXmlOn:self withName:name];
     } else {
         id content=nil;
+        id valueType=nil;
+        char charcontent[100]="";
         switch ( *itemType ) {
             
             case 'c':
             case 'C':
-                content = [NSString stringWithFormat:@"%d",*(char*)address];
+                valueType=@"valuetype='c'";
+//              content = [NSString stringWithFormat:@"%d",*(char*)address];
+                sprintf(charcontent, "%d",*(char*)address);
                 break;
             case 'i':
-                content = [NSString stringWithFormat:@"%d",*(int*)address];
+                valueType=@"valuetype='i'";
+//              content = [NSString stringWithFormat:@"%d",*(int*)address];
+                sprintf(charcontent, "%d",*(int*)address);
                 break;
             case 'I':
-                content = [NSString stringWithFormat:@"%D",*(unsigned int*)address];
+                valueType=@"valuetype='i'";
+//              content = [NSString stringWithFormat:@"%D",*(unsigned int*)address];
+                sprintf(charcontent, "%D",*(unsigned int*)address);
+
                 break;
 //           case 'q':
                 content = [NSString stringWithFormat:@"%d",*( long*)address];
@@ -213,18 +223,27 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
 				content = [NSString stringWithFormat:@"%d",*( long*)address];
                 break;
             case 's':
-                content = [NSString stringWithFormat:@"%d",*(short*)address];
+                valueType=@"valuetype='s'";
+//              content = [NSString stringWithFormat:@"%d",*(short*)address];
+                sprintf(charcontent, "%d",*(short*)address);
                 break;
             case 'S':
-                content = [NSString stringWithFormat:@"%D",*(unsigned short*)address];
+                valueType=@"valuetype='S'";
+//              content = [NSString stringWithFormat:@"%D",*(unsigned short*)address];
+                sprintf(charcontent, "%D",*(unsigned short*)address);
                 break;
             case 'f':
-                content = [NSString stringWithFormat:@"%g",(double)*(float*)address];
+                valueType=@"valuetype='f'";
+//              content = [NSString stringWithFormat:@"%g",(double)*(float*)address];
+                sprintf(charcontent, "%g",(double)*(float*)address);
                 break;
             case 'd':
-                content = [NSString stringWithFormat:@"%g",*(double*)address];
+                valueType=@"valuetype='d'";
+//                content = [NSString stringWithFormat:@"%g",*(double*)address];
+                sprintf(charcontent, "%g",*(double*)address);
                 break;
             case '@':
+                valueType=@"valuetype='@'";
                 content = @"";
                 break;
             case ':':
@@ -257,7 +276,16 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
                 break;
                 ;
         }
-        [target writeElementName:name attributes:[NSString stringWithFormat:@"valuetype='%s'",itemType] contents:content];
+        if ( content)  {
+            [content getCString:charcontent maxLength:120 encoding:NSASCIIStringEncoding];
+        }
+        [target beginStartTag:name];
+        [target writeCStrAttribute:"t" value:itemType];
+        [target endStartTag:name single:NO];
+        [target appendBytes:charcontent length:strlen(charcontent)];
+//      [target writeElementName:name attributes:valueType contents:content];
+        [target writeCloseTag:name];
+
     }
 }
 

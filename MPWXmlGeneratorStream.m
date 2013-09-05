@@ -34,6 +34,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 @implementation MPWXmlGeneratorStream
 
+
 -initWithTarget:aTarget
 {
     self = [super initWithTarget:aTarget];
@@ -57,6 +58,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
     FORWARDCHARS("\n");
     atBOL=YES;
 }
+
+-(void)appendContentBytes:(void*)bytes length:(int)len
+{
+    [target appendBytes:bytes length:len];
+}
+
 -(void)indent
 {
     indent++;
@@ -115,6 +122,20 @@ THE POSSIBILITY OF SUCH DAMAGE.
     FORWARDCHARS("\"");
 }
 
+-(void)writeCStrAttribute:(const char*)attributeName intValue:(long)intValue
+{
+    char attribute[180]="";
+    snprintf(attribute, 170, " %s=\"%ld\"",attributeName,intValue);
+	FORWARDCHARS(attribute);
+}
+
+-(void)writeCStrAttribute:(const char*)attributeName doubleValue:(double)doubleValue
+{
+    char attribute[180]="";
+    snprintf(attribute, 170, " %s=\"%g\"",attributeName,doubleValue);
+	FORWARDCHARS(attribute);
+}
+
 -(void)beginStartTag:(const char*)name
 {
     [self writeIndent];
@@ -143,6 +164,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
     [self endStartTag:name single:isSingle];
 	return self;
 }
+
+
 
 -startTag:(const char*)tag
 {
@@ -208,6 +231,32 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	return self;
 }
 
+-(id)writeElementName:(const char *)name attributeBlock:(XmlGeneratorBlock)attrs contentBlock:(XmlGeneratorBlock)content
+{
+    int l=strlen(name);
+    char tagNameBuffer[l+10];
+    strncpy( tagNameBuffer+2,name,l);
+    tagNameBuffer[l+2]=0;
+    tagNameBuffer[1]='<';
+    FORWARDCHARS(tagNameBuffer+1);
+    if ( attrs ) {
+        attrs(self);
+    }
+    if ( content) {
+        FORWARDCHARS(">");
+        content(self);
+        tagNameBuffer[0]='<';
+        tagNameBuffer[1]='/';
+        tagNameBuffer[l+2]='>';
+        tagNameBuffer[l+3]='\n';
+        tagNameBuffer[l+4]=0;
+        FORWARDCHARS(tagNameBuffer);
+    } else {
+        FORWARDCHARS("/>\n");
+    }
+    return self;
+}
+
 -writeElementName:(const char*)name contents:contents
 {
 	return [self writeElementName:name attributes:nil contents:contents];
@@ -217,6 +266,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 {
     [anObject generateXmlContentOnto:self];
 }
+
 static const char *scanCData( const char *currentPtr, const char *endPtr )
 {
     currentPtr+=2;
@@ -365,4 +415,5 @@ boolAccessor( shouldIndent, setShouldIndent )
 
 
 @end
+
 

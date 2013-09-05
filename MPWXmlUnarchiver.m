@@ -258,7 +258,7 @@ static id defaultVersions=nil;
 //		NSLog(@"name length: %d",[name length]);
 //		NSLog(@"name : %@",name);
 //		NSLog(@"name class : %@",[name class]) ;
-		NSLog(@"value name length: %d",[[value valueName] length]);
+		NSLog(@"value name length: %d",(int)[[value valueName] length]);
 		NSLog(@"value name : %@",[value valueName]);
 		NSLog(@"value name class : %@",[[value valueName] class]) ;
 		
@@ -500,13 +500,13 @@ static id object=nil;
     } else {
         if ( [attrs count] > 0) {
             id value=nil;
-//           NSLog(@"attributes: %@",attrs);
+           NSLog(@"attributes: %@",attrs);
             if (nil != (value = [attrs objectForKey:@"idref"])  ) {
 				id referencedObject=[objectTable objectForKey:value];
                 valueType='@';
 //				NSAssert1( referencedObject != nil, @"unresolved object reference for '%@'",value);
                 [self setCurrentValue:referencedObject];
-            } else if ( nil != (value = [attrs objectForKey:@"valuetype"])  ) {
+            } else if ( nil != (value = [attrs objectForKey:@"t"])  ) {
                 unichar vtype;
 //                NSLog(@"valueType: %@",value);
                 [value getCharacters:&vtype range:NSMakeRange(0,1)];

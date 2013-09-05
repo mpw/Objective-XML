@@ -32,6 +32,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #import "mpwfoundation_imports.h"
 //#import <ObjectiveXML/SaxDocumentHandler.h>
 
+
+
 @interface MPWXmlGeneratorStream : MPWFlattenStream //<SaxDocumentHandler>
 {
     BOOL		atBOL;
@@ -41,6 +43,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	int			curTagDepth;
 }
 
+typedef void (^XmlGeneratorBlock)(MPWXmlGeneratorStream* );
+
 
 -writeStartTag:(const char*)name attributes:attrs single:(BOOL)isSingle;
 -startTag:(const char*)tag;
@@ -48,6 +52,9 @@ THE POSSIBILITY OF SUCH DAMAGE.
 -closeTag;
 -(void)writeAttribute:(NSString*)attributeName value:(NSString*)attributeValue;
 -(void)writeCStrAttribute:(const char*)attributeName value:(const char*)attributeValue;
+-(void)writeCStrAttribute:(const char*)attributeName intValue:(long)intValue;
+-(void)writeCStrAttribute:(const char*)attributeName doubleValue:(double)doubleValue;
+
 -(void)beginStartTag:(const char*)name;
 -(void)endStartTag:(const char*)name single:(BOOL)isSingle;
 
@@ -66,6 +73,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
 -(void)writeContent:anObject;
 -(void)setShouldIndent:(BOOL)should;
 -(BOOL)shouldIndent;
+-(id)writeElementName:(const char *)name attributeBlock:(XmlGeneratorBlock)attrs contentBlock:(XmlGeneratorBlock)content;
+
 @end
 
 @interface NSObject(MPWXmlGeneratorStream)

@@ -254,6 +254,23 @@ static id extractor=nil;
 	return [extractor extractTextFromPath:path maxLength:maxLen attributes:dict];
 }
 
+-ampersandConstant
+{
+    return [NSData dataWithBytes:"&" length:1];
+}
+
+-apostropheConstant
+{
+    return [NSData dataWithBytes:"'" length:1];
+}
+
+-resolvedEntityWithCharacter:(unichar)aChar
+{
+    unsigned char ch=aChar;
+    return [NSData dataWithBytes:&ch length:1];
+
+}
+
 -(void)dealloc
 {
 	[string release];

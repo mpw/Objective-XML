@@ -131,7 +131,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 		result = [[children lastObject] retain];
 	} else {
 		int i;
-		id *strings = [children _pointerToObjects];
+		id *strings = (id*)[children _pointerToObjects];
 		result = [[NSMutableString alloc] initWithString:strings[0]];
 		for ( i=1;i<count;i++ ) {
 			[result appendString:strings[i]];

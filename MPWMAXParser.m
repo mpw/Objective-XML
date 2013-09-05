@@ -1026,23 +1026,53 @@ typedef char xmlchar;
     return YES;
 }
 
+-ampersandConstant
+{
+    return @"&";
+}
+
+-apostropheConstant
+{
+    return @"'";
+}
+
+-doubleQuoteConstant
+{
+    return @"\"";
+}
+
+-openAngleBracketConstant
+{
+    return @"<";
+}
+
+-closeAngleBracketConstant
+{
+    return @">";
+}
+
+-resolvedEntityWithCharacter:(unichar)aChar
+{
+    return [NSString stringWithCharacters:&aChar length:1];
+}
+
 -resolvePredefinedInternalEntity:(const xmlchar*)start length:(int)len
 {
 	id	resolved=nil;
 //	NSLog(@"will try to resolve predefined entity %.*s",len,start);
 	if ( len == 2 && start[1]=='t') {
 		if ( start[0] == 'l') {
-			resolved = @"<";
+			resolved = [self openAngleBracketConstant];
 		} else if ( start[0]=='g' ) {
-			resolved=@">";
+			resolved=[self closeAngleBracketConstant];
 		}
 	} else if ( len == 3 && !strncmp( "amp" , (char*)start,3 ) ) {
-		resolved = @"&";
+		resolved = [self ampersandConstant];
 	} else if ( len == 4 && start[0]!='#') {
 		if ( !strncmp( "apos",(char*)start,4 ) ) {
-			resolved = @"'";
+			resolved = [self apostropheConstant];
 		} else if ( !strncmp( "quot", (char*)start, 4 ) ) {
-			resolved = @"\"";
+			resolved = [self doubleQuoteConstant];
 		}
 	} else if ( start[0]=='#'  ) {
 		char *conversionString="%d";
@@ -1058,7 +1088,7 @@ typedef char xmlchar;
 		hexValueBuffer[16]=0;
 		sscanf(hexValueBuffer, conversionString,&value);
 		univalue=value;
-		resolved=[NSString stringWithCharacters:&univalue length:1];
+        resolved=[self resolvedEntityWithCharacter:univalue];
 	}
 //	NSLog(@"resolved: '%@'",resolved);
 	return resolved;
