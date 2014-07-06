@@ -60,6 +60,9 @@ extern NSString *MPWXMLPCDataKey;
 
 @class MPWXMLAttributes,MPWObjectCache;
 
+typedef id (*XMLIMP)(id, SEL, ...);
+
+
 #endif
 @interface MPWMAXParser : NSObject   {
 	id						data;
@@ -68,16 +71,12 @@ extern NSString *MPWXMLPCDataKey;
 
     id						dataCache;
 	MPWObjectCache			*attributeCache;
-    IMP						getData,initDataBytesLength;
-#if WINDOWS
+    XMLIMP					getData,initDataBytesLength;
     void					*_elementStack;
-#else
-    __strong void			*_elementStack;
-#endif
     NSInteger				tagStackLen,tagStackCapacity,maxDepthAllowed;
-    IMP						beginElement,endElement,characterDataAllowed;
-	IMP						characters,cdata,uniqueTagForCString;
-    IMP                     tagHandlerForPrefix,prefixMapObjectForCString;
+    XMLIMP					beginElement,endElement,characterDataAllowed;
+	XMLIMP					characters,cdata,uniqueTagForCString;
+    XMLIMP                  tagHandlerForPrefix,prefixMapObjectForCString;
 	MPWXMLAttributes*		_attributes;
 
 	NSMutableDictionary*	namespacePrefixToURIMap;
@@ -116,6 +115,7 @@ extern NSString *MPWXMLPCDataKey;
 -(BOOL)parse;
 -(BOOL)parseDataFromURL:(NSURL*)url;
 -(id)parsedDataFromURL:(id)theUrlOrString;
+-(id)parsedData:(NSData*)someData;
 -(BOOL)startParsingFromURL:(NSURL*)xmlUrl;
 
 -(NSInteger)currentElementNestingLevel;												//	nesting level of the element currently being processed

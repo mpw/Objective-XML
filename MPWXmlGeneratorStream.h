@@ -37,7 +37,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 @interface MPWXmlGeneratorStream : MPWFlattenStream //<SaxDocumentHandler>
 {
     BOOL		atBOL;
-    int			indent;
+    int         indent;
 	BOOL		shouldIndent;
 	const char	*tagStack[1024];
 	int			curTagDepth;
@@ -51,7 +51,7 @@ typedef void (^XmlGeneratorBlock)(MPWXmlGeneratorStream* );
 -writeCloseTag:(const char*)name;
 -closeTag;
 -(void)writeAttribute:(NSString*)attributeName value:(NSString*)attributeValue;
--(void)writeCStrAttribute:(const char*)attributeName value:(const char*)attributeValue;
+-(void)writeCStrAttribute:(const char*)attributeName cStrValue:(const char*)attributeValue;
 -(void)writeCStrAttribute:(const char*)attributeName intValue:(long)intValue;
 -(void)writeCStrAttribute:(const char*)attributeName doubleValue:(double)doubleValue;
 

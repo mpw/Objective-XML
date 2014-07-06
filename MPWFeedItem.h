@@ -28,6 +28,7 @@
 -(NSString*)pubDate;
 -(NSDictionary*)remainder;
 
+-(void)setRemainder:(NSDictionary*)newRemainder;
 
 @end
 

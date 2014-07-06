@@ -11,6 +11,7 @@
 #import "MPWFeedItem.h"
 #import "MPWFeed.h"
 #import "AccessorMacros.h"
+#import "MPWXmlAttributes.h"
 
 @implementation MPWRSSParser
 
@@ -62,7 +63,7 @@ scalarAccessor( Class, feedItemClass , setFeedItemClass )
 	return [parser buildPlistWithChildren:children attributes:attributes parser:parser];
 }	
 
--channelElement:children attributes:attributes parser:parser
+-channelElement:(MPWXMLAttributes*)children attributes:(MPWXMLAttributes*)attributes parser:parser
 {
 //	NSLog(@"got channel"); 
 	[self setHeaderItems:[children asDictionary]];

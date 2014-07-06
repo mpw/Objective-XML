@@ -37,7 +37,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 	[self pushObject:result forKey:tag withNamespace:nil];
 }
 
--(void)endDict
+-(void)endDictionary
 {
 	[self pushResult:[self dictElement:CURRENTELEMENT.children attributes:nil parser:self ] withTag:@"dict"];
 }
@@ -145,7 +145,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 		switch (*curptr) {
 			case '{':
 #if USE_BUILDER				
-				[builder beginDict];
+				[builder beginDictionary];
 #else				
 				[self pushTag:@"dict"];
 #endif				
@@ -156,9 +156,9 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 				break;
 			case '}':
 #if USE_BUILDER				
-				[builder endDict];
+				[builder endDictionary];
 #else				
-				[self endDict];
+				[self endDictionary];
 #endif				
 //				NSLog(@"} -- end dict");
 				curptr++;
@@ -311,7 +311,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 				break;
 
 			default:
-				[NSException raise:@"invalidcharacter" format:@"JSON invalid character %x/'%c' at %d",*curptr,*curptr,curptr-(char*)[data bytes]];
+				[NSException raise:@"invalidcharacter" format:@"JSON invalid character %x/'%c' at %td",*curptr,*curptr,curptr-(char*)[data bytes]];
 				break;
 		}
 	}

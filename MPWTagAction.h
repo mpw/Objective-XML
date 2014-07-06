@@ -21,12 +21,15 @@
     MPWFastInvocation *elementAction;
 }
 
++undeclaredElementAction;
+
 -initWithTagName:(NSString*)tag;
 +tagActionWithName:(NSString*)tag;
 -(NSString*)tagName;
+-(void)setTagName:(NSString*)newName;
 -(MPWFastInvocation*)tagAction;
 -(MPWFastInvocation*)elementAction;
-
+-(void)setMappedName:(NSString*)newMappedName;
 -(void)setElementInvocationForTarget:primary backup:backup;
 -(void)setNamespacePrefix:(NSString*)aPrefix;
 @end

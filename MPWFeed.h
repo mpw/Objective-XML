@@ -50,8 +50,9 @@ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMA
 }
 
 
-- (MPWFeed *) initWithData: (NSData *) rssData normalize: (BOOL) fl;
-- (MPWFeed *) initWithURL: (NSURL *) url normalize: (BOOL) fl;
+-(instancetype)initWithVersion:(NSString*)newVersion items:(NSArray*)newItems header:(NSDictionary*)newHeaderItems;
+- (instancetype) initWithData: (NSData *) rssData normalize: (BOOL) fl;
+- (instancetype) initWithURL: (NSURL *) url normalize: (BOOL) fl;
 
 - (NSDictionary *) headerItems;
 - (NSArray *) newsItems;

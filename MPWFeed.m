@@ -26,7 +26,7 @@ objectAccessor( NSString, version, setVersion )
 //  MAX XML parsing callbacks  
 
 
--initWithVersion:(NSString*)newVersion items:(NSArray*)newItems header:(NSDictionary*)newHeaderItems
+-(instancetype)initWithVersion:(NSString*)newVersion items:(NSArray*)newItems header:(NSDictionary*)newHeaderItems
 {
 	self=[super init];
 	[self setVersion:newVersion];
@@ -37,7 +37,7 @@ objectAccessor( NSString, version, setVersion )
 
 -(Class)feedItemClass { return [MPWFeedItem class]; }
 
-- (MPWFeed *) initWithData: (NSData *) rssData normalize: (BOOL) fl {
+- (instancetype) initWithData: (NSData *) rssData normalize: (BOOL) fl {
 	
 	id parser =[[[MPWRSSParser alloc] init] autorelease];
 	[parser setFeedClass:[self class]];
@@ -53,7 +53,7 @@ objectAccessor( NSString, version, setVersion )
 	} /*initWithData*/
 
 
-- (MPWFeed *) initWithURL: (NSURL *) url normalize: (BOOL) fl {
+- (instancetype) initWithURL: (NSURL *) url normalize: (BOOL) fl {
 	
 	NSData *rssData=[NSData dataWithContentsOfURL:url];
 	NSAssert1( rssData , @"couldn't load RSS feed '%@'",url);

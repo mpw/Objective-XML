@@ -35,12 +35,12 @@
     [self appendBytes:"] " length:2];
 }
 
--(void)beginDict
+-(void)beginDictionary
 {
     [self appendBytes:"{ " length:2];
 }
 
--(void)endDict
+-(void)endDictionary
 {
     [self appendBytes:"} " length:2];
 }
@@ -58,7 +58,7 @@
 -(void)writeDictionary:(NSDictionary *)dict
 {
 	BOOL first=YES;
-	[self beginDict];
+	[self beginDictionary];
 	for ( NSString *key in [dict allKeys] ) {
 		if ( first ) {
 			first=NO;
@@ -67,7 +67,7 @@
 		}
 		[self writeObject:[dict objectForKey:key] forKey:key];
 	}
-	[self endDict];
+	[self endDictionary];
 }
 
 -(void)writeString:(NSString*)anObject
@@ -127,21 +127,12 @@
 	return @selector(writeOnJSONStream:);
 }
 
--(void)writeBoolean:(BOOL)truthValue
-{
-	if ( truthValue ) {
-		[self appendBytes:"true" length:4];
-	} else {
-		[self appendBytes:"false" length:5];
-	}
-}
-
 -(void)writeNull
 {
 	[self appendBytes:"null" length:4];
 }
 
--(void)writeInt:(int)number
+-(void)writeInteger:(int)number
 {
 	[self printf:@"%d",number];
 }
@@ -164,30 +155,13 @@
 
 -(void)writeOnJSONStream:aStream
 {
-	[self writeOnPropertyListStream:aStream];
+	[self writeOnPropertyList:aStream];
 }
 
 
 @end
 
-@implementation NSNumber(streamWriting)
-
-
--(void)writeOnJSONStream:aStream
-{
- //   NSLog(@"obj: %@ className: %@",self,[self className]);
-	if ( [[self className] rangeOfString:@"Boolean"].length > 0)  {
-		[aStream writeBoolean:[self boolValue]];
-	} else if ( CFNumberIsFloatType( (CFNumberRef)self ) ) {
-		[aStream writeFloat:[self doubleValue]];
-	} else {
-		[aStream writeInt:[self intValue]];
-	}
-	
-}
-
-@end
-
+#import <MPWFoundation/DebugMacros.h>
 
 @implementation MPWJSONWriter(testing)
 

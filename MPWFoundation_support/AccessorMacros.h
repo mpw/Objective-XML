@@ -47,6 +47,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #define toBool(x)	[x boolValue]
 //#define toString(x)	[x stringValue]
 
+#if !__has_feature(objc_arc)
 #define ASSIGN_ID(var,value)\
     {\
         id tempValue=(value);\
@@ -57,7 +58,18 @@ THE POSSIBILITY OF SUCH DAMAGE.
 			[var release]; \
 		var = tempValue; \
 	} \
-    }\
+    }
+#else
+#define ASSIGN_ID(var,value)    var=value
+#endif
+
+#ifndef AUTORELEASE
+#if !__has_feature(objc_arc)
+#define AUTORELEASE(x)  ([(x) autorelease])
+#else
+#define AUTORELEASE(x)  (x)
+#endif
+#endif
 
 
 #define	setAccessor( type, var,setVar ) \
@@ -105,23 +117,42 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #define objectAccessor_h( objectType, var, setVar )   scalarAccessor_h( objectType*, var, setVar )
 
-#define intAccessor( var, setVar )	scalarAccessor( int, var, setVar )
-#define intAccessor_h( var, setVar )	scalarAccessor_h( int, var, setVar )
-#define floatAccessor(var,setVar )  scalarAccessor( float, var, setVar )
-#define floatAccessor_h(var,setVar )  scalarAccessor_h( float, var, setVar )
-#define boolAccessor(var,setVar )  scalarAccessor( BOOL, var, setVar )
-#define boolAccessor_h(var,setVar )  scalarAccessor_h( BOOL, var, setVar )
+#define intAccessor( var, setVar )          scalarAccessor( int, var, setVar )
+#define intAccessor_h( var, setVar )        scalarAccessor_h( int, var, setVar )
+#define longAccessor( var, setVar )         scalarAccessor( long, var, setVar )
+#define longAccessor_h( var, setVar )       scalarAccessor_h( long, var, setVar )
+#define longlongAccessor( var, setVar )     scalarAccessor( long long, var, setVar )
+#define longlongAccessor_h( var, setVar )	scalarAccessor_h( longlong, var, setVar )
+#define floatAccessor(var,setVar )          scalarAccessor( float, var, setVar )
+#define floatAccessor_h(var,setVar )        scalarAccessor_h( float, var, setVar )
+#define boolAccessor(var,setVar )           scalarAccessor( BOOL, var, setVar )
+#define boolAccessor_h(var,setVar )         scalarAccessor_h( BOOL, var, setVar )
 
 #define lazyAccessor( ltype, lvar ,setLVar, computeVar )   \
 	readAccessorName( ltype*, lvar, _##lvar ) \
 	setAccessor( ltype*, lvar, setLVar ) \
 \
 -(ltype*)lvar { \
-	if ( ![self _##lvar] )  { \
-		[self setLVar:[self computeVar]]; \
-	}  \
+    if ( ![self _##lvar] )  { \
+      [self setLVar:[self computeVar]]; \
+    }  \
 	return [self _##lvar]; \
 } \
+
+#define slazyAccessor( ltype, lvar ,setLVar, computeVar )   \
+readAccessorName( ltype*, lvar, _##lvar ) \
+setAccessor( ltype*, lvar, setLVar ) \
+\
+-(ltype*)lvar { \
+@synchronized( self ) { \
+if ( ![self _##lvar] )  { \
+[self setLVar:[self computeVar]]; \
+}  \
+} \
+return [self _##lvar]; \
+} \
+
+
 
 #define dictAccessor( objectType, var, setVar, someDict ) \
     -(objectType*)var { return [someDict objectForKey:@""#var]; } \
@@ -131,6 +162,14 @@ THE POSSIBILITY OF SUCH DAMAGE.
      -(scalarType)var { scalarType temp=0;  [[someDict objectForKey:@""#var] getValue:&temp]; return temp; }\
      -(void)setVar:(scalarType)newValue {  NSValue *temp=[NSValue valueWithBytes:&newValue objCType:@encode(scalarType)]; [someDict setObject:temp forKey:@""#var]; } \
 
+#ifndef CONVENIENCE
+#define CONVENIENCE( sel, initsel ) \
++(instancetype)sel { \
+  return AUTORELEASE([[self alloc] initsel]); \
+} 
+
+#define SHORTCONVENIENCE( name, initsel )  CONVENIENCE( name##initsel , init##initsel )
+#endif
 
 
 //--- compatibility:
@@ -141,20 +180,38 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 //---- RETAIN/RELEASE Macros for GNUStep compatibility
 
+#if __has_feature(objc_arc)
+#define DEALLOC( x) \
+-(void)dealloc { \
+    x; \
+}
+#else
+#define DEALLOC( x) \
+-(oneway void)dealloc { \
+    x; \
+    [super dealloc]; \
+}
+#endif
+
 #ifndef RETAIN
+#if !__has_feature(objc_arc)
 #define RETAIN(x)  ([(x) retain])
+#else
+#define RETAIN(x)   (x)
+#endif
 #endif
 
 #ifndef RELEASE
+#if !__has_feature(objc_arc)
 #define RELEASE(x)  ([(x) release])
+#else
+#define RELEASE(x)
+#endif
 #endif
 
-#ifndef AUTORELEASE
-#define AUTORELEASE(x)  ([(x) autorelease])
-#endif
 
 #ifndef DESTROY
-#define DESTROY(x)  ([(x) release])
+#define DESTROY(x)  RELEASE(x)
 #endif
 
 #ifndef ASSIGN
@@ -164,5 +221,6 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIGNCOPY
 #define ASSIGNCOPY(var,value) ASSIGN(var,[(value) copy])
 #endif
+
 
 #endif

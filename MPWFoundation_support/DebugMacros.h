@@ -69,10 +69,10 @@ NSStringFromRect(NSMakeRect(_ax, _ay, _aw, _ah)),\
 NSStringFromRect(NSMakeRect(ex, ey, ew, eh)),msg]),@""); \
 }
 #define FLOATEXPECT( got, expect, msg  ) \
-NSAssert1((expect)==(got) , ([NSString stringWithFormat:@"%g instead of expected %g for %@",got,expect,msg]),@"");
+NSAssert1((expect)==(got) , ([NSString stringWithFormat:@"%g instead of expected %g for %@",(double)got,(double)expect,msg]),@"");
 
 #define FLOATEXPECTTOLERANCE( got, expect, tol, msg  ) \
-NSAssert1(fabs((expect)-(got)) < (tol) ,  ([NSString stringWithFormat:@"got %g instead of expected %g for %@",got,expect,msg]),@"");
+NSAssert1(fabs((expect)-(got)) < (tol) ,  ([NSString stringWithFormat:@"got %g instead of expected %g for %@",(double)got,(double)expect,msg]),@"");
 
 #define _IDEXPECT(  got,  expected,  msg,  self,  _cmd ) { \
 id _expected=expected;\
@@ -86,7 +86,7 @@ NSAssert1( _idsAreEqual(_expected,_got),  ([NSString stringWithFormat:@"got '%@'
 #ifndef NeXT
 /*
 #define	D0PRINTF( msg,arg...)	\
-	NSLog( @"%s:%d(%s): %c%s -> "msg@"\n", \
+	NSLog( @"%s:%d(%s): %c%s -> "#msg@"\n", \
 			__FILE__,__LINE__, \
 			[[[self class] description] cString], \
 			((id)[self class] == self) ? '+' : '-', \
@@ -94,25 +94,25 @@ NSAssert1( _idsAreEqual(_expected,_got),  ([NSString stringWithFormat:@"got '%@'
 */
 #endif
 #define D0PRINTF3( msg, arg1, arg2,arg3 ) \
-	NSLog( @"%s:%d(%s): %c%s -> "msg@"\n", \
+	NSLog( @"%s:%d(%s): %c%s -> "#msg@"\n", \
 			__FILE__,__LINE__, \
 			[[[self class] description] cString], \
 			((id)[self class] == self) ? '+' : '-', \
 			[NSStringFromSelector(_cmd) cString],arg1,arg2,arg3 )
 #define	D0PRINTF2( msg, arg1,arg2 )	\
-	NSLog( @"%s:%d(%s): %c%s -> "msg@"\n", \
+	NSLog( @"%s:%d(%s): %c%s -> "#msg@"\n", \
 			__FILE__,__LINE__, \
 			[[[self class] description] cString], \
 			((id)[self class] == self) ? '+' : '-', \
 			[NSStringFromSelector(_cmd) cString],arg1,arg2 )
 #define D0PRINTF1( msg, arg1 ) \
-	NSLog( @"%s:%d(%s): %c%s -> "msg@"\n", \
+	NSLog( @"%s:%d(%s): %c%s -> "#msg@"\n", \
 			__FILE__,__LINE__, \
 			[[[self class] description] cString], \
 			((id)[self class] == self) ? '+' : '-', \
 			[NSStringFromSelector(_cmd) cString],arg1 )
 #define	D0PRINTF0( msg )	\
-	NSLog( @"%s:%d(%s): %c%s -> "msg@"\n", \
+	NSLog( @"%s:%d(%s): %c%s -> "#msg@"\n", \
 			__FILE__,__LINE__, \
 			[[[self class] description] cString], \
 			((id)[self class] == self) ? '+' : '-', \

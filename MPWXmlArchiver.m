@@ -60,7 +60,7 @@ static NSString* describeObject(NSMapTable *table, const void *obj)
 
 static NSString* describeInteger(NSMapTable *table, const void *obj)
 {
-    return [NSString stringWithFormat:@"%d",(NSInteger)obj];
+    return [NSString stringWithFormat:@"%ld",(long)obj];
 }
 
 -initWithTarget:newTarget
@@ -217,10 +217,10 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
 
                 break;
 //           case 'q':
-                content = [NSString stringWithFormat:@"%d",*( long*)address];
+                content = [NSString stringWithFormat:@"%ld",*( long*)address];
                 break;
 //            case 'Q':
-				content = [NSString stringWithFormat:@"%d",*( long*)address];
+				content = [NSString stringWithFormat:@"%ld",*( long*)address];
                 break;
             case 's':
                 valueType=@"valuetype='s'";
@@ -355,7 +355,7 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
 
 -(void)encodeDataObject:(NSData*)theObject
 {
-    [target writeElementName:"data" attributes:[NSString stringWithFormat:@"length=%d",[theObject length]]
+    [target writeElementName:"data" attributes:[NSString stringWithFormat:@"length=%lu",(unsigned long)[theObject length]]
         contents:theObject];
 }
 
@@ -459,7 +459,7 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
 	NSNumber *result;
 	NSLog(@"num objCType: %s",[num objCType]);
 	result=[self _archiveAndUnarchive:num];
-	IDEXPECT( result, num , "unarchived number should equal original");
+	IDEXPECT( result, num , @"unarchived number should equal original");
 }
 
 +testSelectors

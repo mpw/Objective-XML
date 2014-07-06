@@ -6,7 +6,7 @@
 //  Copyright 2012 Marcel Weiher. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <MPWFoundation/MPWFoundation.h>
 
 @class MPWMAXParser;
 
@@ -17,6 +17,7 @@
 	NSDictionary	*headerItems;
 }
 
-//scalarAccessor_h( Class, feedClass , setFeedClass )
+scalarAccessor_h( Class, feedClass , setFeedClass )
+scalarAccessor_h( Class, feedItemClass , setFeedItemClass )
 
 @end

@@ -410,7 +410,7 @@ static inline int offsetOfCStringWithLengthInTableOfLength( const unsigned char 
     NSMutableArray *result=[NSMutableArray arrayWithCapacity:[self count]];
     for (int i=0;i<[self count];i++) {
         NSString *key=[self keyAtIndex:i];
-//        NSLog(@"key[%d]='%@'",i,key);
+        NSLog(@"key[%d]='%@'",i,key);
         [result addObject:key];
     }
     return result;

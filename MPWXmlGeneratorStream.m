@@ -103,6 +103,21 @@ THE POSSIBILITY OF SUCH DAMAGE.
     [self writeProcessingInstruction:@"xml" attributes:@"version=\"1.0\" encoding=\"UTF-8\""];
 }
 
+static inline void forwardAttributeName( MPWXmlGeneratorStream *self, const char *attributeName) {
+    int len=strlen(attributeName);
+    if ( len < 800) {
+        char buffer[1000]=" ";
+        char *cur=buffer+1;
+        cur = stpcpy(cur, attributeName);
+        cur = stpcpy(cur, "=\"" );
+        FORWARDCHARSLEN(buffer, cur-buffer);
+    } else {
+        FORWARDCHARS(" ");
+        FORWARDCHARS(attributeName);
+        FORWARDCHARS("=\"");
+    }
+}
+
 
 -(void)writeAttribute:(NSString*)attributeName value:(NSString*)attributeValue
 {
@@ -113,26 +128,88 @@ THE POSSIBILITY OF SUCH DAMAGE.
     FORWARDCHARS("\"");
 }
 
--(void)writeCStrAttribute:(const char*)attributeName value:(const char*)attributeValue
+-(void)writeCStrAttribute:(const char*)attributeName cStrValue:(const char*)attributeValue
 {
-	FORWARDCHARS(" ");
-    FORWARDCHARS(attributeName);
-    FORWARDCHARS("=\"");
+    forwardAttributeName( self, attributeName);
     FORWARDCHARS(attributeValue);
     FORWARDCHARS("\"");
 }
 
+-(void)writeCStrAttribute:(const char*)attributeName value:(NSString*)attributeValue
+{
+    forwardAttributeName( self, attributeName);
+    [target writeString:attributeValue];
+    FORWARDCHARS("\"");
+}
+
+static inline int itoa( char *buffer, long a ) {
+    char tempbuf[40];
+    int i;
+    int len=0;
+    if ( a > 0 ) {
+        while ( a > 0 ) {
+            tempbuf[len++]=(a%10)+'0';
+            a/=10;
+        }
+        for (i=0;i<len;i++) {
+            buffer[i]=tempbuf[len-i-1];
+        }
+        buffer[i]=0;
+    } else {
+        buffer[0]='0';
+        buffer[1]=0;
+        len=1;
+    }
+    return len;
+}
+
+static inline int ftoa( char *buffer , double a) {
+    static double multiplier[10]={
+        1,10,100,1000,10000,100000,1000000,10000000,100000000,
+    };
+    long wholePart=(long)a;
+    
+    int beforeDecimalDigits=itoa(buffer, wholePart);
+    buffer[beforeDecimalDigits]='.';
+    double fractionalPart=a-wholePart;
+    int afterDecimalDesiredDigits=MAX(7-beforeDecimalDigits,0);
+    long shiftedFractional=round(fractionalPart*multiplier[afterDecimalDesiredDigits]);
+    int afterDecimalDigits=itoa(buffer+beforeDecimalDigits+1, shiftedFractional);
+    while ( buffer[beforeDecimalDigits+afterDecimalDigits]=='0') {
+        afterDecimalDigits--;
+    }
+    if ( buffer[beforeDecimalDigits+afterDecimalDigits]=='.') {
+        afterDecimalDigits--;
+    }
+    buffer[beforeDecimalDigits+afterDecimalDigits+1]=0;
+    
+    return beforeDecimalDigits+afterDecimalDigits+1;
+}
+
+
 -(void)writeCStrAttribute:(const char*)attributeName intValue:(long)intValue
 {
-    char attribute[180]="";
-    snprintf(attribute, 170, " %s=\"%ld\"",attributeName,intValue);
+    char attribute[180]=" ";
+    char *cur=attribute+1;
+    cur = stpcpy(cur, attributeName);
+    cur = stpcpy(cur, "=\"");
+    cur += itoa(cur, intValue);
+    *cur++ ='"';
+    *cur++ = 0;
+    
 	FORWARDCHARS(attribute);
 }
 
 -(void)writeCStrAttribute:(const char*)attributeName doubleValue:(double)doubleValue
 {
-    char attribute[180]="";
-    snprintf(attribute, 170, " %s=\"%g\"",attributeName,doubleValue);
+    char attribute[180]=" ";
+    char *cur=attribute+1;
+    cur = stpcpy(cur, attributeName);
+    cur = stpcpy(cur, "=\"");
+    cur += ftoa(cur, doubleValue);
+    *cur++ ='"';
+    *cur++ = 0;
+    
 	FORWARDCHARS(attribute);
 }
 

@@ -237,6 +237,7 @@ static id defaultVersions=nil;
                 *(Class*)address=NSClassFromString(val);
                 break;
             default:
+#if !TARGET_OS_IPHONE
                 if ( !strcmp( itemType, "{?={?=ff}{?=ff}}" )  ||
                      !strcmp( itemType, "{_NSRect={_NSPoint=ff}{_NSSize=ff}}") ) {
                     *(NSRect*)address=NSRectFromString( val );
@@ -245,7 +246,9 @@ static id defaultVersions=nil;
                     *(NSPoint*)address=NSPointFromString( val );
                 } else  if ( !strcmp( itemType, "{_NSSize=ff}") ) {
                     *(NSSize*)address=NSSizeFromString( val );
-                } else {
+                } else
+#endif
+                {
                     NSLog(@"tried to decode unknown type-code %s",itemType);
 //                    [NSException raise:@"UnknownType" format:@"tried to decode unknown type-code %s",itemType];
                 }
@@ -455,7 +458,7 @@ static id object=nil;
 {
     ignoreSpace=YES;
 
-	NSLog(@"end with '%@', object=%@ count = %d",endName,object,[objects count]);
+	NSLog(@"end with '%@', object=%@ count = %ld",endName,object,(long)[objects count]);
 //	NSLog(@"class = %@/%x",NSClassFromString( endName ),NSClassFromString( endName ));
     NSString *s=[endName stringValue];
     

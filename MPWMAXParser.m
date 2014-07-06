@@ -575,7 +575,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 //		fprintf(stderr,"BEGINELEMENT: self=%p beginElement: %p documentHandler: %p\n",self,beginElement,documentHandler);
 		CURRENTELEMENT.attributes=retainMPWObject( attrs ) ;
 		if ( ! CURRENTELEMENT.children ) {
-			CURRENTELEMENT.children=[[MPWXMLAttributes alloc] init];
+			CURRENTELEMENT.children=[GETOBJECT(attributeCache) retain];
 		} else {
 			[CURRENTELEMENT.children removeAllObjects];
 		}
