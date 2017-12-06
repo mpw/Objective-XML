@@ -1,4 +1,4 @@
-/* MPWObject.h Copyright (c) 1998-2015 by Marcel Weiher, All Rights Reserved.
+/* MPWObject.h Copyright (c) 1998-2017 by Marcel Weiher, All Rights Reserved.
 
 
 Redistribution and use in source and binary forms, with or without
@@ -41,11 +41,14 @@ THE POSSIBILITY OF SUCH DAMAGE.
 			int flags;
 }
 
+-(void)mydealloc
+
 @end
 extern id retainMPWObject( MPWObject *obj );
 extern void retainMPWObjects( MPWObject **objs, unsigned count );
 extern void releaseMPWObject( MPWObject *obj );
 extern void releaseMPWObjects( MPWObject **objs, unsigned count );
+
 
 #if __OBJC_GC__
 #include <objc/objc-auto.h>

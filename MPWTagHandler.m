@@ -113,7 +113,7 @@ boolAccessor(isCaseInsensitive, setIsCaseInsensitive)
 {
     Class tableClass= isCaseInsensitive ? [MPWCaseInsensitiveSmallStringTable class] : [MPWSmallStringTable class];
     NSArray *keys=[[self tagDict] allKeys];
-    NSArray *values=[[[self tagDict] collect] objectForKey:[keys each]];
+    NSArray *values=[[self tagDict] objectsForKeys:keys notFoundMarker:@""]; //[[[[self tagDict] collect] objectForKey:[keys each]]];
     MPWSmallStringTable *stringTable = [[[tableClass alloc] initWithKeys:keys values:values] autorelease];
     [stringTable setDefaultValue:[self undeclared]];
     [self setTagTable:stringTable];

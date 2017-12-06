@@ -1402,7 +1402,7 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 {
     MPWXmlElement *element;
 	NSArray *sub=nil;
-	int count = [children count];
+	int count = (int)[children count];
 	id *objs=[children _pointerToObjects];
     if ( count > 0 ) {
 		sub=[NSArray arrayWithObjects:objs count:count];

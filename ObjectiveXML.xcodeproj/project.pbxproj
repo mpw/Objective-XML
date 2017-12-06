@@ -663,12 +663,12 @@
 		1FB43BFD10BFB6EF00490AA6 /* MPWFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9BAE6905762A2E009DD1EC /* MPWFoundation.framework */; };
 		1FB43C5C10BFBCA700490AA6 /* dllmain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB43C5B10BFBCA700490AA6 /* dllmain.m */; };
 		1FB751F515A07C3600408140 /* MPWXmlAppleProplistReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A2400668979C35ADD82 /* MPWXmlAppleProplistReader.m */; };
-		1FBDB9431B789475009534A2 /* MPWFoundationTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBDB9421B789475009534A2 /* MPWFoundationTouch.framework */; };
 		1FBF986A0F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBF98680F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.h */; };
 		1FBF986B0F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF98690F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m */; };
 		1FBF988F0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF988E0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc */; };
 		1FBF98A20F9E7F340030ED80 /* loginRequest.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF98A10F9E7F340030ED80 /* loginRequest.xmlrpc */; };
 		1FC164BA0ACAFD5D007F72C8 /* metadata_unicode.html in Resources */ = {isa = PBXBuildFile; fileRef = 1FC164B90ACAFD5D007F72C8 /* metadata_unicode.html */; };
+		1FC45D841ED40C4E0068DF0F /* MPWFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC45D831ED40C4E0068DF0F /* MPWFoundation.framework */; };
 		1FC4D34E0DFA05FC00AC1A66 /* MPWCaseInsensitiveSmallStringTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4D3480DFA05FC00AC1A66 /* MPWCaseInsensitiveSmallStringTable.m */; };
 		1FC4D34F0DFA05FD00AC1A66 /* MPWFastInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4D3490DFA05FC00AC1A66 /* MPWFastInvocation.m */; };
 		1FC4D3500DFA05FD00AC1A66 /* MPWObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4D34A0DFA05FC00AC1A66 /* MPWObject.m */; };
@@ -989,6 +989,7 @@
 		1FBF988E0F9E7B490030ED80 /* getSimpleDictResponse.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = getSimpleDictResponse.xmlrpc; sourceTree = "<group>"; };
 		1FBF98A10F9E7F340030ED80 /* loginRequest.xmlrpc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = loginRequest.xmlrpc; sourceTree = "<group>"; };
 		1FC164B90ACAFD5D007F72C8 /* metadata_unicode.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = metadata_unicode.html; sourceTree = "<group>"; };
+		1FC45D831ED40C4E0068DF0F /* MPWFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MPWFoundation.framework; path = "../../Build/Release-iphonesimulator/MPWFoundation.framework"; sourceTree = "<group>"; };
 		1FC4D3480DFA05FC00AC1A66 /* MPWCaseInsensitiveSmallStringTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWCaseInsensitiveSmallStringTable.m; sourceTree = "<group>"; };
 		1FC4D3490DFA05FC00AC1A66 /* MPWFastInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWFastInvocation.m; sourceTree = "<group>"; };
 		1FC4D34A0DFA05FC00AC1A66 /* MPWObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWObject.m; sourceTree = "<group>"; };
@@ -1060,7 +1061,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBDB9431B789475009534A2 /* MPWFoundationTouch.framework in Frameworks */,
+				1FC45D841ED40C4E0068DF0F /* MPWFoundation.framework in Frameworks */,
 				1F81C0561969962D0066DF43 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1121,6 +1122,7 @@
 				1FD5649F0E2ECAFE00607D4E /* B&I-Info.plist */,
 				1FB43C0410BFB6EF00490AA6 /* Info-MPWXmlKit__Framework___Upgraded_ copy.plist */,
 				1F3C7C0C136FE2EF009C0697 /* Info-MPWXmlKit__Framework___Upgraded_ copy 2.plist */,
+				1FC45D821ED40C4E0068DF0F /* Frameworks */,
 			);
 			name = MPWXmlKit;
 			sourceTree = "<group>";
@@ -1413,6 +1415,14 @@
 				1F7EC2FA15AF3142009C36B5 /* MPWTagAction.m */,
 			);
 			name = CoreClasses;
+			sourceTree = "<group>";
+		};
+		1FC45D821ED40C4E0068DF0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FC45D831ED40C4E0068DF0F /* MPWFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		1FC4D32E0DFA03F500AC1A66 /* MPWFoundation_support */ = {
@@ -2752,6 +2762,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2802,6 +2813,7 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = arm64;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2826,7 +2838,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
-				INSTALL_PATH = "@rpath/Frameworks/\n";
+				INSTALL_PATH = "@rpath/Frameworks/";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -2971,7 +2983,6 @@
 					/Users/marcel/programming/Build/Release,
 				);
 				PRODUCT_NAME = iXmlKit;
-				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "i386 armv6";
 			};
@@ -3029,7 +3040,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
-				INSTALL_PATH = "@rpath/Frameworks/\n";
+				INSTALL_PATH = "@rpath/Frameworks/";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -3115,7 +3126,6 @@
 				);
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = iXmlKit;
-				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv6";
 			};
