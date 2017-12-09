@@ -51,6 +51,7 @@
 		1F0E2D10109AC9850093F50E /* responseWithAmpersands.xmlrpc in Resources */ = {isa = PBXBuildFile; fileRef = 1F0E2D0F109AC9850093F50E /* responseWithAmpersands.xmlrpc */; };
 		1F1806E61FDBF354000BB0D2 /* MPWFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F81C053196996270066DF43 /* MPWFoundation.framework */; };
 		1F1806E71FDBF354000BB0D2 /* MPWFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F81C053196996270066DF43 /* MPWFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F1806E81FDC1770000BB0D2 /* MPWMAXParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F421F0110C2555700C403D5 /* MPWMAXParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F18E7A20D510A3E00839569 /* MPWFastKeyedArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F18E7A00D510A3E00839569 /* MPWFastKeyedArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F18E7A30D510A3E00839569 /* MPWFastKeyedArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18E7A10D510A3E00839569 /* MPWFastKeyedArchiver.m */; };
 		1F18E7AE0D51341D00839569 /* MPWFastKeyedUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F18E7AC0D51341D00839569 /* MPWFastKeyedUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1705,6 +1706,7 @@
 				1F81C032196992D20066DF43 /* MPWHrefScanner.h in Headers */,
 				1F81C034196992D20066DF43 /* MPWXmlWrapperArchiver.h in Headers */,
 				1F81C027196992D20066DF43 /* NSString+extras.h in Headers */,
+				1F1806E81FDC1770000BB0D2 /* MPWMAXParser.h in Headers */,
 				1F81C038196992D20066DF43 /* MPWSaxProtocol.h in Headers */,
 				1F81C029196992D20066DF43 /* MPWOpenDocumentParser.h in Headers */,
 				1F81C03B196992D20066DF43 /* MPWXmlAppleProplistReader.h in Headers */,
