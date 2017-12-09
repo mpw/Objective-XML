@@ -39,7 +39,9 @@ int runTests( NSArray *testSuiteNames , NSMutableArray *testTypeNames,  BOOL ver
     //    }
     NSArray *classNamesToTest=
     @[
-        @"MPWMAXParser",
+      @"MPWMAXParser",
+      @"NSXMLScanner",
+      @"MPWXMLAttributes",
       ];
     NSMutableArray *mirrors=[NSMutableArray array];
     for ( NSString *className in classNamesToTest ) {

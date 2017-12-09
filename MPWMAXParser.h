@@ -60,7 +60,13 @@ extern NSString *MPWXMLPCDataKey;
 
 @class MPWXMLAttributes,MPWObjectCache;
 
-typedef id (*XMLIMP)(id, SEL, ...);
+typedef id (*XMLIMP0)(id, SEL);
+typedef id (*XMLIMP1)(id, SEL, id);
+typedef id (*XMLIMP2)(id, SEL, id,id);
+typedef id (*XMLIMP3)(id, SEL, id,id,id);
+typedef id (*XMLIMP4)(id, SEL, id,id,id,id);
+typedef id (*XMLIMP5)(id, SEL, id,id,id,id,id);
+typedef id (*XMLIMP6)(id, SEL, id,id,id,id,id,id);
 
 
 #endif
@@ -71,12 +77,17 @@ typedef id (*XMLIMP)(id, SEL, ...);
 
     id						dataCache;
 	MPWObjectCache			*attributeCache;
-    XMLIMP                  getData,initDataBytesLength;
+    XMLIMP0                 getData;
+    XMLIMP3                 initDataBytesLength;
     void					*_elementStack;
     NSInteger				tagStackLen,tagStackCapacity,maxDepthAllowed;
-    XMLIMP					beginElement,endElement,characterDataAllowed;
-	XMLIMP					characters,cdata,uniqueTagForCString;
-    XMLIMP                  tagHandlerForPrefix,prefixMapObjectForCString;
+    XMLIMP5					beginElement;
+    XMLIMP4                 endElement;
+    XMLIMP1                 characterDataAllowed;
+    XMLIMP2                 characters,cdata;
+    XMLIMP3                 uniqueTagForCString;
+    XMLIMP2                 tagHandlerForPrefix;
+    XMLIMP2                 prefixMapObjectForCString;
 	MPWXMLAttributes*		_attributes;
 
 	NSMutableDictionary*	namespacePrefixToURIMap;

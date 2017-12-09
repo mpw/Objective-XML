@@ -457,12 +457,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 +testSelectors
 {
-	return [NSArray arrayWithObjects:
+	return @[
 			@"testTextCombining",
 			@"testObjectForUniqueKey",
 			@"testCopyKeys",
 			@"testByteStreaming",
-			nil];
+			];
 }
 
 @end
