@@ -19,7 +19,6 @@
 -(void)setValue:(id)anObject forAttribute:(id)aKey ;
 -(void)setValueAndRelease:(id)anObject forAttribute:(id)aKey namespace:aNamespace;
 
-//--- private?
 
 -(id*)_pointerToObjects;
 

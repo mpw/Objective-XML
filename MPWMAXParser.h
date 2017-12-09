@@ -71,7 +71,7 @@ typedef id (*XMLIMP)(id, SEL, ...);
 
     id						dataCache;
 	MPWObjectCache			*attributeCache;
-    XMLIMP					getData,initDataBytesLength;
+    XMLIMP                  getData,initDataBytesLength;
     void					*_elementStack;
     NSInteger				tagStackLen,tagStackCapacity,maxDepthAllowed;
     XMLIMP					beginElement,endElement,characterDataAllowed;
