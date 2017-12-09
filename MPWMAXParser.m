@@ -36,6 +36,7 @@ NSString *MPWXMLPCDataKey=nil;
 
 @implementation MPWMAXParser
 
+
 intAccessor( undefinedTagAction, setUndefinedTagAction)
 intAccessor( cfDataEncoding, setCfDataEncoding )
 intAccessor( dataEncoding, _setDataEncoding )

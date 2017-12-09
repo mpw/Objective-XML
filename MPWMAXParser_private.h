@@ -40,7 +40,7 @@ typedef struct _NSXMLElementInfo {
 
 #define	INITIALTAGSTACKDEPTH 20
 
-#define DEOPTIMIZE_ALLOCATION 0
+//#define DEOPTIMIZE_ALLOCATION 1
 
 #if DEOPTIMIZE_ALLOCATION
 #define MAKEDATA( dataStart, dataLength )   [NSData dataWithBytes:dataStart length:dataLength]
