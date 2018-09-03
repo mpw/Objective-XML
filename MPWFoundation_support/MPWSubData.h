@@ -41,16 +41,17 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	int		flags;
     NSData*	myData;
     const void *myBytes;
-    unsigned int myLength;
+    long myLength;
     BOOL	mustUnique,interned;
 }
 
--initWithData:(NSData*)data bytes:(const char*)bytes length:(unsigned)len;
--reInitWithData:(NSData*)data bytes:(const char*)bytes length:(unsigned)len;
+-initWithData:(NSData*)data bytes:(const char*)bytes length:(long)len;
+-reInitWithData:(NSData*)data bytes:(const char*)bytes length:(long)len;
 -(const void*)bytes;
 -(const char*)cString;
 -(NSUInteger)length;
 boolAccessor_h( mustUnique, setMustUnique )
+-originalData;
 
 @end
 

@@ -44,6 +44,22 @@ THE POSSIBILITY OF SUCH DAMAGE.
 @end
 
 @implementation MPWObjectCache
+{
+    MPWObject   **objs;
+    Class       objClass;
+    SEL         allocSel,initSel;
+    IMP0        allocImp,initImp,retainImp,autoreleaseImp;
+    INT_IMP     retainCountImp;
+    VOID_IMP    removeFromCacheImp;
+    int         cacheSize;
+    int         objIndex;
+    void        *cachelock;
+    BOOL        unsafeFastAlloc;
+    VOID_IMP	releaseImp;
+    SEL         reInitSelector;
+    IMP0		reInitImp;
+
+}
 /*"
    Provides a local, circular buffer for re-cycling objects.  Needs objects that can be
    re-initialized.  Can be made thread-safe if necessary, default is non-thread-safe
@@ -57,7 +73,6 @@ THE POSSIBILITY OF SUCH DAMAGE.
  
 "*/
 
-static int _collecting=NO;
 
 -initWithCapacity:(int)newCap class:(Class)newClass allocSel:(SEL)aSel initSel:(SEL)iSel
 {
@@ -66,27 +81,27 @@ static int _collecting=NO;
     initSel=iSel;
     objClass = newClass;
 
-    allocImp = [newClass methodForSelector:allocSel];
+    allocImp = (IMP0)[newClass methodForSelector:allocSel];
     NSAssert( allocImp != NULL , @"allocImp");
-    initImp = [newClass instanceMethodForSelector:initSel];
+    initImp = (IMP0)[newClass instanceMethodForSelector:initSel];
     [self setReInitSelector:initSel];
     NSAssert( initImp != NULL , @"initImp");
-    retainImp = [newClass instanceMethodForSelector:@selector(retain)];
+    retainImp = (IMP0)[newClass instanceMethodForSelector:@selector(retain)];
     NSAssert( retainImp != NULL , @"retainImp");
-    autoreleaseImp = [newClass instanceMethodForSelector:@selector(autorelease)];
+    autoreleaseImp = (IMP0)[newClass instanceMethodForSelector:@selector(autorelease)];
     NSAssert( autoreleaseImp != NULL , @"autoreleaseImp");
-    releaseImp = [newClass instanceMethodForSelector:@selector(release)];
+    releaseImp = (VOID_IMP)[newClass instanceMethodForSelector:@selector(release)];
     NSAssert( releaseImp != NULL , @"releaseImp");
-    retainCountImp = [newClass instanceMethodForSelector:@selector(retainCount)];
+    retainCountImp = (INT_IMP)[newClass instanceMethodForSelector:@selector(retainCount)];
     NSAssert( retainCountImp != NULL , @"retainCountImp");
 	if ( [newClass instancesRespondToSelector:@selector(removeFromCache:)] ) {
-		removeFromCacheImp=[newClass instanceMethodForSelector:@selector(removeFromCache:)];
+		removeFromCacheImp=(VOID_IMP)[newClass instanceMethodForSelector:@selector(removeFromCache:)];
 	} else {
 		removeFromCacheImp=NULL;
 	}
     objs = calloc( newCap+2, sizeof *objs);
     cacheSize = newCap;
-    getObject = [self getObjectIMP];
+    getObject = (IMP0)[self getObjectIMP];
     return self;
 }
 
@@ -136,7 +151,7 @@ scalarAccessor( SEL, reInitSelector, _setReInitSelector )
 -(void)setReInitSelector:(SEL)newSelector
 {
     [self _setReInitSelector:newSelector];
-    reInitImp = [objClass instanceMethodForSelector:newSelector];
+    reInitImp = (IMP0)[objClass instanceMethodForSelector:newSelector];
     NSAssert( reInitImp != NULL , @"reInitImp");
 }
 
@@ -170,9 +185,7 @@ intAccessor( hits, setHits )
     Returns an object as if freshly allocated.
 "*/
 {
-	if (_collecting) {
-		return initImp( allocImp( objClass, allocSel ),initSel);
-	} else {
+    {
 		int i,maxIndex;
 		MPWObject *obj=nil;
 	//	look back just a bit, a lot can be stacking order

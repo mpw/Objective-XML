@@ -46,7 +46,7 @@ IMP __stringTableLookupFun=NULL;
 #endif	
 }
 
--initWithObjects:(id*)values forKeys:(id*)keys count:(NSUInteger)count
+-initWithObjects:(const id [])values forKeys:(const id <NSCopying> [])keys count:(NSUInteger)count
 {
 //	NSLog(@"%p initWithObjects:forKeys:count: %d --- ",self,count);
 //	NSLog(@"will super init");
@@ -59,7 +59,6 @@ IMP __stringTableLookupFun=NULL;
 	self=[super init];
 #endif
 	if ( self ) {
-		int i;
 		int lengths[ count +1 ];
         maxLen=0;
         NSAssert2(count<255, @"%@ - total number of strings %ld > 255", [self class], (long)count);
@@ -67,11 +66,11 @@ IMP __stringTableLookupFun=NULL;
 		int totalStringLen=0;
 		unsigned char *curptr;
 //		NSLog(@"super init");
-		for (i=0;i<count;i++) {
-            int thisLength=[keys[i] lengthOfBytesUsingEncoding:encoding];
-			lengths[i]=thisLength;
+		for (int i=0;i<count;i++) {
+            int thisLength=(int)[(NSString*)keys[i] lengthOfBytesUsingEncoding:encoding];
+			lengths[i]=(int)thisLength;
 			totalStringLen+=thisLength+3;
-            NSAssert3(thisLength<255, @"%@ - length of string '%@' %d > 255", [self class], keys[i], thisLength);
+            NSAssert3(thisLength<255, @"%@ - length of string '%@' %ld > 255", [self class], keys[i], (long)thisLength);
             if (thisLength>maxLen ) {
                 maxLen=thisLength;
             }
@@ -81,7 +80,7 @@ IMP __stringTableLookupFun=NULL;
         bzero(stringsOfLen, sizeof(int) * maxLen );
         chainStarts=calloc( maxLen+2, sizeof(int));
         tableOffsetsPerLength=calloc( maxLen+2, sizeof(int));
-		tableLength=count;
+		tableLength=(int)count;
 		table=malloc( totalStringLen +1 );
         tableIndex=calloc( count + 1, sizeof(StringTableIndex));
         for (int i=0;i<=maxLen;i++) {
@@ -93,7 +92,7 @@ IMP __stringTableLookupFun=NULL;
 		curptr=table;
 //		NSLog(@"table=%p curptr=%p",table,curptr);
         
-		for (i=0;i<tableLength;i++) {\
+		for (int i=0;i<tableLength;i++) {\
 			int len=lengths[i];
             tableIndex[i].length=len;
             tableIndex[i].index=i;
@@ -104,7 +103,7 @@ IMP __stringTableLookupFun=NULL;
         
         //--- gather lengths
         
-        for (i=0;i<=maxLen;i++) {
+        for (int i=0;i<=maxLen;i++) {
             int curIndex=chainStarts[i];
 //            NSLog(@"len[%d], start=%d",i,curIndex);
             int number=0;
@@ -121,10 +120,10 @@ IMP __stringTableLookupFun=NULL;
         //---- write the table in ascending order of lengths
         
 #if 1
-        for (i=0;i<=maxLen;i++) {
+        for (int i=0;i<=maxLen;i++) {
             if ( stringsOfLen[i]>0) {
  //               NSLog(@"%d strings of length %d",stringsOfLen[i], i);
-                tableOffsetsPerLength[i]=curptr-table;
+                tableOffsetsPerLength[i]=(int)(curptr-table);
                 *curptr++ = i;
                 *curptr++ = stringsOfLen[i];
                 int curIndex=chainStarts[i];
@@ -132,7 +131,7 @@ IMP __stringTableLookupFun=NULL;
                     
                     int theIndex = tableIndex[curIndex].index;
                     int len=lengths[theIndex];
-                    NSString* key=keys[theIndex];
+                    NSString* key=(NSString*)keys[theIndex];
 //                  NSLog(@"add string: %@",key);
 //                    NSLog(@"theIndex: %d",theIndex);
                     if ( theIndex > tableLength){
@@ -140,7 +139,7 @@ IMP __stringTableLookupFun=NULL;
                     }
                     *curptr++=theIndex;   // store the key's index
                     [key getCString:(char*)curptr maxLength:len+1 encoding:encoding];
-                    tableIndex[curIndex].offset=curptr-table;
+                    tableIndex[curIndex].offset=(int)(curptr-table);
                     
                     
 //                    NSLog(@"retain value[%d]: %p/%@ (of %d)",theIndex,values[theIndex],values[theIndex],tableLength);
@@ -190,7 +189,7 @@ IMP __stringTableLookupFun=NULL;
 		}
 #endif
 		if ( !__stringTableLookupFun ) {
-			__stringTableLookupFun=[self methodForSelector:@selector(objectForCString:length:)];
+			__stringTableLookupFun=(LOOKUPIMP)[self methodForSelector:@selector(objectForCString:length:)];
 		}
 		[self setDefaultValue:nil];
 	}
@@ -205,15 +204,20 @@ IMP __stringTableLookupFun=NULL;
 -initWithKeys:(NSArray*)keys values:(NSArray*)values
 {
 //	NSLog(@"initWithKeys: %d values: %d",[keys count],[values count]);
-    int keyCount = [keys count];
+    int keyCount = (int)[keys count];
 	id keyArray[ keyCount +1 ];
 	id valueArray[ [values count] + 1];
     NSAssert2([keys count]==[values count], @"different numbers of keys and values", [keys count], [values count]);
-    [keys getObjects:keyArray];
-    [values getObjects:valueArray];
+    [keys getObjects:keyArray range:NSMakeRange(0,keyCount)];
+    [values getObjects:valueArray range:NSMakeRange(0,keyCount)];
 //    NSLog(@"keys: %@",keys);
 //	NSLog(@"will initWithObjects:forKeys:count");
 	return [self initWithObjects:valueArray forKeys:keyArray count:[keys count]];
+}
+
+-(instancetype)initWithObjects:(NSArray *)objects forKeys:(NSArray<id<NSCopying>> *)keys
+{
+    return [self initWithKeys:keys values:objects];
 }
 
 -(NSUInteger)count
@@ -221,22 +225,7 @@ IMP __stringTableLookupFun=NULL;
 	return tableLength;
 }
 
--objectForKey:(NSString*)key
-{
-    if ( tableLength ) {
-        int encoding=NSUTF8StringEncoding;
-#if WINDOWS
-        encoding=NSISOLatin1StringEncoding;
-#endif
-        int len=[key lengthOfBytesUsingEncoding:encoding];
-        char buffer[len+20];
-        [key getCString:buffer maxLength:len+10 encoding:encoding];
-        buffer[len]=0;
-        return [self objectForCString:buffer length:len];
-    } else {
-        return defaultValue;
-    }
-}
+
 
 -objectAtIndex:(NSUInteger)anIndex
 {
@@ -274,9 +263,8 @@ static inline int offsetOfCStringWithLengthInTableOfLength( const unsigned char 
 {
 #if 1
     if (  tableOffsets[len] >= 0 )  {
-        int i;
         const unsigned char *curptr=table+tableOffsets[len];
-        for (i=0; i<1;i++ ) {
+        for (int i=0; i<1;i++ ) {
             int entryLen=*curptr++;
             int numEntries=*curptr++;
 //            NSLog(@"len: %d entryLen: %d",len,entryLen);
@@ -287,10 +275,9 @@ static inline int offsetOfCStringWithLengthInTableOfLength( const unsigned char 
                     const unsigned char *tablestring=curptr;
 //                    NSLog(@"'%.*s' = '%.*s' ?",len,cstr,entryLen,tablestring);
                     if ( (cstr[offset])==(tablestring[offset]) ) {
-                        int j;
                         BOOL matches=YES;
-                        for ( j=0;j<len-1;j++) {
-                            if ( cstr[j] != tablestring[j] ) {
+                        for ( int k=0;k<len-1;k++) {
+                            if ( cstr[k] != tablestring[k] ) {
                                 matches=NO;
                                 break;
                             }
@@ -346,13 +333,39 @@ static inline int offsetOfCStringWithLengthInTableOfLength( const unsigned char 
 
 -(int)offsetForCString:(const char*)cstr
 {
-	return [self offsetForCString:cstr length:strlen(cstr)];
+	return [self offsetForCString:cstr length:(int)strlen(cstr)];
+}
+
+-(int)offsetForKey:(NSString*)key
+{
+    int encoding=NSUTF8StringEncoding;
+#if WINDOWS
+    encoding=NSISOLatin1StringEncoding;
+#endif
+    int len=(int)[key lengthOfBytesUsingEncoding:encoding];
+    char buffer[len+20];
+    [key getCString:buffer maxLength:len+10 encoding:encoding];
+    buffer[len]=0;
+    int offset= [self offsetForCString:buffer];
+//    NSLog(@"key: '%@' buffer: '%s' len:%d offset=%d",key,buffer,len,offset);
+    return offset;
+}
+
+
+-objectForKey:(NSString*)key
+{
+    if ( tableLength ) {
+        int offset=[self offsetForKey:key];
+        if ( offset >= 0 ) {
+            return tableValues[offset];
+        }
+    }
+    return defaultValue;
 }
 
 -(void)setObject:anObject forKey:aKey
 {
-	const char *str=[aKey UTF8String];
-	int offset=[self offsetForCString:str];
+	int offset=[self offsetForKey:aKey];
 	if ( offset >= 0 ) {
 		[self replaceObjectAtIndex:offset  withObject:anObject];
 	} else {
@@ -373,9 +386,10 @@ static inline int offsetOfCStringWithLengthInTableOfLength( const unsigned char 
 		return defaultValue;
 	}
 }
+
 -objectForCString:(const char*)cstr
 {
-	return [self objectForCString:cstr length:strlen(cstr)];
+	return [self objectForCString:cstr length:(int)strlen(cstr)];
 }
 
 -description
@@ -410,7 +424,7 @@ static inline int offsetOfCStringWithLengthInTableOfLength( const unsigned char 
     NSMutableArray *result=[NSMutableArray arrayWithCapacity:[self count]];
     for (int i=0;i<[self count];i++) {
         NSString *key=[self keyAtIndex:i];
-        NSLog(@"key[%d]='%@'",i,key);
+//        NSLog(@"key[%d]='%@'",i,key);
         [result addObject:key];
     }
     return result;
@@ -447,6 +461,8 @@ int _small_string_table_releaseIndex=0;
 }
 
 @end
+
+#if !TARGET_OS_IPHONE
 
 #import "MPWUniqueString.h"
 
@@ -528,7 +544,7 @@ int _small_string_table_releaseIndex=0;
 	MPWSmallStringTable *table=[self _testCreateTestTable];
 	NSDictionary *dict=[NSDictionary dictionaryWithObjects:[self _testValues] forKeys:[self _testKeys]];
 	int i;
-#define CKEY  "me"
+#define CKEY  "m#$;eMemem1"
     NSString *nskey=[NSString stringWithUTF8String:CKEY];
     NSLog(@"nskey class: %@",[nskey class]);
     
@@ -559,10 +575,10 @@ int _small_string_table_releaseIndex=0;
     double ratio1 = (double)[slowerTime absoluteMicroseconds] / (double)[fastTime absoluteMicroseconds];
 	NSLog(@"dict with string time:  %d (%g ns/iter) dict with constant string time: %d (%g ns/iter) stringtable time: %d (%g ns/iter)",[slowerTime absoluteMicroseconds],(1000.0*[slowerTime absoluteMicroseconds])/LOOKUP_COUNT,[slowTime absoluteMicroseconds],(1000.0*[slowTime absoluteMicroseconds])/LOOKUP_COUNT,[fastTime absoluteMicroseconds],(1000.0*[fastTime absoluteMicroseconds])/LOOKUP_COUNT);
 	NSLog(@"string table vs dict lookup time ratio: %g  vs. dict with computed key: %g",ratio,ratio1);
-#define CONSTANT_STRING_RATIO 2.8
+#define CONSTANT_STRING_RATIO 1.2
 	NSAssert2( ratio > CONSTANT_STRING_RATIO ,@"ratio of small string table to NSDictionary with constant string  %g < %g",
               ratio, CONSTANT_STRING_RATIO );
-#define COMPUTED_STRING_RATIO 3.8
+#define COMPUTED_STRING_RATIO 1.8
 
 	NSAssert2( ratio1 > COMPUTED_STRING_RATIO ,@"ratio of small string table to NSDictionary with computed key %g < %g",
               ratio1, COMPUTED_STRING_RATIO );
@@ -690,4 +706,6 @@ int _small_string_table_releaseIndex=0;
 }
 
 @end
+
+#endif
 

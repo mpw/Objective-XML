@@ -53,6 +53,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
     return [MPWXMLByteStream stream];
 }
 
+-(void)setTarget:aTarget
+{
+    [super setTarget:aTarget];
+    byteTarget=aTarget;
+}
+
 -(void)cr
 {
     FORWARDCHARS("\n");
@@ -61,7 +67,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -(void)appendContentBytes:(void*)bytes length:(int)len
 {
-    [target appendBytes:bytes length:len];
+    [_target appendBytes:bytes length:len];
 }
 
 -(void)indent
@@ -81,7 +87,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
     char spaces[]="                                                                                                                           ";
     if ( atBOL && shouldIndent ) {
         int numSpacesToOutput = MIN( indent, sizeof spaces - 2);
-        [target appendBytes:spaces length:numSpacesToOutput];
+        [_target appendBytes:spaces length:numSpacesToOutput];
         atBOL=NO;
     }
 }
@@ -122,9 +128,9 @@ static inline void forwardAttributeName( MPWXmlGeneratorStream *self, const char
 -(void)writeAttribute:(NSString*)attributeName value:(NSString*)attributeValue
 {
 	FORWARDCHARS(" ");
-    [target writeString:attributeName];
+    [_target writeString:attributeName];
     FORWARDCHARS("=\"");
-    [target writeString:attributeValue];
+    [_target writeString:attributeValue];
     FORWARDCHARS("\"");
 }
 
@@ -138,7 +144,7 @@ static inline void forwardAttributeName( MPWXmlGeneratorStream *self, const char
 -(void)writeCStrAttribute:(const char*)attributeName value:(NSString*)attributeValue
 {
     forwardAttributeName( self, attributeName);
-    [target writeString:attributeValue];
+    [_target writeString:attributeValue];
     FORWARDCHARS("\"");
 }
 
@@ -405,7 +411,7 @@ boolAccessor( shouldIndent, setShouldIndent )
 
 -(void)generateXmlContentOnto:(MPWXmlGeneratorStream*)aStream
 {
-    [self flattenOntoStream:aStream];
+    [self flattenStructureOntoStream:aStream];
 }
 
 -(void)generateXmlOnto:(MPWXmlGeneratorStream*)aStream

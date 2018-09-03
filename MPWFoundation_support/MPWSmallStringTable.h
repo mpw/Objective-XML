@@ -10,6 +10,9 @@
 #import "MPWObject.h"
 #import "AccessorMacros.h"
 
+typedef id (*LOOKUPIMP)(id, SEL, char*, int);
+
+
 typedef struct {
     int index;
     int length;
@@ -19,24 +22,24 @@ typedef struct {
 } StringTableIndex;
 
 @interface MPWSmallStringTable : NSDictionary {
-	int __retainCount;
-	int	flags;
-	int	tableLength;
+	int     __retainCount;
+	int     flags;
+	int     tableLength;
 	unsigned char *table;
 #if WINDOWS || LINUX
-	id *tableValues;
+	id      *tableValues;
 #else
 	__strong  id *tableValues;
 #endif
     StringTableIndex *tableIndex;
-    int *chainStarts;
-    int *tableOffsetsPerLength;
-    int maxLen;
-	id	defaultValue;
-	BOOL caseInsensitive;
+    int     *chainStarts;
+    int     *tableOffsetsPerLength;
+    int     maxLen;
+	id      defaultValue;
+	BOOL    caseInsensitive;
     
 	@public
-	IMP __stringTableLookupFun;
+	LOOKUPIMP    __stringTableLookupFun;
 }
 
 //extern IMP __stringTableLookupFun;
@@ -51,6 +54,9 @@ typedef struct {
 -(int)offsetForCString:(const char*)cstr length:(int)len;
 -(int)offsetForCString:(const char*)cstr;
 -keyAtIndex:(NSUInteger)anIndex;
+-(void)setObject:anObject forKey:aKey;
+- (void)replaceObjectAtIndex:(NSUInteger)anIndex withObject:(id)anObject;
+-(int)offsetForKey:(NSString*)key;
 
 idAccessor_h( defaultValue, setDefaultValue )
 

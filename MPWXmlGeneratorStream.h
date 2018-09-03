@@ -41,6 +41,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	BOOL		shouldIndent;
 	const char	*tagStack[1024];
 	int			curTagDepth;
+    id          byteTarget;
 }
 
 typedef void (^XmlGeneratorBlock)(MPWXmlGeneratorStream* );

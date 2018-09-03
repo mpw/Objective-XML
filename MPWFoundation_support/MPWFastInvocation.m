@@ -10,6 +10,7 @@
 #import "DebugMacros.h"
 #import "AccessorMacros.h"
 #import "NSInvocationAdditions_lookup.h"
+#define FULL_MPWFOUNDATION 1
 #if FULL_MPWFOUNDATION && !WINDOWS && !LINUX
 #import "MPWRusage.h"
 #endif
@@ -41,7 +42,7 @@ lazyAccessor( NSMethodSignature , methodSignature, setMethodSignature, getSignat
 {
 	self = [super init];
     if ( self && !invokeFun) {
-        invokeFun=[self methodForSelector:@selector(resultOfInvoking)];
+        invokeFun=(IMP0)[self methodForSelector:@selector(resultOfInvoking)];
     }
 	return self;
 }
@@ -61,18 +62,18 @@ lazyAccessor( NSMethodSignature , methodSignature, setMethodSignature, getSignat
 	return [self  invocation];
 }
 
-// extern id objc_msgSend( id target, SEL selector, ... );
+//extern id objc_msgSend( id target, SEL selector, ... );
 
 -(void)recache
 {
 	cached=NULL;
 	if ( useCaching && target && selector) {
 //		cached=objc_msg_lookup( target, selector );
-		cached=[target methodForSelector:selector];
+		cached=(IMP0)[target methodForSelector:selector];
 	}
 #if !LINUX	
 	if (!cached) {
-		cached=objc_msgSend;
+		cached=(IMP0)objc_msgSend;
 	}
 #endif
 }
@@ -118,11 +119,12 @@ lazyAccessor( NSMethodSignature , methodSignature, setMethodSignature, getSignat
 	[self setResult:*(id*)retval];
 }
 
+typedef id (*IMP4)(id, SEL, id,id,id,id);
 
 
 -resultOfInvoking
 {
-	return cached( target, selector, args[0], args[1],args[2],args[3] );
+	return ((IMP4)cached)( target, selector, args[0], args[1],args[2],args[3] );
 }
 
 -(id)invokeWithArgs:(va_list)varArgs
@@ -142,15 +144,13 @@ lazyAccessor( NSMethodSignature , methodSignature, setMethodSignature, getSignat
 
 -returnValueAfterInvokingWithTarget:aTarget
 {
-//    NSLog(@"returnValueAfterInvokingWithTarget: [%@ %@]",aTarget,NSStringFromSelector(selector));
-    id retval = cached( aTarget, selector, args[0], args[1],args[2],args[3] );
-//    NSLog(@"retval: %p",retval);
+    id retval = ((IMP4)cached)( aTarget, selector, args[0], args[1],args[2],args[3] );
     return retval;
 }
 
 -resultOfInvokingWithArgs:(id*)newArgs count:(int)count
 {
-    return cached( target, selector, newArgs[0], newArgs[1],newArgs[2],newArgs[3] );
+    return ((IMP4)cached)( target, selector, newArgs[0], newArgs[1],newArgs[2],newArgs[3] );
 }
 
 -(void)invoke
@@ -249,20 +249,24 @@ lazyAccessor( NSMethodSignature , methodSignature, setMethodSignature, getSignat
 	int i;
 	MPWFastInvocation* fast=[self simpleSendWithInvocationOfClass:[MPWFastInvocation class]];
 	id slow=[self simpleSendWithInvocationOfClass:[MPWConvenientInvocation class]];
-	IMP invoke = [slow methodForSelector:@selector(resultOfInvoking)];
+	IMP0 invoke = (IMP0)[slow methodForSelector:@selector(resultOfInvoking)];
 	MPWRusage* slowStart=[MPWRusage current];
-#define SEND_COUNT 10000
+#define SEND_COUNT 1000000
 
 	for (i=0;i<SEND_COUNT;i++) {
 		invoke( slow, @selector(resultOfInvoking));
 	}
 	MPWRusage* slowTime=[MPWRusage timeRelativeTo:slowStart];
+//    NSLog(@"slowTime: %@",slowTime);
+//    NSLog(@"slowTime: %g",(double)[slowTime userMicroseconds]);
 	[fast setUseCaching:caching];
 	MPWRusage* fastStart=[MPWRusage current];
 	for (i=0;i<SEND_COUNT;i++) {
 		INVOKE(fast);
 	}
 	MPWRusage* fastTime=[MPWRusage timeRelativeTo:fastStart];
+//    NSLog(@"fastTime: %@",fastTime);
+//    NSLog(@"fastTime: %g",(double)[fastTime userMicroseconds]);
 	double ratio = (double)[slowTime userMicroseconds] / (double)[fastTime userMicroseconds];
 	NSLog(@"ratio of %@cached MPWFastInvocation compared to NSInvocation: %g",caching?@"":@"un",ratio);
 	return ratio;
@@ -273,6 +277,7 @@ lazyAccessor( NSMethodSignature , methodSignature, setMethodSignature, getSignat
 	double ratio = [self ratioOfNSInvocationToMPWFastInvocationSpeed:NO];
 	NSAssert2( ratio > 5 ,@"ratio of non-cached fast invocation to normal invocation %g < %d  (this may fluctuate)",
 				ratio,5);
+    (void)ratio;
 
 }
 
@@ -282,6 +287,7 @@ lazyAccessor( NSMethodSignature , methodSignature, setMethodSignature, getSignat
 	NSAssert2( ratio > 12 ,@"ratio of cached fast invocation to normal invocation %g < %d  (this may fluctuate)",
 				ratio,12);   //  actual up to factor 18
 
+    (void)ratio;
 }
 
 +(void)testCachingFasterThanNonCaching
@@ -290,10 +296,13 @@ lazyAccessor( NSMethodSignature , methodSignature, setMethodSignature, getSignat
 	double ratio2 = [self ratioOfNSInvocationToMPWFastInvocationSpeed:NO];
 	NSAssert2( ratio1 > ratio2 ,@"cached ratio (%g) slower than noncaced %g",
 				ratio1,ratio2);
+    (void)ratio1;
+    (void)ratio2;
+
 }
 
 #undef SEND_COUNT
-#define SEND_COUNT 100000
+#define SEND_COUNT 1000000
 
 +(void)testCachedInvocationFasterThanMessaging
 {
@@ -314,8 +323,8 @@ lazyAccessor( NSMethodSignature , methodSignature, setMethodSignature, getSignat
 	MPWRusage* fastTime=[MPWRusage timeRelativeTo:fastStart];
 	double ratio = (double)[slowTime userMicroseconds] / (double)[fastTime userMicroseconds];
 	NSLog(@"cached invocation (%d) vs. plain message send (%d): %g x faster than normal message send",(int)[fastTime userMicroseconds],(int)[slowTime userMicroseconds],ratio);
-	NSAssert2( ratio > 0.6 ,@"ratio of cached fast invocation to normal message send %g < %g",
-				ratio,0.6);
+	NSAssert2( ratio > 0.2 ,@"ratio of cached fast invocation to normal message send %g < %g",
+				ratio,0.2);
 }
 
 #endif
@@ -324,7 +333,7 @@ lazyAccessor( NSMethodSignature , methodSignature, setMethodSignature, getSignat
 {
 	MPWFastInvocation *invocation = [self invocation];
 	
-	int three=3;
+	long three=3;
 	NSInteger charAtThree;
 	[invocation setSelector:@selector(characterAtIndex:)];
 	[invocation setTarget:@"Hello World!"];

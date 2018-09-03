@@ -36,7 +36,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #import "MPWObject.h"
 //#import <MPWFoundation/bytecoding.h>
 #import "DebugMacros.h"
-
+#include <objc/runtime.h>
 
 @interface NSObject(validate)
 
@@ -46,7 +46,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 @interface NSString(fastCString)
 
--(char*)_fastCStringContents:(BOOL)something;
+-(const char*)_fastCStringContents:(BOOL)something;
 
 @end
 
@@ -136,18 +136,22 @@ boolAccessor( mustUnique, setMustUnique )
 
 -(int)intValue
 {
-    return [self longValue];
+    return (int)[self longValue];
 }
 
+-(void*)mutableBytes
+{
+    return (void*)[self bytes];
+}
 
--initWithData:(NSData*)data bytes:(const char*)bytes length:(unsigned)len
+-initWithData:(NSData*)data bytes:(const char*)bytes length:(long)len
 {
 #ifndef GNUSTEP
 	self = [super init];
 #else
 #warning cannot do [super init] in an NSString subclass in GNUStep
 #endif
-	self = [self reInitWithData:data bytes:bytes length:len];
+	[self reInitWithData:data bytes:bytes length:len];
     return self;   
 }
 
@@ -162,7 +166,7 @@ boolAccessor( mustUnique, setMustUnique )
 	return (id)CFMakeCollectable( CFStringCreateWithBytes( NULL, myBytes , myLength, [self cfStringEncoding], NO) );
 }
 
--reInitWithData:(NSData*)data bytes:(const char*)bytes length:(unsigned)len
+-reInitWithData:(NSData*)data bytes:(const char*)bytes length:(long)len
 {
 	if ( data != nil ) {
 		if ( myData != data ) {
@@ -193,7 +197,7 @@ boolAccessor( mustUnique, setMustUnique )
     if ( index < myLength ) {
         return ((unsigned char*)myBytes)[index];
     } else {
-        [NSException raise:@"OutOfRangeSubscript" format:@"subscript %ld greater than length %d of %@/%p",
+        [NSException raise:@"OutOfRangeSubscript" format:@"subscript %ld greater than length %ld of %@/%p",
             (long)index,myLength,[self class],self];
         return 0;
     }
@@ -204,8 +208,8 @@ boolAccessor( mustUnique, setMustUnique )
     if ( self == other ) {
         return YES;
     }
-	if ( other && *(Class*)other == isa ) {
-		int otherLen=[other length];
+	if ( other &&  object_getClass( other) == object_getClass( self) ) {
+		long otherLen=[other length];
 		const void *otherBytes=[other bytes];
 		return otherLen==myLength &&
 		((otherBytes==myBytes) || !strncmp( [other bytes],myBytes, myLength ));
@@ -250,6 +254,15 @@ boolAccessor( mustUnique, setMustUnique )
     }
 }
 
+#if NS_BLOCKS_AVAILABLE
+- (void) enumerateByteRangesUsingBlock:(void (^)(const void *bytes, NSRange byteRange, BOOL *stop))block
+{
+    BOOL stop=0;
+    block( myBytes, NSMakeRange(0, myLength),&stop);
+}
+#endif
+
+
 -(void)removeFromCache:aCache
 {
 //	[self intern];
@@ -266,12 +279,21 @@ boolAccessor( mustUnique, setMustUnique )
 		myData=nil;
 	}
 }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 
 -(void)getCString:(char*)buffer maxLength:(NSUInteger)len
 {
-	int copyLen=MIN(len,myLength);
+	long copyLen=MIN(len,myLength);
 	memcpy(buffer,myBytes,copyLen);
 }
+
+-(NSUInteger)cStringLength
+{
+    return myLength;
+}
+
+#pragma clang diagnostic pop
 
 -(void)validate
 {
@@ -291,11 +313,6 @@ boolAccessor( mustUnique, setMustUnique )
 }
 
 -(NSUInteger)length
-{
-    return myLength;
-}
-
--(unsigned int)cStringLength
 {
     return myLength;
 }
@@ -338,7 +355,7 @@ boolAccessor( mustUnique, setMustUnique )
         char end[3]="  ";
         strncpy( start, myBytes, 2 );
         strncpy( end, myBytes+myLength-2,2);
-        return [NSString stringWithFormat:@"Data with %d bytes, start '%.2s' end '%.2s'",
+        return [NSString stringWithFormat:@"Data with %ld bytes, start '%.2s' end '%.2s'",
             myLength,start,end];
     } else {
         return [self stringValue];
@@ -350,7 +367,7 @@ boolAccessor( mustUnique, setMustUnique )
     [stream appendBytes:myBytes length:myLength];
 }
 
--(unsigned)offset
+-(unsigned long)offset
 {
     return (unsigned char*)myBytes - (unsigned char*)[myData bytes];
 }
@@ -361,7 +378,7 @@ boolAccessor( mustUnique, setMustUnique )
     if ( interned || mustUnique ||
          ([myData retainCount] == 1 && ![NSStringFromClass( [myData class]) isEqual:@"NSPageData"])
           /* && [myData isKindOfClass:[NSData class]] */ ) {
-        int offset = [self offset];
+        long offset = [self offset];
         if ( [myData isKindOfClass:[self class]] ) {
             MPWSubData *mySub=(MPWSubData*)myData;
             id orig=[mySub originalData];
@@ -377,7 +394,7 @@ boolAccessor( mustUnique, setMustUnique )
 
 -(void)encodeWithCoder:(NSCoder*)aCoder
 {
-    int offset = [self offset];
+    long offset = [self offset];
     encodeVar( aCoder, myData );
     //    [aCoder encodeValueOfObjCType:@encode(typeof(offset)) at:&offset withName:"offset"]
     encodeVar( aCoder, offset );
@@ -400,16 +417,34 @@ boolAccessor( mustUnique, setMustUnique )
 
 -classForCoder
 {
-    return isa;
+    return object_getClass( self);
 }
 
 @end
+
+@implementation NSData(stringValue)
+
+-stringValue
+{
+    NSString *s=nil;
+    @try {
+        s=[[[NSString alloc] initWithData:self encoding:NSUTF8StringEncoding] autorelease];
+    } @catch ( id e) {
+    }
+    if (!s) {
+        s=[[[NSString alloc] initWithData:self encoding:NSISOLatin1StringEncoding] autorelease];
+    }
+    return s; 
+}
+
+@end
+
 
 @implementation MPWSubData(testing)
 
 +_subDataWithString:(char *)string 
 {
-	int len=strlen(string);
+	long len=strlen(string);
 	NSData *data = [NSData dataWithBytes:string length:len];
 	MPWSubData *subData = [[[MPWSubData alloc] initWithData:data bytes:[data bytes] length:len] autorelease];
 	return subData;

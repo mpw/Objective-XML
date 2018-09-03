@@ -17,11 +17,11 @@
 	int	numargs;
 	id   args[10];
 	id	result;
-	IMP cached;
+	IMP0 cached;
 	BOOL useCaching;
     NSMethodSignature *methodSignature;
 	@public
-	IMP  invokeFun;
+	IMP0  invokeFun;
 }
 
 #define	INVOKE( inv )	((inv)->invokeFun( (inv), @selector(resultOfInvoking))) 

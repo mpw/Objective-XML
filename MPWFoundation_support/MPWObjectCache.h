@@ -35,25 +35,14 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #import "AccessorMacros.h"
 #import <pthread.h>
 
-@class MPWObject;
 
+typedef long (*INT_IMP)(id, SEL );
+typedef void (*VOID_IMP)(id, SEL, ...);
 
 
 
 @interface MPWObjectCache : MPWObject  
 {
-    MPWObject   **objs;
-    Class       objClass;
-    SEL         allocSel,initSel;
-    IMP         allocImp,initImp;
-    IMP         retainImp,autoreleaseImp,retainCountImp,removeFromCacheImp;
-    int         cacheSize;
-    int         objIndex;
-    void        *cachelock;
-    BOOL        unsafeFastAlloc;
-    IMP0		releaseImp;
-    SEL         reInitSelector;
-    IMP0		reInitImp;
 @public
     IMP0		getObject;
 }

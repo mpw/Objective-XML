@@ -30,7 +30,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #import "MPWXmlAttributes.h"
 #import "mpwfoundation_imports.h"
-//#import "MPWTagHandler.h"
+#import "MPWTagHandler.h"
 
 @implementation MPWXMLAttributes
 

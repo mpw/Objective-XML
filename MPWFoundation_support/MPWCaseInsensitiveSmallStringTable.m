@@ -11,18 +11,28 @@
 
 @implementation MPWCaseInsensitiveSmallStringTable
 
--initWithObjects:(id*)values forKeys:(id*)keys count:(NSUInteger)count
+-initWithObjects:(const id[])values forKeys:(const id <NSCopying> [])keys count:(NSUInteger)count
 {
 	int i;
 	id lowercaseKeys[ count ];
 	for (i=0;i<count;i++) {
-		lowercaseKeys[i]=[keys[i] lowercaseString];
+		lowercaseKeys[i]=[(NSString*)keys[i] lowercaseString];
 	}
 	return [super initWithObjects:values forKeys:lowercaseKeys count:count];
 }
 
 
--objectForCString:(const char*)cstr length:(int)len
+-(int)offsetForCString:(const char*)cstr length:(int)len
+{
+	int i;
+	char lowercasestring[ len+1 ];
+	for (i=0;i<len;i++) {
+		lowercasestring[i]=tolower(cstr[i]);
+	}
+	return [super offsetForCString:lowercasestring length:len];
+}
+
+-(id)objectForCString:(const char*)cstr length:(int)len
 {
 	int i;
 	char lowercasestring[ len+1 ];

@@ -68,12 +68,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 
 -(void)encodeKeys:keys withCoder:(NSCoder*)aCoder;
--initWithCoder:(NSCoder*)aCoder keys:keys;
+-decodeWithCoder:(NSCoder*)aCoder keys:keys;
 +(BOOL)doReflectiveCoding;
 +(NSArray*)defaultEncodingKeys;
 -(NSArray*)encodingKeys;
--(void)encodeWithCoder:(NSCoder*)aCoder;
--initWithCoder:(NSCoder*)aCoder;
+//-(void)encodeWithCoder:(NSCoder*)aCoder;
+//-initWithCoder:(NSCoder*)aCoder;
 -(NSArray*)theKeysToCopy;
 -(void)takeKey:aKey from:otherObject;
 -copyReflectivelyWithZone:(NSZone*)aZone;
