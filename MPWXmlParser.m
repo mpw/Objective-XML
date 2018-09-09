@@ -79,7 +79,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
 		namespacePrefix=start;
 		namespaceLen=len-(namespaceLocation-start)-1; //   namespaceLocation-namespacePrefix-1;
 		endName=TAGFORCSTRING( namespaceLocation+1, namespaceLen);
-		prefix = TAGFORCSTRING( start, namespaceLocation-start );
+        int prefixLen=namespaceLocation-start;
+		prefix = TAGFORCSTRING( start, prefixLen );
 		namespaceURI=[namespacePrefixToURIMap objectForKey:prefix];
 
 
@@ -129,7 +130,9 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	}
 	if ( shouldProcessNamespaces &&  nameLen >= 5  && !strncmp( nameStart, "xmlns", 5 ) ) {
 		if ( nameLen > 6 ) {
-			name=TAGFORCSTRING( nameStart+6, nameLen-6 );
+            const char *tagStart=nameStart+6;
+            int tagLen=nameLen-6;
+			name=TAGFORCSTRING( tagStart, tagLen );
 		} else {
 			name=@"";
 		}

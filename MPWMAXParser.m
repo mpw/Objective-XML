@@ -15,6 +15,7 @@
 #import "SaxDocumentHandler.h"
 #import "MPWXmlElement.h"
 #import "MPWTagAction.h"
+#import <MPWFoundation/MPWSubData.h>
 #import <MPWFoundation/MPWBlockInvocation.h>
 
 #if TARGET_OS_IPHONE
@@ -48,7 +49,7 @@ scalarAccessor( NSInteger, maxDepthAllowed, setMaxDepthAllowed )
 objectAccessor( NSData, buffer, setBuffer )
 objectAccessor( NSURL, url, setUrl )
 
-// #define MAKEDATA( start, length )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , length )
+#define MAKEDATA( start, length )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , length )
 
 #define POPTAGNORELEASE						(((NSXMLElementInfo*)_elementStack)[--tagStackLen].elementName)
 // #define POPTAG						( [POPTAGNORELEASE release])
@@ -119,10 +120,10 @@ static inline BOOL extractNameSpace( const char *start, int len, const char **st
  //	NSLog(@"before dataCache");
    dataCache=[[MPWObjectCache alloc] initWithCapacity:90 class:[MPWSubData class]];
     [dataCache setUnsafeFastAlloc:YES];
-    getData = [dataCache getObjectIMP];
-    initDataBytesLength=[MPWSubData
+    getData = (XMLIMP0)[dataCache getObjectIMP];
+    initDataBytesLength=(XMLIMP3)[MPWSubData
                     instanceMethodForSelector:@selector(reInitWithData:bytes:length:)];
-	uniqueTagForCString=[self methodForSelector: @selector(getTagForCString:length:)];
+	uniqueTagForCString=(XMLIMP3)[self methodForSelector: @selector(getTagForCString:length:)];
     [self _growTagStack:INITIALTAGSTACKDEPTH];
 //	NSLog(@"before attributeCache");
     attributeCache=[[MPWObjectCache alloc] initWithCapacity:20 class:[MPWXMLAttributes class]];

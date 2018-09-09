@@ -44,6 +44,7 @@ typedef struct _NSXMLElementInfo {
 #if DEOPTIMIZE_ALLOCATION
 #define MAKEDATA( dataStart, dataLength )   [NSData dataWithBytes:dataStart length:dataLength]
 #else
+#define MAKEDATA( start, length )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , length )
 #endif
 
 
@@ -64,7 +65,7 @@ typedef struct _NSXMLElementInfo {
 #if DEOPTIMIZE_ALLOCATION
 #define TAGFORCSTRING( cstr, cstrlen)   [[[NSString alloc] initWithBytes:cstr length:cstrlen encoding:NSUTF8StringEncoding] autorelease]
 #else
-#define TAGFORCSTRING( cstr, cstrlen)   MAKEDATA( (cstr), (cstrlen) )
+#define TAGFORCSTRING( cstr, cstrlen)   MAKEDATA( cstr, cstrlen )
 #endif
 
 
