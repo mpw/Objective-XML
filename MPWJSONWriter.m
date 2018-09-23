@@ -130,21 +130,37 @@ static inline long writeKey( char *buffer, const char *aKey, BOOL *firstPtr)
 
 -(void)writeString:(NSString*)anObject
 {
-	long maxLen= [anObject maximumLengthOfBytesUsingEncoding:NSUTF8StringEncoding];
-	char buffer[ maxLen ];
-	char *rest=buffer;
-	char *cur=rest;
+    const char *buffer=NULL;
     char curchar;
+    NSUInteger len=[anObject length];
 //	NSLog(@"==== JSONriter writeString: %@",anObject);
-    [self appendBytes:"\"" length:1];
-	[anObject getCString:buffer maxLength:maxLen encoding:NSUTF8StringEncoding];
-
+    TARGET_APPEND("\"", 1);
+    buffer=CFStringGetCStringPtr((CFStringRef)anObject, kCFStringEncodingUTF8);
+    if ( buffer ) {
+//        NSLog(@"got buffer: %p",buffer);
+    } else {
+        long maxLen= [anObject maximumLengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+        buffer=alloca(maxLen+1);
+//        NSLog(@"alloca buffer: %p",buffer);
+//        NSAssert(buffer, @"buffer");
+        BOOL success=[anObject getBytes:buffer maxLength:maxLen usedLength:&len encoding:NSUTF8StringEncoding options:0 range:NSMakeRange(0, len) remainingRange:NULL];
+//        NSLog(@"got bytes: %d",success);
+//        NSAssert(success,@"got bytes");
+//        [anObject getCString:buffer maxLength:maxLen encoding:NSUTF8StringEncoding];
+    }
+    const char *endptr=buffer+len;
+    const char *rest=buffer;
+    char *cur=rest;
 //	NSLog(@"length of UTF8: %d",strlen(buffer));
-	while ( (curchar = *cur) ) {
+	while ( (curchar = *cur) && cur < endptr ) {
         
-        while ( curchar > '0' && curchar != '\\') {
+        while (  cur < endptr && (curchar > '0')  && (curchar != '\\')) {
             cur++;
             curchar=*cur;
+        }
+        if (curchar==' ') {
+            cur++;
+            continue;
         }
         if (curchar==0) {
             break;
@@ -177,8 +193,8 @@ static inline long writeKey( char *buffer, const char *aKey, BOOL *firstPtr)
 				break;
 		}
 		if ( escapeSequence ) {
-			[self appendBytes:rest length:cur-rest ];
-			[self appendBytes:escapeSequence length:strlen(escapeSequence)];
+            TARGET_APPEND((char*)rest, cur-rest);
+            TARGET_APPEND(escapeSequence, strlen(escapeSequence));
 			cur++;
 			rest=cur;
 			
@@ -186,8 +202,8 @@ static inline long writeKey( char *buffer, const char *aKey, BOOL *firstPtr)
 			cur++;
 		}
 	}
-	[self appendBytes:rest length:strlen(rest) ];
-    [self appendBytes:"\"" length:1];
+    TARGET_APPEND((char*)rest,endptr-rest);
+    TARGET_APPEND("\"", 1);
 }
 
 -(SEL)streamWriterMessage
