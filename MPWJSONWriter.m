@@ -14,35 +14,93 @@
 -(void)writeKey:(NSString*)aKey
 {
     [self writeString:aKey];
-    [self appendBytes:": " length:2];
+    [self appendBytes:":" length:1];
 }
 
--(void)writeObject:anObject forKey:aKey
-{
-    [self writeIndent];
-	[self writeKey:aKey];
-    [self writeObject:anObject];
+#define INTBUFLEN 64
 
-} 
+typedef struct {
+    char buf[INTBUFLEN];
+} intbuf;
+
+static inline char *itoa( int value, intbuf *buf )
+{
+    char *buffer=buf->buf;
+    int offset=INTBUFLEN/2;
+    buffer[offset]=0;
+    do {
+        int next=value/10;
+        int digit=value - (next*10)+'0';
+        buffer[--offset]=digit;
+        value=next;
+    } while (value);
+    return buffer+offset;
+}
+
+static inline long writeKey( char *buffer, const char *aKey, BOOL *firstPtr)
+{
+    char *ptr=buffer;
+    long  keylen=strlen(aKey);
+    if ( !*firstPtr ) {
+        *firstPtr=NO;
+    } else {
+        *ptr++ = ',';
+    }
+    *ptr++ = '"';
+    memcpy( ptr, aKey, keylen);
+    ptr+=keylen;
+    *ptr++ ='"';
+    *ptr++ =':';
+    return ptr-buffer;
+}
+
+-(void)writeString:aString forKey:(const char*)aKey
+{
+    char buffer[1000];
+    long len=writeKey(buffer, aKey, firstElementOfDict + currentFirstElement);
+    [self appendBytes:buffer length:len];
+//    [self appendBytes:"\":" length:2];
+    [self writeObject:aString];
+}
+
+-(void)writeObject:(id)anObject forKey:(id)aKey
+{
+    [self writeKey:aKey];
+    [self writeObject:anObject];
+}
+
+-(void)writeInteger:(int)number forKey:(const char*)aKey
+{
+    char buffer[1000];
+    long len=writeKey(buffer, aKey, firstElementOfDict + currentFirstElement);
+    char *ptr=buffer+len;
+    intbuf ibuf;
+    char *s=itoa(number, &ibuf);
+    long ilen=strlen(s);
+    memcpy( ptr, s, ilen);
+    ptr+=ilen;
+    TARGET_APPEND(buffer, ptr-buffer);
+//    [self appendBytes:buffer length:ptr-buffer];
+}
 
 -(void)beginArray
 {
-    [self appendBytes:"[ " length:2];
+    TARGET_APPEND("[", 1);
 }
 
 -(void)endArray
 {
-    [self appendBytes:"] " length:2];
+    TARGET_APPEND("]", 1);
 }
 
 -(void)beginDictionary
 {
-    [self appendBytes:"{ " length:2];
+    TARGET_APPEND("{", 1);
 }
 
 -(void)endDictionary
 {
-    [self appendBytes:"} " length:2];
+    TARGET_APPEND("}", 1);
 }
 
 -(void)writeArray:(NSArray*)anArray
@@ -72,19 +130,29 @@
 
 -(void)writeString:(NSString*)anObject
 {
-	int maxLen= [anObject maximumLengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+	long maxLen= [anObject maximumLengthOfBytesUsingEncoding:NSUTF8StringEncoding];
 	char buffer[ maxLen ];
 	char *rest=buffer;
 	char *cur=rest;
+    char curchar;
 //	NSLog(@"==== JSONriter writeString: %@",anObject);
     [self appendBytes:"\"" length:1];
 	[anObject getCString:buffer maxLength:maxLen encoding:NSUTF8StringEncoding];
 
 //	NSLog(@"length of UTF8: %d",strlen(buffer));
-	while ( *cur ) {
+	while ( (curchar = *cur) ) {
+        
+        while ( curchar > '0' && curchar != '\\') {
+            cur++;
+            curchar=*cur;
+        }
+        if (curchar==0) {
+            break;
+        }
+        
 		char *escapeSequence=NULL;
 		char unicodeEscapeBuf[16];
-		switch (*cur) {
+		switch (curchar) {
 			case '\\':
 				escapeSequence="\\\\";
 				break;
@@ -102,7 +170,7 @@
 				break;
 			default:
 				
-				if ( *cur < 32 ) {
+				if ( curchar < 32 ) {
 					snprintf( unicodeEscapeBuf, 8,"\\u00%02x",*cur);
 					escapeSequence=unicodeEscapeBuf;
 				}
@@ -153,7 +221,7 @@
 
 @implementation NSObject(jsonWriting)
 
--(void)writeOnJSONStream:aStream
+-(void)writeOnJSONStream:(MPWJSONWriter*)aStream
 {
 	[self writeOnPropertyList:aStream];
 }
@@ -168,12 +236,12 @@
 +(void)testWriteArray
 {
 	IDEXPECT( ([self _encode:[NSArray arrayWithObjects:@"hello",@"world",nil]]), 
-			 @"[ \"hello\",\"world\"] ", @"array encode" );
+			 @"[\"hello\",\"world\"]", @"array encode" );
 }
 
 +(void)testWriteDict
 {
-	NSString *expectedEncoding= @"{ \"key\": \"value\", \"key1\": \"value1\"} ";
+	NSString *expectedEncoding= @"{\"key\":\"value\", \"key1\":\"value1\"}";
 	NSString *actualEncoding=[self _encode:[NSDictionary dictionaryWithObjectsAndKeys:@"value",@"key",
 											@"value1",@"key1",nil ]];
 //	INTEXPECT( [actualEncoding length], [expectedEncoding length], @"lengths");
@@ -196,7 +264,8 @@
 	IDEXPECT( [self _encode:@"\n"], @"\"\\n\"", @"newline is escaped");
 	IDEXPECT( [self _encode:@"\r"], @"\"\\r\"", @"return is escaped");
 	IDEXPECT( [self _encode:@"\t"], @"\"\\t\"", @"tab is escaped");
-	IDEXPECT( [self _encode:@"\\"], @"\"\\\\\"", @"backslash is escaped");
+    IDEXPECT( [self _encode:@"\\"], @"\"\\\\\"", @"backslash is escaped");
+    IDEXPECT( [self _encode:@"hello world\\\n"], @"\"hello world\\\\\\n\"", @"combined escapes");
 }
 
 

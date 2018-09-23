@@ -831,6 +831,11 @@
 		1FF832E912D1BBDF00DF5E66 /* MPWRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */; };
 		1FF832EA12D1BBDF00DF5E66 /* MPWRSSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832E612D1BBDF00DF5E66 /* MPWRSSParser.h */; };
 		1FF832EB12D1BBDF00DF5E66 /* MPWRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */; };
+		1FFA191E214C112A00571663 /* ObjectiveXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FFA191D214C112A00571663 /* ObjectiveXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FFA191F214C112A00571663 /* ObjectiveXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FFA191D214C112A00571663 /* ObjectiveXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FFA1920214C112A00571663 /* ObjectiveXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FFA191D214C112A00571663 /* ObjectiveXML.h */; };
+		1FFA1921214C112A00571663 /* ObjectiveXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FFA191D214C112A00571663 /* ObjectiveXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FFA1922214C112A00571663 /* ObjectiveXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FFA191D214C112A00571663 /* ObjectiveXML.h */; };
 		1FFD587A0E0DACD9000AE272 /* test3_16bit.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD58790E0DACD9000AE272 /* test3_16bit.xml */; };
 /* End PBXBuildFile section */
 
@@ -1144,6 +1149,8 @@
 		1FF832E112D1BB9400DF5E66 /* MPWAtomLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWAtomLink.m; sourceTree = "<group>"; };
 		1FF832E612D1BBDF00DF5E66 /* MPWRSSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWRSSParser.h; sourceTree = "<group>"; };
 		1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWRSSParser.m; sourceTree = "<group>"; };
+		1FFA191D214C112A00571663 /* ObjectiveXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveXML.h; sourceTree = "<group>"; };
+		1FFA1923214C11E900571663 /* ObjectiveXML.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = ObjectiveXML.map; sourceTree = "<group>"; };
 		1FFD58790E0DACD9000AE272 /* test3_16bit.xml */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.xml; path = test3_16bit.xml; sourceTree = "<group>"; };
 		66FB6C16012ABAD5005ADD88 /* MPWXmlWrapperArchiver.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MPWXmlWrapperArchiver.m; sourceTree = "<group>"; };
 		66FB6C17012ABAD5005ADD88 /* MPWXmlWrapperArchiver.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MPWXmlWrapperArchiver.h; sourceTree = "<group>"; };
@@ -1212,6 +1219,7 @@
 		07DF1A1A00668979C35ADD82 /* MPWXmlKit */ = {
 			isa = PBXGroup;
 			children = (
+				1FFA1923214C11E900571663 /* ObjectiveXML.map */,
 				1F5ED2371FDBD402001D28FB /* MPWTest.framework */,
 				1FBDB9421B789475009534A2 /* MPWFoundationTouch.framework */,
 				1F81C0551969962D0066DF43 /* Foundation.framework */,
@@ -1313,6 +1321,7 @@
 				07DF1A3B00668979C35ADD82 /* MPWXmlScanner16BitBE.h */,
 				07DF1A3E00668979C35ADD82 /* XmlDelimitAttrValues.h */,
 				07DF1A3F00668979C35ADD82 /* XmlCommonMacros.h */,
+				1FFA191D214C112A00571663 /* ObjectiveXML.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -1605,6 +1614,7 @@
 				1F2B4A7B0D6B893B00189FEB /* MPWOpenDocumentParser.h in Headers */,
 				1FAAD2E30DF61EC200592B29 /* mpwfoundation_imports.h in Headers */,
 				1FC4D35F0DFA0EC600AC1A66 /* MPWFastInvocation.h in Headers */,
+				1FFA191E214C112A00571663 /* ObjectiveXML.h in Headers */,
 				1FC4D3600DFA0EC600AC1A66 /* MPWObject.h in Headers */,
 				1FC4D3610DFA0EC600AC1A66 /* MPWObjectCache.h in Headers */,
 				1FC4D3620DFA0EC600AC1A66 /* MPWSmallStringTable.h in Headers */,
@@ -1638,6 +1648,7 @@
 				1F3C7B51136FE2EF009C0697 /* MPWXmlArchiver.h in Headers */,
 				1F3C7B52136FE2EF009C0697 /* MPWXmlUnarchiver.h in Headers */,
 				1F3C7B53136FE2EF009C0697 /* XmlScannerScanCDataPseudoMacro.h in Headers */,
+				1FFA1921214C112A00571663 /* ObjectiveXML.h in Headers */,
 				1F3C7B54136FE2EF009C0697 /* MPWXmlScanner16BitBE.h in Headers */,
 				1F3C7B55136FE2EF009C0697 /* SaxDocumentHandler.h in Headers */,
 				1F3C7B56136FE2EF009C0697 /* XmlDelimitAttrValues.h in Headers */,
@@ -1675,6 +1686,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FFA1922214C112A00571663 /* ObjectiveXML.h in Headers */,
 				1F81C033196992D20066DF43 /* MPWXmlWrapperUnarchiver.h in Headers */,
 				1F81C030196992D20066DF43 /* MPWTemplateApply.h in Headers */,
 				1F81BFF9196992380066DF43 /* ObjectiveXMLTouch.h in Headers */,
@@ -1732,6 +1744,7 @@
 				1F96E5D209B62F5C0063D669 /* MPWXmlArchiver.h in Headers */,
 				1F96E5D309B62F5C0063D669 /* MPWXmlUnarchiver.h in Headers */,
 				1F96E5D409B62F5C0063D669 /* XmlScannerScanCDataPseudoMacro.h in Headers */,
+				1FFA191F214C112A00571663 /* ObjectiveXML.h in Headers */,
 				1F96E5D609B62F5C0063D669 /* MPWXmlScanner16BitBE.h in Headers */,
 				1F96E5D709B62F5C0063D669 /* SaxDocumentHandler.h in Headers */,
 				1F96E5D909B62F5C0063D669 /* XmlDelimitAttrValues.h in Headers */,
@@ -1783,6 +1796,7 @@
 				1FB43B6310BFB6EF00490AA6 /* MPWXmlArchiver.h in Headers */,
 				1FB43B6410BFB6EF00490AA6 /* MPWXmlUnarchiver.h in Headers */,
 				1FB43B6510BFB6EF00490AA6 /* XmlScannerScanCDataPseudoMacro.h in Headers */,
+				1FFA1920214C112A00571663 /* ObjectiveXML.h in Headers */,
 				1FB43B6710BFB6EF00490AA6 /* MPWXmlScanner16BitBE.h in Headers */,
 				1FB43B6810BFB6EF00490AA6 /* SaxDocumentHandler.h in Headers */,
 				1FB43B6A10BFB6EF00490AA6 /* XmlDelimitAttrValues.h in Headers */,
@@ -3212,6 +3226,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -3227,6 +3242,7 @@
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
 				INSTALL_PATH = "@rpath/Frameworks/";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = ObjectiveXML.map;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOL_FLAGS = "";
@@ -3345,6 +3361,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /System/Library/PrivateFrameworks/;
@@ -3398,6 +3415,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /System/Library/PrivateFrameworks/;
@@ -3412,6 +3430,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -3427,6 +3446,7 @@
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
 				INSTALL_PATH = "@rpath/Frameworks/";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = ObjectiveXML.map;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOL_FLAGS = "";

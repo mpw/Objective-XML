@@ -1,0 +1,8 @@
+
+framework module ObjectiveXML {
+    umbrella header "ObjectiveXML.h"
+    module * { export * }
+    export *
+    
+}
+
