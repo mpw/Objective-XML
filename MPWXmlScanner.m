@@ -236,23 +236,23 @@ static inline scanStateType checkForMarkup( const xmlchar *start, const xmlchar 
 /**
  * tries to skip a comment.
  */
-static inline const xmlchar *
-tryToSkipComment( const xmlchar *start, const xmlchar *end )
-{
-    const xmlchar *currentPtr = start;
-    if (end-start == 0 || !ISHYPHEN(start[0])  ||  !ISHYPHEN(start[1]))  {
-        return currentPtr+1;
-    } else {
-        currentPtr += 2;;
-    }
-    while ( (currentPtr+1) < end && !ISHYPHEN(currentPtr[0]) && !ISHYPHEN(currentPtr[1]))  {
-        currentPtr++;
-    }
-    if ((currentPtr+1) < end) {
-        currentPtr +=2;
-    }
-    return currentPtr;
-}
+//static inline const xmlchar *
+//tryToSkipComment( const xmlchar *start, const xmlchar *end )
+//{
+//    const xmlchar *currentPtr = start;
+//    if (end-start == 0 || !ISHYPHEN(start[0])  ||  !ISHYPHEN(start[1]))  {
+//        return currentPtr+1;
+//    } else {
+//        currentPtr += 2;;
+//    }
+//    while ( (currentPtr+1) < end && !ISHYPHEN(currentPtr[0]) && !ISHYPHEN(currentPtr[1]))  {
+//        currentPtr++;
+//    }
+//    if ((currentPtr+1) < end) {
+//        currentPtr +=2;
+//    }
+//    return currentPtr;
+//}
 
 
 static int scanXml(
@@ -446,7 +446,7 @@ static int scanXml(
             xmlchar attValDelim=' ';
             const xmlchar *attValStart,*attValEnd;
             scanStateType saveState = scanState;
-            int attrNameSpaceLen=0;
+            long attrNameSpaceLen=0;
             //--- scan over any leading whitesspace
             
             while ( INRANGE &&  isspace(*currentPtr)) {

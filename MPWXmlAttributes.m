@@ -39,10 +39,10 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 
 
--(void)pop:(int)n
+-(void)pop:(long)n
 {
 	n=MIN(n,attrCount);
-    int remaining=attrCount-n;
+    long remaining=attrCount-n;
     id *keyPtr=keys+remaining;
     id *valPtr=values+remaining;
     id *namespacePtr=namespaces+remaining;
@@ -92,7 +92,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -(NSDictionary*)asDictionaryExcludingKeys:(NSSet*)excludedKeys;
 {
-	int i,max;
+	long i,max;
 	NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithCapacity:[self count] - [excludedKeys count]];
 	for ( i=0,max=[self count];i<max; i++ ) {
 		if ( ! [excludedKeys containsObject:keys[i]] && values[i] && keys[i] ) {
@@ -252,7 +252,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -(void)_growCapacity
 {
-	int newCapacity = attrCapacity * 2;
+	long newCapacity = attrCapacity * 2;
 	id *newKeys=ALLOC_POINTERS( (newCapacity+1)*sizeof(id) );
 	id *newValues=ALLOC_POINTERS((newCapacity+1)*sizeof(id) );
 	id *newNamespaces=ALLOC_POINTERS( (newCapacity+1)*sizeof(id) );

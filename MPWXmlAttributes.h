@@ -65,6 +65,6 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 
 -(void)setValue:anObject forAttribute:aKey;
 -(void)removeAllObjects;
--(void)pop:(int)n;
+-(void)pop:(long)n;
 
 @end
