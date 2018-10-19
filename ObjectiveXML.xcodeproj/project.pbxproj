@@ -74,10 +74,6 @@
 		1F27432512CC7D16001498F9 /* dict.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27432312CC7D16001498F9 /* dict.json */; };
 		1F27433D12CC8074001498F9 /* array.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27433C12CC8074001498F9 /* array.json */; };
 		1F27433E12CC8074001498F9 /* array.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F27433C12CC8074001498F9 /* array.json */; };
-		1F27436A12CC8741001498F9 /* MPWJSONWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F27436812CC8741001498F9 /* MPWJSONWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F27436B12CC8741001498F9 /* MPWJSONWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27436912CC8741001498F9 /* MPWJSONWriter.m */; };
-		1F27436C12CC8741001498F9 /* MPWJSONWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F27436812CC8741001498F9 /* MPWJSONWriter.h */; };
-		1F27436D12CC8741001498F9 /* MPWJSONWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27436912CC8741001498F9 /* MPWJSONWriter.m */; };
 		1F2B4A7B0D6B893B00189FEB /* MPWOpenDocumentParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2B4A790D6B893B00189FEB /* MPWOpenDocumentParser.h */; };
 		1F2B4ADD0D6B95EF00189FEB /* MPWTagHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2B4ADB0D6B95EF00189FEB /* MPWTagHandler.h */; };
 		1F2B4ADE0D6B95EF00189FEB /* MPWTagHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B4ADC0D6B95EF00189FEB /* MPWTagHandler.m */; };
@@ -152,7 +148,6 @@
 		1F3C7B6A136FE2EF009C0697 /* MPWMAXParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F421F0110C2555700C403D5 /* MPWMAXParser.h */; };
 		1F3C7B6B136FE2EF009C0697 /* MPWAtomParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FCD3D3612B854FB00FF08E9 /* MPWAtomParser.h */; };
 		1F3C7B6C136FE2EF009C0697 /* MPWMASONParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2742A112CC6DA0001498F9 /* MPWMASONParser.h */; };
-		1F3C7B6D136FE2EF009C0697 /* MPWJSONWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F27436812CC8741001498F9 /* MPWJSONWriter.h */; };
 		1F3C7B6E136FE2EF009C0697 /* MPWFeedItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832D212D1BAAE00DF5E66 /* MPWFeedItem.h */; };
 		1F3C7B6F136FE2EF009C0697 /* MPWAtomLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832E012D1BB9400DF5E66 /* MPWAtomLink.h */; };
 		1F3C7B70136FE2EF009C0697 /* MPWRSSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF832E612D1BBDF00DF5E66 /* MPWRSSParser.h */; };
@@ -291,7 +286,6 @@
 		1F3C7BFA136FE2EF009C0697 /* MPWXmlRpcGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF98690F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m */; };
 		1F3C7BFC136FE2EF009C0697 /* MPWAtomParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD3D3712B854FB00FF08E9 /* MPWAtomParser.m */; };
 		1F3C7BFD136FE2EF009C0697 /* MPWMASONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2742A212CC6DA0001498F9 /* MPWMASONParser.m */; };
-		1F3C7BFE136FE2EF009C0697 /* MPWJSONWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27436912CC8741001498F9 /* MPWJSONWriter.m */; };
 		1F3C7BFF136FE2EF009C0697 /* MPWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832D312D1BAAE00DF5E66 /* MPWFeedItem.m */; };
 		1F3C7C00136FE2EF009C0697 /* MPWAtomLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E112D1BB9400DF5E66 /* MPWAtomLink.m */; };
 		1F3C7C01136FE2EF009C0697 /* MPWRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */; };
@@ -488,7 +482,6 @@
 		1F81C020196992B60066DF43 /* MPWXmlRpcGeneratorStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF98690F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m */; };
 		1F81C021196992B60066DF43 /* MPWAtomParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD3D3712B854FB00FF08E9 /* MPWAtomParser.m */; };
 		1F81C022196992B60066DF43 /* MPWMASONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2742A212CC6DA0001498F9 /* MPWMASONParser.m */; };
-		1F81C023196992B60066DF43 /* MPWJSONWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27436912CC8741001498F9 /* MPWJSONWriter.m */; };
 		1F81C024196992B60066DF43 /* MPWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832D312D1BAAE00DF5E66 /* MPWFeedItem.m */; };
 		1F81C025196992B60066DF43 /* MPWAtomLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E112D1BB9400DF5E66 /* MPWAtomLink.m */; };
 		1F81C026196992B60066DF43 /* MPWRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF832E712D1BBDF00DF5E66 /* MPWRSSParser.m */; };
@@ -959,8 +952,6 @@
 		1F27431012CC7BF4001498F9 /* string.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = string.json; sourceTree = "<group>"; };
 		1F27432312CC7D16001498F9 /* dict.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dict.json; sourceTree = "<group>"; };
 		1F27433C12CC8074001498F9 /* array.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = array.json; sourceTree = "<group>"; };
-		1F27436812CC8741001498F9 /* MPWJSONWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWJSONWriter.h; sourceTree = "<group>"; };
-		1F27436912CC8741001498F9 /* MPWJSONWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWJSONWriter.m; sourceTree = "<group>"; };
 		1F2B4A790D6B893B00189FEB /* MPWOpenDocumentParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWOpenDocumentParser.h; sourceTree = "<group>"; };
 		1F2B4ADB0D6B95EF00189FEB /* MPWTagHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWTagHandler.h; sourceTree = "<group>"; };
 		1F2B4ADC0D6B95EF00189FEB /* MPWTagHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWTagHandler.m; sourceTree = "<group>"; };
@@ -1279,8 +1270,6 @@
 				1FCD3D3712B854FB00FF08E9 /* MPWAtomParser.m */,
 				1F2742A112CC6DA0001498F9 /* MPWMASONParser.h */,
 				1F2742A212CC6DA0001498F9 /* MPWMASONParser.m */,
-				1F27436812CC8741001498F9 /* MPWJSONWriter.h */,
-				1F27436912CC8741001498F9 /* MPWJSONWriter.m */,
 				1FF832D212D1BAAE00DF5E66 /* MPWFeedItem.h */,
 				1FF832D312D1BAAE00DF5E66 /* MPWFeedItem.m */,
 				1FF832E012D1BB9400DF5E66 /* MPWAtomLink.h */,
@@ -1674,7 +1663,6 @@
 				1F3C7B6A136FE2EF009C0697 /* MPWMAXParser.h in Headers */,
 				1F3C7B6B136FE2EF009C0697 /* MPWAtomParser.h in Headers */,
 				1F3C7B6C136FE2EF009C0697 /* MPWMASONParser.h in Headers */,
-				1F3C7B6D136FE2EF009C0697 /* MPWJSONWriter.h in Headers */,
 				1F3C7B6E136FE2EF009C0697 /* MPWFeedItem.h in Headers */,
 				1F3C7B6F136FE2EF009C0697 /* MPWAtomLink.h in Headers */,
 				1F3C7B70136FE2EF009C0697 /* MPWRSSParser.h in Headers */,
@@ -1770,7 +1758,6 @@
 				1F421F0410C2555700C403D5 /* MPWMAXParser.h in Headers */,
 				1FCD3D3812B854FB00FF08E9 /* MPWAtomParser.h in Headers */,
 				1F2742A312CC6DA0001498F9 /* MPWMASONParser.h in Headers */,
-				1F27436A12CC8741001498F9 /* MPWJSONWriter.h in Headers */,
 				1FF832D412D1BAAE00DF5E66 /* MPWFeedItem.h in Headers */,
 				1FF832E212D1BB9400DF5E66 /* MPWAtomLink.h in Headers */,
 				1FF832E812D1BBDF00DF5E66 /* MPWRSSParser.h in Headers */,
@@ -1822,7 +1809,6 @@
 				1F421F0210C2555700C403D5 /* MPWMAXParser.h in Headers */,
 				1FCD3D3A12B854FB00FF08E9 /* MPWAtomParser.h in Headers */,
 				1F2742A512CC6DA0001498F9 /* MPWMASONParser.h in Headers */,
-				1F27436C12CC8741001498F9 /* MPWJSONWriter.h in Headers */,
 				1FF832D612D1BAAE00DF5E66 /* MPWFeedItem.h in Headers */,
 				1FF832E412D1BB9400DF5E66 /* MPWAtomLink.h in Headers */,
 				1FF832EA12D1BBDF00DF5E66 /* MPWRSSParser.h in Headers */,
@@ -1958,7 +1944,7 @@
 		07DF1A1900668979C35ADD82 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
 				TargetAttributes = {
 					1F5ED2201FDBCDBB001D28FB = {
 						CreatedOnToolsVersion = 9.1;
@@ -2603,7 +2589,6 @@
 				1F3C7BFA136FE2EF009C0697 /* MPWXmlRpcGeneratorStream.m in Sources */,
 				1F3C7BFC136FE2EF009C0697 /* MPWAtomParser.m in Sources */,
 				1F3C7BFD136FE2EF009C0697 /* MPWMASONParser.m in Sources */,
-				1F3C7BFE136FE2EF009C0697 /* MPWJSONWriter.m in Sources */,
 				1F3C7BFF136FE2EF009C0697 /* MPWFeedItem.m in Sources */,
 				1F3C7C00136FE2EF009C0697 /* MPWAtomLink.m in Sources */,
 				1F3C7C01136FE2EF009C0697 /* MPWRSSParser.m in Sources */,
@@ -2643,7 +2628,6 @@
 				1F81C01B196992A60066DF43 /* MPWXmlFastInfosetParser.m in Sources */,
 				1F81C025196992B60066DF43 /* MPWAtomLink.m in Sources */,
 				1F81C04E196992E10066DF43 /* MPWXmlElement.m in Sources */,
-				1F81C023196992B60066DF43 /* MPWJSONWriter.m in Sources */,
 				1F81C04A196992E10066DF43 /* MPWMAXParser.m in Sources */,
 				1F81C045196992E10066DF43 /* MPWTagHandler.m in Sources */,
 				1F81C020196992B60066DF43 /* MPWXmlRpcGeneratorStream.m in Sources */,
@@ -2691,7 +2675,6 @@
 				1FBF986B0F9E6D130030ED80 /* MPWXmlRpcGeneratorStream.m in Sources */,
 				1FCD3D3912B854FB00FF08E9 /* MPWAtomParser.m in Sources */,
 				1F2742A412CC6DA0001498F9 /* MPWMASONParser.m in Sources */,
-				1F27436B12CC8741001498F9 /* MPWJSONWriter.m in Sources */,
 				1FF832D512D1BAAE00DF5E66 /* MPWFeedItem.m in Sources */,
 				1FF832E312D1BB9400DF5E66 /* MPWAtomLink.m in Sources */,
 				1FF832E912D1BBDF00DF5E66 /* MPWRSSParser.m in Sources */,
@@ -2733,7 +2716,6 @@
 				1FB43C5C10BFBCA700490AA6 /* dllmain.m in Sources */,
 				1FCD3D3B12B854FB00FF08E9 /* MPWAtomParser.m in Sources */,
 				1F2742A612CC6DA0001498F9 /* MPWMASONParser.m in Sources */,
-				1F27436D12CC8741001498F9 /* MPWJSONWriter.m in Sources */,
 				1FF832D712D1BAAE00DF5E66 /* MPWFeedItem.m in Sources */,
 				1FF832E512D1BB9400DF5E66 /* MPWAtomLink.m in Sources */,
 				1FF832EB12D1BBDF00DF5E66 /* MPWRSSParser.m in Sources */,
@@ -2966,7 +2948,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "iXmlKit (Phone + Simulator fat)";
@@ -2980,7 +2961,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "iXmlKit (Phone + Simulator fat)";
 				ZERO_LINK = NO;

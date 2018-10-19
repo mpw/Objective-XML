@@ -464,11 +464,11 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
 
 +testSelectors
 {
-    return [NSArray arrayWithObjects:
+    return @[
 //		@"testArchiveSimpleString",
 //		@"testSubstitutedClassArchiving",
 //		@"testEncodingNSNumber",
-		nil];
+		];
 }
 
 @end

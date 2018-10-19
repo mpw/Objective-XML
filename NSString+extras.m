@@ -60,12 +60,12 @@ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMA
 	
 	NSArray *stringComponents = [self componentsSeparatedByString: @" "];
 	NSMutableArray *componentsCopy = [stringComponents mutableCopy];
-	int ix = n;
-	int len = [componentsCopy count];
+	long ix = n;
+	long len = [componentsCopy count];
 	
-	if (len < n)
+    if (len < n) {
 		ix = len;
-	
+    }
 	[componentsCopy removeObjectsInRange: NSMakeRange (ix, len - ix)];
 
 	return [componentsCopy componentsJoinedByString: @" "];
@@ -74,7 +74,7 @@ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMA
 
 - (NSString *) stripHTML {
 	
-	int len = [self length];
+    long len = [self length];
 	NSMutableString *s = [NSMutableString stringWithCapacity: len];
 	int i = 0, level = 0;
 	

@@ -31,6 +31,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #import "MPWXmlScanner.h"
 #import "MPWXmlScanner16BitBE.h"
 #import "mpwfoundation_imports.h"
+#import "SaxDocumentHandler.h"
 #import <objc/message.h>
 #if 0
 
@@ -256,7 +257,7 @@ tryToSkipComment( const xmlchar *start, const xmlchar *end )
 
 static int scanXml(
                    const xmlchar *data,
-                   unsigned int charCount,
+                   unsigned long charCount,
                    ProcessFunc openTagCallback,
                    ProcessFunc closeTagCallback,
                    ProcessFunc declarationCallback,
