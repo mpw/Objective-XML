@@ -49,7 +49,7 @@ scalarAccessor( NSInteger, maxDepthAllowed, setMaxDepthAllowed )
 objectAccessor( NSData, buffer, setBuffer )
 objectAccessor( NSURL, url, setUrl )
 
-#define MAKEDATA( start, length )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , length )
+#define MAKEDATA( start, theLength )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , theLength )
 
 #define POPTAGNORELEASE						(((NSXMLElementInfo*)_elementStack)[--tagStackLen].elementName)
 // #define POPTAG						( [POPTAGNORELEASE release])

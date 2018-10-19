@@ -110,7 +110,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 }
 
 static inline void forwardAttributeName( MPWXmlGeneratorStream *self, const char *attributeName) {
-    int len=strlen(attributeName);
+    long len=strlen(attributeName);
     if ( len < 800) {
         char buffer[1000]=" ";
         char *cur=buffer+1;

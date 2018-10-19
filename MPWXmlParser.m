@@ -131,7 +131,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	if ( shouldProcessNamespaces &&  nameLen >= 5  && !strncmp( nameStart, "xmlns", 5 ) ) {
 		if ( nameLen > 6 ) {
             const char *tagStart=nameStart+6;
-            int tagLen=nameLen-6;
+            long tagLen=nameLen-6;
 			name=TAGFORCSTRING( tagStart, tagLen );
 		} else {
 			name=@"";
