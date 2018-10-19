@@ -86,7 +86,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 {
     char spaces[]="                                                                                                                           ";
     if ( atBOL && shouldIndent ) {
-        int numSpacesToOutput = MIN( indent, sizeof spaces - 2);
+        long numSpacesToOutput = MIN( indent, sizeof spaces - 2);
         [_target appendBytes:spaces length:numSpacesToOutput];
         atBOL=NO;
     }
