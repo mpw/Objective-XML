@@ -555,7 +555,7 @@ static id object=nil;
     if ( dataLen>0 ) {
 //        NSLog(@"characters: expecting dataLen = %d, got %d '%@'",dataLen,[chars length],chars);
         if ( [chars isEqual:@">]]&gt;"] ) {
-            chars=[NSData dataWithBytes:"]]>" length:3];
+            chars=(MPWSubData*)[NSData dataWithBytes:"]]>" length:3];
         }
         dataLen-=[chars length];
         if ( currentValue ) {

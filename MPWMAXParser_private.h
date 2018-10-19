@@ -44,7 +44,7 @@ typedef struct _NSXMLElementInfo {
 #if DEOPTIMIZE_ALLOCATION
 #define MAKEDATA( dataStart, dataLength )   [NSData dataWithBytes:dataStart length:dataLength]
 #else
-#define MAKEDATA( start, length )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , length )
+#define MAKEDATA( start, lengthBytes )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , lengthBytes )
 #endif
 
 
