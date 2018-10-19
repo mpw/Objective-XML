@@ -80,12 +80,12 @@ boolAccessor(isCaseInsensitive, setIsCaseInsensitive)
 //    NSLog(@"tag handler did dealloc");
 }
 
--actionForCString:(const char*)aCstring length:(int)len
+-actionForCString:(const char*)aCstring length:(long)len
 {
     if (!tagTable) {
         [self buildLookupTables];
     }
-    return OBJECTFORSTRINGLENGTH(tagTable, aCstring, len);
+    return OBJECTFORSTRINGLENGTH(tagTable, (char*)aCstring, (int)len);
 }
 
 -actionForCString:(const char*)aCstring

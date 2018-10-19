@@ -43,7 +43,7 @@
 */
 -namespaceString;
 -(void)setNamespaceString:(id)newNamespaceString;
--actionForCString:(const char*)aCstring length:(int)len;
+-actionForCString:(const char*)aCstring length:(long)len;
 
 
 @end

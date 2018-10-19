@@ -58,14 +58,14 @@ THE POSSIBILITY OF SUCH DAMAGE.
 @protocol MPWXmlScannerDelegate
 @optional
 
--(BOOL)beginElement:(const char*)fullyQualifedPtr length:(int)len nameLen:(int)fullyQualifiedLen namespaceLen:(int)namespaceLen;
--(BOOL)endElement:(const char*)fullyQualifedPtr length:(int)fullyQualifiedLen namespaceLen:(int)namespaceLen;
--(BOOL)makeText:(const char*)start length:(int)len firstEntityOffset:(int)entityOffset;
--(BOOL)makeSpace:(const char*)start length:(int)len;
--(BOOL)makeCData:(const char*)start length:(int)len;
--(BOOL)makeSgml:(const char*)start length:(int)len nameLen:(int)nameEnd;
--(BOOL)makePI:(const char*)start length:(int)len nameLen:(int)nameLen;
--(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen namespaceLen:(int)namespaceLen valueHasHighBit:(BOOL)highBit;
--(BOOL)makeEntityRef:(const char*)start length:(int)len;
+-(BOOL)beginElement:(const char*)fullyQualifedPtr length:(long)len nameLen:(long)fullyQualifiedLen namespaceLen:(long)namespaceLen;
+-(BOOL)endElement:(const char*)fullyQualifedPtr length:(long)fullyQualifiedLen namespaceLen:(long)namespaceLen;
+-(BOOL)makeText:(const char*)start length:(long)len firstEntityOffset:(long)entityOffset;
+-(BOOL)makeSpace:(const char*)start length:(long)len;
+-(BOOL)makeCData:(const char*)start length:(long)len;
+-(BOOL)makeSgml:(const char*)start length:(long)len nameLen:(long)nameEnd;
+-(BOOL)makePI:(const char*)start length:(long)len nameLen:(long)nameLen;
+-(BOOL)attributeName:(const char*)nameStart length:(long)nameLen value:(const char*)valueStart length:(long)valueLen namespaceLen:(long)namespaceLen valueHasHighBit:(BOOL)highBit;
+-(BOOL)makeEntityRef:(const char*)start length:(long)len;
 
 @end

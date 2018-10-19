@@ -76,21 +76,21 @@ boolAccessor( enforceTagNesting, setEnforceTagNesting )
 objectAccessor( NSError, parserError, setParserError  )
 
 
-static inline BOOL extractNameSpace( const char *start, int len, const char **strippedTagPtr, int *namespaceLen, int *tagLen )
-{
-	char *namespacePtr=memchr(start, ':', len);
-	if ( namespacePtr ) {
-		*namespaceLen=namespacePtr-start;
-		*tagLen=len-*namespaceLen-1;
-		*strippedTagPtr=start+*namespaceLen+1;
-		return YES;
-	} else {
-		*strippedTagPtr=start;
-		*tagLen=len;
-		*namespaceLen=0;
-		return NO;
-	}
-}
+//static inline BOOL extractNameSpace( const char *start, int len, const char **strippedTagPtr, int *namespaceLen, int *tagLen )
+//{
+//    char *namespacePtr=memchr(start, ':', len);
+//    if ( namespacePtr ) {
+//        *namespaceLen=namespacePtr-start;
+//        *tagLen=len-*namespaceLen-1;
+//        *strippedTagPtr=start+*namespaceLen+1;
+//        return YES;
+//    } else {
+//        *strippedTagPtr=start;
+//        *tagLen=len;
+//        *namespaceLen=0;
+//        return NO;
+//    }
+//}
 
 
 
@@ -244,7 +244,7 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 	
 }
 
--(MPWTagHandler*)handlerForPrefix:(const char*)prefixString length:(int)prefixLen
+-(MPWTagHandler*)handlerForPrefix:(const char*)prefixString length:(long)prefixLen
 {
 	MPWTagHandler* handler=nil;
 	if (! prefix2HandlerMap ) {
@@ -965,7 +965,7 @@ typedef char xmlchar;
 	[self _setAttributes:nil];
 }
 
--(BOOL)makeText:(const char*)start length:(int)len firstEntityOffset:(int)entityOffset
+-(BOOL)makeText:(const char*)start length:(long)len firstEntityOffset:(long)entityOffset
 {
 	id	stringToRelease=nil;
 	id  str=nil;

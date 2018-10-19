@@ -287,8 +287,8 @@ static int scanXml(
     //	NSLog(@"start scan with client data %x",clientData);
     while ( currentPtr < endPtr ) {
         const xmlchar *currentString = currentPtr;
-        int spaceOffset=0;
-        int namespaceLen=0;
+        long spaceOffset=0;
+        long namespaceLen=0;
         ProcessFunc currentCallback;
         
 		//--- scan up to the beginning of a tag (the initial '<' )

@@ -44,7 +44,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	return self;
 }
 
--(BOOL)endElement:(const char*)start length:(int)len namespaceLen:(int)namespaceLen
+-(BOOL)endElement:(const char*)start length:(long)len namespaceLen:(long)namespaceLen
 {
     id endName=nil;
 	id prefix=nil;
@@ -116,7 +116,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
     }
 }
 
--(BOOL)attributeName:(const char*)nameStart length:(int)nameLen value:(const char*)valueStart length:(int)valueLen namespaceLen:(int)namespaceLen valueHasHighBit:(BOOL)highBit
+-(BOOL)attributeName:(const char*)nameStart length:(long)nameLen value:(const char*)valueStart length:(long)valueLen namespaceLen:(long)namespaceLen valueHasHighBit:(BOOL)highBit
 	/*"
 	"*/
 {
@@ -150,7 +150,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 }
 
 
--(BOOL)beginElement:(const char*)fullyQualifedPtr length:(int)len nameLen:(int)fullyQualifiedLen namespaceLen:(int)namespaceLen
+-(BOOL)beginElement:(const char*)fullyQualifedPtr length:(long)len nameLen:(long)fullyQualifiedLen namespaceLen:(long)namespaceLen
 {
 	const char *tagStartPtr=fullyQualifedPtr;
 	int tagLen=fullyQualifiedLen;
@@ -258,7 +258,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
     return YES;
 }
 
--(BOOL)makeSpace:(const char*)start length:(int)len 
+-(BOOL)makeSpace:(const char*)start length:(long)len 
 /*"
     Call-back for spaces.  Create text data.
 "*/
