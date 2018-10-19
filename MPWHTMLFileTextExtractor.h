@@ -17,5 +17,5 @@
 	id	metadata;
 }
 
-+extractTextFromPath:url maxLength:(int)maxLen attributes:dict;
++extractTextFromPath:url maxLength:(long)maxLen attributes:dict;
 @end

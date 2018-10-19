@@ -9,6 +9,13 @@
 #import "MPWTagAction.h"
 #import "mpwfoundation_imports.h"
 
+@interface MPWTagAction(testingSupport)
+
++defaultElement:childen attributes:children parser:parser;
+
+
+@end
+
 @implementation MPWTagAction
 
 objectAccessor(NSString, tagName, setTagName)

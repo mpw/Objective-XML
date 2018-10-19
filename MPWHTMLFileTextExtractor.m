@@ -234,11 +234,11 @@ idAccessor( metadata, setMetadata )
 	return result;
 }
 
--extractTextFromPath:path maxLength:(int)newMaxLen attributes:dict
+-extractTextFromPath:path maxLength:(long)newMaxLen attributes:dict
 {
 	id pool=[NSAutoreleasePool new];
 	id result;
-	NSData *contents = [[[NSData alloc] initWithContentsOfMappedFile:path] autorelease];
+    NSData *contents = [[[NSData alloc] initWithContentsOfFile:path options:NSDataReadingMappedAlways error:nil] autorelease];
 	result = [[self extractTextFromData:contents attributes:dict] retain];
 	[pool release];
 	return [result autorelease];
@@ -246,7 +246,7 @@ idAccessor( metadata, setMetadata )
 
 static id extractor=nil;
 
-+extractTextFromPath:path maxLength:(int)maxLen attributes:dict
++extractTextFromPath:path maxLength:(long)maxLen attributes:dict
 {
 	if ( !extractor ) {
 		extractor=[[self alloc] init];
