@@ -258,7 +258,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
     return YES;
 }
 
--(BOOL)makeSpace:(const char*)start length:(long)len 
+-(BOOL)makeSpace:(const char*)start length:(long)len
 /*"
     Call-back for spaces.  Create text data.
 "*/

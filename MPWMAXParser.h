@@ -65,7 +65,7 @@ typedef id (*XMLIMP1)(id, SEL, id);
 typedef id (*XMLIMP2)(id, SEL, id,id);
 typedef id (*XMLIMPCHARPLONG)(id, SEL, char *,long);
 typedef id (*XMLIMP3)(id, SEL, id,id,id);
-typedef id (*XMLIMP1CharP1L1)(id, SEL, id,char*,long);
+typedef id (*XMLIMP1CharP1L1)(id, SEL, id,const char*,long);
 typedef id (*XMLIMP4)(id, SEL, id,id,id,id);
 typedef id (*XMLIMP5)(id, SEL, id,id,id,id,id);
 typedef id (*XMLIMP6)(id, SEL, id,id,id,id,id,id);

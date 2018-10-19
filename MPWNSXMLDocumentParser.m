@@ -110,7 +110,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 -undeclaredElement:children attributes:attributes parser:parser
 {
     id element=nil;
-	int i,max=[attributes count];
+	long i,max=[attributes count];
 //	sub=[NSArray arrayWithObjects:objs count:count];
 	element = [[NSXMLElement alloc] initWithName:CURRENTTAG];
 	if ( [children count] ) {
