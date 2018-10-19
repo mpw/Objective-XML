@@ -179,8 +179,8 @@ typedef enum {
 #define  XMLKITCALLBACK( whichCallBack )  whichCallBack( clientData, NULL, currentString, CURRENTCHARCOUNT,spaceOffset ,namespaceLen )
 
 
-typedef BOOL (*ProcessFunc) (void *target, void* dummySel,const xmlchar *, unsigned int length,unsigned int nameLen,int namespaceLen);
-typedef BOOL (*AttrFunc) (void *target, void* dummySel,const xmlchar *, unsigned int ,const xmlchar *,unsigned int, int namespaceLen, BOOL valueHasHighBit);
+typedef BOOL (*ProcessFunc) (void *target, void* dummySel,const xmlchar *, unsigned long length,unsigned long nameLen,long namespaceLen);
+typedef BOOL (*AttrFunc) (void *target, void* dummySel,const xmlchar *, unsigned long ,const xmlchar *,unsigned long, long namespaceLen, BOOL valueHasHighBit);
 
 
 static BOOL processDummy( void *dummyTarget ,void *dummySel ,const xmlchar *textPtr, unsigned int charCount,unsigned int nameLen)
