@@ -30,6 +30,13 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #import "MPWXmlProplistGenerator.h"
 
+@interface NSObject(xmlProplist)
+
+-(void)generateXmlProplistOnto:aStream;
+
+@end
+
+
 @implementation MPWXmlProplistGenerator
 
 static const char *array="array";

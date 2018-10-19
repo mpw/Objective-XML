@@ -37,7 +37,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 }
 
 
--realElement:(const char*)start length:(int)len;
+-realElement:(const char*)start length:(long)len;
 -integerElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser;
 
 @end

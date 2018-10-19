@@ -200,7 +200,7 @@ objectAccessor( NSData, fiData , _setFiData )
 				namespace = [self parseNamespace];
 			}
 			name=[self parseNameStartingOnFirstBit];
-			[documentHandler parser:PARSERSELF didStartElement:name namespaceURI:nil qualifiedName:nil attributes:nil];
+            [documentHandler parser:PARSERSELF didStartElement:name namespaceURI:nil qualifiedName:nil attributes:@{}];
 			[self parseElementContent];
 			[documentHandler parser:PARSERSELF didEndElement:name namespaceURI:nil qualifiedName:nil ];
 
@@ -273,7 +273,7 @@ objectAccessor( NSData, fiData , _setFiData )
 
 +(NSArray*)testSelectors
 {
-    return [NSArray arrayWithObjects:
+    return @[
  #if 0 
 		@"testVerifyFI",
 		@"testBasicSaxParse",
@@ -284,7 +284,7 @@ objectAccessor( NSData, fiData , _setFiData )
         @"testEmptyElementWithAttribute",
         @"testNamespaceParsingMPWXML",
 #endif		
-        nil];
+        ];
 }
 
 

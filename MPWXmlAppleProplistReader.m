@@ -70,7 +70,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 	return [[NSDictionary alloc] initWithObjects:values forKeys:keys count:count/2];
 }
 
--integerElementAtPtr:(const char*)start length:(int)len
+-integerElementAtPtr:(const char*)start length:(long)len
 {
 	int val=0;
 	int sign=1;
@@ -89,7 +89,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 	return (id)CFNumberCreate( allocator, kCFNumberSInt32Type, &val );
 }
 
--realElement:(const char*)start length:(int)len
+-realElement:(const char*)start length:(long)len
 {
 	double val=0;
 	double sign=1;

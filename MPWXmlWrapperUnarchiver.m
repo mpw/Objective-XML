@@ -86,7 +86,8 @@ idAccessor( datas, setDatas )
 }
 +testSelectors
 {
-    return [NSArray arrayWithObjects:nil];
+    return @[
+             ];
 }
 
 

@@ -58,7 +58,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 	
 }
 
--(NSString*)makeRetainedJSONStringStart:(const char*)start length:(int)len
+-(NSString*)makeRetainedJSONStringStart:(const char*)start length:(long)len
 {
 	NSString *curstr;
 	if ( commonStrings  ) {

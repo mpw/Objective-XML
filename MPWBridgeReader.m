@@ -39,7 +39,7 @@ idAccessor( loadedSet, setLoadedSet )
 	id pool=[NSAutoreleasePool new];
 	id reader = [[[self alloc] initWithContext:aContext] autorelease];
 	[reader parse:aDict];
-	NSLog(@"%d total elements",[reader count]);
+//	NSLog(@"%d total elements",(int)[reader count]);
 	[pool release];
 }
 

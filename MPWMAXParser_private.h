@@ -31,8 +31,8 @@ typedef struct _NSXMLElementInfo {
 	const char	*start;
 	const char  *end;
 	BOOL		isIncomplete;
-	int			integerTag;
-    int         fullyQualifiedLen;
+	long			integerTag;
+    long         fullyQualifiedLen;
     MPWTagAction *action;
     MPWTagHandler *handler;
 } NSXMLElementInfo;
@@ -96,7 +96,7 @@ typedef struct _NSXMLElementInfo {
 
 objectAccessor_h( NSError, parserError, setParserError )
 
--(void)_growTagStack:(unsigned)newCapacity;
+-(void)_growTagStack:(long)newCapacity;
 -currentTag;
 -(void)pushTag:aTag;
 -(void)popTag;

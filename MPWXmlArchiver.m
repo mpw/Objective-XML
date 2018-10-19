@@ -386,7 +386,7 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
 
 -(void)encodeWithXmlCoder:(NSCoder*)aCoder
 {
-    [self encodeWithCoder:aCoder];
+    [(id)self encodeWithCoder:aCoder];
 }
 
 @end

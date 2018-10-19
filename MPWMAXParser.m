@@ -121,7 +121,7 @@ objectAccessor( NSError, parserError, setParserError  )
    dataCache=[[MPWObjectCache alloc] initWithCapacity:90 class:[MPWSubData class]];
     [dataCache setUnsafeFastAlloc:YES];
     getData = (XMLIMP0)[dataCache getObjectIMP];
-    initDataBytesLength=(XMLIMP3)[MPWSubData
+    initDataBytesLength=(XMLIMP1CharP1L1)[MPWSubData
                     instanceMethodForSelector:@selector(reInitWithData:bytes:length:)];
 	uniqueTagForCString=(XMLIMP3)[self methodForSelector: @selector(getTagForCString:length:)];
     [self _growTagStack:INITIALTAGSTACKDEPTH];
@@ -856,7 +856,7 @@ static IMP unknownMethod;
 }
 
 
--(void)_growTagStack:(unsigned)newCapacity
+-(void)_growTagStack:(long)newCapacity
 {
 //    NSLog(@"growStack to: %d",newCapacity);
 	void *newStack = ALLOC_POINTERS( (newCapacity+10)* sizeof (NSXMLElementInfo)  );
@@ -874,17 +874,17 @@ static IMP unknownMethod;
 -(void)setDelegate:handler
 {
     [self _setDocumentHandler:handler];
-    beginElement = [self defaultedVoidMethodForSelector:BEGINELEMENTSELECTOR forReceiver:handler];
+    beginElement = (XMLIMP5)[self defaultedVoidMethodForSelector:BEGINELEMENTSELECTOR forReceiver:handler];
 //	NSLog(@"beginElement: %x for %@",beginElement,NSStringFromSelector(BEGINELEMENTSELECTOR));
-    endElement = [self defaultedVoidMethodForSelector:ENDELEMENTSELECTOR  forReceiver:handler];
+    endElement = (XMLIMP4)[self defaultedVoidMethodForSelector:ENDELEMENTSELECTOR  forReceiver:handler];
 //	NSLog(@"endElementSelector: %@",NSStringFromSelector(ENDELEMENTSELECTOR));
 
-	characterDataAllowed = [self boolMethodForSelector:@selector(characterDataAllowed:) defaultValue:YES forReceiver:self ];
+	characterDataAllowed = (XMLIMP1)[self boolMethodForSelector:@selector(characterDataAllowed:) defaultValue:YES forReceiver:self ];
 
 	[self setCharacterHandlerWithDocumentHandler:handler];
 
-    characters = [self defaultedVoidMethodForSelector:CHARACTERSSELECTOR forReceiver:characterHandler];
-    cdata = [self defaultedVoidMethodForSelector:CDATASELECTOR forReceiver:characterHandler];
+    characters = (XMLIMP2)[self defaultedVoidMethodForSelector:CHARACTERSSELECTOR forReceiver:characterHandler];
+    cdata = (XMLIMP2)[self defaultedVoidMethodForSelector:CDATASELECTOR forReceiver:characterHandler];
 //    NSLog(@"document-handler now %@",documentHandler);
 }
 

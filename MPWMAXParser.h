@@ -125,6 +125,7 @@ typedef id (*XMLIMP6)(id, SEL, id,id,id,id,id,id);
 -(BOOL)parse:(NSData*)xmlData;										//  process the XML data passed, start sending element(1) or tag(2) 
 																	//  messages to the configured handlers according to the 
 																	//  NSMAXParserDelegate 'protocol' and message patterns.
+-(instancetype)initWithData:(NSData*)data;
 -(BOOL)parse;
 -(BOOL)parseDataFromURL:(NSURL*)url;
 -(id)parsedDataFromURL:(id)theUrlOrString;

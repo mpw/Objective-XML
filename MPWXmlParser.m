@@ -153,7 +153,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 -(BOOL)beginElement:(const char*)fullyQualifedPtr length:(long)len nameLen:(long)fullyQualifiedLen namespaceLen:(long)namespaceLen
 {
 	const char *tagStartPtr=fullyQualifedPtr;
-	int tagLen=fullyQualifiedLen;
+	long tagLen=fullyQualifiedLen;
     id tag=nil;
     BOOL isEmpty=NO;
 //  NSString *namespacePrefixTag=nil;
@@ -166,10 +166,10 @@ THE POSSIBILITY OF SUCH DAMAGE.
 		currentElement->fullyQualifiedLen = fullyQualifiedLen;
 	}
     
-	if ( NO && charactersAreSpace &&  !reportIgnoreableWhitespace) {
-        //		NSLog(@"characters before begin: %.*s were space",nameLen,start);
-		[self flushPureSpace];
-    }
+//    if ( NO && charactersAreSpace &&  !reportIgnoreableWhitespace) {
+//                NSLog(@"characters before begin: %.*s were space",nameLen,start);
+//        [self flushPureSpace];
+//    }
     
 	lastTagWasOpen=YES;
 	charactersAreSpace=YES;
