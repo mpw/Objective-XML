@@ -216,10 +216,10 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
                 sprintf(charcontent, "%D",*(unsigned int*)address);
 
                 break;
-//           case 'q':
+           case 'q':
                 content = [NSString stringWithFormat:@"%ld",*( long*)address];
                 break;
-//            case 'Q':
+            case 'Q':
 				content = [NSString stringWithFormat:@"%ld",*( long*)address];
                 break;
             case 's':

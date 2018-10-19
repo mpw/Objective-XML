@@ -54,8 +54,8 @@ typedef enum {
 #define  XMLKITCALLBACK( whichCallBack )  whichCallBack( clientData, NULL, currentString, CURRENTCHARCOUNT,spaceOffset )
 
 
-typedef BOOL (*ProcessFunc) (void *target, void* dummySel,const xmlchar *, unsigned int length,unsigned int nameLen);
-typedef BOOL (*AttrFunc) (void *target, void* dummySel,const xmlchar *, unsigned int ,const xmlchar *,unsigned int);
+typedef BOOL (*ProcessFunc) (void *target, void* dummySel,const xmlchar *, unsigned long length,unsigned long nameLen);
+typedef BOOL (*AttrFunc) (void *target, void* dummySel,const xmlchar *, unsigned long ,const xmlchar *,unsigned long);
 
 
 static BOOL processDummy( void *dummyTarget ,void *dummySel ,const xmlchar *textPtr, unsigned int charCount,unsigned int nameLen)
