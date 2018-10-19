@@ -119,7 +119,7 @@ objectAccessor_h( NSError, parserError, setParserError )
 
 -(void)setData:newData;
 
--(BOOL)makeText:(const char*)start length:(int)len firstEntityOffset:(int)entityOffset;
+-(BOOL)makeText:(const char*)start length:(long)len firstEntityOffset:(long)entityOffset;
 -(void)pushObject:anObject forKey:aKey withNamespace:aNamespace;
 -(int)dataEncoding;
 -(void)setDataEncoding:(int)newEncoding;

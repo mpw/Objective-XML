@@ -1812,7 +1812,7 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	[parser parse:xmlData];
 	dom=[parser parseResult];
 	[writer writeObject:dom];
-	IDEXPECT( [[[writer target] target] stringValue], [xmlData stringValue], @"rewritten data");
+	IDEXPECT( [[(id)[writer target] target] stringValue], [xmlData stringValue], @"rewritten data");
 }
 
 +(void)testRewriteOfLazyDOM
@@ -1825,7 +1825,7 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	[parser parse:xmlData];
 	dom=[parser parseResult];
 	[writer writeObject:dom];
-	IDEXPECT( [[[writer target] target] stringValue], [xmlData stringValue], @"rewritten data");
+	IDEXPECT( [[(id)[writer target] target] stringValue], [xmlData stringValue], @"rewritten data");
 }
 
 +(void)testUTF8Attributes

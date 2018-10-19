@@ -60,7 +60,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 -dictElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {    
 	id *objs=[children _pointerToObjects];
-	int count=[children count];
+	long count=[children count];
 	id keys[count/2+1],values[count/2+1];
 	int i;
 	for (i=0;i<count/2;i++) {
@@ -126,7 +126,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 -stringElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {
 	id result=nil;
-	int count=[children count];
+	long count=[children count];
 	if ( count == 1 ) {
 		result = [[children lastObject] retain];
 	} else {
@@ -154,7 +154,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 -dateElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {
 	id dateString = [children lastObject];
-	int len=[dateString length];
+	long len=[dateString length];
 	CFGregorianDate date;
 	char temp[ len+1];
 	int year,month,day,hour,minute,second;
