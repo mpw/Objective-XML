@@ -89,7 +89,7 @@
 	}
 	[TARGET closeTag];
 	
-	return [[[self target] target] target];
+	return [[(id)[self target] target] target];
 }
 
 -(NSData*)requestWithMethodName:(NSString*)requestName parameters:params

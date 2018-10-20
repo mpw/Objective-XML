@@ -71,7 +71,7 @@ idAccessor( loadedSet, setLoadedSet )
 	if ( [[attrs objectForKey:@"type"] isEqual:@"@"] ) {
 		char symbol[255]="";
 		id name = [attrs objectForKey:@"name"];
-		[name getCString:symbol maxLength:250];
+        [name getCString:symbol maxLength:250 encoding:NSISOLatin1StringEncoding];
 		symbol[ [name length] ] =0;
 		
 #if !WINDOWS &&  !LINUX

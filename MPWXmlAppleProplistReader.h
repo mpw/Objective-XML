@@ -41,5 +41,6 @@ THE POSSIBILITY OF SUCH DAMAGE.
 -integerElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser;
 -dictElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser;
 -arrayElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser;
+-integerElementAtPtr:(const char*)start length:(long)len;
 
 @end

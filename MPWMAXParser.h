@@ -129,10 +129,7 @@ objectAccessor_h( NSError, parserError, setParserError  )
 																	//  NSMAXParserDelegate 'protocol' and message patterns.
 -(instancetype)initWithData:(NSData*)data;
 -(BOOL)parse;
--(BOOL)parseDataFromURL:(NSURL*)url;
--(id)parsedDataFromURL:(id)theUrlOrString;
 -(id)parsedData:(NSData*)someData;
--(BOOL)startParsingFromURL:(NSURL*)xmlUrl;
 
 -(NSInteger)currentElementNestingLevel;												//	nesting level of the element currently being processed
 -(NSString*)elementNameAtNestingLevel:(NSInteger)depth;					//	the tag names at different nesting levels

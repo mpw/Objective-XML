@@ -1302,84 +1302,11 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	}
 }
 
--(BOOL)startParsingFromURL:(NSURL*)xmlUrl
-{
-	BOOL success=YES;
-	if ( [xmlUrl isFileURL] ) {
-		//		NSLog(@"isFileURL: %@",xmlUrl);
-		return [self parse:[NSData dataWithContentsOfURL:xmlUrl]];
-	} else {
-		NS_DURING
-//		downloader = [[[MPWCachingDownloader alloc] init] autorelease];
-		NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:xmlUrl];
-		//		NSLog(@"theRequest: %@",theRequest);
-		[theRequest setValue:@"ObjectiveXML" forHTTPHeaderField:@"User-Agent"];
-		[theRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"]; 
-		isReceivingData=YES;
-		[[[NSURLConnection alloc] initWithRequest:theRequest delegate:self] autorelease];
-		if ( [documentHandler respondsToSelector:@selector(parserDidStartDocument:) ] ) {
-			[documentHandler parserDidStartDocument:(NSXMLParser*)self];
-		}
-		NS_HANDLER
-		if ( ![[localException name] isEqual:@"abort"] ) {
-			NSLog(@"got exception: %@",localException);
-			success=NO;
-		} else {
-			NSLog(@"got abort");
-		}
-		NS_ENDHANDLER
-		
-		//		NSLog(@"started the connection: %@",connection);
-	}
-	return success;
-}
-
--(BOOL)parseDataFromURL:(NSURL*)xmlUrl
-{
-	BOOL success=YES;
-//	NSLog(@"parseDataFromURL: %@",xmlUrl);
-	if (  [self startParsingFromURL:xmlUrl] ) {
-		@try {
-            while (  isReceivingData ) {
-//                NSLog(@"will run runloop %@",[NSRunLoop currentRunLoop]);
-                [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-//                NSLog(@"loop did run");
-            }
-//            NSLog(@"end of loop");
-        }
-        @catch (NSException *exception) {
-            if ( ![[exception name] isEqual:@"abort"] ) {
-                NSLog(@"got exception: %@",exception);
-                success=NO;
-            } else {
-                NSLog(@"got abort");
-            }
-
-        }
-	}
-	return success;
-}
-
--(id)parsedDataFromURL:urlOrString
-{
-	NSURL *theUrl=(NSURL*)urlOrString;
-//	NSLog(@"parsedDataFromURL: %@",theUrl);
-	if ( [theUrl isKindOfClass:[NSString class]] ) {
-		theUrl=[NSURL URLWithString:(NSString*)theUrl];
-	}
-	if ( [self parseDataFromURL:theUrl] ) {
-		return [self parseResult];
-	} else {
-		return nil;
-	}
-}
 
 -(BOOL)parse
 {
 	if ( [self data] ) {
 		return [self parse:[self data]];
-	} else if ( [self url] ) {
-		return [self parseDataFromURL:[self url]];
 	} else {
 		[NSException raise:@"nodata" format:@"no data or URL specified"];
 		return NO;

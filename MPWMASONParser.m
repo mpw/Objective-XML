@@ -100,11 +100,12 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 					break;
 				case 'u':
 				{
-					NSString* hexstring=[NSString stringWithCString:start+1 length:4];
-					NSScanner* hexscanner=[NSScanner scannerWithString:hexstring];
+                    char hexstring[5];
+                    memcpy(hexstring, start+1, 4);
+                    hexstring[4]=0;
 					unsigned int value=0;
-					unichar charvalue=0;
-					[hexscanner scanHexInt:&value];
+                    unichar charvalue=0;
+                    sscanf( hexstring, "%x",&value); 
 					charvalue=value;
 					NSString *charString=[NSString stringWithCharacters:&charvalue length:1];
 					[charString getCString:dest maxLength:5 encoding:NSUTF8StringEncoding];

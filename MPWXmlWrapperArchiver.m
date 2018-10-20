@@ -53,7 +53,7 @@ idAccessor( datas, setDatas )
 
 -(void)encodeDataObject:(NSData*)theObject
 {
-    [target writeElementName:"datareference" attributes:[NSString stringWithFormat:@"length='%d'",[theObject length]] contents:nil];
+    [target writeElementName:"datareference" attributes:[NSString stringWithFormat:@"length='%d'",(int)[theObject length]] contents:nil];
 	[datas addObject:theObject];
 }
 
