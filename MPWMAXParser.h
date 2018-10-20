@@ -111,7 +111,6 @@ typedef id (*XMLIMP6)(id, SEL, id,id,id,id,id,id);
 	BOOL					isReceivingData;
 	NSURL					*url;
 	int						undefinedTagAction;
-	NSError					*parserError;
 }
 
 +parser;															//	returns a non-configured parser
@@ -121,8 +120,7 @@ typedef id (*XMLIMP6)(id, SEL, id,id,id,id,id,id);
 @property(assign) BOOL ignoreCase;										//	default is NO  (YES makes it easier to deal with HTML)
 @property(assign) BOOL shouldProcessNamespaces;							//	
 @property(assign) int  undefinedTagAction;
-
-objectAccessor_h( NSError, parserError, setParserError  )
+@property (nonatomic, strong) NSError *parserError;
 
 -(BOOL)parse:(NSData*)xmlData;										//  process the XML data passed, start sending element(1) or tag(2) 
 																	//  messages to the configured handlers according to the 

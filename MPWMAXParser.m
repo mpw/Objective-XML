@@ -72,7 +72,6 @@ boolAccessor( shouldProcessNamespaces, setShouldProcessNamespaces )
 boolAccessor( shouldReportNamespacePrefixes, setShouldReportNamespacePrefixes )
 boolAccessor( autotranslateUTF8, setAutotranslateUTF8 )
 boolAccessor( enforceTagNesting, setEnforceTagNesting )
-objectAccessor( NSError, parserError, setParserError  )
 
 
 //static inline BOOL extractNameSpace( const char *start, int len, const char **strippedTagPtr, int *namespaceLen, int *tagLen )
@@ -805,7 +804,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 //	[defaultNamespacePrefixURI release];
 	[emptyDict release];
 	[buffer release];
-	[parserError release];
+	[_parserError release];
 	[super dealloc];
 }
 
