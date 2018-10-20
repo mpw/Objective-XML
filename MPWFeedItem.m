@@ -12,19 +12,12 @@
 
 @implementation MPWFeedItem
 
-objectAccessor( NSString, guid, setGuid )
-objectAccessor( NSString, title, setTitle )
-objectAccessor( NSString, category, setCategory )
-objectAccessor( NSArray, links, setLinks )
-objectAccessor( NSString, imageLink, setImageLink )
-objectAccessor( NSString, pubDate, setPubDate )
-objectAccessor( NSDictionary, remainder, setRemainder )
 
 -(void)setLink:(NSString*)aLink
 {
 	MPWAtomLink* link=[[[MPWAtomLink alloc] init] autorelease];
 	[link setHref:aLink];
-	[self setLinks:[NSArray arrayWithObject:link]];
+	[self setLinks:[NSMutableArray arrayWithObject:link]];
 }
 
 -(NSString*)link
@@ -34,12 +27,12 @@ objectAccessor( NSDictionary, remainder, setRemainder )
 
 -(void)dealloc
 {
-	[guid release];
-	[title release];
-	[category release];
-	[links release];
-	[imageLink release];
-	[pubDate release];
+	[_guid release];
+	[_title release];
+	[_category release];
+	[_links release];
+	[_imageLink release];
+	[_pubDate release];
 	[super dealloc];
 }
 

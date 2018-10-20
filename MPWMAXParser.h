@@ -122,6 +122,8 @@ typedef id (*XMLIMP6)(id, SEL, id,id,id,id,id,id);
 @property(assign) BOOL shouldProcessNamespaces;							//	
 @property(assign) int  undefinedTagAction;
 
+objectAccessor_h( NSError, parserError, setParserError  )
+
 -(BOOL)parse:(NSData*)xmlData;										//  process the XML data passed, start sending element(1) or tag(2) 
 																	//  messages to the configured handlers according to the 
 																	//  NSMAXParserDelegate 'protocol' and message patterns.

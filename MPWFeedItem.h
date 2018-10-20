@@ -12,23 +12,16 @@
 
 @interface MPWFeedItem : NSObject
 {
-	NSString		*guid;
-	NSString		*title;
-	NSString		*category;
-	NSString		*imageLink;
-	NSString		*pubDate;
-	NSDictionary	*remainder;
-	NSMutableArray	*links;
 }
 
--(NSString*)guid;
--(NSString*)title;
--(NSString*)category;
--(NSString*)link;
--(NSString*)pubDate;
--(NSDictionary*)remainder;
+@property (nonatomic, strong)  NSString *guid;
+@property (nonatomic, strong)  NSString *title;
+@property (nonatomic, strong)  NSString *category;
+@property (nonatomic, strong)  NSString *imageLink;
+@property (nonatomic, strong)  NSString *pubDate;
+@property (nonatomic, strong)  NSDictionary *remainder;
+@property (nonatomic, strong)  NSMutableArray *links;
 
--(void)setRemainder:(NSDictionary*)newRemainder;
 
 @end
 

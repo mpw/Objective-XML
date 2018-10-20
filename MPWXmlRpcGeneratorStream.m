@@ -10,6 +10,12 @@
 
 #define  TARGET _target
 
+@interface NSObject(generateXmlRPCOnStream)
+
+-(void)generateXmlRPCOnStream:aStream;
+
+@end
+
 @implementation MPWXmlRpcGeneratorStream
 
 -(SEL)streamWriterMessage

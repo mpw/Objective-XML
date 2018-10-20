@@ -61,7 +61,7 @@
 +(NSArray*)parseTestFeed:(NSString*)feedName type:(NSString*)feedType
 {
 	NSString *path=[[NSBundle bundleForClass:self] pathForResource:feedName ofType:feedType ];
-	NSData *xmlData = [NSData dataWithContentsOfMappedFile:path];
+    NSData *xmlData = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedAlways error:nil];
 	EXPECTNOTNIL(xmlData,@"data");
 	MPWAtomParser *parser = [[[self alloc] init] autorelease];
 //	NSLog(@" === parser: %@",parser);
