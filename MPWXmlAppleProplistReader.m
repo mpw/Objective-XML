@@ -123,7 +123,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 	return [self integerElementAtPtr:[subdata bytes] length:[subdata length]];
 }
 
--stringElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
+-stringElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {
 	id result=nil;
 	long count=[children count];
@@ -140,7 +140,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 	return result;
 }
 
--dataElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
+-dataElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {
 	return [self stringElement:children attributes:attrs parser:parser];
 }
@@ -153,24 +153,25 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 
 -dateElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {
-	id dateString = [children lastObject];
-	long len=[dateString length];
-	CFGregorianDate date;
-	char temp[ len+1];
-	int year,month,day,hour,minute,second;
-	memcpy(temp,[dateString bytes],len);
-	temp[len]=0;
-	sscanf( temp, "%d-%d-%dT%d:%d:%dZ",&year,&month,&day,&hour,&minute,&second);
-	date.year=year;
-	date.month=month;
-	date.day=day;
-	date.hour=hour;
-	date.minute=minute;
-	date.second=second;
-	return (id)CFDateCreate( allocator, CFGregorianDateGetAbsoluteTime(date, NULL));
+//    id dateString = [children lastObject];
+//    long len=[dateString length];
+//    CFGregorianDate date;
+//    char temp[ len+1];
+//    int year,month,day,hour,minute,second;
+//    memcpy(temp,[dateString bytes],len);
+//    temp[len]=0;
+//    sscanf( temp, "%d-%d-%dT%d:%d:%dZ",&year,&month,&day,&hour,&minute,&second);
+//    date.year=year;
+//    date.month=month;
+//    date.day=day;
+//    date.hour=hour;
+//    date.minute=minute;
+//    date.second=second;
+//    return (id)CFDateCreate( allocator, CFGregorianDateGetAbsoluteTime(date, NULL));
+    return nil;
 }
 
--keyElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
+-keyElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser
 {
     if ( [children count]==1) {
         MPWSubData *d=[children lastObject];
@@ -180,7 +181,7 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
         return [MPWUniqueStringWithCString([d bytes],[d length]) retain];
 #endif
     } else {
-        return [self stringElement:(id <NSXMLAttributes>)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser];
+        return [self stringElement:(MPWXMLAttributes*)children attributes:(id <NSXMLAttributes>)attrs parser:(MPWMAXParser*)parser];
     }
 }
 

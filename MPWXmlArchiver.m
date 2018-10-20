@@ -278,7 +278,7 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
             [content getCString:charcontent maxLength:120 encoding:NSASCIIStringEncoding];
         }
         [target beginStartTag:name];
-        [target writeCStrAttribute:"t" value:itemType];
+        [target writeCStrAttribute:"t" value:[NSString stringWithCString:itemType encoding:NSASCIIStringEncoding]];
         [target endStartTag:name single:NO];
         [target appendBytes:charcontent length:strlen(charcontent)];
 //      [target writeElementName:name attributes:valueType contents:content];

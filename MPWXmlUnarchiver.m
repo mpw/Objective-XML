@@ -285,7 +285,7 @@ static id defaultVersions=nil;
     if ( *itemType == 'c' || *itemType=='C' ) {
         id string;
         [self decodeValueOfObjCType:"@" at:&string withName:name];
-        [string getCString:address maxLength:count];
+        [string getCString:address maxLength:count encoding:NSISOLatin1StringEncoding];
         [string release];
     } else {
         elemSize=4;
@@ -621,10 +621,13 @@ static id object=nil;
 
 @implementation NSObject(xmlUnarchiving)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 -(instancetype)initWithXmlCoder:(NSCoder*)coder
 {
     return [(id)self initWithCoder:coder];
 }
+#pragma clang diagnostic pop
 
 +(BOOL)canHaveRecursiveReferences
 {
