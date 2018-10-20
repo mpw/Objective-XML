@@ -79,7 +79,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 		namespacePrefix=start;
 		namespaceLen=len-(namespaceLocation-start)-1; //   namespaceLocation-namespacePrefix-1;
 		endName=TAGFORCSTRING( namespaceLocation+1, namespaceLen);
-        int prefixLen=namespaceLocation-start;
+        long prefixLen=namespaceLocation-start;
 		prefix = TAGFORCSTRING( start, prefixLen );
 		namespaceURI=[namespacePrefixToURIMap objectForKey:prefix];
 
