@@ -15,6 +15,6 @@
 	BOOL decoding;
 }
 
-
+-(instancetype)initForWritingWithMutableData:(NSData*)data;
 
 @end

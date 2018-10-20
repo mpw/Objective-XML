@@ -140,15 +140,13 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
 //    const char* className=class_getName( objectClass );
     const char* className=class_getName( objectClass);
     
-    NSInteger objid = NSCountMapTable(objectTable);
+    long objid = NSCountMapTable(objectTable);
     NSMapInsert( objectTable, anObject, (void*)objid );
     currentObject = encodedObject;
 	
     [self writeClass:objectClass];
     [target beginStartTag:className];
-    char ptrval[50];
-    sprintf(ptrval, "%x",(int)objid);
-    [target writeCStrAttribute:"id" value:ptrval];
+    [target writeCStrAttribute:"id" value:[NSString stringWithFormat:@"%lx",objid]];
     [target endStartTag:className single:NO];
 
 //    [target indent];
@@ -179,7 +177,7 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
             [target closeTag];
         }
     } else {
-        [target writeElementName:cname attributes:[NSString stringWithFormat:@"idref='%x'",ref] contents:nil];
+        [target writeElementName:cname attributes:[NSString stringWithFormat:@"idref='%lx'",ref] contents:nil];
         [target cr];
     }
 }

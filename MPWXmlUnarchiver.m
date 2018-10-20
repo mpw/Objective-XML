@@ -621,9 +621,9 @@ static id object=nil;
 
 @implementation NSObject(xmlUnarchiving)
 
--initWithXmlCoder:(NSCoder*)coder
+-(instancetype)initWithXmlCoder:(NSCoder*)coder
 {
-    return [self initWithCoder:coder];
+    return [(id)self initWithCoder:coder];
 }
 
 +(BOOL)canHaveRecursiveReferences
@@ -685,9 +685,9 @@ static id object=nil;
 
 +testSelectors
 {
-    return [NSArray arrayWithObjects:
+    return @[
 //		@"testUnarchiveSimpleString",
-		nil];
+		];
 }
 
 @end

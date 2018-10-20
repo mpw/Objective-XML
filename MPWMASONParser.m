@@ -16,9 +16,9 @@
 objectAccessor( MPWPListBuilder, builder, setBuilder )
 objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 
--initWithTarget:aTarget
+-init
 {
-	self=[super initWithTarget:aTarget];
+	self=[super init];
 //	[self setBuilder:[MPWPListBuilder builder]];
 	return self;
 }
