@@ -40,8 +40,8 @@ NSString *MPWXMLPCDataKey=nil;
 }
 
 intAccessor( undefinedTagAction, setUndefinedTagAction)
-intAccessor( cfDataEncoding, setCfDataEncoding )
-intAccessor( dataEncoding, _setDataEncoding )
+longAccessor( cfDataEncoding, setCfDataEncoding )
+longAccessor( dataEncoding, _setDataEncoding )
 idAccessor( defaultNamespaceHandler, setDefaultNamespaceHandler	)
 boolAccessor( reportIgnoreableWhitespace, setReportIgnoreableWhitespace )
 boolAccessor( ignoreCase, setIgnoreCase )
@@ -49,7 +49,6 @@ scalarAccessor( NSInteger, maxDepthAllowed, setMaxDepthAllowed )
 objectAccessor( NSData, buffer, setBuffer )
 objectAccessor( NSURL, url, setUrl )
 
-#define MAKEDATA( start, theLength )   initDataBytesLength( getData( dataCache, @selector(getObject)),@selector(reInitWithData:bytes:length:), data, start , theLength )
 
 #define POPTAGNORELEASE						(((NSXMLElementInfo*)_elementStack)[--tagStackLen].elementName)
 // #define POPTAG						( [POPTAGNORELEASE release])
@@ -95,7 +94,7 @@ objectAccessor( NSError, parserError, setParserError  )
 
 
 
--(void)setDataEncoding:(int)newEncoding
+-(void)setDataEncoding:(long)newEncoding
 {
 	[self _setDataEncoding:newEncoding];
 #ifndef WINDOWS	
@@ -147,7 +146,7 @@ objectAccessor( NSError, parserError, setParserError  )
 //	NSLog(@"after setHandler");
 //	[pool release];
 	autotranslateUTF8=YES;
-        tagHandlerForPrefix=[self methodForSelector:@selector(handlerForPrefix:length:)];
+    tagHandlerForPrefix=(XMLIMPCHARPLONG)[self methodForSelector:@selector(handlerForPrefix:length:)];
     }
 	return self;
 }
@@ -171,7 +170,7 @@ objectAccessor( NSError, parserError, setParserError  )
 }
 
 
-static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MPWObjectCache *attributeCache ) {
+static inline id currentChildrenNoCheck( NSXMLElementInfo *base, long offset , MPWObjectCache *attributeCache ) {
 	id children=nil;
 	NSXMLElementInfo *info=&base[offset-1];
 	children=info->children;
@@ -251,7 +250,7 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 		[self rebuildPrefixHandlerMap];
 	}
 //	NSLog(@"getting handler for prefix: '%.*s'",prefixLen,prefixString);
-    handler = prefixMapObjectForCString( prefix2HandlerMap, @selector(objectForCString:length:), prefixString, prefixLen);
+    handler = prefixMapObjectForCString( prefix2HandlerMap, @selector(objectForCString:length:), (char*)prefixString, prefixLen);
 //	handler = [prefix2HandlerMap objectForCString:(char*)prefixString length:prefixLen];
 	if ( !handler ) {
 		handler=defaultNamespaceHandler;
@@ -276,7 +275,7 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
 		int i;
 		for (i=0;i< valueLen;i++ ) {
 			if ( valueStart[i] & 128 ) {
-				value = (id)CFMakeCollectable(CFStringCreateWithBytes(NULL, (unsigned char*)valueStart, valueLen, cfDataEncoding, NO));
+				value = (id)CFStringCreateWithBytes(NULL, (unsigned char*)valueStart, valueLen, (CFStringEncoding)cfDataEncoding, NO);
 				valueToRelease=value;
 				break;
 			}
@@ -295,7 +294,7 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, int offset , MP
         }
         @try {
             if ( !isNamespace) {
-                handler=tagHandlerForPrefix(self,@selector(handlerForPrefix:length:), nameStart, namespaceLen);
+                handler=tagHandlerForPrefix(self,@selector(handlerForPrefix:length:), (char*)nameStart, namespaceLen);
             }
         } @catch (id e) {
             NSLog(@"---- raised in getting handler for prefix: %@",e);
@@ -420,7 +419,7 @@ idAccessor( prefix2HandlerMap, setPrefix2HandlerMap )
 		}
 	}
 	[self setPrefix2HandlerMap:[[[MPWSmallStringTable alloc] initWithKeys:activePrefixes values:handlers] autorelease]];
-    prefixMapObjectForCString=[prefix2HandlerMap methodForSelector:@selector(objectForCString:length:)];
+    prefixMapObjectForCString=(XMLIMPCHARPLONG)[prefix2HandlerMap methodForSelector:@selector(objectForCString:length:)];
 	[pool release];
 }
 
@@ -832,7 +831,10 @@ static IMP unknownMethod;
 	if ( [receiver respondsToSelector:sel] ) {
 		IMP theMethod = [receiver methodForSelector:sel];
 		if ( !unknownMethod ) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
 			unknownMethod = [self methodForSelector:@selector(thisOneDoesntExistAtAll)];
+#pragma clang diagnostic pop
 		}
 		if ( theMethod != (IMP)NULL  && theMethod != unknownMethod) {
 			result = theMethod;
@@ -980,7 +982,7 @@ typedef char xmlchar;
 		if ( autotranslateUTF8 ) {
 			for (i=0;i< len;i++ ) {
 				if ( start[i] & 128 ) {
-					str = (id)CFMakeCollectable(CFStringCreateWithBytes(NULL, (const unsigned char*)start, len, cfDataEncoding, NO));
+					str = (id)CFStringCreateWithBytes(NULL, (const unsigned char*)start, len, (CFStringEncoding)cfDataEncoding, NO);
 					stringToRelease=str;
 //					if (!str ) { return YES; }
 					break;
@@ -1113,6 +1115,7 @@ typedef char xmlchar;
 		id name=MAKEDATA(start,len);
 //		NSLog(@"entity: '%@'",name);
 		if ( [documentHandler respondsToSelector:@selector(parser:resolveExternalEntityName:systemID:)] ) {
+            // FIXME:  this actually returns an NSData
 			[documentHandler parser:(NSXMLParser*)self resolveExternalEntityName:name systemID:nil];
 		}
 	}
@@ -1237,14 +1240,14 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	lastGoodPosition=[nextData bytes];
 	scanComplete=[scanner parse:nextData];
 	if ( !scanComplete ) {
-		int remainderOffset=(char*)lastGoodPosition-(char*)[nextData bytes];
-		int remainderLength=[nextData length]-remainderOffset;
+		long remainderOffset=(char*)lastGoodPosition-(char*)[nextData bytes];
+		long remainderLength=[nextData length]-remainderOffset;
 		if ( remainderLength >0 ) {
 //			NSLog(@"scan failure with offset: %d length: %d at '%c'",remainderOffset,remainderLength,*lastGoodPosition);
 			[self setBuffer:[NSMutableData dataWithBytes:lastGoodPosition length:remainderLength]];
 		} else {
 			[self setBuffer:nil];			//  must clear buffer if there was no remainder
-			NSLog(@"non-positive remainder length: %d",remainderLength);
+//			NSLog(@"non-positive remainder length: %d",(int)remainderLength);
 		}
 	} else {
 		[self setBuffer:nil];			//  must clear buffer if there was no remainder
@@ -1394,7 +1397,7 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	if ( currentElement && tagStackLen > 0 && currentElement->start && currentElement->end > currentElement->start ) {
 		const char * start = currentElement->start;
 		const char * end = currentElement->end;
-		int len=end-start;
+		long len=end-start;
 		return MAKEDATA( start , len );
 	} else {
 		return nil;
@@ -1436,10 +1439,10 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	if ( [children isLeaf] ) {
 		result=[[children combinedText] retain];
 		if (!result ) {
-			result=[attrs copy];
+			result=[(id)attrs copy];
 		}
 	} else {
-		result=[attrs copy];
+		result=[(id)attrs copy];
 		[children copyKeysTo:result];
 	}
 //	NSLog(@"tag %@ buildDOMWithChildren: %@ from children: %@ ",[self currentTag], result,children);

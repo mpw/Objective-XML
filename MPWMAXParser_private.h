@@ -121,8 +121,8 @@ objectAccessor_h( NSError, parserError, setParserError )
 
 -(BOOL)makeText:(const char*)start length:(long)len firstEntityOffset:(long)entityOffset;
 -(void)pushObject:anObject forKey:aKey withNamespace:aNamespace;
--(int)dataEncoding;
--(void)setDataEncoding:(int)newEncoding;
+-(long)dataEncoding;
+-(void)setDataEncoding:(long)newEncoding;
 -(BOOL)parseSource:(NSEnumerator*)source;
 -htmlAttributeLowerCaseNamed:(NSString*)lowerCaseAttributeName;
 -(BOOL)handleMetaTag;

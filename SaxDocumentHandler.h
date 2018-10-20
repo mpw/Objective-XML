@@ -38,8 +38,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName;
 -(void)parser:(NSXMLParser *)aParser didStartMappingPrefix:aPrefix toURI: uri;
 -(void)parser:(NSXMLParser *)aParser didEndMappingPrefix:aPrefix;
--(void)parser:(NSXMLParser *)aParser resolveExternalEntityName:name systemID:systemId;
-- (void)parser:(NSXMLParser *)parser foundProcessingInstructionWithTarget:(NSString *)target data:(NSString *)data;
+-(NSData *)parser:(NSXMLParser *)aParser resolveExternalEntityName:(NSString *)name systemID:(NSString *)systemId;
+-(void)parser:(NSXMLParser *)parser foundProcessingInstructionWithTarget:(NSString *)target data:(NSString *)data;
 
 //-(void)processingInstructionTarget:piTarget data:piData;
 //-(void)cdata:cdata;

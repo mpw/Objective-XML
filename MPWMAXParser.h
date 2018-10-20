@@ -88,7 +88,7 @@ typedef id (*XMLIMP6)(id, SEL, id,id,id,id,id,id);
     XMLIMP1                 characterDataAllowed;
     XMLIMP2                 characters,cdata;
     XMLIMP3                 uniqueTagForCString;
-    XMLIMP2                 tagHandlerForPrefix;
+    XMLIMPCHARPLONG         tagHandlerForPrefix;
     XMLIMPCHARPLONG         prefixMapObjectForCString;
 	MPWXMLAttributes*		_attributes;
 
@@ -104,7 +104,7 @@ typedef id (*XMLIMP6)(id, SEL, id,id,id,id,id,id);
 	BOOL					shouldReportNamespacePrefixes, autotranslateUTF8,ignoreCase;
 	BOOL					enforceTagNesting,lastTagWasOpen;
 	BOOL					reportIgnoreableWhitespace,charactersAreSpace;	
-	int						dataEncoding,cfDataEncoding;
+	long					dataEncoding,cfDataEncoding;
 	NSString*				version;
 	const char*				lastGoodPosition;
 	NSMutableData			*buffer;
@@ -145,7 +145,6 @@ objectAccessor_h( NSError, parserError, setParserError  )
 -(void)abortParsing;
 -(id)parseResult;														//	root of the parse-tree constructed (valid after parse is complete)
 -(void)setDelegate:handler;
--(NSError*)parserError;
 
 //---	Configure element(1) messages to be sent for specific elements in a specific namespace (nil for the default namespace)
 //---	Messages will be sent to a specific handler object.  Element names will be assigned numeric tags starting sequentially
