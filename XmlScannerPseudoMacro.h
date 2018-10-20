@@ -132,7 +132,7 @@ tryToSkipComment( const xmlchar *start, const xmlchar *end )
 
 static int scanXml(
                    const xmlchar *data,
-                   unsigned int charCount,
+                   unsigned long charCount,
                    ProcessFunc openTagCallback,
                    ProcessFunc closeTagCallback,
                    ProcessFunc declarationCallback,

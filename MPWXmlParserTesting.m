@@ -55,7 +55,7 @@ idAccessor( nonWSCharSet, setNonWSCharSet )
 	return messages;
 }
 
--(int)xxxMessageCount {
+-(long)xxxMessageCount {
 	return [messages count];
 }
 

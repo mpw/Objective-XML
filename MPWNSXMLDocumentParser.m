@@ -65,7 +65,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 }
 
 
--(BOOL)makeText:(const char*)start length:(int)len firstEntityOffset:(int)entityOffset
+-(BOOL)makeText:(const char*)start length:(long)len firstEntityOffset:(long)entityOffset
 {
 //	NSLog(@"%d characters:  '%@' entityOffset: %d tagStackLen: %d self: %x",len,MAKEDATA(start,len),entityOffset,tagStackLen,self);
 	if ( entityOffset > 0 ) {

@@ -316,7 +316,7 @@ static inline int ftoa( char *buffer , double a) {
 
 -(id)writeElementName:(const char *)name attributeBlock:(XmlGeneratorBlock)attrs contentBlock:(XmlGeneratorBlock)content
 {
-    int l=strlen(name);
+    long l=strlen(name);
     char tagNameBuffer[l+10];
     strncpy( tagNameBuffer+2,name,l);
     tagNameBuffer[l+2]=0;
@@ -461,7 +461,7 @@ boolAccessor( shouldIndent, setShouldIndent )
 
 -(void)writeString:(NSString*)string
 {
-    int maxLen = [string length] * 4;
+    long maxLen = [string length] * 4;
     NSUInteger length=0;
     char utf8bytes[  maxLen ];
     [string getBytes:utf8bytes maxLength:maxLen-1 usedLength:&length encoding:NSUTF8StringEncoding options:0 range:NSMakeRange(0,[string length]) remainingRange:NULL];

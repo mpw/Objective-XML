@@ -28,8 +28,8 @@ THE POSSIBILITY OF SUCH DAMAGE.  */
 
 #import "MPWXmlAppleProplistReader.h"
 #import "mpwfoundation_imports.h"
-#import "MPWXMLAttributes.h"
-#import "MPWMAXPArser_private.h"
+#import "MPWXmlAttributes.h"
+#import "MPWMAXParser_private.h"
 
 @implementation MPWXmlAppleProplistReader
 

@@ -153,7 +153,7 @@ objectAccessor( MPWXmlRpcGeneratorStream , generator, setGenerator )
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];
 	[request setHTTPMethod:@"POST"];
 	[request setValue:@"text/xml" forHTTPHeaderField:@"Content-Type"];
-	[request setValue: [[NSNumber numberWithInt:[payload length]] stringValue]  forHTTPHeaderField:@"Content-Length"];
+	[request setValue: [[NSNumber numberWithLong:[payload length]] stringValue]  forHTTPHeaderField:@"Content-Length"];
 	[request setHTTPBody:payload];
 	NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
 	if ( error ) {

@@ -118,12 +118,12 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
     className = NSStringFromClass(aClass);
 //    NSLog(@"writeClass: %@, found version: %@",aClass,[classVersionTable objectForKey:className]);
     if ( ![classVersionTable objectForKey:className] ) {
-        int version=[aClass version];
+        long version=[aClass version];
 //        NSLog(@"version = %d",version);
         if ( version != 0 ) {
-            [target writeProcessingInstruction:@"Class" attributes:[NSString stringWithFormat:@"name=\"%@\" version=\"%d\"",className,version]];
+            [target writeProcessingInstruction:@"Class" attributes:[NSString stringWithFormat:@"name=\"%@\" version=\"%ld\"",className,version]];
         }
-        [classVersionTable setObject:[NSNumber numberWithInt:version] forKey:className];
+        [classVersionTable setObject:[NSNumber numberWithLong:version] forKey:className];
         aClass=[aClass superclass];
         if ( aClass ) {
             [self writeClass:aClass];
@@ -164,7 +164,7 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
 
 -(void)addReference:anObject name:(const char*)cname
 {
-    int ref;
+    long ref;
 //	const char *cname=[name cString];
     if ( !(ref=(NSInteger)NSMapGet(objectTable,anObject )) ) {
 //        [objectTable addObject:anObject];

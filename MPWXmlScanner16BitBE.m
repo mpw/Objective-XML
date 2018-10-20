@@ -122,7 +122,7 @@ static int unicharncmp( const xmlchar *left, const xmlchar *right, int length )
     ProcessFunc pi16 = (ProcessFunc)[self methodForSelector:@selector(makePIBE:length:nameLen:)];
     ProcessFunc openTag16 = (ProcessFunc)[self methodForSelector:@selector(beginElementBE:length:nameLen:)];
     ProcessFunc closeTag16 = (ProcessFunc)[self methodForSelector:@selector(endElementBE:length:)];
-    ProcessFunc entityRef16 = (ProcessFunc)[self methodForSelector:@selector(makeEntityRef:length:)];
+    ProcessFunc entityRef16 = (ProcessFunc)[self methodForSelector:@selector(makeEntityRefBE:length:)];
     data=[aData retain];
     scanXml( [data bytes], [data length] / sizeof(xmlchar),  openTag16, closeTag16, sgml16,pi16,entityRef16, text16,space16,cdata16, NULL, self );
     [data release];

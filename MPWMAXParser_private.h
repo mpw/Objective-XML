@@ -126,5 +126,6 @@ objectAccessor_h( NSError, parserError, setParserError )
 -(BOOL)parseSource:(NSEnumerator*)source;
 -htmlAttributeLowerCaseNamed:(NSString*)lowerCaseAttributeName;
 -(BOOL)handleMetaTag;
+-currentChildren;
 
 @end

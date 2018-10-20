@@ -70,6 +70,8 @@ typedef void (^XmlGeneratorBlock)(MPWXmlGeneratorStream* );
 -(void)outdent;
 -(void)cr;
 -(void)writeNSDataContent:(NSData*)data;
+-(void)writeCStrAttribute:(const char*)attributeName value:(NSString*)attributeValue;
+
 -(void)writeContent:anObject;
 -(void)setShouldIndent:(BOOL)should;
 -(BOOL)shouldIndent;
