@@ -3169,7 +3169,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
-				INSTALL_PATH = "@rpath/Frameworks/";
+				INSTALL_PATH = "@rpath";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = ObjectiveXML.map;
 				OTHER_CFLAGS = "";
@@ -3374,7 +3374,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-MPWXmlKit__Framework___Upgraded_.plist";
-				INSTALL_PATH = "@rpath/Frameworks/";
+				INSTALL_PATH = "@rpath";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = ObjectiveXML.map;
 				OTHER_CFLAGS = "";

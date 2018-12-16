@@ -9,6 +9,5 @@
 #define ObjectiveXML_h
 
 #import "ObjectiveXML/MPWMAXParser.h"
-#import "ObjectiveXML/MPWJSONWriter.h"
 
 #endif /* ObjectiveXML_h */
