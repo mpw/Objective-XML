@@ -4,9 +4,10 @@ include $(GNUSTEP_MAKEFILES)/common.make
 
 LIBRARY_NAME = libMPWXmlKit
 
+OBJCFLAGS += -Wno-import -fobjc-runtime=gnustep
+
 libMPWXmlKit_HEADER_FILES = \
 	MPWSaxProtocol.h		\
-	MPWXMLAttributeGenerator.h	\
 	MPWXmlAppleProplistGenerator.h	\
 	MPWXmlAppleProplistReader.h	\
 	MPWXmlArchiver.h		\
@@ -41,23 +42,20 @@ libMPWXmlKit_HEADER_FILES_DIR = .
 libMPWXmlKit_HEADER_FILES_INSTALL_DIR = /MPWXmlKit
 
 libMPWXmlKit_OBJC_FILES = \
-	MPWXMLAttributeGenerator.m MPWXmlAppleProplistGenerator.m\
-	MPWXmlAppleProplistReader.m\
-	MPWXmlArchiver.m MPWXmlAttribute.m MPWXmlAttributes.m\
-	MPWXmlCloseTag.m MPWXmlDomParser.m MPWXmlElement.m\
-	MPWXmlEntityReference.m MPWXmlGeneratorStream.m\
+    MPWXmlAppleProplistGenerator.m\
+	MPWXmlArchiver.m  MPWXmlAttributes.m\
+	MPWXmlGeneratorStream.m\
 	MPWXmlParser.m \
 	MPWXmlProplistGenerator.m MPWXmlSaxScanner.m\
 	MPWXmlScanner.m \
-	MPWXmlStartTag.m\
-	MPWXmlTag.m MPWXmlTag2ElementProcessor.m\
 	MPWXmlUnarchiver.m MPWXmlWrapperArchiver.m\
 	MPWXmlWrapperUnarchiver.m\
+
 
 libMPWXmlKit_LIBRARIES_DEPEND_UPON += \
 	-lMPWFoundation -lgnustep-base -lobjc
 
-libMPWXmlKit_INCLUDE_DIRS += -I. -I..
+libMPWXmlKit_INCLUDE_DIRS += -I. -I..   -I../MPWFoundation/.headers/
 libMPWXmlKit_OBJCFLAGS += -Wno-import
 libMPWXmlKit_CFLAGS += -Wno-import
 

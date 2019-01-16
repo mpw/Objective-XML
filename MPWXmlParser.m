@@ -123,7 +123,11 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	id name = MAKEDATA( nameStart, nameLen );
 	id value=nil;
 	if ( autotranslateUTF8 && highBit) {
+#ifdef GS_API_LATEST
+        value = [[[NSString alloc] initWithBytes:valueStart length:valueLen encoding:NSUTF8StringEncoding] autorelease];
+#else
         value = [(id)CFStringCreateWithBytes(NULL, (const unsigned char*)valueStart, valueLen, kCFStringEncodingUTF8, NO) autorelease];
+#endif
 	}
 	if (! value ) {
 		value = MAKEDATA( valueStart, valueLen );

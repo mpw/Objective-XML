@@ -955,6 +955,7 @@
 		1F2DB6B40AB0C52C00DA2427 /* entity_runon.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = entity_runon.txt; sourceTree = "<group>"; };
 		1F2DB6C70AB0C65700DA2427 /* close_tag_not_closed.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = close_tag_not_closed.html; sourceTree = "<group>"; };
 		1F2DB6C80AB0C65700DA2427 /* close_tag_not_closed.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = close_tag_not_closed.txt; sourceTree = "<group>"; };
+		1F2F5B3421EF426C00AB0858 /* GNUmakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		1F3466670E09BB04001FBB20 /* nested.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = nested.xml; sourceTree = "<group>"; };
 		1F3519A90E05766900A730BF /* revision3-diggnation-quicktime.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "revision3-diggnation-quicktime.rss"; sourceTree = "<group>"; };
 		1F36076D0AC9CD51007B4CA2 /* meta_attributes.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = meta_attributes.html; sourceTree = "<group>"; };
@@ -1403,6 +1404,7 @@
 		07DF1A4300668979C35ADD82 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F2F5B3421EF426C00AB0858 /* GNUmakefile */,
 				1FB43C5B10BFBCA700490AA6 /* dllmain.m */,
 				07DF1A4700668979C35ADD82 /* m.template */,
 				07DF1A4800668979C35ADD82 /* h.template */,

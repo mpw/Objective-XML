@@ -179,11 +179,11 @@ typedef id (*IMP4)(id, SEL, id,id,id,id);
 
 @end
 
-@interface MPWConvenientInvocation : NSInvocation {}
+@interface NSInvocation(convenience)
 -resultOfInvoking;
 @end
 
-@implementation MPWConvenientInvocation
+@implementation NSInvocation(convenience)
 
 -resultOfInvoking
 {
@@ -322,7 +322,7 @@ typedef id (*IMP4)(id, SEL, id,id,id,id);
 	}
 	MPWRusage* fastTime=[MPWRusage timeRelativeTo:fastStart];
 	double ratio = (double)[slowTime userMicroseconds] / (double)[fastTime userMicroseconds];
-	NSLog(@"cached invocation (%d) vs. plain message send (%d): %g x faster than normal message send",(int)[fastTime userMicroseconds],(int)[slowTime userMicroseconds],ratio);
+	NSLog(@"cached invocation (%d) vs. plain message send (%d): %g x speed of normal message send",(int)[fastTime userMicroseconds],(int)[slowTime userMicroseconds],ratio);
 	NSAssert2( ratio > 0.2 ,@"ratio of cached fast invocation to normal message send %g < %g",
 				ratio,0.2);
 }

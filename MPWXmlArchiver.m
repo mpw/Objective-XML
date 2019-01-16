@@ -211,7 +211,7 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
             case 'I':
                 valueType=@"valuetype='i'";
 //              content = [NSString stringWithFormat:@"%D",*(unsigned int*)address];
-                sprintf(charcontent, "%D",*(unsigned int*)address);
+                sprintf(charcontent, "%u",*(unsigned int*)address);
 
                 break;
            case 'q':
@@ -228,7 +228,7 @@ static NSString* describeInteger(NSMapTable *table, const void *obj)
             case 'S':
                 valueType=@"valuetype='S'";
 //              content = [NSString stringWithFormat:@"%D",*(unsigned short*)address];
-                sprintf(charcontent, "%D",*(unsigned short*)address);
+                sprintf(charcontent, "%u",*(unsigned short*)address);
                 break;
             case 'f':
                 valueType=@"valuetype='f'";
