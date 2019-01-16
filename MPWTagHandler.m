@@ -168,6 +168,11 @@ boolAccessor(isCaseInsensitive, setIsCaseInsensitive)
 	return @"62";
 }
 
++dummyTag:tag parser:paser
+{
+    return @"";
+}
+
 +(void)testElementHandlerForCString
 {
 	id handler=[[[MPWTagHandler alloc] init] autorelease];
