@@ -96,8 +96,10 @@ boolAccessor( enforceTagNesting, setEnforceTagNesting )
 -(void)setDataEncoding:(long)newEncoding
 {
 	[self _setDataEncoding:newEncoding];
-#ifndef WINDOWS	
+#ifndef WINDOWS
+#if !GS_API_LATEST
 	[self setCfDataEncoding: CFStringConvertNSStringEncodingToEncoding( newEncoding )];
+#endif
 #endif	
 }
 
@@ -828,7 +830,7 @@ static IMP unknownMethod;
 		if ( !unknownMethod ) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
-			unknownMethod = [self methodForSelector:@selector(thisOneDoesntExistAtAll)];
+//			unknownMethod = [self methodForSelector:@selector(thisOneDoesntExistAtAll)];
 #pragma clang diagnostic pop
 		}
 		if ( theMethod != (IMP)NULL  && theMethod != unknownMethod) {
@@ -965,8 +967,13 @@ typedef char xmlchar;
 static inline NSString* createNSStringIfAnyHighBitSet( const char *start, long len, long cfDataEncoding ) {
     for (int i=0;i< len;i++ ) {
         if ( start[i] & 128 ) {
+#if GS_API_LATEST
+            return [[[NSString alloc] initWithBytes:start length:len encoding:cfDataEncoding] autorelease];
+
+#else
             return  (id)CFStringCreateWithBytes(NULL, (const unsigned char*)start, len, (CFStringEncoding)cfDataEncoding, NO);
             //                    if (!str ) { return YES; }
+#endif
             break;
         }
     }
@@ -1122,41 +1129,41 @@ static inline NSString* createNSStringIfAnyHighBitSet( const char *start, long l
     return YES;
 }
 
-#if WINDOWS
+#if WINDOWS || GS_API_LATEST
 #define kCFStringEncodingInvalidId (0xffffffffU)
 
-CFStringEncoding CFStringConvertIANACharSetNameToEncoding(CFStringRef self) {
-	id encodingstring=[(NSString*)self uppercaseString];
+static NSStringEncoding NSStringConvertIANACharSetNameToEncoding(NSString* self) {
+	id encodingstring=[self uppercaseString];
 	if ( [encodingstring isEqual:@"UTF-8"] ) {
-		return kCFStringEncodingUTF8;
+        return NSUTF8StringEncoding; //   kCFStringEncodingUTF8;
 	} else if ( [encodingstring isEqual:@"ISO-8859-1"] ) {
-		return kCFStringEncodingISOLatin1;
+        return NSISOLatin1StringEncoding; //    kCFStringEncodingISOLatin1;
 	} else if ( [encodingstring isEqual:@"WINDOWS-1252"] ) {
-		return kCFStringEncodingWindowsLatin1;
+        return  NSWindowsCP1252StringEncoding; // kCFStringEncodingWindowsLatin1;
 	}
 	NSLog(@"unknown encoding string %@",self);
 	 return kCFStringEncodingInvalidId;
 }
 	 
+#if 0
 CFUInteger CFStringConvertEncodingToNSStringEncoding(CFStringEncoding encoding) {
-	NSStringEncoding result=encoding;
-	switch ( encoding) {
-		case kCFStringEncodingUTF8:
-			result=NSUTF8StringEncoding;
-			break;
-		case kCFStringEncodingISOLatin1:
-			result=NSISOLatin1StringEncoding;
-			break;
-		case kCFStringEncodingWindowsLatin1:
-			result=NSWindowsCP1252StringEncoding;
-			break;
-		default:
-			NSLog(@"unknown cfstring encoding %d",encoding);
-			break;
-	}
-	return result;
+    NSStringEncoding result=encoding;
+    switch ( encoding) {
+        case kCFStringEncodingUTF8:
+            result=NSUTF8StringEncoding;
+            break;
+        case kCFStringEncodingISOLatin1:
+            result=NSISOLatin1StringEncoding;
+            break;
+        case kCFStringEncodingWindowsLatin1:
+            result=NSWindowsCP1252StringEncoding;
+            break;
+        default:
+            NSLog(@"unknown cfstring encoding %d",encoding);
+            break;
+    }
+    return result;
 }
-
 CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) {
 	CFStringEncoding result=kCFStringEncodingUTF8;
 	switch ( encoding) {
@@ -1176,6 +1183,14 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 	
 	return result;
 }
+#endif
+
+#else
+
+static NSStringEncoding NSStringConvertIANACharSetNameToEncoding(NSString* encodingstring) {
+    long cfEncoding = CFStringConvertIANACharSetNameToEncoding( (CFStringRef)encodingstring);
+    return CFStringConvertEncodingToNSStringEncoding( cfEncoding );
+}
 
 #endif
 
@@ -1185,10 +1200,9 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 
 -(void)setStringEncodingFromIANACharset:(NSString*)charSetName
 {
-	CFStringEncoding cf_encoding = CFStringConvertIANACharSetNameToEncoding( (CFStringRef)charSetName );
-	if ( cf_encoding != kCFStringEncodingInvalidId ) {
-		NSStringEncoding computed = CFStringConvertEncodingToNSStringEncoding( cf_encoding );
-		[self setDataEncoding:computed];
+	NSStringEncoding encoding = NSStringConvertIANACharSetNameToEncoding( charSetName );
+	if ( encoding != kCFStringEncodingInvalidId ) {
+		[self setDataEncoding:encoding];
 	} else {
 		NSLog(@"unknown encoding: %@",charSetName);
 	}

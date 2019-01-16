@@ -33,6 +33,6 @@
 -(void)setNamespacePrefix:(NSString*)aPrefix;
 -(void)setTagInvocationForTarget:primaryTarget;
 
-objectAccessor_h(MPWFastInvocation, elementAction, setElementAction)
+@property (nonatomic, strong) MPWFastInvocation* elementAction;
 
 @end

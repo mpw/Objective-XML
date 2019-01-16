@@ -51,6 +51,9 @@ libMPWXmlKit_OBJC_FILES = \
 	MPWXmlGeneratorStream.m\
     MPWXmlParser.m \
     MPWMAXParser.m \
+    MPWTagHandler.m \
+    MPWTagAction.m \
+    MPWXmlElement.m \
 	MPWXmlProplistGenerator.m MPWXmlSaxScanner.m\
 	MPWXmlScanner.m \
 	MPWXmlUnarchiver.m MPWXmlWrapperArchiver.m\
