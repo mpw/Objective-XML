@@ -27,9 +27,9 @@ static void runTests()
 	int success=0;
 	int failure=0;
 	NSArray *classes=@[
-//        @"MPWMAXParser",
+        @"MPWMAXParser",
         @"MPWTagHandlerTesting",
-        @"MPWXmlParserTesting",
+//        @"MPWXmlParserTesting",
 	];
 
 	for (NSString *className in classes ) {
