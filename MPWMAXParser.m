@@ -271,15 +271,11 @@ static inline id currentChildrenNoCheck( NSXMLElementInfo *base, long offset , M
 		return YES;
 	}
 	if ( highBit ) {
-		int i;
-		for (i=0;i< valueLen;i++ ) {
-			if ( valueStart[i] & 128 ) {
-				value = (id)CFStringCreateWithBytes(NULL, (unsigned char*)valueStart, valueLen, (CFStringEncoding)cfDataEncoding, NO);
-				valueToRelease=value;
-				break;
-			}
-		}
+        valueToRelease=createNSStringIfAnyHighBitSet(valueStart, valueLen,cfDataEncoding);
 	}
+    if ( valueToRelease) {
+        value=valueToRelease;
+    }
 	if ( !value ) {
 		value = MAKEDATA( valueStart, valueLen );
 	}
@@ -966,6 +962,17 @@ typedef char xmlchar;
 	[self _setAttributes:nil];
 }
 
+static inline NSString* createNSStringIfAnyHighBitSet( const char *start, long len, long cfDataEncoding ) {
+    for (int i=0;i< len;i++ ) {
+        if ( start[i] & 128 ) {
+            return  (id)CFStringCreateWithBytes(NULL, (const unsigned char*)start, len, (CFStringEncoding)cfDataEncoding, NO);
+            //                    if (!str ) { return YES; }
+            break;
+        }
+    }
+    return nil;
+}
+
 -(BOOL)makeText:(const char*)start length:(long)len firstEntityOffset:(long)entityOffset
 {
 	id	stringToRelease=nil;
@@ -976,19 +983,13 @@ typedef char xmlchar;
 		
 	}
     if (  CHARACTERDATAALLOWED  ) {
-		int i;
-//		NSLog(@"allowing characters, tagStackLen: %d and sending to %@",tagStackLen,characterHandler);
-		if ( autotranslateUTF8 ) {
-			for (i=0;i< len;i++ ) {
-				if ( start[i] & 128 ) {
-					str = (id)CFStringCreateWithBytes(NULL, (const unsigned char*)start, len, (CFStringEncoding)cfDataEncoding, NO);
-					stringToRelease=str;
-//					if (!str ) { return YES; }
-					break;
-				}
-			}
+        //		NSLog(@"allowing characters, tagStackLen: %d and sending to %@",tagStackLen,characterHandler);
+		if (  autotranslateUTF8 ) {
+            stringToRelease=createNSStringIfAnyHighBitSet(start, len,cfDataEncoding);
 		}
-		if ( !str ) {
+        if ( stringToRelease) {
+            str = stringToRelease;
+        } else {
 			str= MAKEDATA( start, len );
 		}
 		if ( str ) {

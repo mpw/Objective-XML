@@ -3,6 +3,7 @@
 include $(GNUSTEP_MAKEFILES)/common.make
 
 LIBRARY_NAME = libMPWXmlKit
+GNUSTEP_BUILD_DIR = ~/Build
 
 OBJCFLAGS += -Wno-import -fobjc-runtime=gnustep
 
@@ -48,7 +49,8 @@ libMPWXmlKit_OBJC_FILES = \
     MPWXmlAppleProplistGenerator.m\
 	MPWXmlArchiver.m  MPWXmlAttributes.m\
 	MPWXmlGeneratorStream.m\
-	MPWXmlParser.m \
+    MPWXmlParser.m \
+    MPWMAXParser.m \
 	MPWXmlProplistGenerator.m MPWXmlSaxScanner.m\
 	MPWXmlScanner.m \
 	MPWXmlUnarchiver.m MPWXmlWrapperArchiver.m\
@@ -66,3 +68,9 @@ libMPWXmlKit_CFLAGS += -Wno-import
 include $(GNUSTEP_MAKEFILES)/library.make
 -include GNUmakefile.postamble
 
+
+test    : libMPWXmlKit tester
+	LD_LIBRARY_PATH=/home/gnustep/GNUstep/Library/Libraries:/usr/local/lib:/home/gnustep/Build/obj/  ./GNUstep/testobjectivexml
+
+tester  :
+	clang -fobjc-runtime=gnustep-1.9 -I../MPWFoundation/.headers/ -I.headers -o GNUstep/testobjectivexml GNUstep/testobjectivexml.m -L/home/gnustep/Build/obj -lMPWXmlKit -lMPWFoundation -lgnustep-base -L/usr/local/lib/ -lobjc
