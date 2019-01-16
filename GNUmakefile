@@ -6,6 +6,9 @@ LIBRARY_NAME = libMPWXmlKit
 
 OBJCFLAGS += -Wno-import -fobjc-runtime=gnustep
 
+LDFLAGS += -L /home/gnustep/Build/obj
+
+
 libMPWXmlKit_HEADER_FILES = \
 	MPWSaxProtocol.h		\
 	MPWXmlAppleProplistGenerator.h	\
