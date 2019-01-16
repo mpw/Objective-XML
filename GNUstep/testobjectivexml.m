@@ -7,11 +7,17 @@
 
 @implementation NSObject(resources)
 
-+frameworkResource:(NSString*)name category:(NSString*)extension
++resourceWithName:(NSString*)name type:(NSString*)extension
 {
-    NSString *path=[NSString stringWithFormat:@"TestData/%@.%@",name,extension];
+    NSString *path=[NSString stringWithFormat:@"TestResources/%@.%@",name,extension];
     return [NSData dataWithContentsOfFile:path];
 }
+
++frameworkResource:(NSString*)name category:(NSString*)extension
+{
+    return [self resourceWithName:name type:extension];
+}
+
 @end
 
 
@@ -23,6 +29,7 @@ static void runTests()
 	NSArray *classes=@[
 //        @"MPWMAXParser",
         @"MPWTagHandlerTesting",
+        @"MPWXmlParserTesting",
 	];
 
 	for (NSString *className in classes ) {

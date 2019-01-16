@@ -58,6 +58,7 @@ libMPWXmlKit_OBJC_FILES = \
 	MPWXmlScanner.m \
 	MPWXmlUnarchiver.m MPWXmlWrapperArchiver.m\
 	MPWXmlWrapperUnarchiver.m\
+    MPWXmlParserTesting.m\
 
 
 libMPWXmlKit_LIBRARIES_DEPEND_UPON += \
