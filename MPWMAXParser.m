@@ -1189,7 +1189,7 @@ CFStringEncoding CFStringConvertNSStringEncodingToEncoding(CFUInteger encoding) 
 
 static NSStringEncoding NSStringConvertIANACharSetNameToEncoding(NSString* encodingstring) {
     long cfEncoding = CFStringConvertIANACharSetNameToEncoding( (CFStringRef)encodingstring);
-    return CFStringConvertEncodingToNSStringEncoding( cfEncoding );
+    return CFStringConvertEncodingToNSStringEncoding( (unsigned)cfEncoding );
 }
 
 #endif
@@ -1468,7 +1468,6 @@ static NSStringEncoding NSStringConvertIANACharSetNameToEncoding(NSString* encod
 	}
 }
 
-#if NS_BLOCKS_AVAILABLE
 -(void)handleElement:(NSString*)elementName withBlock:(id (^)(id elements, id attributes, id parser ))aBlock
 {
 
@@ -1476,7 +1475,6 @@ static NSStringEncoding NSStringConvertIANACharSetNameToEncoding(NSString* encod
 	[handler setInvocation:[MPWBlockInvocation invocationWithBlock:aBlock] forElement:elementName];
 }
 
-#endif
 
 @end
 
@@ -1825,7 +1823,6 @@ static NSStringEncoding NSStringConvertIANACharSetNameToEncoding(NSString* encod
 	IDEXPECT( [clip objectForKey:@"EndTime"], @"10950584119", @"EndTime in elements");
 }
 
-#if NS_BLOCKS_AVAILABLE
 
 +(void)testSimpleInlineBlockParseAction
 {
@@ -1841,7 +1838,6 @@ static NSStringEncoding NSStringConvertIANACharSetNameToEncoding(NSString* encod
 	
 }
 
-#endif
 +testSelectors
 {
 	return [NSArray arrayWithObjects:
@@ -1868,9 +1864,7 @@ static NSStringEncoding NSStringConvertIANACharSetNameToEncoding(NSString* encod
 			@"testParsingNilReturnsNil",
 			@"testParseStatesDotXml",
 			@"testAttributeValuesInPlistParse",
-#if NS_BLOCKS_AVAILABLE
 			@"testSimpleInlineBlockParseAction",
-#endif
 			nil];
 }
 
