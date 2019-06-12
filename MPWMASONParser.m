@@ -13,7 +13,6 @@
 
 @implementation MPWMASONParser
 
-objectAccessor( MPWPListBuilder, builder, setBuilder )
 objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 
 -init
@@ -129,13 +128,30 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 }
 
 
-#define USE_BUILDER 0
+static inline void parsestring( const char *curptr , const char *endptr, const char **stringstart, const char **stringend )
+{
+    curptr++;
+    //                NSLog(@"curptr at start of str: '%c'",*curptr);
+    *stringstart=curptr;
+    while ( curptr < endptr && *curptr != '"' ) {
+        //                    NSLog(@"curptr in str: '%c'",*curptr);
+        if ( *curptr=='\\'  ) {
+            curptr++;
+        }
+        curptr++;
+    }
+    *stringend=curptr;
+}
+
+#define USE_BUILDER 1
 
 
 -parsedData:(NSData*)jsonData
 {
 #if USE_BUILDER
-	[self setBuilder:[MPWPListBuilder builder]];
+    if (!self.builder) {
+        [self setBuilder:[MPWPListBuilder builder]];
+    }
 #endif	
 	[self setData:jsonData];
 	const char *curptr=[jsonData bytes];
@@ -146,7 +162,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 		switch (*curptr) {
 			case '{':
 #if USE_BUILDER				
-				[builder beginDictionary];
+				[_builder beginDictionary];
 #else				
 				[self pushTag:@"dict"];
 #endif				
@@ -157,7 +173,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 				break;
 			case '}':
 #if USE_BUILDER				
-				[builder endDictionary];
+				[_builder endDictionary];
 #else				
 				[self endDictionary];
 #endif				
@@ -167,7 +183,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 			case '[':
 //				NSLog(@"[ -- start array");
 #if USE_BUILDER				
-				[builder beginArray];
+				[_builder beginArray];
 #else				
 				[self pushTag:@"array"];
 #endif				
@@ -178,31 +194,22 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 			case ']':
 //				NSLog(@"] -- end array");
 #if	USE_BUILDER
-				[builder endArray];
+				[_builder endArray];
 #else				
 				[self endArray];
 #endif				
 				curptr++;
 				break;
 			case '"':
-				curptr++;
-//				NSLog(@"curptr at start of str: '%c'",*curptr);
-				stringstart=curptr;
-				while ( curptr < endptr && *curptr != '"' ) {
-//					NSLog(@"curptr in str: '%c'",*curptr);
-					if ( *curptr=='\\'  ) { 
-						curptr++;
-					}
-					curptr++;
-				}
-				curstr = [self makeRetainedJSONStringStart:stringstart length:curptr-stringstart];
+                parsestring( curptr , endptr, &stringstart, &curptr  );
+                curstr = [self makeRetainedJSONStringStart:stringstart length:curptr-stringstart];
 //				NSLog(@"found string: '%@'  curptr: %c",curstr,*curptr);
 				curptr++;
 //				NSLog(@"curptr after end of string skip: %c",*curptr);
 				if ( *curptr == ':' ) {
 //					NSLog(@"writeKey: %@",curstr);
 #if USE_BUILDER					
-					[builder writeKey:curstr];
+					[_builder writeKey:curstr];
 #else					
 					[self pushObject:curstr forKey:@"key" withNamespace:nil];
 #endif					
@@ -210,7 +217,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 					
 				} else {
 #if USE_BUILDER					
-					[builder writeString:curstr];
+					[_builder writeString:curstr];
 #else					
 					[self pushObject:curstr forKey:@"string" withNamespace:nil];
 #endif					
@@ -259,7 +266,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 
 //				NSLog(@"write number: %@",number);
 #if USE_BUILDER					
-				[builder writeString:number];
+				[_builder writeString:number];
 #else
 				[self pushObject:number forKey:@"number" withNamespace:nil];
 #endif				
@@ -271,7 +278,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 					curptr+=4;
 //					NSLog(@"true");
 #if USE_BUILDER					
-					[builder pushObject:true_value];
+					[_builder pushObject:true_value];
 #else
 					[self pushObject:[true_value retain] forKey:@"true" withNamespace:nil];
 #endif
@@ -283,7 +290,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 					curptr+=5;
 //					NSLog(@"false");
 #if USE_BUILDER					
-					[builder pushObject:false_value];
+					[_builder pushObject:false_value];
 #else
 					[self pushObject:[false_value retain] forKey:@"false" withNamespace:nil];
 #endif
@@ -295,7 +302,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 					// return null;
 //					NSLog(@"null");
 #if USE_BUILDER					
-					[builder pushObject:[NSNull null]];
+					[_builder pushObject:[NSNull null]];
 #else
 					[self pushObject:[[NSNull null] retain] forKey:@"null" withNamespace:nil];
 #endif
@@ -317,7 +324,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 		}
 	}
 #if USE_BUILDER
-	return [builder result];
+	return [_builder result];
 #else
 	return [self parseResult];
 #endif
@@ -326,7 +333,7 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 
 -(void)dealloc
 {
-	[builder release];
+	[(id)_builder release];
 	[commonStrings release];
 	[super dealloc];
 }
@@ -460,8 +467,10 @@ objectAccessor( MPWSmallStringTable, commonStrings, setCommonStrings )
 //        NSLog(@"parser retainCount: %d",[parser retainCount]);
         [parser release];
 //        NSLog(@"result array: %@",array);
+#if !USE_BUILDER
         EXPECTTRUE( [array objectAtIndex:0] == string1 ,@"expected the same string for string1");
         EXPECTTRUE( [array objectAtIndex:1] == string2 ,@"expected the same string for string2");
+#endif
         [array release];
     }
 //    NSLog(@"after test pool");

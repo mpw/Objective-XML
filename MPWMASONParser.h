@@ -8,13 +8,15 @@
 
 #import "MPWXmlAppleProplistReader.h"
 
-@class MPWPListBuilder,MPWSmallStringTable;
+@class MPWSmallStringTable;
+@protocol MPWPlistStreaming;
 
 @interface MPWMASONParser : MPWXmlAppleProplistReader {
-	MPWPListBuilder *builder;
 	BOOL inDict;
 	BOOL inArray;
 	MPWSmallStringTable *commonStrings;
 }
+
+@property (nonatomic, strong) id <MPWPlistStreaming> builder;
 
 @end

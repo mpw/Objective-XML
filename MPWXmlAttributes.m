@@ -452,7 +452,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 	MPWXMLAttributes* attrs=[[self new] autorelease];
 	[attrs setValue:@"value1" forAttribute:@"key"];
 	[attrs setValue:@"value2" forAttribute:@"key"];
-	IDEXPECT( [MPWByteStream makeString:attrs], @"{\n    key = value1;\n    key = value2;\n}" ,@"serialize");
+    IDEXPECT( [MPWByteStream makeString:attrs], @"{\n    key: value1;\n    key: value2;\n}" ,@"serialize");
 }
 
 +testSelectors
