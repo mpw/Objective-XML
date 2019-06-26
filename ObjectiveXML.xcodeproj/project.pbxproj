@@ -6,43 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		1F4B0F610DBEB75A00639DC0 /* All */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 1F4B0F6E0DBEB78C00639DC0 /* Build configuration list for PBXAggregateTarget "All" */;
-			buildPhases = (
-			);
-			dependencies = (
-				1F4B0F6C0DBEB76900639DC0 /* PBXTargetDependency */,
-				1FC4D3160DFA034400AC1A66 /* PBXTargetDependency */,
-			);
-			name = All;
-			productName = All;
-		};
-		1F5A6CAA1170104300E4A959 /* iXmlKit (Phone + Simulator fat) */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 1F5A6CC11170105400E4A959 /* Build configuration list for PBXAggregateTarget "iXmlKit (Phone + Simulator fat)" */;
-			buildPhases = (
-				1F5A6CA91170104300E4A959 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "iXmlKit (Phone + Simulator fat)";
-			productName = "iXmlKit (Phone + Simulator fat)";
-		};
-		1FD564AB0E2ECB2D00607D4E /* B&I ObjectiveXML */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 1FD564B50E2ECB5F00607D4E /* Build configuration list for PBXAggregateTarget "B&I ObjectiveXML" */;
-			buildPhases = (
-			);
-			dependencies = (
-				1FD564B30E2ECB3400607D4E /* PBXTargetDependency */,
-			);
-			name = "B&I ObjectiveXML";
-			productName = "B&I ObjectiveXML";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		1F04895112D148560069E1D4 /* dictAfterNumber.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F04895012D148560069E1D4 /* dictAfterNumber.json */; };
 		1F04895212D148560069E1D4 /* dictAfterNumber.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F04895012D148560069E1D4 /* dictAfterNumber.json */; };
@@ -307,6 +270,10 @@
 		1F4A855E0ACB46190059E997 /* decor.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A855D0ACB46190059E997 /* decor.txt */; };
 		1F4B0F9B0DBEBA7500639DC0 /* MPWMAXParser_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4B0F7D0DBEB9E700639DC0 /* MPWMAXParser_private.h */; };
 		1F4B0F9C0DBEBA8700639DC0 /* MPWMAXParser_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4B0F7D0DBEB9E700639DC0 /* MPWMAXParser_private.h */; };
+		1F5752DD22C3726900EB658E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5752DC22C3726900EB658E /* main.m */; };
+		1F5752E122C3730500EB658E /* ObjectiveXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F96E60009B62F5C0063D669 /* ObjectiveXML.framework */; };
+		1F5752E222C3730C00EB658E /* MPWFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9BAE6905762A2E009DD1EC /* MPWFoundation.framework */; };
+		1F5752E422C3731200EB658E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5752E322C3731200EB658E /* Foundation.framework */; };
 		1F5A6C53116EE4B800E4A959 /* MPWXmlElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF1A1E00668979C35ADD82 /* MPWXmlElement.m */; };
 		1F5ED2251FDBCDBB001D28FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5ED2241FDBCDBB001D28FB /* AppDelegate.m */; };
 		1F5ED2281FDBCDBB001D28FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5ED2271FDBCDBB001D28FB /* ViewController.m */; };
@@ -832,13 +799,6 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
-		1F4B0F6B0DBEB76900639DC0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07DF1A1900668979C35ADD82 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1F96E5C409B62F5C0063D669;
-			remoteInfo = "MPWXmlKit (Framework) (Upgraded)";
-		};
 		1F5ED23F1FDBD41B001D28FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07DF1A1900668979C35ADD82 /* Project object */;
@@ -846,23 +806,18 @@
 			remoteGlobalIDString = 1F81BFF3196992370066DF43;
 			remoteInfo = ObjectiveXMLTouch;
 		};
-		1FC4D3150DFA034400AC1A66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07DF1A1900668979C35ADD82 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1F2553E80D627362007D8DAF;
-			remoteInfo = MPWXmlCore;
-		};
-		1FD564B20E2ECB3400607D4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07DF1A1900668979C35ADD82 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1F2553E80D627362007D8DAF;
-			remoteInfo = MPWXmlCore;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1F5752D822C3726900EB658E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		1F5ED23A1FDBD403001D28FB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -987,6 +942,9 @@
 		1F4FCED11105101B00376799 /* MPWByteStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPWByteStream.h; path = ../MPWFoundation/Streams.subproj/MPWByteStream.h; sourceTree = SOURCE_ROOT; };
 		1F4FCED21105101B00376799 /* MPWFlattenStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPWFlattenStream.h; path = ../MPWFoundation/Streams.subproj/MPWFlattenStream.h; sourceTree = SOURCE_ROOT; };
 		1F4FCED31105101B00376799 /* MPWStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPWStream.h; path = ../MPWFoundation/Streams.subproj/MPWStream.h; sourceTree = SOURCE_ROOT; };
+		1F5752DA22C3726900EB658E /* masonrunner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = masonrunner; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5752DC22C3726900EB658E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F5752E322C3731200EB658E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1F5ED2211FDBCDBB001D28FB /* ObjectiveXMLTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveXMLTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5ED2231FDBCDBB001D28FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F5ED2241FDBCDBB001D28FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1143,6 +1101,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F5752D722C3726900EB658E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5752E422C3731200EB658E /* Foundation.framework in Frameworks */,
+				1F5752E222C3730C00EB658E /* MPWFoundation.framework in Frameworks */,
+				1F5752E122C3730500EB658E /* ObjectiveXML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F5ED21E1FDBCDBB001D28FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1205,6 +1173,7 @@
 				1F81BFF5196992380066DF43 /* ObjectiveXMLTouch */,
 				1F81C002196992380066DF43 /* ObjectiveXMLTouchTests */,
 				1F5ED2221FDBCDBB001D28FB /* ObjectiveXMLTests */,
+				1F5752DB22C3726900EB658E /* masonrunner */,
 				07DF1A4E00668979C35ADD82 /* Products */,
 				1F96E5FF09B62F5C0063D669 /* Info-MPWXmlKit__Framework___Upgraded_.plist */,
 				1F2553EA0D627362007D8DAF /* MPWXmlCore-Info.plist */,
@@ -1434,8 +1403,17 @@
 				1F3C7C0B136FE2EF009C0697 /* MPWXmlKit.framework */,
 				1F81BFF4196992370066DF43 /* ObjectiveXML.framework */,
 				1F5ED2211FDBCDBB001D28FB /* ObjectiveXMLTests.app */,
+				1F5752DA22C3726900EB658E /* masonrunner */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1F5752DB22C3726900EB658E /* masonrunner */ = {
+			isa = PBXGroup;
+			children = (
+				1F5752DC22C3726900EB658E /* main.m */,
+			);
+			path = masonrunner;
 			sourceTree = "<group>";
 		};
 		1F5ED2221FDBCDBB001D28FB /* ObjectiveXMLTests */ = {
@@ -1522,6 +1500,7 @@
 		1FC45D821ED40C4E0068DF0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F5752E322C3731200EB658E /* Foundation.framework */,
 				1FC45D831ED40C4E0068DF0F /* MPWFoundation.framework */,
 			);
 			name = Frameworks;
@@ -1819,6 +1798,23 @@
 			productReference = 1F3C7C0B136FE2EF009C0697 /* MPWXmlKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		1F5752D922C3726900EB658E /* masonrunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F5752DE22C3726900EB658E /* Build configuration list for PBXNativeTarget "masonrunner" */;
+			buildPhases = (
+				1F5752D622C3726900EB658E /* Sources */,
+				1F5752D722C3726900EB658E /* Frameworks */,
+				1F5752D822C3726900EB658E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = masonrunner;
+			productName = masonrunner;
+			productReference = 1F5752DA22C3726900EB658E /* masonrunner */;
+			productType = "com.apple.product-type.tool";
+		};
 		1F5ED2201FDBCDBB001D28FB /* ObjectiveXMLTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F5ED2341FDBCDBB001D28FB /* Build configuration list for PBXNativeTarget "ObjectiveXMLTests" */;
@@ -1905,8 +1901,13 @@
 		07DF1A1900668979C35ADD82 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastUpgradeCheck = 1000;
 				TargetAttributes = {
+					1F5752D922C3726900EB658E = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					1F5ED2201FDBCDBB001D28FB = {
 						CreatedOnToolsVersion = 9.1;
 						DevelopmentTeam = PE4436LT5M;
@@ -1934,15 +1935,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1FD564AB0E2ECB2D00607D4E /* B&I ObjectiveXML */,
 				1F2553E80D627362007D8DAF /* ObjXMLCore */,
 				1F96E5C409B62F5C0063D669 /* ObjectiveXML */,
-				1F4B0F610DBEB75A00639DC0 /* All */,
 				1FB43B5510BFB6EF00490AA6 /* ObjectiveXML (Windows) */,
-				1F5A6CAA1170104300E4A959 /* iXmlKit (Phone + Simulator fat) */,
 				1F3C7B44136FE2EF009C0697 /* ObjectiveXML (Linux) */,
 				1F81BFF3196992370066DF43 /* ObjectiveXMLTouch */,
 				1F5ED2201FDBCDBB001D28FB /* ObjectiveXMLTests */,
+				1F5752D922C3726900EB658E /* masonrunner */,
 			);
 		};
 /* End PBXProject section */
@@ -2457,19 +2456,6 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F5A6CA91170104300E4A959 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here\npwd\nexport VER=4.2\nxcodebuild -configuration Release -target iXmlKit -sdk \"iphonesimulator$VER\" ARCHS=i386 DSTROOT=$CONFIGURATION_BUILD_DIR/../Release-iphonesimulator\nxcodebuild -configuration Release  -target iXmlKit -sdk \"iphoneos$VER\" ARCHS='armv6 armv7'  DSTROOT=$CONFIGURATION_BUILD_DIR/../Release-iphoneos\ncd  $CONFIGURATION_BUILD_DIR\ncd ..\nlipo -create Release-iphoneos/libiXmlKit.a Release-iphonesimulator/libiXmlKit.a -output  Release/libiXmlKit.a\n#rm Release-iphoneos/libiXmlKit.a Release-iphonesimulator/libiXmlKit.a";
-		};
 		1F734A570AC6D807004C624F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2553,6 +2539,14 @@
 				1F3C7C00136FE2EF009C0697 /* MPWAtomLink.m in Sources */,
 				1F3C7C01136FE2EF009C0697 /* MPWRSSParser.m in Sources */,
 				1F7EC30415AF3142009C36B5 /* MPWTagAction.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5752D622C3726900EB658E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5752DD22C3726900EB658E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2678,25 +2672,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1F4B0F6C0DBEB76900639DC0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1F96E5C409B62F5C0063D669 /* ObjectiveXML */;
-			targetProxy = 1F4B0F6B0DBEB76900639DC0 /* PBXContainerItemProxy */;
-		};
 		1F5ED2401FDBD41B001D28FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1F81BFF3196992370066DF43 /* ObjectiveXMLTouch */;
 			targetProxy = 1F5ED23F1FDBD41B001D28FB /* PBXContainerItemProxy */;
-		};
-		1FC4D3160DFA034400AC1A66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1F2553E80D627362007D8DAF /* ObjXMLCore */;
-			targetProxy = 1FC4D3150DFA034400AC1A66 /* PBXContainerItemProxy */;
-		};
-		1FD564B30E2ECB3400607D4E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1F2553E80D627362007D8DAF /* ObjXMLCore */;
-			targetProxy = 1FD564B20E2ECB3400607D4E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2881,41 +2860,94 @@
 			};
 			name = Release;
 		};
-		1F4B0F650DBEB75A00639DC0 /* Development */ = {
+		1F5752DF22C3726900EB658E /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = All;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Development;
 		};
-		1F5A6CAD1170104400E4A959 /* Development */ = {
+		1F5752E022C3726900EB658E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				PRODUCT_NAME = "iXmlKit (Phone + Simulator fat)";
-			};
-			name = Development;
-		};
-		1F5A6CAE1170104400E4A959 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				PRODUCT_NAME = "iXmlKit (Phone + Simulator fat)";
-				ZERO_LINK = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -3288,21 +3320,6 @@
 			};
 			name = Release;
 		};
-		1FD564AE0E2ECB2D00607D4E /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEFINES_MODULE = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INSTALL_PATH = /System/Library/PrivateFrameworks/;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "B&I ObjectiveXML";
-			};
-			name = Development;
-		};
 		1FD5DC150F2CFC8E00F8F769 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3339,21 +3356,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		1FD5DC160F2CFC8E00F8F769 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEFINES_MODULE = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INSTALL_PATH = /System/Library/PrivateFrameworks/;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "B&I ObjectiveXML";
 			};
 			name = Release;
 		};
@@ -3434,18 +3436,6 @@
 			};
 			name = Release;
 		};
-		1FD5DC1B0F2CFC8E00F8F769 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = All;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3476,20 +3466,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		1F4B0F6E0DBEB78C00639DC0 /* Build configuration list for PBXAggregateTarget "All" */ = {
+		1F5752DE22C3726900EB658E /* Build configuration list for PBXNativeTarget "masonrunner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F4B0F650DBEB75A00639DC0 /* Development */,
-				1FD5DC1B0F2CFC8E00F8F769 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
-		};
-		1F5A6CC11170105400E4A959 /* Build configuration list for PBXAggregateTarget "iXmlKit (Phone + Simulator fat)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1F5A6CAD1170104400E4A959 /* Development */,
-				1F5A6CAE1170104400E4A959 /* Release */,
+				1F5752DF22C3726900EB658E /* Development */,
+				1F5752E022C3726900EB658E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
@@ -3526,15 +3507,6 @@
 			buildConfigurations = (
 				1FB43C0110BFB6EF00490AA6 /* Development */,
 				1FB43C0210BFB6EF00490AA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
-		};
-		1FD564B50E2ECB5F00607D4E /* Build configuration list for PBXAggregateTarget "B&I ObjectiveXML" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1FD564AE0E2ECB2D00607D4E /* Development */,
-				1FD5DC160F2CFC8E00F8F769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
