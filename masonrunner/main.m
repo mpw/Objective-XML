@@ -1,7 +1,7 @@
 
 #import <ObjectiveXML/MPWMASONParser.h>
-#import <MPWFoundation/MPWPListBuilder.h>
-#import <MPWFoundation/MPWObjectCache.h>
+
+#import <MPWFoundation/MPWFoundation.h>
 #import <Foundation/Foundation.h>
 
 #define ARRAYTOS    (NSMutableArray*)(*tos)
@@ -32,7 +32,7 @@
 
 @property (nonatomic, strong) MPWObjectCache *cache;
 @property (nonatomic, assign) long objectCount;
-
+@property (nonatomic, strong) id <Streaming> target;
 @end
 
 @implementation TestClassBuilder
@@ -54,7 +54,7 @@
 -(void)endDictionary
 {
     tos--;
-    [self writeObject:[ARRAYTOS lastObject]];
+    [self.target writeObject:[ARRAYTOS lastObject] sender:self];
     [ARRAYTOS removeLastObject];
     self.objectCount++;
 }
@@ -81,6 +81,7 @@ int main(int argc, char *argv[]) {
 #if 1
         parser=[MPWMASONParser parser];
         builder = [TestClassBuilder new];
+        builder.target = [MPWByteStream Stdout];
         parser.builder = builder;
         [parser setFrequentStrings: @[ @"hi" , @"there", @"comment" ]];
         result = [parser parsedData:data];

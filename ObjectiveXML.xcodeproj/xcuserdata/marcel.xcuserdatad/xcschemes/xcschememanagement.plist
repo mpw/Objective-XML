@@ -35,6 +35,11 @@
 			<key>orderHint</key>
 			<integer>121</integer>
 		</dict>
+		<key>swiftdecoder.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>122</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -54,6 +59,11 @@
 			<true/>
 		</dict>
 		<key>1F5752D922C3726900EB658E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1F5752E822C383D200EB658E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
