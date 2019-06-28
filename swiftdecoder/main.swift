@@ -15,7 +15,7 @@ struct TestClass : Decodable {
 }
 
 
-NSLog("Swift Coding")
+NSLog("Swift Coding: \(TestClass.self)")
 let coder=JSONDecoder()
 let filename=CommandLine.arguments[1]
 let data = try! Data(contentsOf: URL(fileURLWithPath: filename))

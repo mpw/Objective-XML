@@ -1,11 +1,9 @@
 
 #import <ObjectiveXML/MPWMASONParser.h>
+#import <ObjectiveXML/MPWObjectBuilder.h>
 
-#import <MPWFoundation/MPWFoundation.h>
 #import <Foundation/Foundation.h>
 
-#define ARRAYTOS    (NSMutableArray*)(*tos)
-#define DICTTOS        (NSMutableDictionary*)(*tos)
 
 @interface TestClass : NSObject {
 }
@@ -18,6 +16,12 @@
 
 @implementation TestClass
 
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@:%p: hi: %d there: %d comment: %@>",
+            [self class],self,self.hi,self.there,self.comment];
+}
+
 -(void)dealloc
 {
     [_comment release];
@@ -28,46 +32,6 @@
 
 
 
-@interface TestClassBuilder :MPWPListBuilder
-
-@property (nonatomic, strong) MPWObjectCache *cache;
-@property (nonatomic, assign) long objectCount;
-@property (nonatomic, strong) id <Streaming> target;
-@end
-
-@implementation TestClassBuilder
-
--(instancetype)init
-{
-    self=[super init];
-    _cache=[[MPWObjectCache alloc] initWithCapacity:20 class:[TestClass class] allocSel:@selector(alloc) initSel:@selector(init)];
-
-    return self;
-}
-
-
--(void)beginDictionary
-{
-    [self pushContainer:GETOBJECT(_cache) ];
-}
-
--(void)endDictionary
-{
-    tos--;
-    [self.target writeObject:[ARRAYTOS lastObject] sender:self];
-    [ARRAYTOS removeLastObject];
-    self.objectCount++;
-}
-
--(void)writeObject:anObject forKey:aKey
-{
-}
-
-
-
-@end
-
-
 
 
 int main(int argc, char *argv[]) {
@@ -76,22 +40,28 @@ int main(int argc, char *argv[]) {
 
     NSArray* result = nil;
     MPWMASONParser *parser=nil;
-    TestClassBuilder *builder=nil;
-    for (int i=0;i<10;i++) {
+    MPWObjectBuilder *builder=nil;
+    for (int i=0;i<1;i++) {
 #if 1
         parser=[MPWMASONParser parser];
-        builder = [TestClassBuilder new];
-        builder.target = [MPWByteStream Stdout];
+        builder = [[[MPWObjectBuilder alloc] initWithClass:[TestClass class]] autorelease];
+        builder.streamingThreshold=1;
+//        builder.target = [MPWByteStream Stdout];
         parser.builder = builder;
-        [parser setFrequentStrings: @[ @"hi" , @"there", @"comment" ]];
+        [parser setFrequentStrings: @[ @"hi" , @"there"  ]];
         result = [parser parsedData:data];
 #else
         result = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
 #endif
     }
     NSLog(@"result: %@",[result class]);
-    NSLog(@"count: %ld",[result count]);
-    NSLog(@"count: %ld",[builder objectCount]);
+    NSLog(@"array count: %ld",[result count]);
+    NSLog(@"stram count: %ld",[builder objectCount]);
     NSLog(@"last: %@",[result lastObject]);
+    NSLog(@"first: %@",[result firstObject]);
+    NSLog(@"last comment: %@",[[result lastObject] comment]);
+    NSLog(@"first comment: %@",[[result firstObject] comment]);
+    NSLog(@"last comment: %p",[[result lastObject] comment]);
+    NSLog(@"first comment: %p",[[result firstObject] comment]);
     return 0;
 }
