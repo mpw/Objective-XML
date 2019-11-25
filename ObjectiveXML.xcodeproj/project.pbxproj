@@ -793,6 +793,8 @@
 			isa = PBXBuildRule;
 			compilerSpec = org.cocotron.1.0.windows.i386.gcc.default;
 			fileType = sourcecode.c;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -801,6 +803,8 @@
 			isa = PBXBuildRule;
 			compilerSpec = org.cocotron.1.0.windows.i386.gcc.default;
 			fileType = sourcecode.c;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -1965,7 +1969,7 @@
 			attributes = {
 				DefaultBuildSystemTypeForWorkspace = Original;
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1110;
 				TargetAttributes = {
 					1F5752D922C3726900EB658E = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -1988,14 +1992,14 @@
 			};
 			buildConfigurationList = 1F39596808A0CC4600BF7444 /* Build configuration list for PBXProject "ObjectiveXML" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
 				Base,
+				ja,
+				fr,
+				en,
+				de,
 			);
 			mainGroup = 07DF1A1A00668979C35ADD82 /* MPWXmlKit */;
 			productRefGroup = 07DF1A4E00668979C35ADD82 /* Products */;
@@ -2779,7 +2783,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1F2553EB0D627363007D8DAF /* Development */ = {
+		1F2553EB0D627363007D8DAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -2810,9 +2814,9 @@
 				SKIP_INSTALL = YES;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		1F39596908A0CC4600BF7444 /* Development */ = {
+		1F39596908A0CC4600BF7444 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -2847,9 +2851,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
-			name = Development;
+			name = Debug;
 		};
-		1F3C7C09136FE2EF009C0697 /* Development */ = {
+		1F3C7C09136FE2EF009C0697 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
@@ -2894,7 +2898,7 @@
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = NO;
 			};
-			name = Development;
+			name = Debug;
 		};
 		1F3C7C0A136FE2EF009C0697 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2940,7 +2944,7 @@
 			};
 			name = Release;
 		};
-		1F5752DF22C3726900EB658E /* Development */ = {
+		1F5752DF22C3726900EB658E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -2999,7 +3003,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
-			name = Development;
+			name = Debug;
 		};
 		1F5752E022C3726900EB658E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3031,7 +3035,7 @@
 			};
 			name = Release;
 		};
-		1F5752EE22C383D200EB658E /* Development */ = {
+		1F5752EE22C383D200EB658E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -3093,7 +3097,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
-			name = Development;
+			name = Debug;
 		};
 		1F5752EF22C383D200EB658E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3127,7 +3131,7 @@
 			};
 			name = Release;
 		};
-		1F5ED2351FDBCDBB001D28FB /* Development */ = {
+		1F5ED2351FDBCDBB001D28FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -3188,7 +3192,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Development;
+			name = Debug;
 		};
 		1F5ED2361FDBCDBB001D28FB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3242,7 +3246,7 @@
 			};
 			name = Release;
 		};
-		1F81C007196992380066DF43 /* Development */ = {
+		1F81C007196992380066DF43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -3304,7 +3308,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Development;
+			name = Debug;
 		};
 		1F81C008196992380066DF43 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3360,7 +3364,7 @@
 			};
 			name = Release;
 		};
-		1F96E5FB09B62F5C0063D669 /* Development */ = {
+		1F96E5FB09B62F5C0063D669 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -3402,9 +3406,9 @@
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = NO;
 			};
-			name = Development;
+			name = Debug;
 		};
-		1FB43C0110BFB6EF00490AA6 /* Development */ = {
+		1FB43C0110BFB6EF00490AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
@@ -3446,7 +3450,7 @@
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = NO;
 			};
-			name = Development;
+			name = Debug;
 		};
 		1FB43C0210BFB6EF00490AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3618,83 +3622,83 @@
 		1F2553EF0D627363007D8DAF /* Build configuration list for PBXNativeTarget "ObjXMLCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F2553EB0D627363007D8DAF /* Development */,
+				1F2553EB0D627363007D8DAF /* Debug */,
 				1FD5DC180F2CFC8E00F8F769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
+			defaultConfigurationName = Release;
 		};
 		1F39596808A0CC4600BF7444 /* Build configuration list for PBXProject "ObjectiveXML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F39596908A0CC4600BF7444 /* Development */,
+				1F39596908A0CC4600BF7444 /* Debug */,
 				1FD5DC150F2CFC8E00F8F769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
+			defaultConfigurationName = Release;
 		};
 		1F3C7C08136FE2EF009C0697 /* Build configuration list for PBXNativeTarget "ObjectiveXML (Linux)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F3C7C09136FE2EF009C0697 /* Development */,
+				1F3C7C09136FE2EF009C0697 /* Debug */,
 				1F3C7C0A136FE2EF009C0697 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
+			defaultConfigurationName = Release;
 		};
 		1F5752DE22C3726900EB658E /* Build configuration list for PBXNativeTarget "masonrunner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F5752DF22C3726900EB658E /* Development */,
+				1F5752DF22C3726900EB658E /* Debug */,
 				1F5752E022C3726900EB658E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
+			defaultConfigurationName = Release;
 		};
 		1F5752ED22C383D200EB658E /* Build configuration list for PBXNativeTarget "swiftdecoder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F5752EE22C383D200EB658E /* Development */,
+				1F5752EE22C383D200EB658E /* Debug */,
 				1F5752EF22C383D200EB658E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
+			defaultConfigurationName = Release;
 		};
 		1F5ED2341FDBCDBB001D28FB /* Build configuration list for PBXNativeTarget "ObjectiveXMLTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F5ED2351FDBCDBB001D28FB /* Development */,
+				1F5ED2351FDBCDBB001D28FB /* Debug */,
 				1F5ED2361FDBCDBB001D28FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
+			defaultConfigurationName = Release;
 		};
 		1F81C00B196992380066DF43 /* Build configuration list for PBXNativeTarget "ObjectiveXMLTouch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F81C007196992380066DF43 /* Development */,
+				1F81C007196992380066DF43 /* Debug */,
 				1F81C008196992380066DF43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
+			defaultConfigurationName = Release;
 		};
 		1F96E5FA09B62F5C0063D669 /* Build configuration list for PBXNativeTarget "ObjectiveXML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F96E5FB09B62F5C0063D669 /* Development */,
+				1F96E5FB09B62F5C0063D669 /* Debug */,
 				1FD5DC170F2CFC8E00F8F769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
+			defaultConfigurationName = Release;
 		};
 		1FB43C0010BFB6EF00490AA6 /* Build configuration list for PBXNativeTarget "ObjectiveXML (Windows)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FB43C0110BFB6EF00490AA6 /* Development */,
+				1FB43C0110BFB6EF00490AA6 /* Debug */,
 				1FB43C0210BFB6EF00490AA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Development;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
